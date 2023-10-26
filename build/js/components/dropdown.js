@@ -1,5 +1,4 @@
-// File: dropdowns.js
-
+// Profile Dropdown
 const profileDropdown = () => {
   const dropdown = document.querySelector(".dropdown-profile");
   const toggleButton = document.getElementById("hs-dropdown-with-header");
@@ -24,6 +23,7 @@ const profileDropdown = () => {
   });
 };
 
+// Notifikasi Dropdown
 const notifikasiDropdown = () => {
   const notifDropdown = document.querySelector(".notif-dropdown");
   const notifToggle = document.getElementById("notif-dropdown-with-header");

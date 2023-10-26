@@ -1,6 +1,6 @@
 import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
 
-document.addEventListener("DOMContentLoaded", function () {
+const checkLoginStatus = () => {
   // Mendapatkan nilai cookie dengan nama "token" menggunakan fungsi getCookie
   const token = getCookie("token");
 
@@ -19,4 +19,6 @@ document.addEventListener("DOMContentLoaded", function () {
       window.location.href = previousPageURL;
     });
   }
-});
+};
+
+document.addEventListener("DOMContentLoaded", checkLoginStatus);
