@@ -2,22 +2,22 @@ import { postWithToken } from "https://jscroot.github.io/api/croot.js";
 import { setInner, getValue } from "https://jscroot.github.io/element/croot.js";
 import { setCookieWithExpireHour } from "https://jscroot.github.io/cookie/croot.js";
 
-export default function PostSignUp() {
-  let target_url =
+const PostSignUp = () => {
+  const target_url =
     "https://asia-southeast2-bursakerja-project.cloudfunctions.net/intermonitoring-login";
-  let tokenkey = "token";
-  let tokenvalue =
+  const tokenkey = "token";
+  const tokenvalue =
     "3108501ddf2f9aa33f3a7c0e387339b131d8a4d22818feb511b0fe1bc3a16b36";
-  let datainjson = {
+  const datainjson = {
     email: getValue("email"),
     password: getValue("password"),
   };
 
   postWithToken(target_url, tokenkey, tokenvalue, datainjson, responseData);
   //   alert("testing2");
-}
+};
 
-function responseData(result) {
+const responseData = (result) => {
   if (result.token) {
     // Jika memiliki token, simpan token di cookie
     setCookieWithExpireHour("token", result.token, 2);
@@ -38,4 +38,6 @@ function responseData(result) {
       text: result.message,
     });
   }
-}
+};
+
+export default PostSignUp;
