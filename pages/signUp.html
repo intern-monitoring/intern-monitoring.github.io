@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Intern Monitoring</title>
+    <script src="../node_modules/preline/dist/preline.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./style/style.css" />
+  </head>
+  <body>
+    <!-- navbar -->
+
+    <header
+      class="fixed top-0 flex flex-wrap shadow-md sm:justify-start sm:flex-nowrap z-50 w-full bg-white border-b border-gray-200 text-sm py-3 sm:py-0"
+    >
+      <nav
+        class="relative max-w-7xl w-full mx-auto px-4 sm:flex sm:items-center sm:justify-between sm:px-6 lg:px-8"
+        aria-label="Global"
+      >
+        <div class="flex items-center justify-between">
+          <a class="flex-none text-xl font-semibold" href="#" aria-label="Brand"
+            >Intern Monitoring</a
+          >
+          <div class="sm:hidden">
+            <button
+              type="button"
+              class="hs-collapse-toggle p-2 inline-flex justify-center items-center gap-2 rounded-md border font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-600 transition-all text-sm"
+              data-hs-collapse="#navbar-collapse-with-animation"
+              aria-controls="navbar-collapse-with-animation"
+              aria-label="Toggle navigation"
+            >
+              <svg
+                class="hs-collapse-open:hidden w-4 h-4"
+                width="16"
+                height="16"
+                fill="currentColor"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
+                />
+              </svg>
+              <svg
+                class="hs-collapse-open:block hidden w-4 h-4"
+                width="16"
+                height="16"
+                fill="currentColor"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div
+          id="navbar-collapse-with-animation"
+          class="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow sm:block"
+        >
+          <div
+            class="flex flex-col gap-y-4 gap-x-0 mt-5 sm:flex-row sm:items-center sm:justify-end sm:gap-y-0 sm:gap-x-7 sm:mt-0 sm:px-7"
+          >
+            <a
+              class="font-medium text-gray-500 hover:text-gray-400 sm:py-6"
+              href="../index.html"
+              aria-current="page"
+              >Home</a
+            >
+            <a
+              class="font-medium text-gray-500 hover:text-gray-400 sm:py-6"
+              href="../index.html"
+              >Alur</a
+            >
+            <a
+              class="font-medium text-gray-500 hover:text-gray-400 sm:py-6"
+              href="../index.html"
+              >Internship</a
+            >
+            <a
+              class="flex items-center gap-x-2 font-medium text-gray-500 sm:border-l sm:border-gray-300 sm:my-6 sm:pl-6"
+              href="signIn.html"
+            >
+              <svg
+                class="w-4 h-4"
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"
+                />
+              </svg>
+              Sign in
+            </a>
+            <a
+              class="flex items-center gap-x-2 font-medium text-black sm:my-6 sm:pl-0"
+              href="signUp.html"
+            >
+              <svg
+                class="w-4 h-4"
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"
+                />
+              </svg>
+              Sign Up
+            </a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- end navbar -->
+
+    <!-- Signup -->
+    <!-- <span
+      class="absolute top-0 left-0 w-full h-full bg-center bg-cover bg-gradient-to-tl from-gray-900 to-slate-800 opacity-80"
+      ></span> -->
+    <div class="w-full h-screen pt-16 pb-10 lg:pb-14 mx-auto bg-gray-50">
+      <div class="mx-auto w-full px-5 lg:px-64">
+        <!-- Card -->
+        <div
+          class="mt-5 p-4 relative shadow-md z-10 bg-white border rounded-xl sm:mt-10 md:p-10"
+        >
+          <div class="p-7">
+            <div class="mb-4">
+              <p class="text-xl font-bold mb-2 text-gray-900 lg:text-2xl">
+                Sign Up
+              </p>
+              <p class="text-md text-gray-500 font-normal lg:text-lg">
+                Tentukan role, buat akun, akses lebih luas
+              </p>
+            </div>
+            <div class="mt-5 mb-5 h-[1px] bg-gray-200"></div>
+            <div class="mb-4">
+              <p class="text-xl font-bold mb-2 text-gray-900 lg:text-2xl">
+                Pilih role anda
+              </p>
+            </div>
+
+            <div class="mb-4">
+              <label
+                for="af-submit-app-category"
+                class="inline-block mb-2 text-md font-normal text-gray-500 lg:text-lg"
+              >
+                Silahkan pilih role yang sesuai.
+              </label>
+
+              <select
+                id="af-submit-app-category"
+                class="py-2 px-3 pr-9 w-full border-[1px] border-gray-200 rounded-lg text-sm focus:border-gray-800 focus:ring-gray-900"
+              >
+                <option selected>Select a role</option>
+                <option>Mahasiswa</option>
+                <option>Mitra</option>
+              </select>
+            </div>
+
+            <div class="py-10 grid">
+              <button
+                type="submit"
+                class="inline-flex justify-center items-center gap-x-3 text-center bg-gradient-to-tl from-blue-600 to-violet-600 shadow-lg shadow-transparent hover:shadow-blue-700/50 border border-transparent text-white text-sm font-medium rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 focus:ring-offset-white py-3 px-6"
+                onclick="handleNextButtonClick()"
+              >
+                Selanjutnya
+              </button>
+            </div>
+            <div class="text-center">
+              <p class="mt-2 text-sm text-gray-600">
+                Sudah punya akun?
+                <a
+                  class="bg-gradient-to-tl from-blue-600 to-violet-600 bg-clip-text text-transparent font-medium"
+                  href="signIn.html"
+                >
+                  Masuk disini
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- End Card -->
+      </div>
+    </div>
+    <!-- End Signup -->
+
+    <script src="js/nextpage.js"></script>
+  </body>
+</html>
