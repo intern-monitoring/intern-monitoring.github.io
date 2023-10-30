@@ -84,7 +84,7 @@
               class="hs-dropdown relative inline-flex [--placement:bottom-right]"
             >
               <button
-                onclick="toggleNotifikasiDropdown()"
+                id="notif-btn"
                 type="button"
                 class="hs-dropdown-toggle inline-flex flex-shrink-0 justify-center items-center gap-2 h-[2.375rem] w-[2.375rem] rounded-full font-medium bg-white text-gray-700 align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 focus:ring-offset-white transition-all text-xs"
               >
@@ -103,7 +103,8 @@
               </button>
 
               <div
-                class="notif-dropdown hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden min-w-[15rem] bg-white shadow-md rounded-lg p-2"
+                id="notif-dropdown"
+                class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden min-w-[15rem] bg-white shadow-md rounded-lg p-2"
                 aria-labelledby="notif-dropdown"
               >
                 <div class="mt-2 py-2 first:pt-0 last:pb-0">
@@ -150,13 +151,13 @@
                 </div>
               </div>
             </div>
-            <!-- Notif Dropdown -->
+            <!-- End Notif Dropdown -->
             <!-- Profile Dropdown -->
             <div
               class="hs-dropdown relative inline-flex [--placement:bottom-right]"
             >
               <button
-                onclick="toggleProfileDropdown()"
+                id="profile-btn"
                 type="button"
                 class="hs-dropdown-toggle inline-flex flex-shrink-0 justify-center items-center gap-2 h-[2.375rem] w-[2.375rem] rounded-full font-medium bg-white text-gray-700 align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 focus:ring-offset-white transition-all text-xs"
               >
@@ -168,7 +169,8 @@
               </button>
 
               <div
-                class="dropdown-profile hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden min-w-[15rem] bg-white shadow-md rounded-lg p-2"
+                id="profile-dropdown"
+                class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden min-w-[15rem] bg-white shadow-md rounded-lg p-2"
                 aria-labelledby="hs-dropdown-with-header"
               >
                 <div class="py-3 px-5 -m-2 bg-gray-100 rounded-t-lg">
@@ -698,18 +700,27 @@
     </div>
     <!-- End Content Section -->
 
-    <script src="../js/components/overlay.js"></script>
-    <script src="../js/components/dropdown.js"></script>
+    <!-- Dropdown Function -->
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/gh/intern-monitoring/jsintermoni@0.0.6/components/dropdown.js"
+    ></script>
+    <!-- Sidebar Function -->
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/gh/intern-monitoring/jsintermoni@0.0.6/components/sidebar.js"
+    ></script>
+
     <!-- Logout Function -->
-    <script
+    <!-- <script
       type="module"
-      src="https://cdn.jsdelivr.net/gh/intern-monitoring/jsintermoni@0.0.2/logOut.js"
-    ></script>
+      src="https://cdn.jsdelivr.net/gh/intern-monitoring/jsintermoni@0.0.6/logOut.js"
+    ></script> -->
     <!-- autentikasi function -->
-    <script
+    <!-- <script
       type="module"
-      src="https://cdn.jsdelivr.net/gh/intern-monitoring/jsintermoni@0.0.2/autentikasiToken.js"
-    ></script>
+      src="https://cdn.jsdelivr.net/gh/intern-monitoring/jsintermoni@0.0.6/autentikasiToken.js"
+    ></script> -->
 
     <script>
       localStorage.setItem("previousPageURL", window.location.href);
