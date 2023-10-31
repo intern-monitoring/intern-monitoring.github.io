@@ -7,7 +7,7 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script>
     <script src="../../node_modules/preline/dist/preline.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="./assets/css/styleMitra.css" />
+    <link rel="stylesheet" href="./assets/css/styleAdmin.css" />
   </head>
   <body>
     <!-- Header -->
@@ -317,7 +317,7 @@
     <!-- Sidebar -->
     <div
       id="application-sidebar"
-      class="sidebar hs-overlay hidden fixed z-[60] top-0 left-0 h-full w-64 bg-white border-r border-gray-200 pt-7 pb-10 overflow-y-auto scrollbar-y lg:block lg:translate-x-0 lg:right-auto lg:bottom-0"
+      class="sidebar hidden fixed z-[60] top-0 left-0 h-full w-64 bg-white border-r border-gray-200 pt-7 pb-10 overflow-y-auto scrollbar-y lg:block lg:translate-x-0 lg:right-auto lg:bottom-0"
     >
       <div class="px-6">
         <a class="flex-none text-xl font-semibold" href="#"
@@ -329,10 +329,6 @@
         class="hs-accordion-group p-6 w-full flex flex-col flex-wrap"
         data-hs-accordion-always-open
       >
-        <!-- Main Menu Section -->
-        <div class="pb-2">
-          <p class="text-gray-400 text-xs font-semibold">MAIN MENU</p>
-        </div>
         <ul class="space-y-1.5">
           <li>
             <a
@@ -359,87 +355,93 @@
               Dashboard
             </a>
           </li>
-          <li>
+          <li class="hs-accordion" id="account-accordion">
             <a
-              class="flex items-center gap-x-3.5 py-2 px-2.5 bg-white text-sm font-semibold text-slate-700 rounded-md hover:bg-gray-100"
-              href="daftarMagang.html"
+              class="hs-accordion-toggle flex items-center gap-x-3.5 py-2 px-2.5 hs-accordion-active:text-blue-600 hs-accordion-active:hover:bg-transparent text-sm text-slate-700 rounded-md hover:bg-gray-100"
+              href="javascript:;"
             >
               <svg
+                class="w-3.5 h-3.5"
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"
                 height="16"
                 fill="currentColor"
-                class="bi bi-clipboard-data w-3.5 h-3.5"
                 viewBox="0 0 16 16"
               >
+                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
                 <path
-                  d="M4 11a1 1 0 1 1 2 0v1a1 1 0 1 1-2 0v-1zm6-4a1 1 0 1 1 2 0v5a1 1 0 1 1-2 0V7zM7 9a1 1 0 0 1 2 0v3a1 1 0 1 1-2 0V9z"
-                />
-                <path
-                  d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"
-                />
-                <path
-                  d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"
+                  fill-rule="evenodd"
+                  d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"
                 />
               </svg>
-              Daftar Magang
-            </a>
-          </li>
-          <li>
-            <a
-              class="flex items-center gap-x-3.5 py-2 px-2.5 bg-white text-sm font-semibold text-slate-700 rounded-md hover:bg-gray-100"
-              href="mahasiswaMagang.html"
-            >
+              Internship
+
               <svg
-                xmlns="http://www.w3.org/2000/svg"
+                class="hs-accordion-active:block ml-auto hidden w-3 h-3 text-gray-600 group-hover:text-gray-500"
                 width="16"
                 height="16"
-                fill="currentColor"
-                class="bi bi-table w-3.5 h-3.5"
                 viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm15 2h-4v3h4V4zm0 4h-4v3h4V8zm0 4h-4v3h3a1 1 0 0 0 1-1v-2zm-5 3v-3H6v3h4zm-5 0v-3H1v2a1 1 0 0 0 1 1h3zm-4-4h4V8H1v3zm0-4h4V4H1v3zm5-3v3h4V4H6zm4 4H6v3h4V8z"
-                />
+                  d="M2 11L8.16086 5.31305C8.35239 5.13625 8.64761 5.13625 8.83914 5.31305L15 11"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                ></path>
               </svg>
-              Mahasiswa Magang
+
+              <svg
+                class="hs-accordion-active:hidden ml-auto block w-3 h-3 text-gray-600 group-hover:text-gray-500"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M2 5L8.16086 10.6869C8.35239 10.8637 8.64761 10.8637 8.83914 10.6869L15 5"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                ></path>
+              </svg>
             </a>
+
+            <div
+              id="account-accordion-child"
+              class="hs-accordion-content w-full overflow-hidden transition-[height] duration-300 hidden"
+            >
+              <ul class="pt-2 pl-2">
+                <li>
+                  <a
+                    class="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-slate-700 rounded-md hover:bg-gray-100"
+                    href="javascript:;"
+                  >
+                    Link 1
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-slate-700 rounded-md hover:bg-gray-100"
+                    href="javascript:;"
+                  >
+                    Link 2
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-slate-700 rounded-md hover:bg-gray-100"
+                    href="javascript:;"
+                  >
+                    Link 3
+                  </a>
+                </li>
+              </ul>
+            </div>
           </li>
         </ul>
-        <!-- End Main Menu Section -->
-        <!-- Seleksi Section -->
-        <div class="py-2">
-          <p class="text-gray-400 text-xs font-semibold">SELEKSI</p>
-        </div>
-        <ul class="space-y-1.5">
-          <li>
-            <a
-              class="flex items-center gap-x-3.5 py-2 px-2.5 bg-white text-sm font-semibold text-slate-700 rounded-md hover:bg-gray-100"
-              href="pesertaSeleksi.html"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fill="currentColor"
-                class="bi bi-clipboard-data w-3.5 h-3.5"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  d="M4 11a1 1 0 1 1 2 0v1a1 1 0 1 1-2 0v-1zm6-4a1 1 0 1 1 2 0v5a1 1 0 1 1-2 0V7zM7 9a1 1 0 0 1 2 0v3a1 1 0 1 1-2 0V9z"
-                />
-                <path
-                  d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"
-                />
-                <path
-                  d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"
-                />
-              </svg>
-              Peserta Seleksi
-            </a>
-          </li>
-        </ul>
-        <!-- End Seleksi Section -->
       </nav>
     </div>
     <!-- End Sidebar -->
