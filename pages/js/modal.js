@@ -1,4 +1,4 @@
-// Ambil elemen-elemen HTML yang diperlukan
+// Mengambil elemen-elemen HTML
 const openDialogButton = document.querySelector(
   '[data-dialog-target="dialog"]'
 );
@@ -19,10 +19,10 @@ const closeDialog = () => {
   dialogBackdrop.style.pointerEvents = "none";
 };
 
-// Tambahkan event listener untuk tombol buka modal
+// Event listener untuk tombol buka modal
 openDialogButton.addEventListener("click", openDialog);
 
-// Tambahkan event listener untuk tombol-tombol tutup modal
+// Event listener untuk tombol-tombol tutup modal
 closeButton.forEach((button) => {
   button.addEventListener("click", closeDialog);
 });
