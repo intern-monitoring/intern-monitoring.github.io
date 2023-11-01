@@ -9,6 +9,17 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- modal -->
     <script src="https://unpkg.com/@material-tailwind/html@latest/scripts/dialog.js"></script>
+    <!-- Trix Editor -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://unpkg.com/trix@2.0.0/dist/trix.css"
+    />
+    <script
+      type="text/javascript"
+      src="https://unpkg.com/trix@2.0.0/dist/trix.umd.min.js"
+    ></script>
+
     <link rel="stylesheet" href="./assets/css/styleMitra.css" />
   </head>
   <body>
@@ -644,12 +655,14 @@
                                   </div>
                                   <!-- End Col -->
                                   <div class="sm:col-span-9">
-                                    <textarea
-                                      id="af-account-alamat"
-                                      class="py-2 px-3 block w-full border-[1px] border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400"
-                                      rows="4"
-                                      placeholder="Deskripsi magang"
-                                    ></textarea>
+                                    <input
+                                      id="deskripsi"
+                                      type="hidden"
+                                      name="content"
+                                    />
+                                    <trix-editor
+                                      input="deskripsi"
+                                    ></trix-editor>
                                   </div>
                                   <!-- End Col -->
                                   <!-- End Deskripsi Magang -->
@@ -665,12 +678,12 @@
                                   </div>
                                   <!-- End Col -->
                                   <div class="sm:col-span-9">
-                                    <textarea
-                                      id="af-account-info"
-                                      class="py-2 px-3 block w-full border-[1px] border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400"
-                                      rows="4"
-                                      placeholder="Info tambahan tentang magang"
-                                    ></textarea>
+                                    <input
+                                      id="infotambahan"
+                                      type="hidden"
+                                      name="content"
+                                    />
+                                    <trix-editor input="info"></trix-editor>
                                   </div>
                                   <!-- End Col -->
                                   <!-- End Info Tambahan -->
@@ -1011,6 +1024,7 @@
       src="https://cdn.jsdelivr.net/gh/intern-monitoring/jsintermoni@0.0.6/autentikasiToken.js"
     ></script> -->
 
+    <script src="./assets/js/hideIcon.js"></script>
     <script src="../js/modal.js"></script>
     <script>
       localStorage.setItem("previousPageURL", window.location.href);
