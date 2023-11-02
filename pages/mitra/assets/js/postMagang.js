@@ -3,6 +3,20 @@ import { getValue } from "https://jscroot.github.io/element/croot.js";
 import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
 
 const PostMagang = () => {
+  if (
+    getValue("posisi") == "" ||
+    getValue("lokasi") == "" ||
+    getValue("deskripsimagang") == "" ||
+    getValue("infotambahanmagang") == "" ||
+    getValue("tentangmitra") == "" ||
+    getValue("expired") == ""
+  ) {
+    Swal.fire({
+      icon: "error",
+      title: "Insert Failed",
+      text: "Please fill all the form",
+    });
+  }
   const target_url =
     "https://asia-southeast2-bursakerja-project.cloudfunctions.net/intermoni-login";
   const tokenvalue = getCookie("Authorization");
