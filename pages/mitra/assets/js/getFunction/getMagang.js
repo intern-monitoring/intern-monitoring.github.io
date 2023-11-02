@@ -1,3 +1,4 @@
+import { deleteMagang } from "./api.js";
 import { addInner } from "https://jscroot.github.io/element/croot.js";
 
 export let URLGetMagang =
@@ -53,7 +54,7 @@ export let tableMagang = `
   <div>
     <a
       class="inline-flex items-center cursor-pointer text-sm text-red-600 decoration-2 hover:underline font-medium"
-      onclick="deleteMagang('#IDHAPUS#')"
+      onclick="deleteButton('#IDHAPUS#')"
     >
       Delete
     </a>
@@ -76,3 +77,7 @@ export function isiRow(value) {
     .replace("#IDHAPUS#", value._id);
   addInner("magang", content);
 }
+
+deleteButton = () => {
+  deleteMagang();
+};

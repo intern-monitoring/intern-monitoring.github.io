@@ -1,4 +1,4 @@
-const deleteMagang = (IDHAPUS) => {
+export const deleteMagang = (IDHAPUS) => {
   try {
     const magangId = IDHAPUS;
     const target_url =
@@ -35,5 +35,3 @@ const deleteMagang = (IDHAPUS) => {
     });
   }
 };
-
-window.deleteMagang = deleteMagang;
