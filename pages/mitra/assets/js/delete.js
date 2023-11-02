@@ -1,17 +1,13 @@
-const deleteMagang = document.getElementById("deleteMagang");
-
-deleteMagang.addEventListener("click", async () => {
-  const magangId = IDHAPUS;
-  const target_url =
-    "https://asia-southeast2-bursakerja-project.cloudfunctions.net/intermoni-delete-magang?id=" +
-    magangId;
-
-  const requestOptions = {
-    method: "DELETE",
-    redirect: "follow",
-  };
-
+const deleteMagang = (IDHAPUS) => {
   try {
+    const magangId = IDHAPUS;
+    const target_url = `https://asia-southeast2-bursakerja-project.cloudfunctions.net/intermoni-delete-magang?id=${magangId}`;
+
+    const requestOptions = {
+      method: "DELETE",
+      redirect: "follow",
+    };
+
     const response = fetch(target_url, requestOptions);
 
     if (!response.ok) {
@@ -21,8 +17,8 @@ deleteMagang.addEventListener("click", async () => {
     Swal.fire({
       icon: "success",
       title: "Data berhasil dihapus",
-      showConfirmButton: true,
-      confirmButtonText: "OK",
+      showConfirmButton: false,
+      timer: 1500,
     });
 
     location.reload();
@@ -36,4 +32,6 @@ deleteMagang.addEventListener("click", async () => {
       confirmButtonText: "OK",
     });
   }
-});
+};
+
+window.DeleteMagang = deleteMagang;
