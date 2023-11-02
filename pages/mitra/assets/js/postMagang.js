@@ -18,7 +18,7 @@ const PostMagang = () => {
     });
   }
   const target_url =
-    "https://asia-southeast2-bursakerja-project.cloudfunctions.net/intermoni-login";
+    "https://asia-southeast2-bursakerja-project.cloudfunctions.net/intermoni-insert-magang";
   const tokenvalue = getCookie("Authorization");
   const tokenkey = "Authorization";
   const datainjson = {
