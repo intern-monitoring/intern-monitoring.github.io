@@ -36,4 +36,6 @@ const deleteMagang = (IDHAPUS) => {
   }
 };
 
-window.deleteMagang = deleteMagang;
+document.addEventListener("DOMContentLoaded", function () {
+  deleteMagang();
+});
