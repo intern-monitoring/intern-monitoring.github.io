@@ -1,3 +1,8 @@
+document.getElementById("deleteButton").addEventListener("click", function () {
+  const IDHAPUS = "#IDHAPUS#"; // Anda dapat mengganti nilai IDHAPUS sesuai dengan kebutuhan
+  deleteMagang(IDHAPUS);
+});
+
 const deleteMagang = (IDHAPUS) => {
   try {
     const magangId = IDHAPUS;
@@ -10,20 +15,32 @@ const deleteMagang = (IDHAPUS) => {
       redirect: "follow",
     };
 
-    const response = fetch(target_url, requestOptions);
-
-    if (!response.ok) {
-      throw new Error("Network response was not ok");
-    }
-
-    Swal.fire({
-      icon: "success",
-      title: "Data berhasil dihapus",
-      showConfirmButton: false,
-      timer: 1500,
-    });
-
-    location.reload();
+    fetch(target_url, requestOptions)
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        return response.json();
+      })
+      .then((data) => {
+        Swal.fire({
+          icon: "success",
+          title: "Data berhasil dihapus",
+          showConfirmButton: false,
+          timer: 1500,
+        });
+        location.reload();
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+        Swal.fire({
+          icon: "error",
+          title: "Gagal menghapus data",
+          text: "Terjadi kesalahan saat menghapus data. Silakan coba lagi.",
+          showConfirmButton: true,
+          confirmButtonText: "OK",
+        });
+      });
   } catch (error) {
     console.error("Error:", error);
     Swal.fire({
@@ -35,7 +52,3 @@ const deleteMagang = (IDHAPUS) => {
     });
   }
 };
-
-document.addEventListener("DOMContentLoaded", function () {
-  deleteMagang();
-});
