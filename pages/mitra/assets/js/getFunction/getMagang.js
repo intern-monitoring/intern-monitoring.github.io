@@ -1,4 +1,4 @@
-import { deleteMagang } from "./api.js";
+import { deleteMagang } from "../delete.js";
 import { addInner } from "https://jscroot.github.io/element/croot.js";
 
 export let URLGetMagang =
