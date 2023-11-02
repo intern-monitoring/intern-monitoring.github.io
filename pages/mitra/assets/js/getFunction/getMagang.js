@@ -73,6 +73,5 @@ export function isiRow(value) {
     .replace("#POSISI#", value.posisi)
     .replace("#LOKASI#", value.lokasi)
     .replace("#EXPIRED#", value.expired);
-  console.log(content);
   addInner("magang", content);
 }
