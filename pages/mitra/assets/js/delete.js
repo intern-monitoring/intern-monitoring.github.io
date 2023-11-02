@@ -36,4 +36,4 @@ const deleteMagang = (IDHAPUS) => {
   }
 };
 
-window.DeleteMagang = deleteMagang;
+window.deleteMagang = deleteMagang;
