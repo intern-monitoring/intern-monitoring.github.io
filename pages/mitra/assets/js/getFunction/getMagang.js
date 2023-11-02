@@ -54,7 +54,7 @@ export let tableMagang = `
     <a
       class="inline-flex items-center cursor-pointer text-sm text-red-600 decoration-2 hover:underline font-medium"
       id="del_button" 
-      onclick="deleteData('#IDHAPUS#')"
+      onclick="DeleteMagang('#IDHAPUS#')"
     >
       Delete
     </a>
