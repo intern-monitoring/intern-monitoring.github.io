@@ -1,7 +1,9 @@
 const deleteMagang = (IDHAPUS) => {
   try {
     const magangId = IDHAPUS;
-    const target_url = `https://asia-southeast2-bursakerja-project.cloudfunctions.net/intermoni-delete-magang?id=${magangId}`;
+    const target_url =
+      "https://asia-southeast2-bursakerja-project.cloudfunctions.net/intermoni-delete-magang?id=" +
+      magangId;
 
     const requestOptions = {
       method: "DELETE",
