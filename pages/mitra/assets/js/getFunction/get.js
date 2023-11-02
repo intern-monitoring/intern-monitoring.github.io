@@ -2,9 +2,9 @@ import { URLGetMagang, responseData } from "./getMagang.js";
 import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
 
 function get(target_url, responseFunction) {
-  var myHeaders = new Headers();
+  const myHeaders = new Headers();
   myHeaders.append("Authorization", getCookie("Authorization"));
-  var requestOptions = {
+  const requestOptions = {
     method: "GET",
     headers: myHeaders,
     redirect: "follow",

@@ -1,9 +1,9 @@
 import { addInner } from "https://jscroot.github.io/element/croot.js";
 
-export let URLGetMagang =
+export const URLGetMagang =
   "https://asia-southeast2-bursakerja-project.cloudfunctions.net/intermoni-magang-mitra";
 
-export let tableMagang = `
+export const tableMagang = `
 <tr>
 <td class="h-px w-px whitespace-nowrap">
 <div class="pl-6 pr-6 py-3">
@@ -69,7 +69,7 @@ export function responseData(results) {
 }
 
 export function isiRow(value) {
-  let content = tableMagang
+  const content = tableMagang
     .replace("#POSISI#", value.posisi)
     .replace("#LOKASI#", value.lokasi)
     .replace("#EXPIRED#", value.expired)

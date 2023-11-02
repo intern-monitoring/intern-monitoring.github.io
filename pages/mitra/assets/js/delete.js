@@ -1,11 +1,16 @@
+import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
+
 function deleteMagang(IDHAPUS) {
   var magangId = IDHAPUS;
+  var myHeaders = new Headers();
+  myHeaders.append("Authorization", getCookie("Authorization"));
   var target_url =
     "https://asia-southeast2-bursakerja-project.cloudfunctions.net/intermoni-delete-magang?id=" +
     magangId;
 
   var requestOptions = {
     method: "DELETE",
+    headers: myHeaders,
     redirect: "follow",
   };
 
@@ -23,3 +28,5 @@ function deleteMagang(IDHAPUS) {
     })
     .catch((error) => console.log("Error:", error));
 }
+
+window.deleteMagang = deleteMagang;
