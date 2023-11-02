@@ -7,7 +7,6 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script>
     <script src="../../node_modules/preline/dist/preline.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script type="module" src="./assets/js/delete.js"></script>
     <!-- Trix Editor -->
     <link
       rel="stylesheet"
@@ -23,6 +22,15 @@
     <script
       type="module"
       src="https://cdn.jsdelivr.net/gh/intern-monitoring/jsintermoni@0.1.2/deleteFunction/deleteMagang.js"
+    ></script>
+    <!-- Update Magang -->
+    <script
+      type="module"
+      src="./assets/js/updateFunction/fetchEditMagang.js"
+    ></script>
+    <script
+      type="module"
+      src="./assets/js/updateFunction/updateMagang.js"
     ></script>
 
     <link rel="stylesheet" href="./assets/css/styleMitra.css" />
@@ -1109,7 +1117,7 @@
                                         <div class="sm:col-span-9">
                                           <div class="sm:flex">
                                             <input
-                                              id="af-account-full-name"
+                                              id="posisi"
                                               type="text"
                                               class="py-2 px-3 pr-11 block w-full border-[1px] border-gray-200 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400"
                                               placeholder="Posisi magang"
@@ -1118,29 +1126,6 @@
                                         </div>
                                         <!-- End Col -->
                                         <!-- EndPosisi -->
-
-                                        <!-- Mitra -->
-                                        <div class="sm:col-span-3">
-                                          <label
-                                            for="af-account-full-name"
-                                            class="inline-block text-sm text-gray-800 mt-2.5 dark:text-gray-200"
-                                          >
-                                            Mitra
-                                          </label>
-                                        </div>
-                                        <!-- End Col -->
-                                        <div class="sm:col-span-9">
-                                          <div class="sm:flex">
-                                            <input
-                                              id="af-account-full-name"
-                                              type="text"
-                                              class="py-2 px-3 pr-11 block w-full border-[1px] border-gray-200 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400"
-                                              placeholder="Nama mitra/perusahaan"
-                                            />
-                                          </div>
-                                        </div>
-                                        <!-- End Col -->
-                                        <!-- End Mitra -->
 
                                         <!-- Lokasi -->
                                         <div class="sm:col-span-3">
@@ -1154,7 +1139,7 @@
                                         <!-- End Col -->
                                         <div class="sm:col-span-9">
                                           <textarea
-                                            id="af-account-alamat"
+                                            id="lokasi"
                                             class="py-2 px-3 block w-full border-[1px] border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400"
                                             rows="4"
                                             placeholder="Lokasi perusahaan"
@@ -1175,7 +1160,7 @@
                                         <!-- End Col -->
                                         <div class="sm:col-span-9">
                                           <input
-                                            id="deskripsi"
+                                            id="deskripsimagang"
                                             type="hidden"
                                             name="content"
                                           />
@@ -1198,7 +1183,7 @@
                                         <!-- End Col -->
                                         <div class="sm:col-span-9">
                                           <input
-                                            id="infotambahan"
+                                            id="infotambahanmagang"
                                             type="hidden"
                                             name="content"
                                           />
@@ -1221,7 +1206,7 @@
                                         <!-- End Col -->
                                         <div class="sm:col-span-9">
                                           <input
-                                            id="af-account-expired"
+                                            id="expired"
                                             type="date"
                                             class="py-2 px-3 pr-11 block w-full border-[1px] border-gray-200 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400"
                                             placeholder="Tanggal expired magang"
