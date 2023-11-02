@@ -53,8 +53,7 @@ export let tableMagang = `
   <div>
     <a
       class="inline-flex items-center cursor-pointer text-sm text-red-600 decoration-2 hover:underline font-medium"
-      id="del_button" 
-      onclick="DeleteMagang('#IDHAPUS#')"
+      id="delleteMagang" 
     >
       Delete
     </a>

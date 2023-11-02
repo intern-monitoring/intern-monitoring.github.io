@@ -1,27 +1,39 @@
-function DeleteMagang(IDHAPUS) {
-  var magangId = IDHAPUS;
-  var target_url =
+const deleteMagang = document.getElementById("deleteMagang");
+
+deleteMagang.addEventListener("click", async () => {
+  const magangId = IDHAPUS;
+  const target_url =
     "https://asia-southeast2-bursakerja-project.cloudfunctions.net/intermoni-delete-magang?id=" +
     magangId;
 
-  var requestOptions = {
+  const requestOptions = {
     method: "DELETE",
     redirect: "follow",
   };
 
-  fetch(target_url, requestOptions)
-    .then((response) => response.json())
-    .then(() => {
-      Swal.fire({
-        icon: "success",
-        title: "Data berhasil dihapus",
-        showConfirmButton: false,
-        timer: 1500,
-      }).then(() => {
-        location.reload();
-      });
-    })
-    .catch((error) => console.log("Error:", error));
-}
+  try {
+    const response = fetch(target_url, requestOptions);
 
-window.DeleteMagang = DeleteMagang;
+    if (!response.ok) {
+      throw new Error("Network response was not ok");
+    }
+
+    Swal.fire({
+      icon: "success",
+      title: "Data berhasil dihapus",
+      showConfirmButton: true,
+      confirmButtonText: "OK",
+    });
+
+    location.reload();
+  } catch (error) {
+    console.error("Error:", error);
+    Swal.fire({
+      icon: "error",
+      title: "Gagal menghapus data",
+      text: "Terjadi kesalahan saat menghapus data. Silakan coba lagi.",
+      showConfirmButton: true,
+      confirmButtonText: "OK",
+    });
+  }
+});
