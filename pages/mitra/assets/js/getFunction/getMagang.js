@@ -306,42 +306,4 @@ export function isiRow(value) {
     .replace("#IDHAPUS#", value._id)
     .replace("#IDEDIT#", value._id);
   addInner("magang", content);
-
-  const editButton = document.getElementById("editButton");
-
-  // Add a click event listener to the "Edit" button
-  editButton.addEventListener("click", function () {
-    // Call a function to fetch data based on the selected ID and populate the modal fields
-    fetchDataAndPopulateModal(value._id);
-  });
-}
-
-const API_ENDPOINT =
-  "https://asia-southeast2-bursakerja-project.cloudfunctions.net/intermoni-magang-mitra";
-
-function fetchDataAndPopulateModal(_id) {
-  // Perform a fetch request to get data based on the selected ID
-  fetch(`${API_ENDPOINT}/${_id}`)
-    .then((response) => {
-      if (!response.ok) {
-        throw new Error("Network response was not ok");
-      }
-      return response.json();
-    })
-    .then((data) => {
-      // Populate the modal fields with the retrieved data
-      document.getElementById("posisi").value = data.posisi;
-      document.getElementById("lokasi").value = data.lokasi;
-      document.getElementById("deskripsimagang").value = data.deskripsimagang;
-      document.getElementById("infotambahanmagang").value =
-        data.infotambahanmagang;
-      document.getElementById("tentangmitra").value = data.tentangmitra;
-      document.getElementById("expiredInput").value = data.expired;
-
-      // Display the modal (you need to implement your modal display logic)
-      // modalElement.style.display = "block";
-    })
-    .catch((error) => {
-      console.error("Error:", error);
-    });
 }
