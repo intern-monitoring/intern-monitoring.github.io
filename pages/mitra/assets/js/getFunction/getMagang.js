@@ -52,8 +52,9 @@ export let tableMagang = `
   </div>
   <div>
     <a
-      class="inline-flex items-center text-sm text-red-600 decoration-2 hover:underline font-medium"
-      href="#"
+      class="inline-flex items-center cursor-pointer text-sm text-red-600 decoration-2 hover:underline font-medium"
+      id="del_button" 
+      onclick="deleteData('#IDHAPUS#')"
     >
       Delete
     </a>
@@ -72,6 +73,7 @@ export function isiRow(value) {
   let content = tableMagang
     .replace("#POSISI#", value.posisi)
     .replace("#LOKASI#", value.lokasi)
-    .replace("#EXPIRED#", value.expired);
+    .replace("#EXPIRED#", value.expired)
+    .replace("#IDHAPUS#", value._id);
   addInner("magang", content);
 }
