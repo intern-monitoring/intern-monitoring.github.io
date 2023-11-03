@@ -22,12 +22,12 @@ const putData = (target_url, datajson, responseFunction) => {
 };
 
 const pushData = () => {
-  const posisiValue = getValue("posisi");
-  const lokasiValue = getValue("lokasi");
-  const deskripsiMagangValue = getValue("deskripsimagang");
-  const infoTambahanMagangValue = getValue("infotambahanmagang");
-  const tentangMitraValue = getValue("tentangmitra");
-  const expiredValue = getValue("expired");
+  posisiValue = getValue("posisi");
+  lokasiValue = getValue("lokasi");
+  deskripsiMagangValue = getValue("deskripsimagang");
+  infoTambahanMagangValue = getValue("infotambahanmagang");
+  tentangMitraValue = getValue("tentangmitra");
+  expiredValue = getValue("expired");
 
   // Create the updated data object
   const data = {
@@ -41,8 +41,4 @@ const pushData = () => {
   putData(urlPUT, data, AmbilResponse);
 };
 
-// Menambahkan event listener pada tombol "Save"
-document.getElementById("updateButton").addEventListener("click", function () {
-  // Memanggil fungsi postData dengan callback AmbilResponse
-  pushData(urlPUT, data, AmbilResponse);
-});
+onClick("updateButton", pushData);
