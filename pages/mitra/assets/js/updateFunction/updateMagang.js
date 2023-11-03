@@ -24,12 +24,12 @@ const putData = (target_url, datajson, responseFunction) => {
 };
 
 const pushData = () => {
-  posisiValue = getValue("posisi");
-  lokasiValue = getValue("lokasi");
-  deskripsiMagangValue = getValue("deskripsimagang");
-  infoTambahanMagangValue = getValue("infotambahanmagang");
-  tentangMitraValue = getValue("tentangmitra");
-  expiredValue = getValue("expired");
+  const posisiValue = getValue("posisi");
+  const lokasiValue = getValue("lokasi");
+  const deskripsiMagangValue = getValue("deskripsimagang");
+  const infoTambahanMagangValue = getValue("infotambahanmagang");
+  const tentangMitraValue = getValue("tentangmitra");
+  const expiredValue = getValue("expired");
 
   // Create the updated data object
   const data = {
