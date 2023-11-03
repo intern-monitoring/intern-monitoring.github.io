@@ -1,6 +1,7 @@
 import { getValue } from "https://jscroot.github.io/element/croot.js";
 import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
 import { urlPUT, AmbilResponse } from "./urlPutMagang";
+console.log("diluar");
 
 const putData = (target_url, datajson, responseFunction) => {
   const myHeaders = new Headers();
@@ -45,8 +46,6 @@ const pushData = () => {
 const updateButton = document.getElementById("updateButton");
 
 updateButton.addEventListener("click", () => {
-  pushData(); // Call pushData function when the button is clicked
   console.log("button aktif");
+  pushData(); // Call pushData function when the button is clicked
 });
-
-console.log("diluar");
