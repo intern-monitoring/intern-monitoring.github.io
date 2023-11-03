@@ -48,3 +48,5 @@ updateButton.addEventListener("click", () => {
   pushData(); // Call pushData function when the button is clicked
   console.log("button aktif");
 });
+
+console.log("diluar");
