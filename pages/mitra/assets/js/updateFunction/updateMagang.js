@@ -1,7 +1,8 @@
 import { getValue } from "https://jscroot.github.io/element/croot.js";
 import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
-import { urlPUT, AmbilResponse } from "./urlPutMagang";
-console.log("diluar");
+import { urlPUT, AmbilResponse } from "./urlPutMagang.js";
+
+console.log("hadeer");
 
 const putData = (target_url, datajson, responseFunction) => {
   const myHeaders = new Headers();
