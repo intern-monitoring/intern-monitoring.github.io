@@ -42,4 +42,5 @@ const pushData = () => {
   putData(urlPUT, data, AmbilResponse);
 };
 
-document.getElementById("updateButton").addEventListener("click", pushData);
+const updateButton = document.getElementById("updateButton");
+updateButton.addEventListener("click", pushData);
