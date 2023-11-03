@@ -73,7 +73,7 @@ export function isiRow(value) {
     .replace("#POSISI#", value.posisi)
     .replace("#LOKASI#", value.lokasi)
     .replace("#EXPIRED#", value.expired)
-    .replace("#IDHAPUS#", value._id)
-    .replace("#IDEDIT#", value._id);
+    .replace("#IDEDIT#", value._id)
+    .replace("#IDHAPUS#", value._id);
   addInner("magang", content);
 }
