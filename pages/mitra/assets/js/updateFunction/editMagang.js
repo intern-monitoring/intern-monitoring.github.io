@@ -1,4 +1,4 @@
-function isiData(results) {
+export const isiData = (results) => {
   const inputMapping = [
     { id: "posisi", path: "posisi" },
     { id: "lokasi", path: "lokasi" },
@@ -13,13 +13,12 @@ function isiData(results) {
     const value = getNestedValue(results, path, index, property);
     inputElement.value = value;
   });
-}
+};
 
-function getNestedValue(obj, path, index, property) {
+const getNestedValue = (obj, path, index, property) => {
   const value = path
     .split(".")
     .reduce((value, key) => (value && value[key] ? value[key] : ""), obj);
-  // console.log(`Value at path ${path}:`, value);
 
   if (
     Array.isArray(value) &&
@@ -30,4 +29,4 @@ function getNestedValue(obj, path, index, property) {
   }
 
   return value;
-}
+};
