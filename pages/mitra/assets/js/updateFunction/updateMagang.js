@@ -40,3 +40,5 @@ const pushData = () => {
   };
   putData(urlPUT, data, AmbilResponse);
 };
+
+window.pushData = pushData;
