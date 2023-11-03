@@ -24,6 +24,16 @@
       src="https://cdn.jsdelivr.net/gh/intern-monitoring/jsintermoni@0.1.2/deleteFunction/deleteMagang.js"
     ></script>
 
+    <!-- Update Magang -->
+    <script
+      type="module"
+      src="./assets/js/updateFunction/fetchEditMagang.js"
+    ></script>
+    <script
+      type="module"
+      src="./assets/js/updateFunction/updateMagang.js"
+    ></script>
+
     <link rel="stylesheet" href="./assets/css/styleMitra.css" />
   </head>
   <body>
@@ -711,15 +721,6 @@
       type="module"
       src="https://cdn.jsdelivr.net/gh/intern-monitoring/jsintermoni@0.1.0/postFunction/magang/postMagang.js"
     ></script>
-    <!-- Update Magang -->
-    <script
-      type="module"
-      src="./assets/js/updateFunction/fetchEditMagang.js"
-    ></script>
-    <script
-      type="module"
-      src="./assets/js/updateFunction/updateMagang.js"
-    ></script>
 
     <!-- autentikasi function -->
     <!-- <script
@@ -730,6 +731,14 @@
     <script src="./assets/js/hideIcon.js"></script>
     <script>
       localStorage.setItem("previousPageURL", window.location.href);
+    </script>
+
+    <script>
+      const updateButton = document.getElementById("updateButton");
+
+      updateButton.addEventListener("click", () => {
+        console.log("button dalam html");
+      });
     </script>
   </body>
 
