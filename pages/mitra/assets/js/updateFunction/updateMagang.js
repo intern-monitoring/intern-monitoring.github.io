@@ -43,4 +43,7 @@ const pushData = () => {
 };
 
 const updateButton = document.getElementById("updateButton");
-updateButton.addEventListener("click", pushData);
+
+updateButton.addEventListener("click", () => {
+  console.log("update button");
+});
