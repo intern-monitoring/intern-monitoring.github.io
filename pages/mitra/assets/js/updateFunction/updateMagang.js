@@ -24,7 +24,6 @@ const putData = (target_url, datajson, responseFunction) => {
 };
 
 const pushData = () => {
-  console.log("update gas");
   posisiValue = getValue("posisi");
   lokasiValue = getValue("lokasi");
   deskripsiMagangValue = getValue("deskripsimagang");
