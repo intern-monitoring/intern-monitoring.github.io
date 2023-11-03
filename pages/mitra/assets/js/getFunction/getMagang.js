@@ -44,7 +44,7 @@ export const tableMagang = `
   </div>
   <div>
     <a
-      id="editButton"
+    href="#IDEDIT#"
       data-ripple-light="true"
       data-dialog-target="dialog-edit"
       class="inline-flex items-center px-2 cursor-pointer text-sm text-green-600 decoration-2 hover:underline font-medium"
