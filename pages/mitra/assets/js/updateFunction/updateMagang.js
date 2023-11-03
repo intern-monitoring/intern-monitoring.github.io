@@ -1,4 +1,4 @@
-import { onClick, getValue } from "https://jscroot.github.io/element/croot.js";
+import { getValue } from "https://jscroot.github.io/element/croot.js";
 import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
 import { urlPUT, AmbilResponse } from "./urlPutMagang";
 
@@ -42,4 +42,4 @@ const pushData = () => {
   putData(urlPUT, data, AmbilResponse);
 };
 
-onClick("updateButton", pushData);
+document.getElementById("updateButton").addEventListener("click", pushData);
