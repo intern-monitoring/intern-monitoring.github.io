@@ -40,5 +40,3 @@ const pushData = () => {
   };
   putData(urlPUT, data, AmbilResponse);
 };
-
-onClick("updateButton", pushData);
