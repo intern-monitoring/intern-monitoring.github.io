@@ -5,17 +5,13 @@ export const URLGetMagang =
 
 export const cardMagang = `
 <div
-class="flex flex-col justify-end rounded-xl p-4 md:p-6 bg-white border border-gray-200 shadow-md"
+class="flex flex-col justify-start rounded-xl p-4 md:p-6 bg-white border border-gray-200 shadow-md"
 >
 <div class="flex items-center gap-x-4">
   <div class="grow">
-    <h3 class="text-xl font-semibold text-gray-800">
-      #POSISI#
-    </h3>
+    <h3 class="text-xl font-semibold text-gray-800">#POSISI#</h3>
     <div class="flex justify-between items-center mt-5">
-      <h3 class="text-sm font-semibold text-gray-800">
-        #MITRA#
-      </h3>
+      <h3 class="text-sm font-semibold text-gray-800">#MITRA#</h3>
       <p
         class="text-sm inline-flex justify-center items-center gap-x-1 text-center font-semibold text-gray-800"
       >
@@ -41,11 +37,11 @@ class="flex flex-col justify-end rounded-xl p-4 md:p-6 bg-white border border-gr
   </div>
 </div>
 
-<p class="text-gray-500 text-sm">
-  #TENTANGMITRA#
-</p>
+<div class="h-36 overflow-x-auto">
+  <p class="text-gray-500 text-sm">#TENTANGMITRA#</p>
+</div>
 <h3 class="flex font-semibold text-gray-800 text-sm mt-8">
-Expired : #EXPIRED#
+  Expired : #EXPIRED#
 </h3>
 
 <div class="flex justify-end pt-2">
