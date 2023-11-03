@@ -16,9 +16,3 @@ export const AmbilResponse = (result) => {
     window.location.reload();
   });
 };
-
-// Menambahkan event listener pada tombol "Save"
-document.getElementById("updateButton").addEventListener("click", function () {
-  // Memanggil fungsi postData dengan callback AmbilResponse
-  postData(urlPOST, data, AmbilResponse);
-});
