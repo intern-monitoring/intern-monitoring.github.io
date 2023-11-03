@@ -497,211 +497,205 @@
     <div class="w-full bg-gray-50 lg:pl-64">
       <!-- Card Section -->
       <div class="px-4 py-10 sm:px-6 lg:px-8 mx-auto">
-        <!-- Card -->
-        <div class="bg-white rounded-xl shadow p-4 sm:p-7 dark:bg-slate-900">
-          <div class="mb-8">
-            <h2 class="text-xl font-bold text-gray-800 dark:text-gray-200">
-              Edit Data Magang
-            </h2>
-          </div>
-
-          <!-- Grid -->
-          <div class="grid sm:grid-cols-12 gap-2 sm:gap-6">
-            <div class="sm:col-span-3">
-              <label class="inline-block text-sm text-gray-800 mt-2.5">
-                Profile photo
-              </label>
+        <!-- Grid -->
+        <div class="relative mx-auto w-full">
+          <!-- Card -->
+          <div class="bg-white rounded-xl border shadow-md p-4 sm:p-7">
+            <div class="mb-8">
+              <h2 class="text-xl font-bold text-gray-800 mb-2">Profile</h2>
+              <p class="text-sm text-gray-600">Lengkapi detail perusahaan</p>
             </div>
-            <!-- End Col -->
 
-            <div class="sm:col-span-9">
-              <div class="flex items-center gap-5">
-                <img
-                  class="inline-block h-16 w-16 rounded-full ring-2 ring-white"
-                  src="../../images/netflix_logo.jpg"
-                  alt="Image Description"
-                />
-                <div class="flex gap-x-2">
-                  <div>
-                    <button
-                      type="button"
-                      class="py-2 px-3 inline-flex justify-center items-center gap-2 rounded-md border font-medium bg-white text-gray-700 shadow-sm align-middle text-sm"
-                    >
-                      <svg
-                        class="w-3 h-3"
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="16"
-                        height="16"
-                        fill="currentColor"
-                        viewBox="0 0 16 16"
+            <!-- Grid -->
+            <div class="grid sm:grid-cols-12 gap-2 sm:gap-6">
+              <div class="sm:col-span-3">
+                <label class="inline-block text-sm text-gray-800 mt-2.5">
+                  Profile photo
+                </label>
+              </div>
+              <!-- End Col -->
+
+              <div class="sm:col-span-9">
+                <div class="flex items-center gap-5">
+                  <img
+                    class="inline-block h-16 w-16 rounded-full ring-2 ring-white"
+                    src="../../images/netflix_logo.jpg"
+                    alt="Image Description"
+                  />
+                  <div class="flex gap-x-2">
+                    <div>
+                      <button
+                        type="button"
+                        class="py-2 px-3 inline-flex justify-center items-center gap-2 rounded-md border font-medium bg-white text-gray-700 shadow-sm align-middle text-sm"
                       >
-                        <path
-                          d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"
-                        />
-                        <path
-                          d="M7.646 1.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 2.707V11.5a.5.5 0 0 1-1 0V2.707L5.354 4.854a.5.5 0 1 1-.708-.708l3-3z"
-                        />
-                      </svg>
-                      Upload photo
-                    </button>
+                        <svg
+                          class="w-3 h-3"
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"
+                          />
+                          <path
+                            d="M7.646 1.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 2.707V11.5a.5.5 0 0 1-1 0V2.707L5.354 4.854a.5.5 0 1 1-.708-.708l3-3z"
+                          />
+                        </svg>
+                        Upload photo
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <!-- End Col -->
-            <!-- Posisi -->
-            <div class="sm:col-span-3">
-              <label
-                for="af-account-full-name"
-                class="inline-block text-sm text-gray-800 mt-2.5 dark:text-gray-200"
-              >
-                Posisi
-              </label>
-            </div>
-            <!-- End Col -->
-            <div class="sm:col-span-9">
-              <div class="sm:flex">
+              <!-- End Col -->
+
+              <!-- Posisi -->
+              <div class="sm:col-span-3">
+                <label
+                  for="af-account-full-name"
+                  class="inline-block text-sm text-gray-800 mt-2.5 dark:text-gray-200"
+                >
+                  Posisi
+                </label>
+              </div>
+              <!-- End Col -->
+              <div class="sm:col-span-9">
+                <div class="sm:flex">
+                  <input
+                    id="posisi"
+                    type="text"
+                    class="py-2 px-3 pr-11 block w-full border-[1px] border-gray-200 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500"
+                    placeholder="Posisi magang"
+                  />
+                </div>
+              </div>
+              <!-- End Col -->
+              <!-- EndPosisi -->
+
+              <!-- Lokasi -->
+              <div class="sm:col-span-3">
+                <label
+                  for="af-account-alamat"
+                  class="inline-block text-sm text-gray-800 mt-2.5 dark:text-gray-200"
+                >
+                  Lokasi
+                </label>
+              </div>
+              <!-- End Col -->
+              <div class="sm:col-span-9">
+                <textarea
+                  id="lokasi"
+                  class="py-2 px-3 block w-full border-[1px] border-gray-200 rounded-lg text-sm"
+                  rows="4"
+                  placeholder="Lokasi perusahaan"
+                ></textarea>
+              </div>
+              <!-- End Col -->
+              <!-- End Lokasi -->
+
+              <!-- Deskripsi Magang -->
+              <div class="sm:col-span-3">
+                <label
+                  for="af-account-deskripsi"
+                  class="inline-block text-sm text-gray-800 mt-2.5 dark:text-gray-200"
+                >
+                  Deskripsi Magang
+                </label>
+              </div>
+              <!-- End Col -->
+              <div class="sm:col-span-9">
+                <input id="deskripsimagang" type="hidden" name="content" />
+                <trix-editor
+                  input="deskripsimagang"
+                  class="py-2 px-3 pr-11 block w-full border-[1px] border-gray-200 shadow-sm text-sm rounded-lg focus:border-black focus:border-2 focus:ring-black"
+                ></trix-editor>
+              </div>
+              <!-- End Col -->
+              <!-- End Deskripsi Magang -->
+
+              <!-- Info Tambahan -->
+              <div class="sm:col-span-3">
+                <label
+                  for="af-account-info"
+                  class="inline-block text-sm text-gray-800 mt-2.5 dark:text-gray-200"
+                >
+                  Info Tambahan
+                </label>
+              </div>
+              <!-- End Col -->
+              <div class="sm:col-span-9">
+                <input id="infotambahanmagang" type="hidden" name="content" />
+                <trix-editor
+                  input="infotambahanmagang"
+                  class="py-2 px-3 pr-11 block w-full border-[1px] border-gray-200 shadow-sm text-sm rounded-lg focus:border-black focus:border-2 focus:ring-black"
+                ></trix-editor>
+              </div>
+              <!-- End Col -->
+              <!-- End Info Tambahan -->
+
+              <!-- Tentang Mitra -->
+              <div class="sm:col-span-3">
+                <label
+                  for="af-account-tentang"
+                  class="inline-block text-sm text-gray-800 mt-2.5 dark:text-gray-200"
+                >
+                  Tentang Mitra
+                </label>
+              </div>
+              <!-- End Col -->
+              <div class="sm:col-span-9">
+                <input id="tentangmitra" type="hidden" name="content" />
+                <trix-editor
+                  input="tentangmitra"
+                  class="py-2 px-3 pr-11 block w-full border-[1px] border-gray-200 shadow-sm text-sm rounded-lg focus:border-black focus:border-2 focus:ring-black"
+                ></trix-editor>
+              </div>
+              <!-- End Col -->
+              <!-- End Tentang Mitra -->
+
+              <!-- Expired -->
+              <div class="sm:col-span-3">
+                <label
+                  for="af-account-expired"
+                  class="inline-block text-sm text-gray-800 mt-2.5 dark:text-gray-200"
+                >
+                  Expired
+                </label>
+              </div>
+              <!-- End Col -->
+
+              <div class="sm:col-span-9">
                 <input
-                  id="posisi"
-                  type="text"
+                  id="expired"
+                  type="date"
                   class="py-2 px-3 pr-11 block w-full border-[1px] border-gray-200 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400"
-                  placeholder="Posisi magang"
+                  placeholder="Tanggal expired magang"
                 />
               </div>
+              <!-- End Col -->
+              <!-- End Expired -->
             </div>
-            <!-- End Col -->
-            <!-- EndPosisi -->
-
-            <!-- Lokasi -->
-            <div class="sm:col-span-3">
-              <label
-                for="af-account-alamat"
-                class="inline-block text-sm text-gray-800 mt-2.5 dark:text-gray-200"
+            <!-- End Grid -->
+            <div class="mt-5 flex justify-end gap-x-2">
+              <a
+                href="daftarMagang.html"
+                class="py-2 px-3 inline-flex cursor-pointer justify-center items-center gap-2 rounded-md border font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-600 transition-all text-sm dark:bg-slate-900 dark:hover:bg-slate-800 dark:border-gray-700 dark:text-gray-400 dark:hover:text-white dark:focus:ring-offset-gray-800"
               >
-                Lokasi
-              </label>
-            </div>
-            <!-- End Col -->
-            <div class="sm:col-span-9">
-              <textarea
-                id="lokasi"
-                class="py-2 px-3 block w-full border-[1px] border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400"
-                rows="4"
-                placeholder="Lokasi perusahaan"
-              ></textarea>
-            </div>
-            <!-- End Col -->
-            <!-- End Lokasi -->
-
-            <!-- Deskripsi Magang -->
-            <div class="sm:col-span-3">
-              <label
-                for="af-account-deskripsi"
-                class="inline-block text-sm text-gray-800 mt-2.5 dark:text-gray-200"
+                Cancel
+              </a>
+              <a
+                id="updateButton"
+                class="inline-flex justify-center items-center cursor-pointer gap-x-3 text-center bg-gradient-to-tl from-blue-600 to-violet-600 shadow-lg shadow-transparent hover:shadow-blue-700/50 border border-transparent text-white text-sm font-medium rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 focus:ring-offset-white py-2 px-5"
               >
-                Deskripsi Magang
-              </label>
+                Save
+              </a>
             </div>
-            <!-- End Col -->
-            <div class="sm:col-span-9">
-              <input
-                id="deskripsimagang"
-                type="hidden"
-                name="content"
-                class="trix"
-              />
-              <trix-editor input="deskripsimagang" class="trix"></trix-editor>
-            </div>
-            <!-- End Col -->
-            <!-- End Deskripsi Magang -->
-
-            <!-- Info Tambahan -->
-            <div class="sm:col-span-3">
-              <label
-                for="af-account-info"
-                class="inline-block text-sm text-gray-800 mt-2.5 dark:text-gray-200"
-              >
-                Info Tambahan
-              </label>
-            </div>
-            <!-- End Col -->
-            <div class="sm:col-span-9">
-              <input
-                id="infotambahanmagang"
-                type="hidden"
-                name="content"
-                class="trix"
-              />
-              <trix-editor
-                input="infotambahanmagang"
-                class="trix"
-              ></trix-editor>
-            </div>
-            <!-- End Col -->
-            <!-- End Info Tambahan -->
-
-            <!-- Tentang Mitra -->
-            <div class="sm:col-span-3">
-              <label
-                for="af-account-tentang"
-                class="inline-block text-sm text-gray-800 mt-2.5 dark:text-gray-200"
-              >
-                Tentang Mitra
-              </label>
-            </div>
-            <!-- End Col -->
-            <div class="sm:col-span-9">
-              <input
-                id="tentangmitra"
-                type="hidden"
-                name="content"
-                class="trix"
-              />
-              <trix-editor input="tentangmitra" class="trix"></trix-editor>
-            </div>
-            <!-- End Col -->
-            <!-- End Tentang Mitra -->
-
-            <!-- Expired -->
-            <div class="sm:col-span-3">
-              <label
-                for="af-account-expired"
-                class="inline-block text-sm text-gray-800 mt-2.5 dark:text-gray-200"
-              >
-                Expired
-              </label>
-            </div>
-            <!-- End Col -->
-
-            <div class="sm:col-span-9">
-              <input
-                id="expired"
-                type="date"
-                class="py-2 px-3 pr-11 block w-full border-[1px] border-gray-200 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400"
-                placeholder="Tanggal expired magang"
-              />
-            </div>
-            <!-- End Col -->
           </div>
-          <!-- End Expired -->
-          <!-- End Grid -->
-
-          <div class="mt-5 flex justify-end gap-x-2">
-            <a
-              href="daftarMagang.html"
-              class="py-2 px-3 inline-flex cursor-pointer justify-center items-center gap-2 rounded-md border font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-600 transition-all text-sm dark:bg-slate-900 dark:hover:bg-slate-800 dark:border-gray-700 dark:text-gray-400 dark:hover:text-white dark:focus:ring-offset-gray-800"
-            >
-              Cancel
-            </a>
-            <a
-              id="updateButton"
-              class="py-2 px-3 inline-flex cursor-pointer justify-center items-center gap-2 rounded-md border border-transparent font-semibold bg-blue-500 text-white hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all text-sm dark:focus:ring-offset-gray-800"
-            >
-              Save changes
-            </a>
-          </div>
+          <!-- End Card -->
         </div>
-        <!-- End Card -->
+        <!-- End Grid -->
       </div>
       <!-- End Card Section -->
     </div>
