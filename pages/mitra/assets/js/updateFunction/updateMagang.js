@@ -41,4 +41,8 @@ const pushData = () => {
   putData(urlPUT, data, AmbilResponse);
 };
 
-onClick("updateButton", pushData);
+// Menambahkan event listener pada tombol "Save"
+document.getElementById("updateButton").addEventListener("click", function () {
+  // Memanggil fungsi postData dengan callback AmbilResponse
+  pushData(urlPUT, data, AmbilResponse);
+});
