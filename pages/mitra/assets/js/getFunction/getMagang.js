@@ -1,7 +1,7 @@
 import { addInner } from "https://jscroot.github.io/element/croot.js";
 
 export const URLGetMagang =
-  "https://asia-southeast2-bursakerja-project.cloudfunctions.net/intermoni-magang-mitra";
+  "https://asia-southeast2-bursakerja-project.cloudfunctions.net/intermoni-magang";
 
 export const tableMagang = `
 <tr>

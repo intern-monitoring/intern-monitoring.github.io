@@ -181,7 +181,7 @@
                 </div>
                 <div class="mt-2 py-2 first:pt-0 last:pb-0">
                   <a
-                    class="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500"
+                    class="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 cursor-pointer"
                     href="profileMahasiswa.html"
                   >
                     <svg
@@ -324,7 +324,7 @@
             class="text-sm font-semibold text-gray-800 truncate"
             aria-current="page"
           >
-            Cari Internship
+            Dashboard
           </li>
         </ol>
         <!-- End Breadcrumb -->
@@ -380,7 +380,7 @@
           </li>
           <li>
             <a
-              class="flex items-center gap-x-3.5 py-2 px-2.5 bg-gradient-to-tl from-blue-600 to-violet-600 text-white font-semibold rounded-md hover:bg-gray-100"
+              class="flex items-center gap-x-3.5 py-2 px-2.5 bg-white text-sm font-semibold text-slate-700 rounded-md hover:bg-gray-100"
               href="cariInternship.html"
             >
               <svg
@@ -417,7 +417,7 @@
                   d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"
                 />
               </svg>
-              Coming Soon
+              Coming soon
 
               <svg
                 class="hs-accordion-active:block ml-auto hidden w-3 h-3 text-gray-600 group-hover:text-gray-500"
@@ -491,101 +491,222 @@
     <!-- End Sidebar -->
 
     <!-- Content Section -->
-    <div class="w-full bg-gray-50 pt-5 px-4 sm:px-6 md:px-8 lg:pl-72">
-      <!-- Search field Section -->
-      <div class="w-full">
-        <div
-          class="relative h-52 bg-cover rounded-xl shadow-md"
-          style="
-            background-image: url('https://images.unsplash.com/photo-1655635643532-fa9ba2648cbe?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=2232&amp;q=80');
-          "
-        >
-          <span
-            class="absolute rounded-lg top-0 left-0 w-full h-full bg-center bg-cover bg-gradient-to-tl from-gray-900 to-slate-800 opacity-80"
-          ></span>
-        </div>
-      </div>
-
-      <div class="relative -mt-28 w-full px-5 lg:px-10">
-        <div
-          class="p-7 justify-center items-center bg-white shadow-md rounded-xl"
-        >
-          <div class="grid grid-cols-1 gap-5 lg:grid-cols-3">
-            <div>
-              <div class="relative h-11 w-full min-w-[200px]">
-                <input
-                  id="posisi"
-                  class="peer h-full w-full rounded-lg border border-gray-400 border-t-transparent bg-transparent px-3 py-3 font-sans text-sm font-normal text-gray-500 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-gray-400 placeholder-shown:border-t-gray-400 focus:border-2 focus:border-gray-900 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-gray-50"
-                  placeholder=" "
-                />
-                <label
-                  class="before:content[' '] after:content[' '] pointer-events-none absolute left-0 -top-1.5 flex h-full w-full select-none text-[11px] font-normal leading-tight text-gray-900 transition-all before:pointer-events-none before:mt-[6.5px] before:mr-1 before:box-border before:block before:h-1.5 before:w-2.5 before:rounded-tl-md before:border-t before:border-l before:border-gray-400 before:transition-all after:pointer-events-none after:mt-[6.5px] after:ml-1 after:box-border after:block after:h-1.5 after:w-2.5 after:flex-grow after:rounded-tr-md after:border-t after:border-r after:border-gray-400 after:transition-all peer-placeholder-shown:text-sm peer-placeholder-shown:leading-[4.1] peer-placeholder-shown:text-gray-400 peer-placeholder-shown:before:border-transparent peer-placeholder-shown:after:border-transparent peer-focus:text-[11px] peer-focus:leading-tight peer-focus:text-gray-900 peer-focus:before:border-t-2 peer-focus:before:border-l-2 peer-focus:before:border-gray-900 peer-focus:after:border-t-2 peer-focus:after:border-r-2 peer-focus:after:border-gray-900 peer-disabled:text-transparent peer-disabled:before:border-transparent peer-disabled:after:border-transparent peer-disabled:peer-placeholder-shown:text-gray-500"
-                >
-                  Posisi/Jabatan
-                </label>
-              </div>
-            </div>
-            <div>
-              <div class="relative h-11 w-full min-w-[200px]">
-                <input
-                  id="nama"
-                  class="peer h-full w-full rounded-lg border border-gray-400 border-t-transparent bg-transparent px-3 py-3 font-sans text-sm font-normal text-gray-500 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-gray-400 placeholder-shown:border-t-gray-400 focus:border-2 focus:border-gray-900 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-gray-50"
-                  placeholder=" "
-                />
-                <label
-                  class="before:content[' '] after:content[' '] pointer-events-none absolute left-0 -top-1.5 flex h-full w-full select-none text-[11px] font-normal leading-tight text-gray-900 transition-all before:pointer-events-none before:mt-[6.5px] before:mr-1 before:box-border before:block before:h-1.5 before:w-2.5 before:rounded-tl-md before:border-t before:border-l before:border-gray-400 before:transition-all after:pointer-events-none after:mt-[6.5px] after:ml-1 after:box-border after:block after:h-1.5 after:w-2.5 after:flex-grow after:rounded-tr-md after:border-t after:border-r after:border-gray-400 after:transition-all peer-placeholder-shown:text-sm peer-placeholder-shown:leading-[4.1] peer-placeholder-shown:text-gray-400 peer-placeholder-shown:before:border-transparent peer-placeholder-shown:after:border-transparent peer-focus:text-[11px] peer-focus:leading-tight peer-focus:text-gray-900 peer-focus:before:border-t-2 peer-focus:before:border-l-2 peer-focus:before:border-gray-900 peer-focus:after:border-t-2 peer-focus:after:border-r-2 peer-focus:after:border-gray-900 peer-disabled:text-transparent peer-disabled:before:border-transparent peer-disabled:after:border-transparent peer-disabled:peer-placeholder-shown:text-gray-500"
-                >
-                  Nama Perusahaan
-                </label>
-              </div>
-            </div>
-            <div>
-              <div class="relative h-11 w-full min-w-[200px]">
-                <input
-                  id="lokasi"
-                  class="peer h-full w-full rounded-lg border border-gray-400 border-t-transparent bg-transparent px-3 py-3 font-sans text-sm font- text-gray-500 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-gray-400 placeholder-shown:border-t-gray-400 focus:border-2 focus:border-gray-900 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-gray-50"
-                  placeholder=" "
-                />
-                <label
-                  class="before:content[' '] after:content[' '] pointer-events-none absolute left-0 -top-1.5 flex h-full w-full select-none text-[11px] font-normal leading-tight text-gray-900 transition-all before:pointer-events-none before:mt-[6.5px] before:mr-1 before:box-border before:block before:h-1.5 before:w-2.5 before:rounded-tl-md before:border-t before:border-l before:border-gray-400 before:transition-all after:pointer-events-none after:mt-[6.5px] after:ml-1 after:box-border after:block after:h-1.5 after:w-2.5 after:flex-grow after:rounded-tr-md after:border-t after:border-r after:border-gray-400 after:transition-all peer-placeholder-shown:text-sm peer-placeholder-shown:leading-[4.1] peer-placeholder-shown:text-gray-400 peer-placeholder-shown:before:border-transparent peer-placeholder-shown:after:border-transparent peer-focus:text-[11px] peer-focus:leading-tight peer-focus:text-gray-900 peer-focus:before:border-t-2 peer-focus:before:border-l-2 peer-focus:before:border-gray-900 peer-focus:after:border-t-2 peer-focus:after:border-r-2 peer-focus:after:border-gray-900 peer-disabled:text-transparent peer-disabled:before:border-transparent peer-disabled:after:border-transparent peer-disabled:peer-placeholder-shown:text-gray-500"
-                >
-                  Lokasi Perusahaan
-                </label>
-              </div>
-            </div>
-          </div>
-          <div class="grid grid-cols-1 pt-5">
-            <button
-              id="searchButton"
-              class="inline-flex justify-center items-center gap-x-3 text-center bg-gradient-to-tl from-blue-600 to-violet-600 shadow-lg shadow-transparent hover:shadow-blue-700/50 border border-transparent text-white text-sm font-medium rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 focus:ring-offset-white py-3 px-6"
-            >
-              Search
-            </button>
-          </div>
-        </div>
-      </div>
-      <!-- End Search field Section -->
-
-      <!-- Internship Section -->
-      <div class="w-full py-10 lg:py-16">
-        <!-- Title -->
-        <div class="flex items-start text-start mb-10 lg:mb-10">
-          <h2
-            class="text-gray-800 text-lg font-bold md:text-xl md:leading-tight"
-          >
-            Daftar Lowongan Internship
-          </h2>
-        </div>
-        <!-- End Title -->
-
+    <div class="w-full bg-gray-50 lg:pl-64">
+      <!-- Card Section -->
+      <div class="px-4 py-10 sm:px-6 lg:px-8 mx-auto">
         <!-- Grid -->
-        <div
-          id="magang"
-          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"
-        ></div>
+        <div class="relative mx-auto w-full">
+          <!-- Card -->
+          <div class="bg-white rounded-xl border shadow-md p-4 sm:p-7">
+            <div class="mb-8">
+              <h2 class="text-xl font-bold text-gray-800 mb-2">Edit Profile</h2>
+              <p class="text-sm text-gray-600">
+                Lengkapi data mahasiswa dengan benar
+              </p>
+            </div>
+
+            <!-- Grid -->
+            <div class="grid sm:grid-cols-12 gap-2 sm:gap-6">
+              <div class="sm:col-span-3">
+                <label class="inline-block text-sm text-gray-800 mt-2.5">
+                  Profile photo
+                </label>
+              </div>
+              <!-- End Col -->
+
+              <div class="sm:col-span-9">
+                <div class="flex items-center gap-5">
+                  <img
+                    class="inline-block h-16 w-16 rounded-full ring-2 ring-white"
+                    src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80"
+                    alt="Image Description"
+                  />
+                  <div class="flex gap-x-2">
+                    <div>
+                      <button
+                        type="button"
+                        class="py-2 px-3 inline-flex justify-center items-center gap-2 rounded-md border font-medium bg-white text-gray-700 shadow-sm align-middle text-sm"
+                      >
+                        <svg
+                          class="w-3 h-3"
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"
+                          />
+                          <path
+                            d="M7.646 1.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 2.707V11.5a.5.5 0 0 1-1 0V2.707L5.354 4.854a.5.5 0 1 1-.708-.708l3-3z"
+                          />
+                        </svg>
+                        Edit Photo
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- End Col -->
+
+              <!-- Nama Lengkap -->
+              <div class="sm:col-span-3">
+                <label
+                  for="af-account-full-name"
+                  class="inline-block text-sm text-gray-800 mt-2.5"
+                >
+                  Nama Lengkap
+                </label>
+              </div>
+              <!-- End Col -->
+              <div class="sm:col-span-9">
+                <div class="sm:flex">
+                  <input
+                    id="namalengkap"
+                    type="text"
+                    class="py-2 px-3 pr-11 block w-full border-[1px] border-gray-200 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500"
+                    placeholder="Nama Lengkap"
+                  />
+                </div>
+              </div>
+              <!-- End Col -->
+              <!-- End Nama Lengkap -->
+
+              <!-- Tanggal Lahir -->
+              <div class="sm:col-span-3">
+                <label
+                  for="af-account-tanggal-lahir"
+                  class="inline-block text-sm text-gray-800 mt-2.5"
+                >
+                  Tanggal Lahir
+                </label>
+              </div>
+              <!-- End Col -->
+              <div class="sm:col-span-9">
+                <input
+                  id="tanggallahir"
+                  type="date"
+                  class="py-2 px-3 block w-full border-[1px] border-gray-200 rounded-lg text-sm"
+                />
+              </div>
+              <!-- End Col -->
+              <!-- End Tanggal Lahir -->
+
+              <!-- Jenis Kelamin -->
+              <div class="sm:col-span-3">
+                <label
+                  for="af-account-jenis-kelamin"
+                  class="inline-block text-sm text-gray-800 mt-2.5"
+                >
+                  Jenis Kelamin
+                </label>
+              </div>
+              <!-- End Col -->
+              <div class="sm:col-span-9">
+                <div class="sm:flex">
+                  <input
+                    id="jeniskelamin"
+                    type="text"
+                    class="py-2 px-3 pr-11 block w-full border-[1px] border-gray-200 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500"
+                    placeholder="Jenis Kelamin"
+                  />
+                </div>
+              </div>
+              <!-- End Col -->
+              <!-- End Jenis Kelamin -->
+
+              <!-- NIM -->
+              <div class="sm:col-span-3">
+                <label
+                  for="af-account-nim"
+                  class="inline-block text-sm text-gray-800 mt-2.5"
+                >
+                  NIM
+                </label>
+              </div>
+              <!-- End Col -->
+              <div class="sm:col-span-9">
+                <div class="sm:flex">
+                  <input
+                    id="nim"
+                    type="text"
+                    class="py-2 px-3 pr-11 block w-full border-[1px] border-gray-200 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500"
+                    placeholder="Nomor Induk Mahasiswa"
+                  />
+                </div>
+              </div>
+              <!-- End Col -->
+              <!-- End NIM -->
+
+              <!-- Perguruan Tinggi -->
+              <div class="sm:col-span-3">
+                <label
+                  for="af-account-perguruan-tinggi"
+                  class="inline-block text-sm text-gray-800 mt-2.5"
+                >
+                  Perguruan Tinggi
+                </label>
+              </div>
+              <!-- End Col -->
+              <div class="sm:col-span-9">
+                <div class="sm:flex">
+                  <input
+                    id="perguruantinggi"
+                    type="text"
+                    class="py-2 px-3 pr-11 block w-full border-[1px] border-gray-200 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500"
+                    placeholder="Nama Perguruan Tinggi"
+                  />
+                </div>
+              </div>
+              <!-- End Col -->
+              <!-- End Perguruan Tinggi -->
+
+              <!-- Prodi -->
+              <div class="sm:col-span-3">
+                <label
+                  for="af-account-prodi"
+                  class="inline-block text-sm text-gray-800 mt-2.5"
+                >
+                  Prodi
+                </label>
+              </div>
+              <!-- End Col -->
+              <div class="sm:col-span-9">
+                <div class="sm:flex">
+                  <input
+                    id="prodi"
+                    type="text"
+                    class="py-2 px-3 pr-11 block w-full border-[1px] border-gray-200 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500"
+                    placeholder="Program Studi"
+                  />
+                </div>
+              </div>
+              <!-- End Col -->
+              <!-- End Prodi -->
+            </div>
+            <!-- End Grid -->
+            <div class="mt-5 flex justify-end gap-x-2">
+              <a
+                href="index.html"
+                class="py-2 px-3 inline-flex cursor-pointer justify-center items-center gap-2 rounded-md border font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-600 transition-all text-sm"
+              >
+                Cancel
+              </a>
+              <button
+                type="submit"
+                id="updateButton"
+                class="inline-flex justify-center items-center gap-x-3 text-center bg-gradient-to-tl from-blue-600 to-violet-600 shadow-lg shadow-transparent hover:shadow-blue-700/50 border border-transparent text-white text-sm font-medium rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 focus:ring-offset-white py-2 px-5"
+              >
+                Save
+              </button>
+            </div>
+          </div>
+          <!-- End Card -->
+        </div>
         <!-- End Grid -->
       </div>
-      <!-- End Internship Section -->
+      <!-- End Card Section -->
     </div>
     <!-- End Content Section -->
 
@@ -594,9 +715,6 @@
       type="module"
       src="https://cdn.jsdelivr.net/gh/intern-monitoring/jsintermoni@0.0.6/components/dropdown.js"
     ></script>
-
-    <!-- Get Function -->
-    <script type="module" src="./assets/js/getFunction/get.js"></script>
 
     <!-- Logout Function -->
     <script

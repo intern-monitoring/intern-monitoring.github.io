@@ -7,7 +7,7 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script>
     <script src="../../node_modules/preline/dist/preline.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="./assets/css/styleMahasiswa.css" />
+    <link rel="stylesheet" href="./assets/css/styleMitra.css" />
   </head>
   <body>
     <!-- Header -->
@@ -182,7 +182,7 @@
                 <div class="mt-2 py-2 first:pt-0 last:pb-0">
                   <a
                     class="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500"
-                    href="profileMahasiswa.html"
+                    href="profileMitra.html"
                   >
                     <svg
                       class="flex-none"
@@ -199,7 +199,7 @@
                   </a>
                   <a
                     class="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500"
-                    href="editProfileMahasiswa.html"
+                    href="editProfileMitra.html"
                   >
                     <svg
                       class="flex-none"
@@ -216,24 +216,6 @@
                       />
                     </svg>
                     Edit Profile
-                  </a>
-                  <a
-                    class="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500"
-                    href="accountMahasiswa.html"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      fill="currentColor"
-                      class="bi bi-person-lock"
-                      viewBox="0 0 16 16"
-                    >
-                      <path
-                        d="M11 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm0 5.996V14H3s-1 0-1-1 1-4 6-4c.564 0 1.077.038 1.544.107a4.524 4.524 0 0 0-.803.918A10.46 10.46 0 0 0 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h5ZM9 13a1 1 0 0 1 1-1v-1a2 2 0 1 1 4 0v1a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1v-2Zm3-3a1 1 0 0 0-1 1v1h2v-1a1 1 0 0 0-1-1Z"
-                      />
-                    </svg>
-                    Account
                   </a>
                   <a
                     class="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 cursor-pointer"
@@ -324,7 +306,7 @@
             class="text-sm font-semibold text-gray-800 truncate"
             aria-current="page"
           >
-            Cari Internship
+            Dashboard
           </li>
         </ol>
         <!-- End Breadcrumb -->
@@ -335,9 +317,8 @@
     <!-- Sidebar -->
     <div
       id="application-sidebar"
-      class="sidebar hidden fixed z-[60] top-0 left-0 h-full w-64 bg-white border-r border-gray-200 pt-7 pb-10 overflow-y-auto scrollbar-y lg:block lg:translate-x-0 lg:right-auto lg:bottom-0"
+      class="sidebar hs-overlay hidden fixed z-[60] top-0 left-0 h-full w-64 bg-white border-r border-gray-200 pt-7 pb-10 overflow-y-auto scrollbar-y lg:block lg:translate-x-0 lg:right-auto lg:bottom-0"
     >
-      <!-- ... (elemen-elemen sidebar lainnya) ... -->
       <div class="px-6">
         <a class="flex-none text-xl font-semibold" href="#"
           >Intern Monitoring</a
@@ -380,212 +361,266 @@
           </li>
           <li>
             <a
-              class="flex items-center gap-x-3.5 py-2 px-2.5 bg-gradient-to-tl from-blue-600 to-violet-600 text-white font-semibold rounded-md hover:bg-gray-100"
-              href="cariInternship.html"
+              class="flex items-center gap-x-3.5 py-2 px-2.5 bg-white text-sm font-semibold text-slate-700 rounded-md hover:bg-gray-100"
+              href="daftarMagang.html"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"
                 height="16"
                 fill="currentColor"
-                class="bi bi-search w-3.5 h-3.5"
+                class="bi bi-clipboard-data w-3.5 h-3.5"
                 viewBox="0 0 16 16"
               >
                 <path
-                  d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+                  d="M4 11a1 1 0 1 1 2 0v1a1 1 0 1 1-2 0v-1zm6-4a1 1 0 1 1 2 0v5a1 1 0 1 1-2 0V7zM7 9a1 1 0 0 1 2 0v3a1 1 0 1 1-2 0V9z"
+                />
+                <path
+                  d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"
+                />
+                <path
+                  d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"
                 />
               </svg>
-              Cari Internship
+              Daftar Magang
             </a>
           </li>
-          <li class="hs-accordion" id="account-accordion">
+          <li>
             <a
-              class="hs-accordion-toggle flex items-center gap-x-3.5 py-2 px-2.5 hs-accordion-active:text-blue-600 hs-accordion-active:hover:bg-transparent text-sm text-slate-700 rounded-md hover:bg-gray-100"
-              href="javascript:;"
+              class="flex items-center gap-x-3.5 py-2 px-2.5 bg-white text-sm font-semibold text-slate-700 rounded-md hover:bg-gray-100"
+              href="mahasiswaMagang.html"
             >
               <svg
-                class="w-3.5 h-3.5"
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"
                 height="16"
                 fill="currentColor"
+                class="bi bi-table w-3.5 h-3.5"
                 viewBox="0 0 16 16"
               >
-                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
                 <path
-                  fill-rule="evenodd"
-                  d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"
+                  d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm15 2h-4v3h4V4zm0 4h-4v3h4V8zm0 4h-4v3h3a1 1 0 0 0 1-1v-2zm-5 3v-3H6v3h4zm-5 0v-3H1v2a1 1 0 0 0 1 1h3zm-4-4h4V8H1v3zm0-4h4V4H1v3zm5-3v3h4V4H6zm4 4H6v3h4V8z"
                 />
               </svg>
-              Coming Soon
-
-              <svg
-                class="hs-accordion-active:block ml-auto hidden w-3 h-3 text-gray-600 group-hover:text-gray-500"
-                width="16"
-                height="16"
-                viewBox="0 0 16 16"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M2 11L8.16086 5.31305C8.35239 5.13625 8.64761 5.13625 8.83914 5.31305L15 11"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                ></path>
-              </svg>
-
-              <svg
-                class="hs-accordion-active:hidden ml-auto block w-3 h-3 text-gray-600 group-hover:text-gray-500"
-                width="16"
-                height="16"
-                viewBox="0 0 16 16"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M2 5L8.16086 10.6869C8.35239 10.8637 8.64761 10.8637 8.83914 10.6869L15 5"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                ></path>
-              </svg>
+              Mahasiswa Magang
             </a>
-
-            <div
-              id="account-accordion-child"
-              class="hs-accordion-content w-full overflow-hidden transition-[height] duration-300 hidden"
-            >
-              <ul class="pt-2 pl-2">
-                <li>
-                  <a
-                    class="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-slate-700 rounded-md hover:bg-gray-100"
-                    href="javascript:;"
-                  >
-                    Link 1
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-slate-700 rounded-md hover:bg-gray-100"
-                    href="javascript:;"
-                  >
-                    Link 2
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-slate-700 rounded-md hover:bg-gray-100"
-                    href="javascript:;"
-                  >
-                    Link 3
-                  </a>
-                </li>
-              </ul>
-            </div>
           </li>
         </ul>
         <!-- End Main Menu Section -->
+        <!-- Seleksi Section -->
+        <div class="py-2">
+          <p class="text-gray-400 text-xs font-semibold">SELEKSI</p>
+        </div>
+        <ul class="space-y-1.5">
+          <li>
+            <a
+              class="flex items-center gap-x-3.5 py-2 px-2.5 bg-white text-sm font-semibold text-slate-700 rounded-md hover:bg-gray-100"
+              href="pesertaSeleksi.html"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-clipboard-data w-3.5 h-3.5"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M4 11a1 1 0 1 1 2 0v1a1 1 0 1 1-2 0v-1zm6-4a1 1 0 1 1 2 0v5a1 1 0 1 1-2 0V7zM7 9a1 1 0 0 1 2 0v3a1 1 0 1 1-2 0V9z"
+                />
+                <path
+                  d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"
+                />
+                <path
+                  d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"
+                />
+              </svg>
+              Peserta Seleksi
+            </a>
+          </li>
+        </ul>
+        <!-- End Seleksi Section -->
       </nav>
     </div>
     <!-- End Sidebar -->
 
     <!-- Content Section -->
-    <div class="w-full bg-gray-50 pt-5 px-4 sm:px-6 md:px-8 lg:pl-72">
-      <!-- Search field Section -->
-      <div class="w-full">
-        <div
-          class="relative h-52 bg-cover rounded-xl shadow-md"
-          style="
-            background-image: url('https://images.unsplash.com/photo-1655635643532-fa9ba2648cbe?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=2232&amp;q=80');
-          "
-        >
-          <span
-            class="absolute rounded-lg top-0 left-0 w-full h-full bg-center bg-cover bg-gradient-to-tl from-gray-900 to-slate-800 opacity-80"
-          ></span>
-        </div>
-      </div>
-
-      <div class="relative -mt-28 w-full px-5 lg:px-10">
-        <div
-          class="p-7 justify-center items-center bg-white shadow-md rounded-xl"
-        >
-          <div class="grid grid-cols-1 gap-5 lg:grid-cols-3">
-            <div>
-              <div class="relative h-11 w-full min-w-[200px]">
-                <input
-                  id="posisi"
-                  class="peer h-full w-full rounded-lg border border-gray-400 border-t-transparent bg-transparent px-3 py-3 font-sans text-sm font-normal text-gray-500 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-gray-400 placeholder-shown:border-t-gray-400 focus:border-2 focus:border-gray-900 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-gray-50"
-                  placeholder=" "
-                />
-                <label
-                  class="before:content[' '] after:content[' '] pointer-events-none absolute left-0 -top-1.5 flex h-full w-full select-none text-[11px] font-normal leading-tight text-gray-900 transition-all before:pointer-events-none before:mt-[6.5px] before:mr-1 before:box-border before:block before:h-1.5 before:w-2.5 before:rounded-tl-md before:border-t before:border-l before:border-gray-400 before:transition-all after:pointer-events-none after:mt-[6.5px] after:ml-1 after:box-border after:block after:h-1.5 after:w-2.5 after:flex-grow after:rounded-tr-md after:border-t after:border-r after:border-gray-400 after:transition-all peer-placeholder-shown:text-sm peer-placeholder-shown:leading-[4.1] peer-placeholder-shown:text-gray-400 peer-placeholder-shown:before:border-transparent peer-placeholder-shown:after:border-transparent peer-focus:text-[11px] peer-focus:leading-tight peer-focus:text-gray-900 peer-focus:before:border-t-2 peer-focus:before:border-l-2 peer-focus:before:border-gray-900 peer-focus:after:border-t-2 peer-focus:after:border-r-2 peer-focus:after:border-gray-900 peer-disabled:text-transparent peer-disabled:before:border-transparent peer-disabled:after:border-transparent peer-disabled:peer-placeholder-shown:text-gray-500"
-                >
-                  Posisi/Jabatan
-                </label>
-              </div>
-            </div>
-            <div>
-              <div class="relative h-11 w-full min-w-[200px]">
-                <input
-                  id="nama"
-                  class="peer h-full w-full rounded-lg border border-gray-400 border-t-transparent bg-transparent px-3 py-3 font-sans text-sm font-normal text-gray-500 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-gray-400 placeholder-shown:border-t-gray-400 focus:border-2 focus:border-gray-900 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-gray-50"
-                  placeholder=" "
-                />
-                <label
-                  class="before:content[' '] after:content[' '] pointer-events-none absolute left-0 -top-1.5 flex h-full w-full select-none text-[11px] font-normal leading-tight text-gray-900 transition-all before:pointer-events-none before:mt-[6.5px] before:mr-1 before:box-border before:block before:h-1.5 before:w-2.5 before:rounded-tl-md before:border-t before:border-l before:border-gray-400 before:transition-all after:pointer-events-none after:mt-[6.5px] after:ml-1 after:box-border after:block after:h-1.5 after:w-2.5 after:flex-grow after:rounded-tr-md after:border-t after:border-r after:border-gray-400 after:transition-all peer-placeholder-shown:text-sm peer-placeholder-shown:leading-[4.1] peer-placeholder-shown:text-gray-400 peer-placeholder-shown:before:border-transparent peer-placeholder-shown:after:border-transparent peer-focus:text-[11px] peer-focus:leading-tight peer-focus:text-gray-900 peer-focus:before:border-t-2 peer-focus:before:border-l-2 peer-focus:before:border-gray-900 peer-focus:after:border-t-2 peer-focus:after:border-r-2 peer-focus:after:border-gray-900 peer-disabled:text-transparent peer-disabled:before:border-transparent peer-disabled:after:border-transparent peer-disabled:peer-placeholder-shown:text-gray-500"
-                >
-                  Nama Perusahaan
-                </label>
-              </div>
-            </div>
-            <div>
-              <div class="relative h-11 w-full min-w-[200px]">
-                <input
-                  id="lokasi"
-                  class="peer h-full w-full rounded-lg border border-gray-400 border-t-transparent bg-transparent px-3 py-3 font-sans text-sm font- text-gray-500 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-gray-400 placeholder-shown:border-t-gray-400 focus:border-2 focus:border-gray-900 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-gray-50"
-                  placeholder=" "
-                />
-                <label
-                  class="before:content[' '] after:content[' '] pointer-events-none absolute left-0 -top-1.5 flex h-full w-full select-none text-[11px] font-normal leading-tight text-gray-900 transition-all before:pointer-events-none before:mt-[6.5px] before:mr-1 before:box-border before:block before:h-1.5 before:w-2.5 before:rounded-tl-md before:border-t before:border-l before:border-gray-400 before:transition-all after:pointer-events-none after:mt-[6.5px] after:ml-1 after:box-border after:block after:h-1.5 after:w-2.5 after:flex-grow after:rounded-tr-md after:border-t after:border-r after:border-gray-400 after:transition-all peer-placeholder-shown:text-sm peer-placeholder-shown:leading-[4.1] peer-placeholder-shown:text-gray-400 peer-placeholder-shown:before:border-transparent peer-placeholder-shown:after:border-transparent peer-focus:text-[11px] peer-focus:leading-tight peer-focus:text-gray-900 peer-focus:before:border-t-2 peer-focus:before:border-l-2 peer-focus:before:border-gray-900 peer-focus:after:border-t-2 peer-focus:after:border-r-2 peer-focus:after:border-gray-900 peer-disabled:text-transparent peer-disabled:before:border-transparent peer-disabled:after:border-transparent peer-disabled:peer-placeholder-shown:text-gray-500"
-                >
-                  Lokasi Perusahaan
-                </label>
-              </div>
-            </div>
-          </div>
-          <div class="grid grid-cols-1 pt-5">
-            <button
-              id="searchButton"
-              class="inline-flex justify-center items-center gap-x-3 text-center bg-gradient-to-tl from-blue-600 to-violet-600 shadow-lg shadow-transparent hover:shadow-blue-700/50 border border-transparent text-white text-sm font-medium rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 focus:ring-offset-white py-3 px-6"
-            >
-              Search
-            </button>
-          </div>
-        </div>
-      </div>
-      <!-- End Search field Section -->
-
-      <!-- Internship Section -->
-      <div class="w-full py-10 lg:py-16">
-        <!-- Title -->
-        <div class="flex items-start text-start mb-10 lg:mb-10">
-          <h2
-            class="text-gray-800 text-lg font-bold md:text-xl md:leading-tight"
-          >
-            Daftar Lowongan Internship
-          </h2>
-        </div>
-        <!-- End Title -->
-
+    <div class="w-full bg-gray-50 lg:pl-64">
+      <!-- Card Section -->
+      <div class="px-4 py-10 sm:px-6 lg:px-8 mx-auto">
         <!-- Grid -->
-        <div
-          id="magang"
-          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"
-        ></div>
+        <div class="relative mx-auto w-full">
+          <!-- Card -->
+          <div class="bg-white rounded-xl shadow-md">
+            <div
+              class="relative h-48 rounded-t-xl bg-[url('https://images.unsplash.com/photo-1655635643532-fa9ba2648cbe?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=2232&amp;q=80')] bg-no-repeat bg-cover bg-center"
+            >
+              <span
+                class="absolute rounded-t-xl top-0 left-0 w-full h-full bg-center bg-cover bg-gradient-to-tl from-gray-900 to-slate-800 opacity-80"
+              ></span>
+            </div>
+
+            <div class="pt-0 p-4 sm:pt-0 sm:p-7">
+              <!-- profile -->
+              <div>
+                <div>
+                  <label class="sr-only"> Photo </label>
+
+                  <div class="flex items-center justify-center gap-x-5">
+                    <img
+                      class="-mt-14 relative z-10 inline-block h-32 w-32 mx-auto sm:mx-0 rounded-full ring-4 ring-white"
+                      src="../../images/netflix_logo.jpg"
+                      alt="Image Description"
+                    />
+                  </div>
+                </div>
+                <div class="flex justify-center gap-5 pt-5">
+                  <h2 class="text-2xl text-gray-900 font-semibold">
+                    Netflix Company
+                  </h2>
+                </div>
+
+                <div class="flex justify-center gap-2 pt-10">
+                  <label class="text-base text-gray-900 font-semibold"
+                    >Narahubung :</label
+                  >
+                  <h3 class="text-base text-gray-900 font-normal">
+                    Mr.Stewards
+                  </h3>
+                </div>
+                <div class="flex justify-center gap-2">
+                  <label class="text-base text-gray-900 font-semibold"
+                    >Nomor Narahubung :</label
+                  >
+                  <h3 class="text-base text-gray-900 font-normal">
+                    089647129890
+                  </h3>
+                </div>
+                <div class="flex justify-center gap-2">
+                  <label class="text-base text-gray-900 font-semibold"
+                    >Website Perusahaan :</label
+                  >
+                  <h3 class="text-base text-gray-900 font-normal">
+                    https://www.netflix.com/id
+                  </h3>
+                </div>
+              </div>
+              <div class="mt-2 border-b border-gray-200"></div>
+              <!-- End profile -->
+
+              <!-- Perusahaan Section -->
+              <div class="grid gap-2 pt-10">
+                <div class="px-10 lg:px-20">
+                  <div class="flex justify-center mb-2">
+                    <p
+                      class="inline-flex justify-center items-center gap-x-3 text-base text-center font-semibold text-gray-900 lg:text-lg"
+                    >
+                      Tentang Perusahaan
+                    </p>
+                  </div>
+                  <p
+                    class="flex justify-center text-xs text-center text-gray-500 lg:text-base"
+                  >
+                    Netflix dalah salah satu penyedia layanan pengaliran
+                    (streaming) media digital, berkantor pusat di Los Gatos,
+                    California. yang didirikan pada tahun 1997 oleh Reed Hasting
+                    dan Marc Randolph di Scotts Valley, California. Bisnis utama
+                    dari perusahaan ini adalah layanan pengaliran (streaming)
+                    berlangganan yang menawarkan film dan program televisi,
+                    termasuk beberapa program yang dibuat oleh Netflix sendiri.
+                  </p>
+                </div>
+              </div>
+              <div class="grid grid-cols-3 gap-2 pt-20 pb-5">
+                <div class="mx-auto">
+                  <div class="flex justify-center mb-2">
+                    <p
+                      class="inline-flex justify-center items-center gap-x-3 text-base text-center font-semibold text-gray-900 lg:text-lg"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-bank"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          d="m8 0 6.61 3h.89a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5H15v7a.5.5 0 0 1 .485.38l.5 2a.498.498 0 0 1-.485.62H.5a.498.498 0 0 1-.485-.62l.5-2A.501.501 0 0 1 1 13V6H.5a.5.5 0 0 1-.5-.5v-2A.5.5 0 0 1 .5 3h.89L8 0ZM3.777 3h8.447L8 1 3.777 3ZM2 6v7h1V6H2Zm2 0v7h2.5V6H4Zm3.5 0v7h1V6h-1Zm2 0v7H12V6H9.5ZM13 6v7h1V6h-1Zm2-1V4H1v1h14Zm-.39 9H1.39l-.25 1h13.72l-.25-1Z"
+                        />
+                      </svg>
+                      Kategori
+                    </p>
+                  </div>
+                  <p
+                    class="flex justify-center text-xs text-center text-gray-500 lg:text-base"
+                  >
+                    Perusahaan Terbuka, Multinasional
+                  </p>
+                </div>
+                <div class="mx-auto">
+                  <div class="flex justify-center mb-2">
+                    <p
+                      class="inline-flex justify-center items-center gap-x-3 text-base text-center font-semibold text-gray-900 lg:text-lg"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-bank"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          d="m8 0 6.61 3h.89a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5H15v7a.5.5 0 0 1 .485.38l.5 2a.498.498 0 0 1-.485.62H.5a.498.498 0 0 1-.485-.62l.5-2A.501.501 0 0 1 1 13V6H.5a.5.5 0 0 1-.5-.5v-2A.5.5 0 0 1 .5 3h.89L8 0ZM3.777 3h8.447L8 1 3.777 3ZM2 6v7h1V6H2Zm2 0v7h2.5V6H4Zm3.5 0v7h1V6h-1Zm2 0v7H12V6H9.5ZM13 6v7h1V6h-1Zm2-1V4H1v1h14Zm-.39 9H1.39l-.25 1h13.72l-.25-1Z"
+                        />
+                      </svg>
+                      Alamat
+                    </p>
+                  </div>
+                  <p class="text-center text-xs text-gray-500 lg:text-base">
+                    Gedung The Plaza Office Tower, Jalan Jenderal Sudirman No.
+                    52-53, Kebayoran Baru, Jakarta Selatan 12190
+                  </p>
+                </div>
+                <div class="mx-auto">
+                  <div class="flex justify-center mb-2">
+                    <p
+                      class="inline-flex justify-center items-center gap-x-3 text-base text-center font-semibold text-gray-900 lg:text-lg"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-stack"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          d="m14.12 10.163 1.715.858c.22.11.22.424 0 .534L8.267 15.34a.598.598 0 0 1-.534 0L.165 11.555a.299.299 0 0 1 0-.534l1.716-.858 5.317 2.659c.505.252 1.1.252 1.604 0l5.317-2.66zM7.733.063a.598.598 0 0 1 .534 0l7.568 3.784a.3.3 0 0 1 0 .535L8.267 8.165a.598.598 0 0 1-.534 0L.165 4.382a.299.299 0 0 1 0-.535L7.733.063z"
+                        />
+                        <path
+                          d="m14.12 6.576 1.715.858c.22.11.22.424 0 .534l-7.568 3.784a.598.598 0 0 1-.534 0L.165 7.968a.299.299 0 0 1 0-.534l1.716-.858 5.317 2.659c.505.252 1.1.252 1.604 0l5.317-2.659z"
+                        />
+                      </svg>
+                      Sektor
+                    </p>
+                  </div>
+                  <p
+                    class="justify-center text-xs text-center text-gray-500 lg:text-base"
+                  >
+                    Teknologi, Hiburan, Media masa
+                  </p>
+                </div>
+              </div>
+              <!-- End Perusahaan Section -->
+            </div>
+          </div>
+          <!-- End Card -->
+        </div>
         <!-- End Grid -->
       </div>
-      <!-- End Internship Section -->
+      <!-- End Card Section -->
     </div>
     <!-- End Content Section -->
 
@@ -594,9 +629,6 @@
       type="module"
       src="https://cdn.jsdelivr.net/gh/intern-monitoring/jsintermoni@0.0.6/components/dropdown.js"
     ></script>
-
-    <!-- Get Function -->
-    <script type="module" src="./assets/js/getFunction/get.js"></script>
 
     <!-- Logout Function -->
     <script
