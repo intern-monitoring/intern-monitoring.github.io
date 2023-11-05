@@ -542,14 +542,11 @@
               </div>
               <!-- End Col -->
               <div class="sm:col-span-9">
-                <select
+                <input
                   id="jeniskelamin"
-                  class="py-2 px-3 pr-9 block w-full border-[1px] border-gray-200 rounded-lg text-sm focus:border-black focus:ring-black"
-                >
-                  <option selected>Select a category</option>
-                  <option>Laki Laki</option>
-                  <option>Perempuan</option>
-                </select>
+                  type="text"
+                  class="py-2 px-3 block w-full border-[1px] border-gray-200 rounded-lg text-sm"
+                />
               </div>
               <!-- End Col -->
               <!-- End Jenis Kelamin -->
@@ -667,19 +664,6 @@
 
     <script>
       localStorage.setItem("previousPageURL", window.location.href);
-    </script>
-    <script>
-      const tanggallahirInput = document.getElementById("tanggallahir");
-
-      tanggallahirInput.addEventListener("change", () => {
-        const inputDate = new Date(tanggallahirInput.value);
-        const day = String(inputDate.getDate()).padStart(2, "0");
-        const month = String(inputDate.getMonth() + 1).padStart(2, "0");
-        const year = inputDate.getFullYear();
-
-        const formattedDate = `${day}/${month}/${year}`;
-        console.log(formattedDate); // Output: "20/05/2001"
-      });
     </script>
   </body>
 </html>
