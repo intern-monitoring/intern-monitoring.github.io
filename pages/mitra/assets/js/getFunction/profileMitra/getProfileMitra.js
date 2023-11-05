@@ -190,7 +190,7 @@ export const dataProfileMitra = `
 
 export function responseData(results) {
   console.log(results);
-  results.forEach(isiRow);
+  isiRow(results);
 }
 
 export function isiRow(value) {
