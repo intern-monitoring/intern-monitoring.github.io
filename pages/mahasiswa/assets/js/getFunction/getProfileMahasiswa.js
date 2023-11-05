@@ -22,14 +22,14 @@ export const dataMahasiswa = `
   </h2>
 </div>
 <div class="flex justify-center gap-2">
-  <h3 class="text-base text-gray-900 font-normal">1214054</h3>
+  <h3 class="text-base text-gray-900 font-normal">#NIM#</h3>
 </div>
 <div class="flex justify-center gap-2 pt-5">
   <label class="text-base text-gray-900 font-semibold"
     >Tanggal Lahir :</label
   >
   <h3 class="text-base text-gray-900 font-normal">
-    #TANGALLAHIR#
+    #TANGGALLAHIR#
   </h3>
 </div>
 <div class="flex justify-center gap-2">
