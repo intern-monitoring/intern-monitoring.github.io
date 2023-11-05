@@ -9,7 +9,12 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script>
     <link rel="stylesheet" href="./assets/css/styleMahasiswa.css" />
-    <script type="module" src="./assets/js/signUp.js"></script>
+
+    <!-- SignUp Mahasiswa -->
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/gh/intern-monitoring/jsintermoni@0.1.8/postFunction/mahasiswa/signUpMahasiswa.js"
+    ></script>
   </head>
   <body>
     <!-- navbar -->
@@ -321,7 +326,7 @@
                 id="jeniskelamin"
                 class="py-2 px-3 pr-9 block w-full border-[1px] border-gray-200 rounded-lg text-sm focus:border-black focus:ring-black"
               >
-                <option selected>Select a category</option>
+                <option selected>Jenis Kelamin</option>
                 <option>Laki Laki</option>
                 <option>Perempuan</option>
               </select>
@@ -409,7 +414,7 @@
                 onclick="SignUpMahasiswa()"
                 class="inline-flex justify-center items-center gap-x-3 text-center bg-gradient-to-tl from-blue-600 to-violet-600 shadow-lg shadow-transparent hover:shadow-blue-700/50 border border-transparent text-white text-sm font-medium rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 focus:ring-offset-white py-2 px-3"
               >
-                Selanjutnya
+                SignUp
               </button>
             </div>
           </div>
