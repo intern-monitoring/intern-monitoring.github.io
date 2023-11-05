@@ -1,5 +1,19 @@
-import { postWithToken } from "https://jscroot.github.io/api/croot.js";
 import { getValue } from "https://jscroot.github.io/element/croot.js";
+
+function postSignUpMitra(target_url, datajson, responseFunction) {
+  var raw = JSON.stringify(datajson);
+
+  var requestOptions = {
+    method: "POST",
+    body: raw,
+    redirect: "follow",
+  };
+
+  fetch(target_url, requestOptions)
+    .then((response) => response.text())
+    .then((result) => responseFunction(JSON.parse(result)))
+    .catch((error) => console.log("error", error));
+}
 
 const SignUpMitra = () => {
   console.log("Sign Up Mitra");
@@ -21,7 +35,7 @@ const SignUpMitra = () => {
       confirmpass: getValue("confirmpass"),
     },
   };
-  postWithToken(target_url, datainjson, responseData);
+  postSignUpMitra(target_url, datainjson, responseData);
 };
 
 const responseData = (result) => {
