@@ -150,7 +150,7 @@
 
             <div class="sm:col-span-9">
               <input
-                id="af-account-email"
+                id="email"
                 type="email"
                 class="py-2 px-3 pr-11 block w-full border-[1px] border-gray-200 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500"
                 placeholder="yourmail@gmail.com"
@@ -171,7 +171,7 @@
             <div class="sm:col-span-9">
               <div class="space-y-2">
                 <input
-                  id="af-account-password"
+                  id="password"
                   type="password"
                   class="py-2 px-3 pr-11 block w-full border-[1px] border-gray-200 shadow-sm rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500"
                   placeholder="Enter password"
@@ -262,6 +262,7 @@
             </div>
             <!-- End Col -->
 
+            <!-- Nama Lengkap -->
             <div class="sm:col-span-3">
               <label
                 for="af-account-full-name"
@@ -271,125 +272,104 @@
               </label>
             </div>
             <!-- End Col -->
-
             <div class="sm:col-span-9">
-              <div class="sm:flex">
-                <input
-                  id="af-account-full-name"
-                  type="text"
-                  class="py-2 px-3 pr-11 block w-full border-[1px] border-gray-200 shadow-sm -mt-px -ml-px first:rounded-t-lg last:rounded-b-lg sm:first:rounded-l-lg sm:mt-0 sm:first:ml-0 sm:first:rounded-tr-none sm:last:rounded-bl-none sm:last:rounded-r-lg text-sm relative focus:z-10 focus:border-blue-500 focus:ring-blue-500"
-                  placeholder="First Name"
-                />
-                <input
-                  type="text"
-                  class="py-2 px-3 pr-11 block w-full border-[1px] border-gray-200 shadow-sm -mt-px -ml-px first:rounded-t-lg last:rounded-b-lg sm:first:rounded-l-lg sm:mt-0 sm:first:ml-0 sm:first:rounded-tr-none sm:last:rounded-bl-none sm:last:rounded-r-lg text-sm relative focus:z-10 focus:border-blue-500 focus:ring-blue-500"
-                  placeholder="Last Name"
-                />
-              </div>
+              <input
+                id="namalengkap"
+                type="text"
+                class="py-2 px-3 pr-11 block w-full border-[1px] border-gray-200 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500"
+                placeholder="Nama Lengkap Mahasiswa"
+              />
             </div>
             <!-- End Col -->
+            <!-- End Nama Lengkap -->
 
+            <!-- Tanggal Lahir -->
             <div class="sm:col-span-3">
               <label
-                for="af-account-email"
+                for="af-account-tanggal"
                 class="inline-block text-sm text-gray-800 mt-2.5"
               >
                 Tanggal Lahir
               </label>
             </div>
             <!-- End Col -->
-
             <div class="sm:col-span-9">
               <input
-                id="af-account-email"
+                id="tanggallahir"
                 type="date"
                 class="py-2 px-3 pr-11 block w-full border-[1px] border-gray-200 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500"
                 placeholder="Nomor Induk Mahasiswa"
               />
             </div>
             <!-- End Col -->
+            <!-- End Tanggal Lahir -->
 
+            <!-- Jenis Kelamin -->
             <div class="sm:col-span-3">
               <label
-                for="af-account-gender-checkbox"
+                for="af-account-gender"
                 class="inline-block text-sm text-gray-800 mt-2.5"
               >
                 Jenis Kelamin
               </label>
             </div>
             <!-- End Col -->
-
             <div class="sm:col-span-9">
-              <div class="sm:flex">
-                <label
-                  for="af-account-gender-checkbox"
-                  class="flex py-2 px-3 w-full border-[1px] border-gray-200 shadow-sm -mt-px -ml-px first:rounded-t-lg last:rounded-b-lg sm:first:rounded-l-lg sm:mt-0 sm:first:ml-0 sm:first:rounded-tr-none sm:last:rounded-bl-none sm:last:rounded-r-lg text-sm relative focus:z-10 focus:border-blue-500 focus:ring-blue-500"
-                >
-                  <input
-                    type="radio"
-                    name="af-account-gender-checkbox"
-                    class="shrink-0 mt-0.5 border-[1px] border-gray-200 rounded-full text-blue-600 pointer-events-none focus:ring-blue-500"
-                    id="af-account-gender-checkbox"
-                  />
-                  <span class="text-sm text-gray-500 ml-3">Male</span>
-                </label>
-
-                <label
-                  for="af-account-gender-checkbox-female"
-                  class="flex py-2 px-3 w-full border-[1px] border-gray-200 shadow-sm -mt-px -ml-px first:rounded-t-lg last:rounded-b-lg sm:first:rounded-l-lg sm:mt-0 sm:first:ml-0 sm:first:rounded-tr-none sm:last:rounded-bl-none sm:last:rounded-r-lg text-sm relative focus:z-10 focus:border-blue-500 focus:ring-blue-500"
-                >
-                  <input
-                    type="radio"
-                    name="af-account-gender-checkbox-female"
-                    class="shrink-0 mt-0.5 border-[1px] border-gray-200 rounded-full text-blue-600 pointer-events-none focus:ring-blue-500"
-                    id="af-account-gender-checkbox-female"
-                  />
-                  <span class="text-sm text-gray-500 ml-3">Female</span>
-                </label>
-              </div>
+              <select
+                id="jeniskelamin"
+                class="py-2 px-3 pr-9 block w-full border-[1px] border-gray-200 rounded-lg text-sm focus:border-black focus:ring-black"
+              >
+                <option selected>Select a category</option>
+                <option>Laki Laki</option>
+                <option>Perempuan</option>
+              </select>
             </div>
             <!-- End Col -->
+            <!-- End Jenis Kelamin -->
 
+            <!-- NIM -->
             <div class="sm:col-span-3">
               <label
-                for="af-account-email"
+                for="af-account-nim"
                 class="inline-block text-sm text-gray-800 mt-2.5"
               >
                 NIM
               </label>
             </div>
             <!-- End Col -->
-
             <div class="sm:col-span-9">
               <input
-                id="af-account-email"
+                id="nim"
                 type="text"
                 class="py-2 px-3 pr-11 block w-full border-[1px] border-gray-200 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500"
                 placeholder="Nomor Induk Mahasiswa"
               />
             </div>
             <!-- End Col -->
+            <!-- End NIM -->
 
+            <!-- Perguruan Tinggi -->
             <div class="sm:col-span-3">
               <label
-                for="af-account-email"
+                for="af-account-perguruan-tinggi"
                 class="inline-block text-sm text-gray-800 mt-2.5"
               >
                 Perguruan Tinggi
               </label>
             </div>
             <!-- End Col -->
-
             <div class="sm:col-span-9">
               <input
-                id="af-account-email"
+                id="perguruantinggi"
                 type="text"
                 class="py-2 px-3 pr-11 block w-full border-[1px] border-gray-200 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500"
                 placeholder="Nama perguruan tinggi"
               />
             </div>
             <!-- End Col -->
+            <!-- End Perguruan Tinggi -->
 
+            <!-- Prodi -->
             <div class="sm:col-span-3">
               <label
                 for="af-account-email"
@@ -399,40 +379,16 @@
               </label>
             </div>
             <!-- End Col -->
-
             <div class="sm:col-span-9">
               <input
-                id="af-account-email"
+                id="prodi"
                 type="text"
                 class="py-2 px-3 pr-11 block w-full border-[1px] border-gray-200 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500"
                 placeholder="Program studi"
               />
             </div>
             <!-- End Col -->
-
-            <div class="sm:col-span-3">
-              <div class="inline-block">
-                <label
-                  for="af-account-phone"
-                  class="inline-block text-sm text-gray-800 mt-2.5"
-                >
-                  Phone Number
-                </label>
-              </div>
-            </div>
-            <!-- End Col -->
-
-            <div class="sm:col-span-9">
-              <div class="sm:flex">
-                <input
-                  id="af-account-phone"
-                  type="number"
-                  class="py-2 px-3 pr-11 block w-full border-[1px] border-gray-200 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500"
-                  placeholder="+62xxx xxx-xx-xx"
-                />
-              </div>
-            </div>
-            <!-- End Col -->
+            <!-- End Prodi -->
           </div>
           <!-- End Grid -->
 
