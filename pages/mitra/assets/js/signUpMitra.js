@@ -16,9 +16,8 @@ function postSignUpMitra(target_url, datajson, responseFunction) {
 }
 
 const SignUpMitra = () => {
-  console.log("Sign Up Mitra");
   const target_url =
-    "https://asia-southeast2-bursakerja-project.cloudfunctions.net/intermoni-signup-mahasiswa";
+    "https://asia-southeast2-bursakerja-project.cloudfunctions.net/intermoni-signup-mitra";
 
   const datainjson = {
     namanarahubung: getValue("namanarahubung"),
