@@ -9,6 +9,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script>
     <link rel="stylesheet" href="./assets/css/styleMahasiswa.css" />
+    <script type="module" src="./assets/js/signUp.js"></script>
   </head>
   <body>
     <!-- navbar -->
@@ -194,7 +195,7 @@
             <div class="sm:col-span-9">
               <div class="space-y-2">
                 <input
-                  id="af-account-password"
+                  id="confirmpass"
                   type="password"
                   class="py-2 px-3 pr-11 block w-full border-[1px] border-gray-200 shadow-sm rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500"
                   placeholder="Repeat your password"
@@ -403,12 +404,13 @@
               </a>
             </div>
             <div class="flex justify-end">
-              <a
-                href=""
+              <button
+                type="submit"
+                onclick="SignUpMahasiswa()"
                 class="inline-flex justify-center items-center gap-x-3 text-center bg-gradient-to-tl from-blue-600 to-violet-600 shadow-lg shadow-transparent hover:shadow-blue-700/50 border border-transparent text-white text-sm font-medium rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 focus:ring-offset-white py-2 px-3"
               >
                 Selanjutnya
-              </a>
+              </button>
             </div>
           </div>
         </div>

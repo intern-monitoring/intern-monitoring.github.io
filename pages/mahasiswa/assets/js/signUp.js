@@ -1,54 +1,57 @@
-function signUp() {
-  const firstname = document.getElementById("firstname").value;
-  const lastname = document.getElementById("lastname").value;
-  const email = document.getElementById("email").value;
-  const password = document.getElementById("password").value;
-  const confirmpass = document.getElementById("confirmpass").value;
+import { getValue } from "https://jscroot.github.io/element/croot.js";
 
-  // Make a POST request to your signup endpoint with the user data
-  fetch("https://dimasardnt6-ulbi.herokuapp.com/sign-up", {
+function postSignUpMahasiswa(target_url, datajson, responseFunction) {
+  var raw = JSON.stringify(datajson);
+
+  var requestOptions = {
     method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      firstname: firstname,
-      lastname: lastname,
-      email: email,
-      password: password,
-      confirmpass: confirmpass,
-    }),
-  })
-    .then((response) => response.json())
-    .then((data) => {
-      console.log(data.message);
-      if (data.status === 200) {
-        // Signup success
-        // Display signup success message using SweetAlert
-        Swal.fire({
-          icon: "success",
-          title: "Sign Up Successful",
-          text: "You have successfully signed up!",
-        }).then(() => {
-          // Reload window
-          window.location.href = "sign-in.html";
-        });
-      } else {
-        // Display signup error message using SweetAlert
-        Swal.fire({
-          icon: "error",
-          title: data.message,
-          text: data.error,
-        });
-      }
-    })
-    .catch((error) => {
-      console.log("Error:", error);
-      // Display error message using SweetAlert
-      Swal.fire({
-        icon: "error",
-        title: "Error",
-        text: "An error occurred while signing up. Please try again later.",
-      });
-    });
+    body: raw,
+    redirect: "follow",
+  };
+
+  fetch(target_url, requestOptions)
+    .then((response) => response.text())
+    .then((result) => responseFunction(JSON.parse(result)))
+    .catch((error) => console.log("error", error));
 }
+
+const SignUpMahasiswa = () => {
+  const target_url =
+    "https://asia-southeast2-bursakerja-project.cloudfunctions.net/intermoni-signup-mahasiswa";
+
+  const datainjson = {
+    namalengkap: getValue("namalengkap"),
+    tanggallahir: getValue("tanggallahir"),
+    jeniskelamin: getValue("jeniskelamin"),
+    nim: getValue("nim"),
+    perguruantinggi: getValue("perguruantinggi"),
+    prodi: getValue("prodi"),
+    akun: {
+      email: getValue("email"),
+      password: getValue("password"),
+      confirmpass: getValue("confirmpass"),
+    },
+  };
+  console.log(datainjson);
+  postSignUpMahasiswa(target_url, datainjson, responseData);
+};
+
+const responseData = (result) => {
+  if (result.status) {
+    Swal.fire({
+      icon: "success",
+      title: "Sign Up Successful",
+      text: result.message,
+    }).then(() => {
+      window.location.href = "../signIn.html";
+    });
+  } else {
+    Swal.fire({
+      icon: "error",
+      title: "Sign Up Failed",
+      text: result.message,
+    });
+  }
+};
+
+window.SignUpMahasiswa = SignUpMahasiswa;
