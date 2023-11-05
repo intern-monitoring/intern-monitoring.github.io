@@ -35,6 +35,7 @@ const SignUpMitra = () => {
       confirmpass: getValue("confirmpass"),
     },
   };
+  console.log(datainjson);
   postSignUpMitra(target_url, datainjson, responseData);
 };
 
