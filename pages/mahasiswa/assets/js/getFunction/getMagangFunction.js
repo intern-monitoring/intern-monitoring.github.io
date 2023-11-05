@@ -1,6 +1,7 @@
-import { URLGetMagang, responseData } from "./getMagang.js";
+import { URLGetMagang, responseDataMagang } from "./getMagang.js";
 
-const get = (target_url, responseFunction) => {
+// Get Magang
+const getMagang = (target_url, responseFunction) => {
   const requestOptions = {
     method: "GET",
     redirect: "follow",
@@ -11,5 +12,4 @@ const get = (target_url, responseFunction) => {
     .then((result) => responseFunction(JSON.parse(result)))
     .catch((error) => console.log("error", error));
 };
-
-get(URLGetMagang, responseData);
+getMagang(URLGetMagang, responseDataMagang);
