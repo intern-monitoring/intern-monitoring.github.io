@@ -2,6 +2,7 @@ import { postWithToken } from "https://jscroot.github.io/api/croot.js";
 import { getValue } from "https://jscroot.github.io/element/croot.js";
 
 const SignUpMitra = () => {
+  console.log("Sign Up Mitra");
   const target_url =
     "https://asia-southeast2-bursakerja-project.cloudfunctions.net/intermoni-signup-mahasiswa";
 
