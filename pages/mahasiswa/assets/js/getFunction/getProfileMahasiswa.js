@@ -98,7 +98,7 @@ export const dataMahasiswa = `
 
 export function responseDataProfile(results) {
   console.log(results);
-  results.forEach(isiRow);
+  isiRow(results);
 }
 
 export function isiRow(value) {
