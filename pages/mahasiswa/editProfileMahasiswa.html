@@ -668,5 +668,18 @@
     <script>
       localStorage.setItem("previousPageURL", window.location.href);
     </script>
+    <script>
+      const tanggallahirInput = document.getElementById("tanggallahir");
+
+      tanggallahirInput.addEventListener("change", () => {
+        const inputDate = new Date(tanggallahirInput.value);
+        const day = String(inputDate.getDate()).padStart(2, "0");
+        const month = String(inputDate.getMonth() + 1).padStart(2, "0");
+        const year = inputDate.getFullYear();
+
+        const formattedDate = `${day}/${month}/${year}`;
+        console.log(formattedDate); // Output: "20/05/2001"
+      });
+    </script>
   </body>
 </html>
