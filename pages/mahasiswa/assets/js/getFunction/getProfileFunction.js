@@ -11,6 +11,7 @@ const getProfile = (target_url, responseFunction) => {
   const requestOptions = {
     method: "GET",
     redirect: "follow",
+    headers: myHeaders,
   };
 
   fetch(target_url, requestOptions)
