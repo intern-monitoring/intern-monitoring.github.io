@@ -37,27 +37,12 @@ export const cardMagang = `
 </div>
 `;
 
-window.onload = function () {
-  fetchData(); // Fungsi untuk menampilkan semua data saat halaman dimuat
-  const searchButton = document.getElementById("searchButton");
-  searchButton.addEventListener("click", searchData); // Menjalankan fungsi pencarian saat tombol search diklik
-};
-
-const fetchData = async () => {
-  try {
-    const response = await fetch(URLGetMagang);
-    const data = await response.json();
-    responseDataMagang(data);
-  } catch (error) {
-    console.error("Error fetching data: ", error);
-  }
-};
-
-export const responseDataMagang = (results) => {
+export function responseDataMagang(results) {
+  console.log(results);
   results.forEach(isiRow);
-};
+}
 
-export const isiRow = (value) => {
+export function isiRow(value) {
   const content = cardMagang
     .replace("#POSISI#", value.posisi)
     .replace("#MITRA#", value.mitra.nama)
@@ -65,42 +50,4 @@ export const isiRow = (value) => {
     .replace("#TENTANGMITRA#", value.mitra.tentang)
     .replace("#EXPIRED#", value.expired);
   addInner("magang", content);
-};
-
-const searchData = async () => {
-  const posisiInput = document.getElementById("posisi").value.toLowerCase();
-  const namaInput = document.getElementById("nama").value.toLowerCase();
-  const lokasiInput = document.getElementById("lokasi").value.toLowerCase();
-
-  try {
-    const response = await fetch(URLGetMagang);
-    const data = await response.json();
-
-    if (Array.isArray(data)) {
-      const filteredResults = data.filter((item) => {
-        const posisi = item.posisi.toLowerCase();
-        const nama = item.mitra.nama.toLowerCase();
-        const lokasi = item.lokasi.toLowerCase();
-        return (
-          posisi.includes(posisiInput) &&
-          nama.includes(namaInput) &&
-          lokasi.includes(lokasiInput)
-        );
-      });
-
-      const magangContainer = document.getElementById("magang");
-      magangContainer.innerHTML = "";
-      if (posisiInput === "" && namaInput === "" && lokasiInput === "") {
-        // Jika semua input kosong, tampilkan semua data
-        responseDataMagang(data);
-      } else {
-        // Jika ada kriteria pencarian, tampilkan hasil pencarian
-        responseDataMagang(filteredResults);
-      }
-    } else {
-      console.error("Data is not an array:", data);
-    }
-  } catch (error) {
-    console.error("Error searching data: ", error);
-  }
-};
+}
