@@ -5,7 +5,7 @@ const get = (target_url, responseFunction) => {
   const myHeaders = new Headers();
   myHeaders.append("Authorization", getCookie("Authorization"));
   const requestOptions = {
-    method: "HEAD",
+    method: "GET",
     headers: myHeaders,
     redirect: "follow",
   };
