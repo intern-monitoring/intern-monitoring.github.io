@@ -2,12 +2,12 @@ export const isiDataProfile = (results) => {
   const inputMapping = [
     { id: "namanarahubung", path: "namanarahubung" },
     { id: "nohpnarahubung", path: "nohpnarahubung" },
-    // { id: "nama", path: "nama" },
     { id: "kategori", path: "kategori" },
     { id: "sektorindustri", path: "sektorindustri" },
-    // { id: "tentang", path: "tentang" },
     { id: "alamat", path: "alamat" },
-    // { id: "website", path: "website" },
+    { id: "website", path: "website" },
+    // { id: "tentang", path: "tentang" },
+    // { id: "nama", path: "nama" },
   ];
 
   inputMapping.forEach(({ id, path, index, property }) => {
