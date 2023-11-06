@@ -60,9 +60,9 @@ export const responseDataMagang = (results) => {
 export const isiRow = (value) => {
   const content = cardMagang
     .replace("#POSISI#", value.posisi)
-    .replace("#MITRA#", value.mitra.namaresmi)
+    .replace("#MITRA#", value.mitra.nama)
     .replace("#LOKASI#", value.lokasi)
-    .replace("#TENTANGMITRA#", value.tentangmitra)
+    .replace("#TENTANGMITRA#", value.mitra.tentang)
     .replace("#EXPIRED#", value.expired);
   addInner("magang", content);
 };
