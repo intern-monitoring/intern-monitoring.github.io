@@ -2,25 +2,29 @@ import { responseDataMagang, URLGetMagang } from "./getMagang.js";
 import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
 
 const fetchData = async () => {
-  let data = localStorage.getItem("magangData");
+  try {
+    let data = localStorage.getItem("magangData");
 
-  if (!data) {
-    const myHeaders = new Headers();
-    myHeaders.append("Authorization", getCookie("Authorization"));
-    const requestOptions = {
-      method: "GET",
-      headers: myHeaders,
-      redirect: "follow",
-    };
+    if (!data) {
+      const myHeaders = new Headers();
+      myHeaders.append("Authorization", getCookie("Authorization"));
+      const requestOptions = {
+        method: "GET",
+        headers: myHeaders,
+        redirect: "follow",
+      };
 
-    const response = await fetch(URLGetMagang, requestOptions);
-    data = await response.json();
-    localStorage.setItem("magangData", JSON.stringify(data));
-  } else {
-    data = JSON.parse(data);
+      const response = await fetch(URLGetMagang, requestOptions);
+      data = await response.json();
+      localStorage.setItem("magangData", JSON.stringify(data));
+    } else {
+      data = JSON.parse(data);
+    }
+
+    responseDataMagang(data);
+  } catch (error) {
+    console.error("Error fetching or processing data: ", error);
   }
-
-  responseDataMagang(data);
 };
 
 window.onload = function () {
@@ -35,8 +39,23 @@ const searchData = async () => {
   const lokasiInput = document.getElementById("lokasi").value.toLowerCase();
 
   try {
-    const response = await fetch(URLGetMagang);
-    const data = await response.json();
+    let data = localStorage.getItem("magangData");
+
+    if (!data) {
+      const myHeaders = new Headers();
+      myHeaders.append("Authorization", getCookie("Authorization"));
+      const requestOptions = {
+        method: "GET",
+        headers: myHeaders,
+        redirect: "follow",
+      };
+
+      const response = await fetch(URLGetMagang, requestOptions);
+      data = await response.json();
+      localStorage.setItem("magangData", JSON.stringify(data));
+    } else {
+      data = JSON.parse(data);
+    }
 
     if (Array.isArray(data)) {
       const filteredResults = data.filter((item) => {
