@@ -30,7 +30,17 @@ const fetchData = async () => {
 window.onload = function () {
   fetchData(); // Fungsi untuk menampilkan semua data saat halaman dimuat
   const searchButton = document.getElementById("searchButton");
-  searchButton.addEventListener("click", searchData); // Menjalankan fungsi pencarian saat tombol search diklik
+  const clearButton = document.getElementById("clearButton");
+
+  searchButton.addEventListener("click", searchData);
+  clearButton.addEventListener("click", clearSearch); // Menjalankan fungsi clear saat tombol Clear diklik
+};
+
+const clearSearch = () => {
+  document.getElementById("posisi").value = "";
+  document.getElementById("nama").value = "";
+  document.getElementById("lokasi").value = "";
+  fetchData(); // Tampilkan kembali semua data setelah membersihkan kolom pencarian
 };
 
 const searchData = async () => {
