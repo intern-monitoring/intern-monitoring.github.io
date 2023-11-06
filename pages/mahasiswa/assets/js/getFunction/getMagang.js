@@ -38,16 +38,16 @@ export const cardMagang = `
 `;
 
 export function responseDataMagang(results) {
-  // Clear existing results
+  // Bersihkan hasil yang sudah ada
   document.getElementById("magang").innerHTML = "";
 
-  // Handle the response data
+  // Handle data hasil respons
   if (results.length > 0) {
-    // If there are matching results, display them
+    // Jika ada hasil yang cocok, tampilkan hasilnya
     results.forEach(isiRow);
   } else {
-    // If there are no matching results, display a message or handle it as needed
-    console.log("No matching results found.");
+    // Jika tidak ada hasil yang cocok, tampilkan pesan atau tangani sesuai kebutuhan
+    console.log("Tidak ditemukan hasil yang cocok.");
   }
 }
 
@@ -61,23 +61,42 @@ export function isiRow(value) {
   addInner("magang", content);
 }
 
-document.getElementById("searchButton").addEventListener("click", function () {
-  const posisi = document.getElementById("posisi").value;
-  const nama = document.getElementById("nama").value;
-  const lokasi = document.getElementById("lokasi").value;
-
-  // Make sure to construct the API endpoint URL with the appropriate query parameters based on the input values
-  const apiUrl = `${URLGetMagang}?posisi=${posisi}&nama=${nama}&lokasi=${lokasi}`;
-
-  // Call the API endpoint
-  fetch(apiUrl)
+// Fungsi untuk memuat semua data saat halaman dimuat
+function loadAllData() {
+  fetch(URLGetMagang)
     .then((response) => response.json())
     .then((data) => {
-      // Handle the response data
+      // Handle data hasil respons
       responseDataMagang(data);
     })
     .catch((error) => {
-      // Handle errors if any
+      // Tangani kesalahan jika ada
       console.error("Error fetching data:", error);
     });
-});
+}
+
+// Panggil fungsi untuk memuat semua data saat halaman dimuat
+window.addEventListener("load", loadAllData);
+
+document
+  .getElementById("searchButton")
+  .addEventListener("click", async function () {
+    const posisi = document.getElementById("posisi").value;
+    const nama = document.getElementById("nama").value;
+    const lokasi = document.getElementById("lokasi").value;
+
+    // Pastikan untuk membuat URL endpoint API dengan parameter pencarian yang sesuai berdasarkan nilai input pengguna
+    const apiUrl = `${URLGetMagang}?posisi=${posisi}&nama=${nama}&lokasi=${lokasi}`;
+
+    try {
+      // Panggil endpoint API menggunakan async/await
+      const response = await fetch(apiUrl);
+      const data = await response.json();
+
+      // Handle data hasil respons
+      responseDataMagang(data);
+    } catch (error) {
+      // Tangani kesalahan jika ada
+      console.error("Error fetching data:", error);
+    }
+  });
