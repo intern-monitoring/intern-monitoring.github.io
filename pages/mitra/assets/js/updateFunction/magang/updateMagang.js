@@ -36,7 +36,6 @@ const pushData = () => {
     lokasi: lokasiValue,
     deskripsimagang: deskripsiMagangValue,
     infotambahanmagang: infoTambahanMagangValue,
-    tentangmitra: tentangMitraValue,
     expired: expiredValue,
   };
   putData(urlPUT, data, AmbilResponse);
