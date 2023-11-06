@@ -41,7 +41,7 @@ const searchData = async () => {
     if (Array.isArray(data)) {
       const filteredResults = data.filter((item) => {
         const posisi = (item.posisi || "").toLowerCase(); // Periksa apakah posisi ada
-        const nama = (item.mitra?.nama || "").toLowerCase(); // Periksa apakah mitra dan nama ada
+        const nama = (item.mitra.nama || "").toLowerCase(); // Periksa apakah mitra dan nama ada
         const lokasi = (item.lokasi || "").toLowerCase(); // Periksa apakah lokasi ada
 
         return (
