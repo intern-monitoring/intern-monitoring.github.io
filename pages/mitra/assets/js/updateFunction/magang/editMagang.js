@@ -4,7 +4,6 @@ export const isiData = (results) => {
     { id: "lokasi", path: "lokasi" },
     { id: "deskripsimagang", path: "deskripsimagang" },
     { id: "infotambahanmagang", path: "infotambahanmagang" },
-    { id: "tentangmitra", path: "tentangmitra" },
     { id: "expired", path: "expired" },
   ];
 

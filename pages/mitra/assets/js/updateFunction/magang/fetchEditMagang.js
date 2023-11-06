@@ -7,7 +7,7 @@ function get(target_url, responseFunction) {
   myHeaders.append("Authorization", getCookie("Authorization"));
 
   var requestOptions = {
-    method: "HEAD",
+    method: "GET",
     headers: myHeaders,
     redirect: "follow",
   };
