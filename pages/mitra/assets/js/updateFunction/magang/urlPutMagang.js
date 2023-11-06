@@ -2,7 +2,7 @@ const urlParams = new URLSearchParams(window.location.search);
 const magangId = urlParams.get("magangId");
 
 export const urlPUT =
-  "https://asia-southeast2-bursakerja-project.cloudfunctions.net/intermoni-update-magang?id=" +
+  "https://asia-southeast2-bursakerja-project.cloudfunctions.net/intermoni-magang?id=" +
   magangId;
 
 export const AmbilResponse = (result) => {
