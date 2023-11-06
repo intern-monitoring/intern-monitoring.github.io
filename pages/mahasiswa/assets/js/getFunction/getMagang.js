@@ -37,12 +37,27 @@ export const cardMagang = `
 </div>
 `;
 
-export function responseDataMagang(results) {
-  console.log(results);
-  results.forEach(isiRow);
-}
+window.onload = function () {
+  fetchData(); // Fungsi untuk menampilkan semua data saat halaman dimuat
+  const searchButton = document.getElementById("searchButton");
+  searchButton.addEventListener("click", searchData); // Menjalankan fungsi pencarian saat tombol search diklik
+};
 
-export function isiRow(value) {
+const fetchData = async () => {
+  try {
+    const response = await fetch(URLGetMagang);
+    const data = await response.json();
+    responseDataMagang(data);
+  } catch (error) {
+    console.error("Error fetching data: ", error);
+  }
+};
+
+export const responseDataMagang = (results) => {
+  results.forEach(isiRow);
+};
+
+export const isiRow = (value) => {
   const content = cardMagang
     .replace("#POSISI#", value.posisi)
     .replace("#MITRA#", value.mitra.namaresmi)
@@ -50,4 +65,38 @@ export function isiRow(value) {
     .replace("#TENTANGMITRA#", value.tentangmitra)
     .replace("#EXPIRED#", value.expired);
   addInner("magang", content);
-}
+};
+
+const searchData = async () => {
+  const posisiInput = document.getElementById("posisi").value.toLowerCase();
+  const namaInput = document.getElementById("nama").value.toLowerCase();
+  const lokasiInput = document.getElementById("lokasi").value.toLowerCase();
+
+  try {
+    const response = await fetch(URLGetMagang);
+    const data = await response.json();
+
+    const filteredResults = data.filter((item) => {
+      const posisi = item.posisi.toLowerCase();
+      const nama = item.mitra.namaresmi.toLowerCase();
+      const lokasi = item.lokasi.toLowerCase();
+      return (
+        posisi.includes(posisiInput) &&
+        nama.includes(namaInput) &&
+        lokasi.includes(lokasiInput)
+      );
+    });
+
+    const magangContainer = document.getElementById("magang");
+    magangContainer.innerHTML = "";
+    if (posisiInput === "" && namaInput === "" && lokasiInput === "") {
+      // Jika semua input kosong, tampilkan semua data
+      responseDataMagang(data);
+    } else {
+      // Jika ada kriteria pencarian, tampilkan hasil pencarian
+      responseDataMagang(filteredResults);
+    }
+  } catch (error) {
+    console.error("Error searching data: ", error);
+  }
+};
