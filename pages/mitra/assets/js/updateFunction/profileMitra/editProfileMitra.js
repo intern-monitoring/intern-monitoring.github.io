@@ -1,4 +1,5 @@
 export const isiDataProfile = (results) => {
+  console.log(results);
   const inputMapping = [
     { id: "namanarahubung", path: "namanarahubung" },
     { id: "nohpnarahubung", path: "nohpnarahubung" },

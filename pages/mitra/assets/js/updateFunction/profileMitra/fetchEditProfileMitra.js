@@ -14,11 +14,7 @@ function get(target_url, responseFunction) {
 
   fetch(target_url, requestOptions)
     .then((response) => response.text())
-    .then((result) => {
-      const parsedResult = JSON.parse(result);
-      responseFunction(parsedResult);
-      console.log("Result:", parsedResult); // Menampilkan hasil di console log
-    })
+    .then((result) => responseFunction(JSON.parse(result)))
     .catch((error) => console.log("error", error));
 }
 get(urlFetch, isiDataProfile);
