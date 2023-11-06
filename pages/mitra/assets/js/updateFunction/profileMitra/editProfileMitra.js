@@ -7,7 +7,7 @@ export const isiDataProfile = (results) => {
     { id: "sektorindustri", path: "sektorindustri" },
     // { id: "tentang", path: "tentang" },
     { id: "alamat", path: "alamat" },
-    { id: "website", path: "website" },
+    // { id: "website", path: "website" },
   ];
 
   inputMapping.forEach(({ id, path, index, property }) => {
