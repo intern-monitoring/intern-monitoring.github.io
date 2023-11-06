@@ -76,25 +76,29 @@ const searchData = async () => {
     const response = await fetch(URLGetMagang);
     const data = await response.json();
 
-    const filteredResults = data.filter((item) => {
-      const posisi = item.posisi.toLowerCase();
-      const nama = item.mitra.nama.toLowerCase();
-      const lokasi = item.lokasi.toLowerCase();
-      return (
-        posisi.includes(posisiInput) &&
-        nama.includes(namaInput) &&
-        lokasi.includes(lokasiInput)
-      );
-    });
+    if (Array.isArray(data)) {
+      const filteredResults = data.filter((item) => {
+        const posisi = item.posisi.toLowerCase();
+        const nama = item.mitra.nama.toLowerCase();
+        const lokasi = item.lokasi.toLowerCase();
+        return (
+          posisi.includes(posisiInput) &&
+          nama.includes(namaInput) &&
+          lokasi.includes(lokasiInput)
+        );
+      });
 
-    const magangContainer = document.getElementById("magang");
-    magangContainer.innerHTML = "";
-    if (posisiInput === "" && namaInput === "" && lokasiInput === "") {
-      // Jika semua input kosong, tampilkan semua data
-      responseDataMagang(data);
+      const magangContainer = document.getElementById("magang");
+      magangContainer.innerHTML = "";
+      if (posisiInput === "" && namaInput === "" && lokasiInput === "") {
+        // Jika semua input kosong, tampilkan semua data
+        responseDataMagang(data);
+      } else {
+        // Jika ada kriteria pencarian, tampilkan hasil pencarian
+        responseDataMagang(filteredResults);
+      }
     } else {
-      // Jika ada kriteria pencarian, tampilkan hasil pencarian
-      responseDataMagang(filteredResults);
+      console.error("Data is not an array:", data);
     }
   } catch (error) {
     console.error("Error searching data: ", error);
