@@ -28,7 +28,6 @@ const pushData = () => {
   const lokasiValue = getValue("lokasi");
   const deskripsiMagangValue = getValue("deskripsimagang");
   const infoTambahanMagangValue = getValue("infotambahanmagang");
-  const tentangMitraValue = getValue("tentangmitra");
   const expiredValue = getValue("expired");
 
   // Create the updated data object
