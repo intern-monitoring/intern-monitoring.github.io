@@ -78,7 +78,7 @@ const searchData = async () => {
 
     const filteredResults = data.filter((item) => {
       const posisi = item.posisi.toLowerCase();
-      const nama = item.mitra.namaresmi.toLowerCase();
+      const nama = item.mitra.nama.toLowerCase();
       const lokasi = item.lokasi.toLowerCase();
       return (
         posisi.includes(posisiInput) &&
