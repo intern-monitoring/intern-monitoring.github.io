@@ -14,7 +14,10 @@ const fetchData = async () => {
     const response = await fetch(URLGetMagang, requestOptions);
     const data = await response.json();
 
-    responseDataMagang(data);
+    // Ubah data menjadi array
+    const dataArray = Array.isArray(data) ? data : Array.from(data);
+
+    responseDataMagang(dataArray);
   } catch (error) {
     console.error("Error fetching or processing data: ", error);
   }
@@ -37,7 +40,7 @@ const searchData = async () => {
   try {
     const data = await fetchData(); // Ambil data baru dari server setiap kali melakukan pencarian
 
-    if (data) {
+    if (Array.isArray(data)) {
       const filteredResults = data.filter((item) => {
         const posisi = (item.posisi || "").toLowerCase();
         const nama = (item.mitra.nama || "").toLowerCase();
