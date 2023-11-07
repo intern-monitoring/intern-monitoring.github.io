@@ -37,7 +37,7 @@ const searchData = async () => {
   try {
     const data = await fetchData(); // Ambil data baru dari server setiap kali melakukan pencarian
 
-    if (Array.isArray(data)) {
+    if (data) {
       const filteredResults = data.filter((item) => {
         const posisi = (item.posisi || "").toLowerCase();
         const nama = (item.mitra.nama || "").toLowerCase();
