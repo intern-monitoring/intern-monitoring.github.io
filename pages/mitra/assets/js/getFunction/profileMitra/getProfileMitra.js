@@ -75,7 +75,7 @@ export const dataProfileMitra = `
     </div>
     <div class="flex justify-center gap-2">
       <label class="text-base text-gray-900 font-semibold"
-        >Website Perusahaan :</label
+        >Website :</label
       >
       <h3 class="text-base text-gray-900 font-normal">
         #WEBSITE#
