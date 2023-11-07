@@ -12,9 +12,17 @@ const fetchData = async () => {
     };
 
     const response = await fetch(URLGetMagang, requestOptions);
+    if (!response.ok) {
+      throw new Error("Failed to fetch data from the server");
+    }
+
     const data = await response.json();
 
-    responseDataMagang(data);
+    if (Array.isArray(data)) {
+      responseDataMagang(data);
+    } else {
+      console.error("Data received from server is not an array:", data);
+    }
   } catch (error) {
     console.error("Error fetching or processing data: ", error);
   }
