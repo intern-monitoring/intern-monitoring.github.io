@@ -40,13 +40,9 @@ const clearSearch = () => {
   document.getElementById("nama").value = "";
   document.getElementById("lokasi").value = "";
 
+  // tampilkan data awal magangData di local storage
   const data = JSON.parse(localStorage.getItem("magangData"));
-  if (data) {
-    responseDataMagang(data);
-  } else {
-    // Jika data tidak ada di localStorage, panggil fetchData untuk mendapatkan data dari server
-    fetchData();
-  }
+  responseDataMagang(data);
 };
 
 const searchData = async () => {
