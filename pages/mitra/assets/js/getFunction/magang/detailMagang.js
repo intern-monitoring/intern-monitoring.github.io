@@ -6,7 +6,7 @@ export const dataMagang = `
   <div class="space-y-4">
     <div>
       <h3 class="text-2xl font-semibold text-gray-800">
-        Front End Developer
+        #POSISI#
       </h3>
 
       <div class="flex justify-between items-center">
