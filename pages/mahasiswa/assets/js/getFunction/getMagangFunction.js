@@ -12,14 +12,11 @@ const fetchData = async () => {
     };
 
     const response = await fetch(URLGetMagang, requestOptions);
-    if (!response.ok) {
-      throw new Error("Failed to fetch data from the server");
-    }
-
     const data = await response.json();
 
     if (Array.isArray(data)) {
-      responseDataMagang(data);
+      // Memastikan data telah berhasil diterima dari server sebelum menjalankan pencarian
+      searchData();
     } else {
       console.error("Data received from server is not an array:", data);
     }
