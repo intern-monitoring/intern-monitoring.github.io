@@ -14,12 +14,6 @@ const fetchData = async () => {
     const response = await fetch(URLGetMagang, requestOptions);
     const data = await response.json();
 
-    // Simpan data awal ke initialMagangData di localStorage
-    localStorage.setItem("initialMagangData", JSON.stringify(data));
-
-    // Simpan data ke magangData di localStorage
-    localStorage.setItem("magangData", JSON.stringify(data));
-
     responseDataMagang(data);
   } catch (error) {
     console.error("Error fetching or processing data: ", error);
@@ -31,14 +25,8 @@ const clearSearch = () => {
   document.getElementById("nama").value = "";
   document.getElementById("lokasi").value = "";
 
-  // Ambil data awal dari localStorage dan tampilkan
-  const initialData = JSON.parse(localStorage.getItem("initialMagangData"));
-  if (initialData) {
-    responseDataMagang(initialData);
-  } else {
-    // Jika data awal tidak ada di localStorage, panggil fetchData untuk mendapatkan data dari server
-    fetchData();
-  }
+  // Panggil fetchData untuk menampilkan data awal setelah membersihkan kolom pencarian
+  fetchData();
 };
 
 const searchData = async () => {
@@ -47,7 +35,7 @@ const searchData = async () => {
   const lokasiInput = document.getElementById("lokasi").value.toLowerCase();
 
   try {
-    const data = JSON.parse(localStorage.getItem("magangData"));
+    const data = await fetchData(); // Ambil data baru dari server setiap kali melakukan pencarian
 
     if (Array.isArray(data)) {
       const filteredResults = data.filter((item) => {
@@ -64,13 +52,7 @@ const searchData = async () => {
 
       const magangContainer = document.getElementById("magang");
       magangContainer.innerHTML = "";
-      if (posisiInput === "" && namaInput === "" && lokasiInput === "") {
-        // Jika semua input kosong, tampilkan semua data
-        responseDataMagang(data);
-      } else {
-        // Jika ada kriteria pencarian, tampilkan hasil pencarian
-        responseDataMagang(filteredResults);
-      }
+      responseDataMagang(filteredResults);
     } else {
       console.error("Data is not an array:", data);
     }
