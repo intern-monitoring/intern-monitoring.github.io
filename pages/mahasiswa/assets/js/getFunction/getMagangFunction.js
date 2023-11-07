@@ -3,9 +3,6 @@ import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
 
 const fetchData = async () => {
   try {
-    // Hapus data lama dari localStorage sebelum mendapatkan data baru
-    localStorage.removeItem("magangData");
-
     const myHeaders = new Headers();
     myHeaders.append("Authorization", getCookie("Authorization"));
     const requestOptions = {
@@ -17,7 +14,10 @@ const fetchData = async () => {
     const response = await fetch(URLGetMagang, requestOptions);
     const data = await response.json();
 
-    // Simpan data baru ke localStorage
+    // Simpan data awal ke initialMagangData di localStorage
+    localStorage.setItem("initialMagangData", JSON.stringify(data));
+
+    // Simpan data ke magangData di localStorage
     localStorage.setItem("magangData", JSON.stringify(data));
 
     responseDataMagang(data);
@@ -26,20 +26,19 @@ const fetchData = async () => {
   }
 };
 
-window.onload = function () {
-  fetchData(); // Fungsi untuk menampilkan semua data saat halaman dimuat
-  const searchButton = document.getElementById("searchButton");
-  const clearButton = document.getElementById("clearButton");
-
-  searchButton.addEventListener("click", searchData);
-  clearButton.addEventListener("click", clearSearch); // Menjalankan fungsi clear saat tombol Clear diklik
-};
-
 const clearSearch = () => {
   document.getElementById("posisi").value = "";
   document.getElementById("nama").value = "";
   document.getElementById("lokasi").value = "";
-  fetchData(); // Tampilkan kembali semua data setelah membersihkan kolom pencarian
+
+  // Ambil data awal dari localStorage dan tampilkan
+  const initialData = JSON.parse(localStorage.getItem("initialMagangData"));
+  if (initialData) {
+    responseDataMagang(initialData);
+  } else {
+    // Jika data awal tidak ada di localStorage, panggil fetchData untuk mendapatkan data dari server
+    fetchData();
+  }
 };
 
 const searchData = async () => {
@@ -48,29 +47,13 @@ const searchData = async () => {
   const lokasiInput = document.getElementById("lokasi").value.toLowerCase();
 
   try {
-    let data = localStorage.getItem("magangData");
-
-    if (!data) {
-      const myHeaders = new Headers();
-      myHeaders.append("Authorization", getCookie("Authorization"));
-      const requestOptions = {
-        method: "GET",
-        headers: myHeaders,
-        redirect: "follow",
-      };
-
-      const response = await fetch(URLGetMagang, requestOptions);
-      data = await response.json();
-      localStorage.setItem("magangData", JSON.stringify(data));
-    } else {
-      data = JSON.parse(data);
-    }
+    const data = JSON.parse(localStorage.getItem("magangData"));
 
     if (Array.isArray(data)) {
       const filteredResults = data.filter((item) => {
-        const posisi = (item.posisi || "").toLowerCase(); // Periksa apakah posisi ada
-        const nama = (item.mitra.nama || "").toLowerCase(); // Periksa apakah mitra dan nama ada
-        const lokasi = (item.lokasi || "").toLowerCase(); // Periksa apakah lokasi ada
+        const posisi = (item.posisi || "").toLowerCase();
+        const nama = (item.mitra.nama || "").toLowerCase();
+        const lokasi = (item.lokasi || "").toLowerCase();
 
         return (
           posisi.includes(posisiInput) &&
@@ -94,4 +77,13 @@ const searchData = async () => {
   } catch (error) {
     console.error("Error searching data: ", error);
   }
+};
+
+window.onload = function () {
+  fetchData();
+  const searchButton = document.getElementById("searchButton");
+  const clearButton = document.getElementById("clearButton");
+
+  searchButton.addEventListener("click", searchData);
+  clearButton.addEventListener("click", clearSearch);
 };
