@@ -40,9 +40,11 @@ const clearSearch = () => {
   document.getElementById("nama").value = "";
   document.getElementById("lokasi").value = "";
 
-  // tampilkan data awal magangData di local storage
-  const data = JSON.parse(localStorage.getItem("magangData"));
-  responseDataMagang(data);
+  // hapus card hasil pencarian juga lalu tampilkan data awal
+  const magangContainer = document.getElementById("magang");
+  magangContainer.innerHTML = "";
+
+  fetchData();
 };
 
 const searchData = async () => {
