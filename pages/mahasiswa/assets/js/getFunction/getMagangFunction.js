@@ -4,7 +4,7 @@ import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
 const fetchData = async () => {
   try {
     // Hapus data lama dari localStorage sebelum mendapatkan data baru
-    localStorage.removeItem("magangData");
+    // localStorage.removeItem("magangData");
 
     const myHeaders = new Headers();
     myHeaders.append("Authorization", getCookie("Authorization"));
@@ -39,7 +39,14 @@ const clearSearch = () => {
   document.getElementById("posisi").value = "";
   document.getElementById("nama").value = "";
   document.getElementById("lokasi").value = "";
-  fetchData(); // Tampilkan kembali semua data setelah membersihkan kolom pencarian
+
+  const data = JSON.parse(localStorage.getItem("magangData"));
+  if (data) {
+    responseDataMagang(data);
+  } else {
+    // Jika data tidak ada di localStorage, panggil fetchData untuk mendapatkan data dari server
+    fetchData();
+  }
 };
 
 const searchData = async () => {
