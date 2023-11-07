@@ -3,23 +3,22 @@ import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
 
 const fetchData = async () => {
   try {
-    let data = localStorage.getItem("magangData");
+    // Hapus data lama dari localStorage sebelum mendapatkan data baru
+    localStorage.removeItem("magangData");
 
-    if (!data) {
-      const myHeaders = new Headers();
-      myHeaders.append("Authorization", getCookie("Authorization"));
-      const requestOptions = {
-        method: "GET",
-        headers: myHeaders,
-        redirect: "follow",
-      };
+    const myHeaders = new Headers();
+    myHeaders.append("Authorization", getCookie("Authorization"));
+    const requestOptions = {
+      method: "GET",
+      headers: myHeaders,
+      redirect: "follow",
+    };
 
-      const response = await fetch(URLGetMagang, requestOptions);
-      data = await response.json();
-      localStorage.setItem("magangData", JSON.stringify(data));
-    } else {
-      data = JSON.parse(data);
-    }
+    const response = await fetch(URLGetMagang, requestOptions);
+    const data = await response.json();
+
+    // Simpan data baru ke localStorage
+    localStorage.setItem("magangData", JSON.stringify(data));
 
     responseDataMagang(data);
   } catch (error) {
