@@ -3,13 +3,11 @@ import { addInner } from "https://jscroot.github.io/element/croot.js";
 export const dataMagang = `
 <div class="bg-white rounded-xl border shadow-md p-4 sm:p-7">
 <div class="p-5">
-  <div class="space-y-4">
-    <div>
-      <h3 class="text-2xl font-semibold text-gray-800">
-        #POSISI#
-      </h3>
-
+  < class="space-y-4">
       <div class="flex justify-between items-center">
+        <h3 class="text-2xl font-semibold text-gray-800">
+            #POSISI#
+        </h3>
         <p
           class="inline-flex justify-center items-center gap-x-1 text-center font-semibold text-gray-800"
         >
@@ -32,7 +30,6 @@ export const dataMagang = `
         </p>
       </div>
       <div class="border-b border-gray-200 py-1"></div>
-    </div>
 
     <div>
       <h3
