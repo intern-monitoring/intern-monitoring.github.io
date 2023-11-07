@@ -30,7 +30,8 @@ export const cardMagang = `
   </h3>
 
   <div class="flex justify-end pt-2">
-    <a class="inline-flex w-full justify-center items-center gap-x-3 text-center bg-gradient-to-tl from-blue-600 to-violet-600 shadow-lg shadow-transparent hover:shadow-blue-700/50 border border-transparent text-white text-sm font-medium rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 focus:ring-offset-white py-3 px-6" href="#">
+    <a class="inline-flex w-full justify-center items-center gap-x-3 text-center bg-gradient-to-tl from-blue-600 to-violet-600 shadow-lg shadow-transparent hover:shadow-blue-700/50 border border-transparent text-white text-sm font-medium rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 focus:ring-offset-white py-3 px-6" 
+    href="detailMagang?magangId=#DETAIL#"
       Detail
     </a>
   </div>
@@ -48,6 +49,7 @@ export function isiRow(value) {
     .replace("#MITRA#", value.mitra.nama)
     .replace("#LOKASI#", value.lokasi)
     .replace("#TENTANGMITRA#", value.mitra.tentang)
-    .replace("#EXPIRED#", value.expired);
+    .replace("#EXPIRED#", value.expired)
+    .replace("#DETAIL#", value._id);
   addInner("magang", content);
 }
