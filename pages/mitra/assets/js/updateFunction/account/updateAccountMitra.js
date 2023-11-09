@@ -27,7 +27,7 @@ const putEmail = (target_url, datajson, responseFunction) => {
 };
 
 const pushDataEmail = () => {
-  const emailValue = getValue("email");
+  const emailValue = getValue("emailbaru");
 
   // Create the updated data object
   const data = {
