@@ -57,7 +57,7 @@ export function responseData(results) {
 }
 
 export function isiRow(value) {
-  const content = dataAccountMitra
+  const content = dataAccountMahasiswa
     .replace("#EMAIL#", value.email)
     .replace("#IDEDIT#", value._id);
   addInner("accountMahasiswa", content);
