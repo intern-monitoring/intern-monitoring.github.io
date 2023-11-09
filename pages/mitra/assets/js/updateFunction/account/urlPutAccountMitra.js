@@ -6,29 +6,39 @@ export const urlPUTEmail =
   userId;
 
 export const AmbilEmailResponse = (result) => {
-  console.log(result); // menampilkan response API pada console
-  Swal.fire({
-    icon: "success",
-    title: "Email berhasil diubah",
-    showConfirmButton: false,
-    timer: 1500,
-  }).then(() => {
-    window.location.href = "profileMitra.html";
-  });
+  if (result.success) {
+    Swal.fire({
+      icon: "success",
+      title: "Email berhasil diubah",
+      showConfirmButton: false,
+      timer: 1500,
+    }).then(() => {
+      window.location.href = "profileMitra.html";
+    });
+  } else {
+    Swal.fire({
+      icon: "error",
+      title: "Error",
+      text: result.message, // Menampilkan pesan error dari response API
+    });
+  }
 };
 
-export const urlPUTPassword =
-  "https://asia-southeast2-bursakerja-project.cloudfunctions.net/intermoni-user-password?id=" +
-  userId;
-
 export const AmbilPasswordResponse = (result) => {
-  console.log(result); // menampilkan response API pada console
-  Swal.fire({
-    icon: "success",
-    title: "Password berhasil diubah",
-    showConfirmButton: false,
-    timer: 1500,
-  }).then(() => {
-    window.location.href = "profileMitra.html";
-  });
+  if (result.success) {
+    Swal.fire({
+      icon: "success",
+      title: "Password berhasil diubah",
+      showConfirmButton: false,
+      timer: 1500,
+    }).then(() => {
+      window.location.href = "profileMitra.html";
+    });
+  } else {
+    Swal.fire({
+      icon: "error",
+      title: "Error",
+      text: result.message, // Menampilkan pesan error dari response API
+    });
+  }
 };
