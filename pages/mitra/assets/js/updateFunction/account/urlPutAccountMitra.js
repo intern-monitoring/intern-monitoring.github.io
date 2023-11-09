@@ -16,3 +16,19 @@ export const AmbilEmailResponse = (result) => {
     window.location.href = "profileMitra.html";
   });
 };
+
+export const urlPUTPassword =
+  "https://asia-southeast2-bursakerja-project.cloudfunctions.net/intermoni-user-password?id=" +
+  userId;
+
+export const AmbilPasswordResponse = (result) => {
+  console.log(result); // menampilkan response API pada console
+  Swal.fire({
+    icon: "success",
+    title: "Password berhasil diubah",
+    showConfirmButton: false,
+    timer: 1500,
+  }).then(() => {
+    window.location.href = "profileMitra.html";
+  });
+};
