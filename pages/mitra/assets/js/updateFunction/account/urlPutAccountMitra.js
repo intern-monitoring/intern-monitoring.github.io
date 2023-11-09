@@ -2,7 +2,8 @@ const urlParams = new URLSearchParams(window.location.search);
 const userId = urlParams.get("userId");
 
 export const urlPUTEmail =
-  "https://asia-southeast2-bursakerja-project.cloudfunctions.net/intermoni-user-email";
+  "https://asia-southeast2-bursakerja-project.cloudfunctions.net/intermoni-user-email?id=" +
+  userId;
 
 export const AmbilEmailResponse = (result) => {
   if (result.status) {
@@ -26,7 +27,8 @@ export const AmbilEmailResponse = (result) => {
 // Password
 
 export const urlPUTPassword =
-  "https://asia-southeast2-bursakerja-project.cloudfunctions.net/intermoni-user-password";
+  "https://asia-southeast2-bursakerja-project.cloudfunctions.net/intermoni-user-password?id=" +
+  userId;
 
 export const AmbilPasswordResponse = (result) => {
   if (result.status) {
