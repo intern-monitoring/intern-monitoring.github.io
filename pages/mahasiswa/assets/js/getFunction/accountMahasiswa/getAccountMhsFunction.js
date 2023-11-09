@@ -1,4 +1,4 @@
-import { URLGetAccountMahasiswa, responseData } from "./getAccountMhs";
+import { URLGetAccountMahasiswa, responseData } from "./getAccountMhs.js";
 import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
 
 const get = (target_url, responseFunction) => {
