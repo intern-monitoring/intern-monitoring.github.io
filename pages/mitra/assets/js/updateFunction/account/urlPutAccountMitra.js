@@ -24,6 +24,12 @@ export const AmbilEmailResponse = (result) => {
   }
 };
 
+// Password
+
+export const urlPUTPassword =
+  "https://asia-southeast2-bursakerja-project.cloudfunctions.net/intermoni-user-password?id=" +
+  userId;
+
 export const AmbilPasswordResponse = (result) => {
   if (result.success) {
     Swal.fire({
