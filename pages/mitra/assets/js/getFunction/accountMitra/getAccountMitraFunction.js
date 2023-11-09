@@ -1,7 +1,7 @@
 import { addInner } from "https://jscroot.github.io/element/croot.js";
 
 export const URLGetAccountMitra =
-  "https://asia-southeast2-bursakerja-project.cloudfunctions.net/intermoni-mitra";
+  "https://asia-southeast2-bursakerja-project.cloudfunctions.net/intermoni-user";
 
 export const dataAccountMitra = `
 <div class="bg-white rounded-xl border shadow-md p-4 sm:p-7">
