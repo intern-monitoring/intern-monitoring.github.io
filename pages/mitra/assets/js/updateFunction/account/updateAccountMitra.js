@@ -1,6 +1,6 @@
 import { getValue } from "https://jscroot.github.io/element/croot.js";
 import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
-import { urlPUTEmail, AmbilResponse } from "./urlPutAccountMitra.js";
+import { urlPUTEmail, AmbilEmailResponse } from "./urlPutAccountMitra.js";
 
 console.log("hadeer");
 
@@ -30,7 +30,7 @@ const pushDataEmail = () => {
   const data = {
     email: emailValue,
   };
-  putEmail(urlPUTEmail, data, AmbilResponse);
+  putEmail(urlPUTEmail, data, AmbilEmailResponse);
 };
 
 const updateButton = document.getElementById("updateEmail");

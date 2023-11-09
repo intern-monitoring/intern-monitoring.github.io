@@ -1,11 +1,11 @@
 const urlParams = new URLSearchParams(window.location.search);
 const userId = urlParams.get("userId");
 
-export const urlPUT =
+export const urlPUTEmail =
   "https://asia-southeast2-bursakerja-project.cloudfunctions.net/intermoni-user-email?id=" +
   userId;
 
-export const AmbilResponse = (result) => {
+export const AmbilEmailResponse = (result) => {
   console.log(result); // menampilkan response API pada console
   Swal.fire({
     icon: "success",
