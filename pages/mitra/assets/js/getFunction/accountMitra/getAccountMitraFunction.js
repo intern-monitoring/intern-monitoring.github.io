@@ -20,7 +20,7 @@ export const dataAccountMitra = `
       for="af-account-full-email"
       class="inline-block text-sm text-gray-800 mt-2.5"
     >
-      #EMAIL#
+      Email
     </label>
   </div>
   <!-- End Col -->
