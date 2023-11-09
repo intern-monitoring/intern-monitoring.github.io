@@ -6,7 +6,7 @@ export const urlPUTEmail =
   userId;
 
 export const AmbilEmailResponse = (result) => {
-  if (result.success) {
+  if (result.status) {
     Swal.fire({
       icon: "success",
       title: "Email berhasil diubah",
@@ -31,7 +31,7 @@ export const urlPUTPassword =
   userId;
 
 export const AmbilPasswordResponse = (result) => {
-  if (result.success) {
+  if (result.status) {
     Swal.fire({
       icon: "success",
       title: "Password berhasil diubah",
