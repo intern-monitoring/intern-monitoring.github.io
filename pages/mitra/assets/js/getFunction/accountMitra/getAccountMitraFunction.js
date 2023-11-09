@@ -37,30 +37,6 @@ export const dataAccountMitra = `
   </div>
   <!-- End Col -->
   <!-- End Email -->
-
-  <!-- Password -->
-  <div class="sm:col-span-3">
-    <label
-      for="af-account-full-email"
-      class="inline-block text-sm text-gray-800 mt-2.5"
-    >
-      Password
-    </label>
-  </div>
-  <!-- End Col -->
-  <div class="sm:col-span-9">
-    <div class="sm:flex">
-      <input
-        id="password"
-        type="password"
-        value="#PASSWORD#"
-        class="py-2 px-3 pr-11 block w-full border-[1px] border-gray-200 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500"
-        disabled
-      />
-    </div>
-  </div>
-  <!-- End Col -->
-  <!-- End Password -->
 </div>
 <!-- End Display Account-->
 <div class="mt-5 flex justify-end gap-x-2">
@@ -83,7 +59,6 @@ export function responseData(results) {
 export function isiRow(value) {
   const content = dataAccountMitra
     .replace("#EMAIL#", value.email)
-    .replace("#PASSWORD#", value.password)
     .replace("#IDEDIT#", value._id);
   addInner("accountMitra", content);
 }
