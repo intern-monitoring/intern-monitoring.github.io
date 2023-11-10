@@ -66,7 +66,7 @@ export const dataMagang = `
     </div>
 
     <div>
-      <div class="border-t border-gray-200 py-1"></div>
+      <div class="border-t border-gray-200 py-2"></div>
       <p
         class="inline-flex justify-center items-center gap-x-2 text-center font-semibold text-gray-800"
       >
@@ -90,12 +90,18 @@ export const dataMagang = `
     </div>
   </div>
 </div>
-<div class="mt-5 flex justify-end gap-x-2">
+<div class="mt-2 flex justify-end gap-x-2">
   <a
     href="cariInternship.html"
     class="py-2 px-3 inline-flex cursor-pointer justify-center items-center gap-2 rounded-md border font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-600 transition-all text-sm"
   >
     Kembali
+  </a>
+  <a
+    href="#"
+    class="inline-flex justify-center items-center gap-x-3 text-center bg-gradient-to-tl from-blue-600 to-violet-600 shadow-lg shadow-transparent hover:shadow-blue-700/50 border border-transparent text-white text-sm font-medium rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 focus:ring-offset-white py-2 px-5"
+  >
+    Apply
   </a>
 </div>
 </div>
