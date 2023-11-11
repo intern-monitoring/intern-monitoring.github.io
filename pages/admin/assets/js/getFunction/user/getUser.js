@@ -5,60 +5,36 @@ export const URLGetUser =
 
 export const tableUser = `
 <tr>
-<td class="h-px w-px whitespace-nowrap">
-<div class="pl-6 pr-6 py-3">
-  <div class="flex items-center gap-x-3">
-    <div class="grow">
-      <span
-        class="block text-sm font-semibold text-gray-800 dark:text-gray-200"
-        >#POSISI#</span
-      >
-    </div>
-  </div>
-</div>
-</td>
-<td class="h-px w-72 whitespace-nowrap">
-<div class="px-6 py-3">
-  <span
-    class="block text-sm font-semibold text-gray-800 dark:text-gray-200"
-    >#LOKASI#</span
-  >
-</div>
-</td>
-<td class="h-px w-px whitespace-nowrap">
-<div class="px-6 py-3">
-  <span class="text-sm text-gray-500"
-    >#EXPIRED#</span
-  >
-</div>
-</td>
-<td class="h-px w-px">
-<div class="flex justify-between px-6 py-1.5">
-  <div>
-    <a
-      class="inline-flex items-center text-sm text-blue-600 decoration-2 hover:underline font-medium"
-      href="detailMagang?magangId=#DETAIL#"
+<td class="px-6 py-3 whitespace-nowrap">
+  <div class="flex items-center">
+    <span
+      class="text-sm font-semibold text-gray-800 dark:text-gray-200"
+      >#EMAIL#</span
     >
-      Detail
-    </a>
   </div>
-  <div>
-    <a
-      href="editMagang?magangId=#IDEDIT#"
-      class="inline-flex items-center px-2 cursor-pointer text-sm text-green-600 decoration-2 hover:underline font-medium"
+</td>
+<td class="px-6 py-3 whitespace-nowrap"></td>
+<td class="px-6 py-3 whitespace-nowrap">
+  <div class="flex items-center">
+    <span
+      class="text-sm font-semibold text-gray-800 dark:text-gray-200"
+      >#ROLE#</span
     >
-      Edit
-    </a>
   </div>
-  <div>
+</td>
+<td class="px-6 py-3 text-right">
+  <div class="flex justify-end space-x-3">
     <a
-      class="inline-flex items-center cursor-pointer text-sm text-red-600 decoration-2 hover:underline font-medium"
+      class="text-sm text-blue-600 hover:underline font-medium"
+      href="detailUser?userId=#DETAIL#"
+      >Detail</a
+    >
+    <a
+      class="text-sm text-red-600 cursor-pointer hover:underline font-medium"
       onclick="deleteMagang('#IDHAPUS#')"
+      >Delete</a
     >
-      Delete
-    </a>
   </div>
-</div>
 </td>
 </tr>
 `;
@@ -70,10 +46,8 @@ export function responseData(results) {
 
 export function isiRow(value) {
   const content = tableUser
-    .replace("#POSISI#", value.posisi)
-    .replace("#LOKASI#", value.lokasi)
-    .replace("#EXPIRED#", value.expired)
-    .replace("#IDEDIT#", value._id)
+    .replace("#POSISI#", value.email)
+    .replace("#LOKASI#", value.role)
     .replace("#IDHAPUS#", value._id)
     .replace("#DETAIL#", value._id);
   addInner("datauser", content);
