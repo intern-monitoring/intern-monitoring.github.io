@@ -12,7 +12,17 @@ const get = (target_url, responseFunction) => {
 
   fetch(target_url, requestOptions)
     .then((response) => response.text())
-    .then((result) => responseFunction(JSON.parse(result)))
+    .then((result) => {
+      const parsedResult = JSON.parse(result);
+
+      // Filter data for "mahasiswa" and "mitra" roles
+      const filteredData = parsedResult.filter((user) =>
+        ["mahasiswa", "mitra"].includes(user.akun.role)
+      );
+
+      // Call the response function with the filtered data
+      responseFunction(filteredData);
+    })
     .catch((error) => console.log("error", error));
 };
 
