@@ -20,8 +20,14 @@ const get = (target_url, responseFunction) => {
 
   fetch(target_url, requestOptions)
     .then((response) => response.text())
-    .then((result) => responseFunction(JSON.parse(result)))
-    .then((result) => CountMagang(result.length))
+    .then((result) => {
+      const jsonData = JSON.parse(result);
+      responseFunction(jsonData);
+
+      // Hitung jumlah data dan perbarui tampilan
+      const count = jsonData.length;
+      CountMagang(count);
+    })
     .catch((error) => console.log("error", error));
 };
 
