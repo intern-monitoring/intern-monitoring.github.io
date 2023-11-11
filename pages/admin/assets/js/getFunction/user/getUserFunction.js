@@ -1,6 +1,11 @@
 import { URLGetUser, responseData } from "./getUser.js";
 import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
 
+const updateResultCount = (count) => {
+  const resultCountElement = document.getElementById("resultCount");
+  resultCountElement.innerHTML = `<p class="text-sm text-gray-600"><span class="font-semibold text-gray-800">${count}</span> results</p>`;
+};
+
 const get = (target_url, responseFunction) => {
   const myHeaders = new Headers();
   myHeaders.append("Authorization", getCookie("Authorization"));
@@ -22,6 +27,8 @@ const get = (target_url, responseFunction) => {
 
       // Call the response function with the filtered data
       responseFunction(filteredData);
+
+      updateResultCount(filteredData.length);
     })
     .catch((error) => console.log("error", error));
 };
