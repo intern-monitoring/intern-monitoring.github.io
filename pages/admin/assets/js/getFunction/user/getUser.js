@@ -31,7 +31,7 @@ export const tableUser = `
     >
     <a
       class="text-sm text-red-600 cursor-pointer hover:underline font-medium"
-      onclick="deleteMagang('#IDHAPUS#')"
+      onclick="deleteUser('#IDHAPUS#')"
       >Delete</a
     >
   </div>
