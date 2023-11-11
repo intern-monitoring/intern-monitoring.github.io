@@ -108,3 +108,14 @@
   opacity: 1;
   transform: translateX(0);
 }
+
+.fade-in-element-bottom {
+  opacity: 0;
+  transform: translateY(50px); /* Move element 50 pixels down initially */
+  transition: opacity 2s ease, transform 4s ease;
+}
+
+.fade-in-element-bottom.visible {
+  opacity: 1;
+  transform: translateY(0); /* Reset the position */
+}
