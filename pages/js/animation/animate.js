@@ -1,12 +1,27 @@
-$(document).ready(function () {
-  $(window).scroll(function () {
-    var windowHeight = $(window).height();
-    var scrollPos = $(window).scrollTop();
-    $(".fade-in-element").each(function () {
-      var offsetTop = $(this).offset().top;
-      if (scrollPos > offsetTop - windowHeight + 200) {
-        $(this).addClass("visible");
+document.addEventListener("DOMContentLoaded", function () {
+  const fadeElementsLeft = document.querySelectorAll(".fade-in-element-left");
+  const fadeElementsRight = document.querySelectorAll(".fade-in-element-right");
+
+  function checkFade(elements) {
+    elements.forEach(function (element) {
+      const elementTop = element.getBoundingClientRect().top;
+      const windowHeight = window.innerHeight;
+
+      if (elementTop < windowHeight) {
+        element.classList.add("visible");
+      } else {
+        element.classList.remove("visible");
       }
     });
+  }
+
+  // Initial check when the page loads
+  checkFade(fadeElementsLeft);
+  checkFade(fadeElementsRight);
+
+  // Add a scroll event listener to check on scroll
+  window.addEventListener("scroll", function () {
+    checkFade(fadeElementsLeft);
+    checkFade(fadeElementsRight);
   });
 });
