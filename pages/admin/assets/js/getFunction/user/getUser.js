@@ -46,8 +46,8 @@ export function responseData(results) {
 
 export function isiRow(value) {
   const content = tableUser
-    .replace("#POSISI#", value.email)
-    .replace("#LOKASI#", value.role)
+    .replace("#EMAIL#", value.email)
+    .replace("#ROLE#", value.role)
     .replace("#IDHAPUS#", value._id)
     .replace("#DETAIL#", value._id);
   addInner("datauser", content);
