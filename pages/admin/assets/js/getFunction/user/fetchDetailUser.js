@@ -19,7 +19,7 @@ function get(target_url) {
     .then((result) => {
       const parsedResult = JSON.parse(result);
       console.log(parsedResult);
-      console.log(result.role);
+      console.log(result.akun.role);
 
       // Pilih fungsi respons berdasarkan peran yang ada di result
       if (parsedResult.role === "mahasiswa") {
