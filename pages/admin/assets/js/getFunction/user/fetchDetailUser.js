@@ -18,17 +18,18 @@ function get(target_url) {
     .then((response) => response.text())
     .then((result) => {
       const parsedResult = JSON.parse(result);
-      console.log(parsedResult);
-      console.log(result.akun.role);
 
-      // Pilih fungsi respons berdasarkan peran yang ada di result
-      if (parsedResult.role === "mahasiswa") {
+      // Periksa peran berdasarkan hierarki objek
+      const role = parsedResult.akun ? parsedResult.akun.role : null;
+
+      // Pilih fungsi respons berdasarkan peran
+      if (role === "mahasiswa") {
         responseDataMhs(parsedResult);
-      } else if (parsedResult.role === "mitra") {
+      } else if (role === "mitra") {
         responseDataMitra(parsedResult);
       } else {
         // Tangani peran lain atau berikan perilaku default
-        console.log("Peran tidak diketahui:", parsedResult.role);
+        console.log("Peran tidak diketahui:", role);
       }
     })
     .catch((error) => console.log("error", error));
