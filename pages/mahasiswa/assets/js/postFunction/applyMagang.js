@@ -18,6 +18,7 @@ const applyMagang = (APPLY) => {
       const tokenkey = "Authorization";
       const idMagang = APPLY;
       postWithToken(target_url, tokenkey, tokenvalue, idMagang, responseData);
+      console.log(idMagang);
     }
   });
 };
