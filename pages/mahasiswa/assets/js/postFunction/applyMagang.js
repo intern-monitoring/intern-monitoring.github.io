@@ -1,6 +1,32 @@
 import { postWithToken } from "https://jscroot.github.io/api/croot.js";
 import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
 
+function postWithToken(
+  target_url,
+  tokenkey,
+  tokenvalue,
+  datajson,
+  responseFunction
+) {
+  var myHeaders = new Headers();
+  myHeaders.append(tokenkey, tokenvalue);
+  myHeaders.append("Content-Type", "application/json");
+
+  var raw = JSON.stringify(datajson);
+
+  var requestOptions = {
+    method: "POST",
+    headers: myHeaders,
+    body: raw,
+    redirect: "follow",
+  };
+
+  fetch(target_url, requestOptions)
+    .then((response) => response.text())
+    .then((result) => responseFunction(JSON.parse(result)))
+    .catch((error) => console.log("error", error));
+}
+
 const applyMagang = (APPLY) => {
   Swal.fire({
     title: "Konfirmasi Apply Magang",
