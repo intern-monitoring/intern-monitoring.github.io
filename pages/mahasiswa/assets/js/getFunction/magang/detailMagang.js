@@ -97,12 +97,12 @@ export const dataMagang = `
   >
     Kembali
   </a>
-  <a
-    href="#"
+  <button
+    onclick="applyMagang('#APPLY#')"
     class="inline-flex justify-center items-center gap-x-3 text-center bg-gradient-to-tl from-blue-600 to-violet-600 shadow-lg shadow-transparent hover:shadow-blue-700/50 border border-transparent text-white text-sm font-medium rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 focus:ring-offset-white py-2 px-5"
   >
     Apply
-  </a>
+  </button>
 </div>
 </div>
 `;
@@ -120,6 +120,7 @@ export function isiRow(value) {
     .replace("#TENTANG#", value.mitra.tentang)
     .replace("#DESKRIPSI#", value.deskripsimagang)
     .replace("#INFO#", value.infotambahanmagang)
+    .replace("#APPLY#", value._id)
     .replace("#EXPIRED#", value.expired);
   addInner("detailMagang", content);
 }
