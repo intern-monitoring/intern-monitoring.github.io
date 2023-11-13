@@ -123,12 +123,13 @@ export function responseData(results) {
 }
 
 export function isiRow(value) {
+  const statusText = value.seleksikampus ? "Lolos" : "Tidak Lolos";
   const content = tableSeleksi
     .replace("#NAMA#", value.mahasiswa.namalengkap)
     .replace("#NIM#", value.mahasiswa.nim)
     .replace("#PRODI#", value.mahasiswa.prodi)
     .replace("#PERGURUAN#", value.mahasiswa.perguruantinggi)
-    .replace("#STATUS#", value.seleksikampus)
+    .replace("#STATUS#", statusText)
     .replace("#POSISI#", value.magang.posisi)
     .replace("#MITRA#", value.magang.mitra.nama)
     .replace("#DETAIL#", value._id);
