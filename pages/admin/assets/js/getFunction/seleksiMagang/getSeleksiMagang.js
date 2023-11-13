@@ -123,7 +123,12 @@ export function responseData(results) {
 }
 
 export function isiRow(value) {
-  const statusText = value.seleksikampus ? "Lolos" : "Tidak Lolos";
+  const statusText =
+    value.seleksikampus === true
+      ? "Lolos"
+      : value.seleksikampus === false
+      ? "Tidak Lolos"
+      : "Proses";
   const content = tableSeleksi
     .replace("#NAMA#", value.mahasiswa.namalengkap)
     .replace("#NIM#", value.mahasiswa.nim)
