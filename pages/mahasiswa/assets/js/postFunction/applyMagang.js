@@ -19,7 +19,6 @@ const applyMagang = (APPLY) => {
       const idMagang = APPLY;
       postWithToken(target_url, tokenkey, tokenvalue, idMagang, responseData);
       console.log(idMagang);
-      console.log(postWithToken);
     }
   });
 };
