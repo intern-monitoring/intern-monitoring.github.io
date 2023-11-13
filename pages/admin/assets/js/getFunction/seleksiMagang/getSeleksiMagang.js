@@ -88,12 +88,12 @@ export const tableSeleksi = `
 </td>
 <td class="h-px w-px whitespace-nowrap">
   <div class="px-6 py-1.5">
-    <a
+    <button
+      onclick="terimaApply('#TERIMA#')"
       class="inline-flex items-center gap-x-1.5 text-sm text-blue-600 decoration-2 hover:underline font-medium pr-5"
-      href="#"
     >
       Terima
-    </a>
+    </button>
     <a
       class="inline-flex items-center gap-x-1.5 text-sm text-red-600 decoration-2 hover:underline font-medium"
       href="#"
@@ -132,6 +132,7 @@ export function isiRow(value) {
     .replace("#POSISI#", value.magang.posisi)
     .replace("#MITRA#", value.magang.mitra.nama)
     .replace("#BACKGROUND_COLOR#", backgroundColor)
+    .replace("#TERIMA#", value._id)
     .replace("#DETAIL#", value._id);
   addInner("seleksiMagang", content);
 }
