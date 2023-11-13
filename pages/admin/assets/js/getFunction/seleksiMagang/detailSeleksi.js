@@ -108,45 +108,48 @@ export const dataSeleksi = `
   <div class="border-b border-gray-200"></div>
 
   <div class="pt-5">
-    <div>
-      <div class="flex justify-center pb-10">
-        <h2 class="text-xl text-gray-900 font-semibold">
-          Magang yang di Apply :
-        </h2>
-      </div>
-      <div class="flex justify-center gap-5 pt-5">
-        <h2 class="text-lg text-gray-900 font-semibold">
-          #POSISI#
-        </h2>
-      </div>
+    <div class="flex justify-center pb-2">
+      <h2 class="text-xl text-gray-900 font-semibold">
+        Magang yang di Apply :
+      </h2>
+    </div>
+    <div class="flex justify-center pb-10">
+      <h2 class="text-lg text-gray-900 font-semibold">#POSISI#</h2>
+    </div>
+    <div class="grid grid-cols-1 lg:grid-cols-2">
       <div class="flex justify-center gap-2">
-        <label class="text-base text-gray-900 font-semibold"
-            >Nama Perusahaan :</label
+        <label
+          class="text-sm text-gray-900 font-semibold lg:text-base"
+          >Nama Perusahaan :</label
         >
-        <h2 class="text-base text-gray-900 font-normal">
+        <h2 class="text-sm text-gray-900 font-normal lg:text-base">
           #NAMAPERUSAHAAN#
         </h2>
       </div>
-
       <div class="flex justify-center gap-2">
-        <label class="text-base text-gray-900 font-semibold"
+        <label
+          class="text-sm text-gray-900 font-semibold lg:text-base"
           >Narahubung :</label
         >
-        <h3 class="text-base text-gray-900 font-normal">
+        <h3 class="text-sm text-gray-900 font-normal lg:text-base">
           #NAMANARAHUBUNG#
         </h3>
       </div>
       <div class="flex justify-center gap-2">
-        <label class="text-base text-gray-900 font-semibold"
+        <label
+          class="text-sm text-gray-900 font-semibold lg:text-base"
           >Nomor Narahubung :</label
         >
-        <h3 class="text-base text-gray-900 font-normal">#NOHP#</h3>
+        <h3 class="text-sm text-gray-900 font-normal lg:text-base">
+          #NOHP#
+        </h3>
       </div>
       <div class="flex justify-center gap-2 pb-5">
-        <label class="text-base text-gray-900 font-semibold"
+        <label
+          class="text-sm text-gray-900 font-semibold lg:text-base"
           >Website :</label
         >
-        <h3 class="text-base text-gray-900 font-normal">
+        <h3 class="text-sm text-gray-900 font-normal lg:text-base">
           #WEBSITE#
         </h3>
       </div>
