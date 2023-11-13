@@ -1,4 +1,3 @@
-import { postWithToken } from "https://jscroot.github.io/api/croot.js";
 import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
 
 function postWithToken(
