@@ -1,17 +1,9 @@
 import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
 
-function postWithToken(
-  target_url,
-  tokenkey,
-  tokenvalue,
-  datajson,
-  responseFunction
-) {
+function postWithToken(target_url, tokenkey, tokenvalue, responseFunction) {
   var myHeaders = new Headers();
   myHeaders.append(tokenkey, tokenvalue);
   myHeaders.append("Content-Type", "application/json");
-
-  var raw = JSON.stringify(datajson);
 
   var requestOptions = {
     method: "POST",
