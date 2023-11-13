@@ -3,8 +3,8 @@ import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
 
 const applyMagang = (APPLY) => {
   Swal.fire({
-    title: "Apply Magang Confirmation",
-    text: "Apakah anda yakin ingin Apply Magang ini?",
+    title: "Konfirmasi Apply Magang",
+    text: "Apakah Anda yakin ingin Apply Magang ini?",
     icon: "warning",
     showCancelButton: true,
     confirmButtonColor: "#3085d6",
@@ -18,13 +18,14 @@ const applyMagang = (APPLY) => {
       const tokenvalue = getCookie("Authorization");
       const tokenkey = "Authorization";
       const idMagang = APPLY;
-      postWithToken(target_url, tokenkey, tokenvalue, responseData);
-      console.log(idMagang);
+      postWithToken(target_url, tokenkey, tokenvalue, (result) =>
+        responseData(result, idMagang)
+      );
     }
   });
 };
 
-const responseData = (result) => {
+const responseData = (result, idMagang) => {
   if (result.status) {
     Swal.fire({
       icon: "success",
@@ -36,7 +37,7 @@ const responseData = (result) => {
   } else {
     Swal.fire({
       icon: "error",
-      title: "Apply Failed",
+      title: "Apply Gagal",
       text: result.message,
     });
   }
