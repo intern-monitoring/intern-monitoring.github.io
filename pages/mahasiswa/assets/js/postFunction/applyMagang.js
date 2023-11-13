@@ -17,10 +17,11 @@ const applyMagang = (APPLY) => {
         APPLY;
       const tokenvalue = getCookie("Authorization");
       const tokenkey = "Authorization";
-      const idMagang = APPLY;
-      postWithToken(target_url, tokenkey, tokenvalue, (result) =>
-        responseData(result, idMagang)
-      );
+
+      // Memastikan bahwa responseFunction adalah fungsi yang valid
+      const responseFunction = (result) => responseData(result);
+
+      postWithToken(target_url, tokenkey, tokenvalue, responseFunction);
     }
   });
 };
