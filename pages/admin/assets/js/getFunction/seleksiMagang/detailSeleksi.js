@@ -252,14 +252,14 @@ export function isiRow(value) {
     .replace("#PERGURUAN#", value.mahasiswa.perguruantinggi)
     .replace("#PRODI#", value.mahasiswa.prodi)
     .replace("#PRODI#", value.mahasiswa.prodi)
-    .replace("#NAMAPERUSAHAAN#", value.mitra.nama)
-    .replace("#POSISI#", value.posisi)
-    .replace("#NAMANARAHUBUNG#", value.mitra.namanarahubung)
-    .replace("#NOHP#", value.mitra.nohpnarahubung)
-    .replace("#KATEGORI#", value.mitra.kategori)
-    .replace("#SEKTOR#", value.mitra.sektorindustri)
-    .replace("#TENTANG#", value.mitra.tentang)
-    .replace("#ALAMAT#", value.mitra.alamat)
-    .replace("#WEBSITE#", value.mitra.website);
+    .replace("#NAMAPERUSAHAAN#", value.magang.mitra.nama)
+    .replace("#POSISI#", value.magang.posisi)
+    .replace("#NAMANARAHUBUNG#", value.magang.mitra.namanarahubung)
+    .replace("#NOHP#", value.magang.mitra.nohpnarahubung)
+    .replace("#KATEGORI#", value.magang.mitra.kategori)
+    .replace("#SEKTOR#", value.magang.mitra.sektorindustri)
+    .replace("#TENTANG#", value.magang.mitra.tentang)
+    .replace("#ALAMAT#", value.magang.mitra.alamat)
+    .replace("#WEBSITE#", value.magang.mitra.website);
   addInner("detailSeleksi", content);
 }
