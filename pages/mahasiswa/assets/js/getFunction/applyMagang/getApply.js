@@ -72,10 +72,9 @@ export const tableApply = `
         </span>
       </div>
     </a>
-    <a
-      href="#"
-      type="button"
-      class="inline-flex items-center gap-x-1.5"
+    <button
+        onclick="deleteApply('#IDHAPUS#')"
+        class="inline-flex items-center gap-x-1.5"
     >
       <div>
         <span
@@ -84,7 +83,7 @@ export const tableApply = `
           Batal Apply
         </span>
       </div>
-    </a>
+    </button>
   </div>
 </td>
 </tr>
@@ -132,6 +131,7 @@ export function isiRow(value) {
     .replace("#SELEKSIMITRA#", statusmitra)
     .replace("#BGKAMPUS#", bgkampus)
     .replace("#BGMITRA#", bgmitra)
+    .replace("#IDHAPUS#", value._id)
     .replace("#DETAIL#", value._id);
   addInner("applyMagang", content);
 }
