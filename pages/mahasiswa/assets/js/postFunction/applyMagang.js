@@ -13,11 +13,12 @@ const applyMagang = (APPLY) => {
   }).then((result) => {
     if (result.isConfirmed) {
       const target_url =
-        "https://asia-southeast2-bursakerja-project.cloudfunctions.net/intermoni-mahasiswa-magang";
+        "https://asia-southeast2-bursakerja-project.cloudfunctions.net/intermoni-mahasiswa-magang?id=" +
+        APPLY;
       const tokenvalue = getCookie("Authorization");
       const tokenkey = "Authorization";
       const idMagang = APPLY;
-      postWithToken(target_url, tokenkey, tokenvalue, idMagang, responseData);
+      postWithToken(target_url, tokenkey, tokenvalue, responseData);
       console.log(idMagang);
     }
   });
