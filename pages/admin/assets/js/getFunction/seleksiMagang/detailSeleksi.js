@@ -119,8 +119,11 @@ export const dataSeleksi = `
           #POSISI#
         </h2>
       </div>
-      <div class="flex justify-center gap-5">
-        <h2 class="text-base text-gray-900 font-semibold">
+      <div class="flex justify-center gap-2">
+        <label class="text-base text-gray-900 font-semibold"
+            >Nama Perusahaan :</label
+        >
+        <h2 class="text-base text-gray-900 font-normal">
           #NAMAPERUSAHAAN#
         </h2>
       </div>
