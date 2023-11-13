@@ -1,5 +1,8 @@
 import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
 
+// Deklarasi fungsi responseFunction di bagian atas
+const responseFunction = (result) => responseData(result);
+
 function postWithToken(
   target_url,
   tokenkey,
@@ -43,9 +46,7 @@ const applyMagang = (APPLY) => {
       const tokenvalue = getCookie("Authorization");
       const tokenkey = "Authorization";
 
-      // Memastikan bahwa responseFunction adalah fungsi yang valid
-      const responseFunction = (result) => responseData(result);
-
+      // Pemanggilan postWithToken setelah deklarasi responseFunction
       postWithToken(target_url, tokenkey, tokenvalue, responseFunction);
     }
   });
@@ -69,4 +70,5 @@ const responseData = (result) => {
   }
 };
 
+// Mengekspor applyMagang sebagai fungsi global
 window.applyMagang = applyMagang;
