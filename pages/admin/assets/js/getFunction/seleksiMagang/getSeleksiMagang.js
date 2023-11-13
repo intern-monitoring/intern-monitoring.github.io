@@ -50,7 +50,8 @@ export const tableSeleksi = `
 <td class="h-px w-px whitespace-nowrap">
   <div class="flex justify-center py-3">
     <span
-      class="inline-flex items-center gap-1.5 py-0.5 px-2 rounded-full text-xs font-medium #BACKGROUND_COLOR# text-gray-900"
+      class="inline-flex items-center gap-1.5 py-0.5 px-2 rounded-full text-xs font-medium text-gray-900"
+      style="background-color: #BACKGROUND_COLOR#"
     >
       <svg
         class="w-2.5 h-2.5"
