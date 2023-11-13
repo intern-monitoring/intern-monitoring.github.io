@@ -25,7 +25,7 @@ const applyMagang = (APPLY) => {
   });
 };
 
-const responseData = (result, idMagang) => {
+const responseData = (result) => {
   if (result.status) {
     Swal.fire({
       icon: "success",
