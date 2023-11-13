@@ -50,7 +50,7 @@ export const tableSeleksi = `
 <td class="h-px w-px whitespace-nowrap">
   <div class="flex justify-center py-3">
     <span
-      class="inline-flex items-center gap-1.5 py-0.5 px-2 rounded-full text-xs font-medium bg-green-100 text-green-800"
+      class="inline-flex items-center gap-1.5 py-0.5 px-2 rounded-full text-xs font-medium #BACKGROUND_COLOR# text-gray-900"
     >
       <svg
         class="w-2.5 h-2.5"
@@ -129,6 +129,12 @@ export function isiRow(value) {
       : value.seleksikampus === false
       ? "Tidak Lolos"
       : "Proses";
+  const backgroundColor =
+    value.seleksikampus === false
+      ? "bg-green-200"
+      : value.seleksikampus === null
+      ? "bg-gray-200"
+      : "";
   const content = tableSeleksi
     .replace("#NAMA#", value.mahasiswa.namalengkap)
     .replace("#NIM#", value.mahasiswa.nim)
@@ -137,6 +143,7 @@ export function isiRow(value) {
     .replace("#STATUS#", statusText)
     .replace("#POSISI#", value.magang.posisi)
     .replace("#MITRA#", value.magang.mitra.nama)
+    .replace("#BACKGROUND_COLOR#", backgroundColor)
     .replace("#DETAIL#", value._id);
   addInner("seleksiMagang", content);
 }
