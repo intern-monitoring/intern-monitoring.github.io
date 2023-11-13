@@ -34,7 +34,7 @@ const responseData = (result) => {
   } else {
     Swal.fire({
       icon: "error",
-      title: "Insert Failed",
+      title: "Apply Failed",
       text: result.message,
     });
   }
