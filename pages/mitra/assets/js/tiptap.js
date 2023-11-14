@@ -1,6 +1,5 @@
 // Tiptap
 import { Editor } from "https://esm.sh/@tiptap/core";
-import Placeholder from "https://esm.sh/@tiptap/extension-placeholder";
 import StarterKit from "https://esm.sh/@tiptap/starter-kit";
 import Paragraph from "https://esm.sh/@tiptap/extension-paragraph";
 import Bold from "https://esm.sh/@tiptap/extension-bold";
