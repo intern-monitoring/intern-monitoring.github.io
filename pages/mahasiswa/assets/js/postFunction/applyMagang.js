@@ -49,7 +49,7 @@ const responseData = (result) => {
       title: "Berhasil Apply Magang",
       text: result.message,
     }).then(() => {
-      window.location.reload();
+      window.location.href = "cariInternship.html";
     });
   } else {
     Swal.fire({
