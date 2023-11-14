@@ -14,10 +14,6 @@ import Blockquote from "https://esm.sh/@tiptap/extension-blockquote";
 const editorDeskripsi = new Editor({
   element: document.querySelector("#hs-editor-tiptap [data-hs-editor-field]"),
   extensions: [
-    Placeholder.configure({
-      placeholder: "Deskripsi Magang",
-      emptyNodeClass: "text-gray-200",
-    }),
     StarterKit,
     Paragraph.configure({
       HTMLAttributes: {
@@ -114,10 +110,6 @@ const editorInfo = new Editor({
     "#hs-editor-tiptap-info [data-hs-editor-field-info]"
   ),
   extensions: [
-    Placeholder.configure({
-      placeholder: "Info Tambahan Magang",
-      emptyNodeClass: "text-gray-200",
-    }),
     StarterKit,
     Paragraph.configure({
       HTMLAttributes: {
