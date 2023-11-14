@@ -2,8 +2,6 @@ export const isiData = (results) => {
   const inputMapping = [
     { id: "posisi", path: "posisi" },
     { id: "lokasi", path: "lokasi" },
-    { id: "deskripsimagang", path: "deskripsimagang" },
-    { id: "infotambahanmagang", path: "infotambahanmagang" },
     { id: "expired", path: "expired" },
   ];
 
@@ -11,6 +9,17 @@ export const isiData = (results) => {
     const inputElement = document.getElementById(id);
     const value = getNestedValue(results, path, index, property);
     inputElement.value = value;
+  });
+
+  const inputMappingTiptap = [
+    { id: "deskripsimagang", path: "deskripsimagang" },
+    { id: "infotambahanmagang", path: "infotambahanmagang" },
+  ];
+
+  inputMappingTiptap.forEach(({ id, path, index, property }) => {
+    const inputElement = document.getElementById(id);
+    const value = getNestedValue(results, path, index, property);
+    inputElement.innerHTML = value;
   });
 };
 
