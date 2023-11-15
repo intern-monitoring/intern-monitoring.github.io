@@ -119,3 +119,20 @@
   opacity: 1;
   transform: translateY(0); /* Reset the position */
 }
+
+/* Password */
+.active.hs-password-active\:block {
+  display: block;
+}
+
+.active.hs-password-active\:hidden {
+  display: none;
+}
+
+.active .hs-password-active\:block {
+  display: block;
+}
+
+.active .hs-password-active\:hidden {
+  display: none;
+}
