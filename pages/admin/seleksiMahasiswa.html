@@ -396,6 +396,29 @@
                 width="16"
                 height="16"
                 fill="currentColor"
+                class="bi bi-person-check w-3.5 h-3.5"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Zm1.679-4.493-1.335 2.226a.75.75 0 0 1-1.174.144l-.774-.773a.5.5 0 0 1 .708-.708l.547.548 1.17-1.951a.5.5 0 1 1 .858.514ZM11 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"
+                />
+                <path
+                  d="M8.256 14a4.474 4.474 0 0 1-.229-1.004H3c.001-.246.154-.986.832-1.664C4.484 10.68 5.711 10 8 10c.26 0 .507.009.74.025.226-.341.496-.65.804-.918C9.077 9.038 8.564 9 8 9c-5 0-6 3-6 4s1 1 1 1h5.256Z"
+                />
+              </svg>
+              Seleksi Mahasiswa
+            </a>
+          </li>
+          <li>
+            <a
+              class="flex items-center gap-x-3.5 py-2 px-2.5 bg-white text-sm font-semibold text-slate-700 rounded-md hover:bg-gray-100"
+              href="seleksiMagang.html"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
                 class="bi bi-clipboard-check w-3.5 h-3.5"
                 viewBox="0 0 16 16"
               >
@@ -410,7 +433,7 @@
                   d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"
                 />
               </svg>
-              Seleksi Mahasiswa
+              Seleksi Magang
             </a>
           </li>
         </ul>
@@ -436,8 +459,7 @@
                     Seleksi Mahasiswa
                   </h2>
                   <p class="text-sm text-gray-600 pt-1">
-                    Berikut merupakan data tahap pertama seleksi mahasiswa yang
-                    apply magang.
+                    Berikut merupakan data seleksi mahasiswa yang telah daftar.
                   </p>
                 </div>
 
@@ -591,16 +613,6 @@
                       </th>
 
                       <th scope="col" class="px-6 py-3 text-left">
-                        <div class="flex items-center gap-x-2">
-                          <span
-                            class="text-xs font-semibold uppercase tracking-wide text-gray-800"
-                          >
-                            Apply
-                          </span>
-                        </div>
-                      </th>
-
-                      <th scope="col" class="px-6 py-3 text-left">
                         <div class="flex justify-center gap-x-2">
                           <span
                             class="text-xs font-semibold uppercase tracking-wide text-gray-800"
@@ -624,10 +636,96 @@
                     </tr>
                   </thead>
 
-                  <tbody
-                    id="seleksiMagang"
-                    class="divide-y divide-gray-200"
-                  ></tbody>
+                  <tbody id="seleksiMagang" class="divide-y divide-gray-200">
+                    <tr>
+                      <td class="h-px w-px whitespace-nowrap">
+                        <div class="pl-6 pr-6 py-3">
+                          <div class="flex items-center gap-x-3">
+                            <img
+                              class="inline-block h-[2.375rem] w-[2.375rem] rounded-full"
+                              src="https://images.unsplash.com/photo-1531927557220-a9e23c1e4794?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80"
+                              alt="Image Description"
+                            />
+                            <div class="grow">
+                              <span
+                                class="block text-sm font-semibold text-gray-800"
+                                >#NAMA#</span
+                              >
+                              <span class="block text-sm text-gray-500"
+                                >#NIM#</span
+                              >
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="h-px w-72 whitespace-nowrap">
+                        <div class="px-6 py-3">
+                          <span
+                            class="block text-sm font-semibold text-gray-800"
+                            >#PRODI#</span
+                          >
+                          <span class="block text-sm text-gray-500"
+                            >#PERGURUAN#</span
+                          >
+                        </div>
+                      </td>
+                      <td class="h-px w-px whitespace-nowrap">
+                        <div class="flex justify-center py-3">
+                          <span
+                            class="#BACKGROUND_COLOR# inline-flex items-center gap-1.5 py-0.5 px-2 rounded-full text-xs font-medium text-gray-900"
+                          >
+                            #STATUS#
+                          </span>
+                        </div>
+                      </td>
+                      <td class="h-px w-px whitespace-nowrap">
+                        <a
+                          href="detailSeleksiMahasiswa?seleksiId=#DETAIL#"
+                          type="button"
+                          class="block"
+                        >
+                          <span class="px-6 py-1.5">
+                            <span
+                              class="py-1 px-2 inline-flex justify-center items-center gap-2 rounded-lg border font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-600 transition-all text-sm dark:bg-slate-900 dark:hover:bg-slate-800 dark:border-gray-700 dark:text-gray-400 dark:hover:text-white dark:focus:ring-offset-gray-800"
+                            >
+                              <svg
+                                class="flex-shrink-0 w-4 h-4"
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="16"
+                                height="16"
+                                fill="currentColor"
+                                viewBox="0 0 16 16"
+                              >
+                                <path
+                                  d="M1.92.506a.5.5 0 0 1 .434.14L3 1.293l.646-.647a.5.5 0 0 1 .708 0L5 1.293l.646-.647a.5.5 0 0 1 .708 0L7 1.293l.646-.647a.5.5 0 0 1 .708 0L9 1.293l.646-.647a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .801.13l.5 1A.5.5 0 0 1 15 2v12a.5.5 0 0 1-.053.224l-.5 1a.5.5 0 0 1-.8.13L13 14.707l-.646.647a.5.5 0 0 1-.708 0L11 14.707l-.646.647a.5.5 0 0 1-.708 0L9 14.707l-.646.647a.5.5 0 0 1-.708 0L7 14.707l-.646.647a.5.5 0 0 1-.708 0L5 14.707l-.646.647a.5.5 0 0 1-.708 0L3 14.707l-.646.647a.5.5 0 0 1-.801-.13l-.5-1A.5.5 0 0 1 1 14V2a.5.5 0 0 1 .053-.224l.5-1a.5.5 0 0 1 .367-.27zm.217 1.338L2 2.118v11.764l.137.274.51-.51a.5.5 0 0 1 .707 0l.646.647.646-.646a.5.5 0 0 1 .708 0l.646.646.646-.646a.5.5 0 0 1 .708 0l.646.646.646-.646a.5.5 0 0 1 .708 0l.646.646.646-.646a.5.5 0 0 1 .708 0l.646.646.646-.646a.5.5 0 0 1 .708 0l.509.509.137-.274V2.118l-.137-.274-.51.51a.5.5 0 0 1-.707 0L12 1.707l-.646.647a.5.5 0 0 1-.708 0L10 1.707l-.646.647a.5.5 0 0 1-.708 0L8 1.707l-.646.647a.5.5 0 0 1-.708 0L6 1.707l-.646.647a.5.5 0 0 1-.708 0L4 1.707l-.646.647a.5.5 0 0 1-.708 0l-.509-.51z"
+                                />
+                                <path
+                                  d="M3 4.5a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5zm8-6a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5z"
+                                />
+                              </svg>
+                              Detail
+                            </span>
+                          </span>
+                        </a>
+                      </td>
+                      <td class="h-px w-px whitespace-nowrap">
+                        <div class="px-6 py-1.5">
+                          <button
+                            onclick="terimaApply('#TERIMA#')"
+                            class="inline-flex items-center gap-x-1.5 text-sm text-blue-600 decoration-2 hover:underline font-medium pr-5"
+                          >
+                            Terima
+                          </button>
+                          <a
+                            class="inline-flex items-center gap-x-1.5 text-sm text-red-600 decoration-2 hover:underline font-medium"
+                            href="#"
+                          >
+                            Tidak
+                          </a>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
                 </table>
                 <!-- End Table -->
 
@@ -701,18 +799,6 @@
     <script
       type="module"
       src="https://cdn.jsdelivr.net/gh/intern-monitoring/jsintermoni@0.0.6/components/dropdown.js"
-    ></script>
-
-    <!-- GetSeleksi -->
-    <script
-      type="module"
-      src="./assets/js/getFunction/seleksiMagang/getSeleksiFunction.js"
-    ></script>
-
-    <!-- Terima Seleksi -->
-    <script
-      type="module"
-      src="./assets/js/updateFunction/seleksiMagang/updateSeleksiMagang.js"
     ></script>
 
     <!-- Logout Function -->
