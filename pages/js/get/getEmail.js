@@ -10,7 +10,6 @@ export const userEmail = `
 </p>
 `;
 export function responseData(results) {
-  console.log(results);
   emailUser(results);
 }
 export function emailUser(value) {
