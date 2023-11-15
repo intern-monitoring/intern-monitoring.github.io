@@ -388,8 +388,31 @@
         <ul class="space-y-1.5">
           <li>
             <a
-              class="flex items-center gap-x-3.5 py-2 px-2.5 bg-gradient-to-tl from-blue-600 to-violet-600 text-sm font-semibold text-white rounded-md hover:bg-gray-100"
+              class="flex items-center gap-x-3.5 py-2 px-2.5 bg-white text-sm font-semibold text-slate-700 rounded-md hover:bg-gray-100"
               href="seleksiMahasiswa.html"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-person-check w-3.5 h-3.5"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Zm1.679-4.493-1.335 2.226a.75.75 0 0 1-1.174.144l-.774-.773a.5.5 0 0 1 .708-.708l.547.548 1.17-1.951a.5.5 0 1 1 .858.514ZM11 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"
+                />
+                <path
+                  d="M8.256 14a4.474 4.474 0 0 1-.229-1.004H3c.001-.246.154-.986.832-1.664C4.484 10.68 5.711 10 8 10c.26 0 .507.009.74.025.226-.341.496-.65.804-.918C9.077 9.038 8.564 9 8 9c-5 0-6 3-6 4s1 1 1 1h5.256Z"
+                />
+              </svg>
+              Seleksi Mahasiswa
+            </a>
+          </li>
+          <li>
+            <a
+              class="flex items-center gap-x-3.5 py-2 px-2.5 bg-gradient-to-tl from-blue-600 to-violet-600 text-sm font-semibold text-white rounded-md hover:bg-gray-100"
+              href="seleksiMagang.html"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -410,7 +433,7 @@
                   d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"
                 />
               </svg>
-              Seleksi Mahasiswa
+              Seleksi Magang
             </a>
           </li>
         </ul>
@@ -420,18 +443,280 @@
     <!-- End Sidebar -->
 
     <!-- Content Section -->
-    <div class="w-full bg-gray-50 lg:pl-64">
-      <!-- Card Section -->
+    <div class="w-full bg-gray-50 h-screen lg:pl-64">
+      <!-- Table Section -->
       <div class="px-4 py-10 sm:px-6 lg:px-8 mx-auto">
-        <!-- Grid -->
-        <div id="detailSeleksi" class="relative mx-auto w-full">
-          <!-- Card -->
+        <!-- Card -->
+        <div class="flex flex-col">
+          <div class="-m-1.5 overflow-x-auto">
+            <div class="p-1.5 min-w-full inline-block align-middle">
+              <div
+                class="bg-white border border-gray-200 rounded-xl shadow-sm overflow-hidden"
+              >
+                <!-- Header -->
+                <div class="px-6 pt-4">
+                  <h2 class="text-xl font-semibold text-gray-800">
+                    Seleksi Magang
+                  </h2>
+                  <p class="text-sm text-gray-600 pt-1">
+                    Berikut merupakan data tahap pertama seleksi mahasiswa yang
+                    apply magang.
+                  </p>
+                </div>
 
-          <!-- End Card -->
+                <div
+                  class="px-6 py-4 grid gap-3 md:flex md:justify-between md:items-center border-b border-gray-200"
+                >
+                  <!-- Input -->
+                  <div>
+                    <label
+                      for="hs-as-table-product-review-search"
+                      class="sr-only"
+                      >Search</label
+                    >
+                    <div class="relative">
+                      <input
+                        type="text"
+                        id="hs-as-table-product-review-search"
+                        name="hs-as-table-product-review-search"
+                        class="py-2 px-3 ps-11 block w-full border-[1px] border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
+                        placeholder="Search"
+                      />
+                      <div
+                        class="absolute inset-y-0 start-0 flex items-center pointer-events-none ps-4"
+                      >
+                        <svg
+                          class="h-4 w-4 text-gray-400"
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Input -->
+
+                  <div>
+                    <div class="flex justify-start gap-x-2">
+                      <div
+                        class="hs-dropdown relative inline-block [--placement:bottom-right]"
+                        data-hs-dropdown-auto-close="inside"
+                      >
+                        <button
+                          id="hs-as-table-table-filter-dropdown"
+                          type="button"
+                          class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none"
+                        >
+                          <svg
+                            class="flex-shrink-0 w-3.5 h-3.5"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <path d="M3 6h18" />
+                            <path d="M7 12h10" />
+                            <path d="M10 18h4" />
+                          </svg>
+                          Filter
+                          <span
+                            class="ps-2 text-xs font-semibold text-blue-600 border-s border-gray-200"
+                          >
+                            1
+                          </span>
+                        </button>
+                        <div
+                          class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden mt-2 divide-y divide-gray-200 min-w-[12rem] z-10 bg-white shadow-md rounded-lg"
+                          aria-labelledby="hs-as-table-table-filter-dropdown"
+                        >
+                          <div class="divide-y divide-gray-200">
+                            <label
+                              for="hs-as-filters-dropdown-all"
+                              class="flex py-2.5 px-3"
+                            >
+                              <input
+                                type="checkbox"
+                                class="shrink-0 mt-0.5 border-gray-300 rounded text-blue-600 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
+                                id="hs-as-filters-dropdown-all"
+                                checked
+                              />
+                              <span class="ms-3 text-sm text-gray-800"
+                                >All</span
+                              >
+                            </label>
+                            <label
+                              for="hs-as-filters-dropdown-published"
+                              class="flex py-2.5 px-3"
+                            >
+                              <input
+                                type="checkbox"
+                                class="shrink-0 mt-0.5 border-gray-300 rounded text-blue-600 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
+                                id="hs-as-filters-dropdown-published"
+                              />
+                              <span class="ms-3 text-sm text-gray-800"
+                                >Published</span
+                              >
+                            </label>
+                            <label
+                              for="hs-as-filters-dropdown-pending"
+                              class="flex py-2.5 px-3"
+                            >
+                              <input
+                                type="checkbox"
+                                class="shrink-0 mt-0.5 border-gray-300 rounded text-blue-600 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
+                                id="hs-as-filters-dropdown-pending"
+                              />
+                              <span class="ms-3 text-sm text-gray-800"
+                                >Pending</span
+                              >
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- End Header -->
+
+                <!-- Table -->
+                <table class="min-w-full divide-y divide-gray-200">
+                  <thead class="bg-gray-50">
+                    <tr>
+                      <th scope="col" class="px-6 py-3 text-left">
+                        <div class="flex items-center gap-x-2">
+                          <span
+                            class="text-xs font-semibold uppercase tracking-wide text-gray-800"
+                          >
+                            Nama
+                          </span>
+                        </div>
+                      </th>
+
+                      <th scope="col" class="px-6 py-3 text-left">
+                        <div class="flex items-center gap-x-2">
+                          <span
+                            class="text-xs font-semibold uppercase tracking-wide text-gray-800"
+                          >
+                            Prodi
+                          </span>
+                        </div>
+                      </th>
+
+                      <th scope="col" class="px-6 py-3 text-left">
+                        <div class="flex items-center gap-x-2">
+                          <span
+                            class="text-xs font-semibold uppercase tracking-wide text-gray-800"
+                          >
+                            Apply
+                          </span>
+                        </div>
+                      </th>
+
+                      <th scope="col" class="px-6 py-3 text-left">
+                        <div class="flex justify-center gap-x-2">
+                          <span
+                            class="text-xs font-semibold uppercase tracking-wide text-gray-800"
+                          >
+                            Status
+                          </span>
+                        </div>
+                      </th>
+
+                      <th scope="col" class="px-6 py-3 text-left">
+                        <div class="flex items-center gap-x-2">
+                          <span
+                            class="text-xs font-semibold uppercase tracking-wide text-gray-800"
+                          >
+                            Detail
+                          </span>
+                        </div>
+                      </th>
+
+                      <th scope="col" class="px-6 py-3 text-right"></th>
+                    </tr>
+                  </thead>
+
+                  <tbody
+                    id="seleksiMagang"
+                    class="divide-y divide-gray-200"
+                  ></tbody>
+                </table>
+                <!-- End Table -->
+
+                <!-- Footer -->
+                <div
+                  class="px-6 py-4 grid gap-3 md:flex md:justify-between md:items-center border-t border-gray-200"
+                >
+                  <div id="seleksiCount">
+                    <p class="text-sm text-gray-600">
+                      <span class="font-semibold text-gray-800">0</span>
+                      results
+                    </p>
+                  </div>
+
+                  <div>
+                    <div class="inline-flex gap-x-2">
+                      <button
+                        type="button"
+                        class="py-2 px-3 inline-flex justify-center items-center gap-2 rounded-md border font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-600 transition-all text-sm"
+                      >
+                        <svg
+                          class="w-3 h-3"
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"
+                          />
+                        </svg>
+                        Prev
+                      </button>
+
+                      <button
+                        type="button"
+                        class="py-2 px-3 inline-flex justify-center items-center gap-2 rounded-md border font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-600 transition-all text-sm"
+                      >
+                        Next
+                        <svg
+                          class="w-3 h-3"
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
+                          />
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <!-- End Footer -->
+              </div>
+            </div>
+          </div>
         </div>
-        <!-- End Grid -->
+        <!-- End Card -->
       </div>
-      <!-- End Card Section -->
+      <!-- End Table Section -->
     </div>
     <!-- End Content Section -->
 
@@ -441,10 +726,16 @@
       src="https://cdn.jsdelivr.net/gh/intern-monitoring/jsintermoni@0.0.6/components/dropdown.js"
     ></script>
 
-    <!-- DetailSeleksi -->
+    <!-- GetSeleksi -->
     <script
       type="module"
-      src="./assets/js/getFunction/seleksiMagang/fetchDetailSeleksi.js"
+      src="./assets/js/getFunction/seleksiMagang/getSeleksiFunction.js"
+    ></script>
+
+    <!-- Terima Seleksi -->
+    <script
+      type="module"
+      src="./assets/js/updateFunction/seleksiMagang/updateSeleksiMagang.js"
     ></script>
 
     <!-- Logout Function -->
@@ -453,11 +744,6 @@
       src="https://cdn.jsdelivr.net/gh/intern-monitoring/jsintermoni@0.2.0/logOut.js"
     ></script>
 
-    <!-- Logout Function -->
-    <!-- <script
-      type="module"
-      src="https://cdn.jsdelivr.net/gh/intern-monitoring/jsintermoni@0.0.6/logOut.js"
-    ></script> -->
     <!-- autentikasi function -->
     <!-- <script
       type="module"
