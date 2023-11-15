@@ -640,7 +640,7 @@
                             <td class="h-px w-px whitespace-nowrap">
                               <div class="flex justify-center py-3">
                                 <span
-                                  class="#BACKGROUND_COLOR# inline-flex items-center gap-1.5 py-0.5 px-2 rounded-full text-xs font-medium text-gray-900"
+                                  class="bg-gray-200 inline-flex items-center gap-1.5 py-0.5 px-2 rounded-full text-xs font-medium text-gray-900"
                                 >
                                   #PENDING#
                                 </span>
@@ -789,7 +789,7 @@
                             <td class="h-px w-px whitespace-nowrap">
                               <div class="flex justify-center py-3">
                                 <span
-                                  class="#BACKGROUND_COLOR# inline-flex items-center gap-1.5 py-0.5 px-2 rounded-full text-xs font-medium text-gray-900"
+                                  class="bg-green-200 inline-flex items-center gap-1.5 py-0.5 px-2 rounded-full text-xs font-medium text-gray-900"
                                 >
                                   #LOLOS#
                                 </span>
@@ -922,7 +922,7 @@
                             <td class="h-px w-px whitespace-nowrap">
                               <div class="flex justify-center py-3">
                                 <span
-                                  class="#BACKGROUND_COLOR# inline-flex items-center gap-1.5 py-0.5 px-2 rounded-full text-xs font-medium text-gray-900"
+                                  class="bg-red-200 inline-flex items-center gap-1.5 py-0.5 px-2 rounded-full text-xs font-medium text-gray-900"
                                 >
                                   #TIDAKLOLOS#
                                 </span>
@@ -972,10 +972,10 @@
                 <div
                   class="px-6 py-4 grid gap-3 md:flex md:justify-between md:items-center border-t border-gray-200"
                 >
-                  <div id="seleksiCount">
+                  <div id="seleksiMhsCount">
                     <p class="text-sm text-gray-600">
                       <span class="font-semibold text-gray-800">0</span>
-                      results
+                      Total Results
                     </p>
                   </div>
 
@@ -1038,6 +1038,12 @@
     <script
       type="module"
       src="https://cdn.jsdelivr.net/gh/intern-monitoring/jsintermoni@0.0.6/components/dropdown.js"
+    ></script>
+
+    <!-- Get Seleksi Mahasiswa -->
+    <script
+      type="module"
+      src="./assets/js/getFunction/seleksiMahasiswa/getSeleksiMhsFunction.js"
     ></script>
 
     <!-- Logout Function -->
