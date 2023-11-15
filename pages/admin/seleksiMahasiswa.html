@@ -500,234 +500,473 @@
                     </div>
                   </div>
                   <!-- End Input -->
-
-                  <div>
-                    <div class="flex justify-start gap-x-2">
-                      <div
-                        class="hs-dropdown relative inline-block [--placement:bottom-right]"
-                        data-hs-dropdown-auto-close="inside"
-                      >
-                        <button
-                          id="hs-as-table-table-filter-dropdown"
-                          type="button"
-                          class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none"
-                        >
-                          <svg
-                            class="flex-shrink-0 w-3.5 h-3.5"
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="24"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          >
-                            <path d="M3 6h18" />
-                            <path d="M7 12h10" />
-                            <path d="M10 18h4" />
-                          </svg>
-                          Filter
-                          <span
-                            class="ps-2 text-xs font-semibold text-blue-600 border-s border-gray-200"
-                          >
-                            1
-                          </span>
-                        </button>
-                        <div
-                          class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden mt-2 divide-y divide-gray-200 min-w-[12rem] z-10 bg-white shadow-md rounded-lg"
-                          aria-labelledby="hs-as-table-table-filter-dropdown"
-                        >
-                          <div class="divide-y divide-gray-200">
-                            <label
-                              for="hs-as-filters-dropdown-all"
-                              class="flex py-2.5 px-3"
-                            >
-                              <input
-                                type="checkbox"
-                                class="shrink-0 mt-0.5 border-gray-300 rounded text-blue-600 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
-                                id="hs-as-filters-dropdown-all"
-                                checked
-                              />
-                              <span class="ms-3 text-sm text-gray-800"
-                                >All</span
-                              >
-                            </label>
-                            <label
-                              for="hs-as-filters-dropdown-published"
-                              class="flex py-2.5 px-3"
-                            >
-                              <input
-                                type="checkbox"
-                                class="shrink-0 mt-0.5 border-gray-300 rounded text-blue-600 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
-                                id="hs-as-filters-dropdown-published"
-                              />
-                              <span class="ms-3 text-sm text-gray-800"
-                                >Published</span
-                              >
-                            </label>
-                            <label
-                              for="hs-as-filters-dropdown-pending"
-                              class="flex py-2.5 px-3"
-                            >
-                              <input
-                                type="checkbox"
-                                class="shrink-0 mt-0.5 border-gray-300 rounded text-blue-600 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
-                                id="hs-as-filters-dropdown-pending"
-                              />
-                              <span class="ms-3 text-sm text-gray-800"
-                                >Pending</span
-                              >
-                            </label>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
                 </div>
                 <!-- End Header -->
 
-                <!-- Table -->
-                <table class="min-w-full divide-y divide-gray-200">
-                  <thead class="bg-gray-50">
-                    <tr>
-                      <th scope="col" class="px-6 py-3 text-left">
-                        <div class="flex items-center gap-x-2">
-                          <span
-                            class="text-xs font-semibold uppercase tracking-wide text-gray-800"
-                          >
-                            Nama
-                          </span>
-                        </div>
-                      </th>
+                <!-- Filter -->
+                <div>
+                  <!-- Nav -->
+                  <div class="border-b border-gray-200 px-4">
+                    <nav
+                      class="flex space-x-2 lg:justify-center"
+                      aria-label="Tabs"
+                      role="tablist"
+                    >
+                      <button
+                        type="button"
+                        class="hs-tab-active:font-semibold hs-tab-active:border-blue-600 hs-tab-active:text-blue-600 py-4 px-1 inline-flex items-center gap-x-2 border-b-2 border-transparent text-sm whitespace-nowrap text-gray-500 hover:text-blue-600 disabled:opacity-50 disabled:pointer-events-none active"
+                        id="basic-tabs-item-1"
+                        data-hs-tab="#basic-tabs-1"
+                        aria-controls="basic-tabs-1"
+                        role="tab"
+                      >
+                        Pending
+                      </button>
+                      <button
+                        type="button"
+                        class="hs-tab-active:font-semibold hs-tab-active:border-blue-600 hs-tab-active:text-blue-600 py-4 px-1 inline-flex items-center gap-x-2 border-b-2 border-transparent text-sm whitespace-nowrap text-gray-500 hover:text-blue-600 disabled:opacity-50 disabled:pointer-events-none"
+                        id="basic-tabs-item-2"
+                        data-hs-tab="#basic-tabs-2"
+                        aria-controls="basic-tabs-2"
+                        role="tab"
+                      >
+                        Lolos
+                      </button>
+                      <button
+                        type="button"
+                        class="hs-tab-active:font-semibold hs-tab-active:border-blue-600 hs-tab-active:text-blue-600 py-4 px-1 inline-flex items-center gap-x-2 border-b-2 border-transparent text-sm whitespace-nowrap text-gray-500 hover:text-blue-600 disabled:opacity-50 disabled:pointer-events-none"
+                        id="basic-tabs-item-3"
+                        data-hs-tab="#basic-tabs-3"
+                        aria-controls="basic-tabs-3"
+                        role="tab"
+                      >
+                        Tidak Lolos
+                      </button>
+                    </nav>
+                  </div>
+                  <!-- End Nav -->
 
-                      <th scope="col" class="px-6 py-3 text-left">
-                        <div class="flex items-center gap-x-2">
-                          <span
-                            class="text-xs font-semibold uppercase tracking-wide text-gray-800"
-                          >
-                            Prodi
-                          </span>
-                        </div>
-                      </th>
+                  <!-- Tabel -->
+                  <div>
+                    <!-- Pending -->
+                    <div
+                      id="basic-tabs-1"
+                      role="tabpanel"
+                      aria-labelledby="basic-tabs-item-1"
+                    >
+                      <table class="min-w-full divide-y divide-gray-200">
+                        <thead class="bg-gray-50">
+                          <tr>
+                            <th scope="col" class="px-6 py-3 text-left">
+                              <div class="flex items-center gap-x-2">
+                                <span
+                                  class="text-xs font-semibold uppercase tracking-wide text-gray-800"
+                                >
+                                  Nama
+                                </span>
+                              </div>
+                            </th>
 
-                      <th scope="col" class="px-6 py-3 text-left">
-                        <div class="flex justify-center gap-x-2">
-                          <span
-                            class="text-xs font-semibold uppercase tracking-wide text-gray-800"
-                          >
-                            Status
-                          </span>
-                        </div>
-                      </th>
+                            <th scope="col" class="px-6 py-3 text-left">
+                              <div class="flex items-center gap-x-2">
+                                <span
+                                  class="text-xs font-semibold uppercase tracking-wide text-gray-800"
+                                >
+                                  Prodi
+                                </span>
+                              </div>
+                            </th>
 
-                      <th scope="col" class="px-6 py-3 text-left">
-                        <div class="flex items-center gap-x-2">
-                          <span
-                            class="text-xs font-semibold uppercase tracking-wide text-gray-800"
-                          >
-                            Detail
-                          </span>
-                        </div>
-                      </th>
+                            <th scope="col" class="px-6 py-3 text-left">
+                              <div class="flex justify-center gap-x-2">
+                                <span
+                                  class="text-xs font-semibold uppercase tracking-wide text-gray-800"
+                                >
+                                  Status
+                                </span>
+                              </div>
+                            </th>
 
-                      <th scope="col" class="px-6 py-3 text-right"></th>
-                    </tr>
-                  </thead>
+                            <th scope="col" class="px-6 py-3 text-left">
+                              <div class="flex items-center gap-x-2">
+                                <span
+                                  class="text-xs font-semibold uppercase tracking-wide text-gray-800"
+                                >
+                                  Detail
+                                </span>
+                              </div>
+                            </th>
 
-                  <tbody id="seleksiMagang" class="divide-y divide-gray-200">
-                    <tr>
-                      <td class="h-px w-px whitespace-nowrap">
-                        <div class="pl-6 pr-6 py-3">
-                          <div class="flex items-center gap-x-3">
-                            <img
-                              class="inline-block h-[2.375rem] w-[2.375rem] rounded-full"
-                              src="https://images.unsplash.com/photo-1531927557220-a9e23c1e4794?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80"
-                              alt="Image Description"
-                            />
-                            <div class="grow">
-                              <span
-                                class="block text-sm font-semibold text-gray-800"
-                                >#NAMA#</span
-                              >
-                              <span class="block text-sm text-gray-500"
-                                >#NIM#</span
-                              >
-                            </div>
-                          </div>
-                        </div>
-                      </td>
-                      <td class="h-px w-72 whitespace-nowrap">
-                        <div class="px-6 py-3">
-                          <span
-                            class="block text-sm font-semibold text-gray-800"
-                            >#PRODI#</span
-                          >
-                          <span class="block text-sm text-gray-500"
-                            >#PERGURUAN#</span
-                          >
-                        </div>
-                      </td>
-                      <td class="h-px w-px whitespace-nowrap">
-                        <div class="flex justify-center py-3">
-                          <span
-                            class="#BACKGROUND_COLOR# inline-flex items-center gap-1.5 py-0.5 px-2 rounded-full text-xs font-medium text-gray-900"
-                          >
-                            #STATUS#
-                          </span>
-                        </div>
-                      </td>
-                      <td class="h-px w-px whitespace-nowrap">
-                        <a
-                          href="detailSeleksiMahasiswa?seleksiId=#DETAIL#"
-                          type="button"
-                          class="block"
+                            <th scope="col" class="px-6 py-3 text-right"></th>
+                          </tr>
+                        </thead>
+
+                        <tbody
+                          id="pendingSeleksi"
+                          class="divide-y divide-gray-200"
                         >
-                          <span class="px-6 py-1.5">
-                            <span
-                              class="py-1 px-2 inline-flex justify-center items-center gap-2 rounded-lg border font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-600 transition-all text-sm dark:bg-slate-900 dark:hover:bg-slate-800 dark:border-gray-700 dark:text-gray-400 dark:hover:text-white dark:focus:ring-offset-gray-800"
-                            >
-                              <svg
-                                class="flex-shrink-0 w-4 h-4"
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="16"
-                                height="16"
-                                fill="currentColor"
-                                viewBox="0 0 16 16"
+                          <tr>
+                            <td class="h-px w-px whitespace-nowrap">
+                              <div class="pl-6 pr-6 py-3">
+                                <div class="flex items-center gap-x-3">
+                                  <img
+                                    class="inline-block h-[2.375rem] w-[2.375rem] rounded-full"
+                                    src="https://images.unsplash.com/photo-1531927557220-a9e23c1e4794?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80"
+                                    alt="Image Description"
+                                  />
+                                  <div class="grow">
+                                    <span
+                                      class="block text-sm font-semibold text-gray-800"
+                                      >#NAMA#</span
+                                    >
+                                    <span class="block text-sm text-gray-500"
+                                      >#NIM#</span
+                                    >
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                            <td class="h-px w-72 whitespace-nowrap">
+                              <div class="px-6 py-3">
+                                <span
+                                  class="block text-sm font-semibold text-gray-800"
+                                  >#PRODI#</span
+                                >
+                                <span class="block text-sm text-gray-500"
+                                  >#PERGURUAN#</span
+                                >
+                              </div>
+                            </td>
+                            <td class="h-px w-px whitespace-nowrap">
+                              <div class="flex justify-center py-3">
+                                <span
+                                  class="#BACKGROUND_COLOR# inline-flex items-center gap-1.5 py-0.5 px-2 rounded-full text-xs font-medium text-gray-900"
+                                >
+                                  #PENDING#
+                                </span>
+                              </div>
+                            </td>
+                            <td class="h-px w-px whitespace-nowrap">
+                              <a
+                                href="detailSeleksiMahasiswa?seleksiId=#DETAIL#"
+                                type="button"
+                                class="block"
                               >
-                                <path
-                                  d="M1.92.506a.5.5 0 0 1 .434.14L3 1.293l.646-.647a.5.5 0 0 1 .708 0L5 1.293l.646-.647a.5.5 0 0 1 .708 0L7 1.293l.646-.647a.5.5 0 0 1 .708 0L9 1.293l.646-.647a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .801.13l.5 1A.5.5 0 0 1 15 2v12a.5.5 0 0 1-.053.224l-.5 1a.5.5 0 0 1-.8.13L13 14.707l-.646.647a.5.5 0 0 1-.708 0L11 14.707l-.646.647a.5.5 0 0 1-.708 0L9 14.707l-.646.647a.5.5 0 0 1-.708 0L7 14.707l-.646.647a.5.5 0 0 1-.708 0L5 14.707l-.646.647a.5.5 0 0 1-.708 0L3 14.707l-.646.647a.5.5 0 0 1-.801-.13l-.5-1A.5.5 0 0 1 1 14V2a.5.5 0 0 1 .053-.224l.5-1a.5.5 0 0 1 .367-.27zm.217 1.338L2 2.118v11.764l.137.274.51-.51a.5.5 0 0 1 .707 0l.646.647.646-.646a.5.5 0 0 1 .708 0l.646.646.646-.646a.5.5 0 0 1 .708 0l.646.646.646-.646a.5.5 0 0 1 .708 0l.646.646.646-.646a.5.5 0 0 1 .708 0l.646.646.646-.646a.5.5 0 0 1 .708 0l.509.509.137-.274V2.118l-.137-.274-.51.51a.5.5 0 0 1-.707 0L12 1.707l-.646.647a.5.5 0 0 1-.708 0L10 1.707l-.646.647a.5.5 0 0 1-.708 0L8 1.707l-.646.647a.5.5 0 0 1-.708 0L6 1.707l-.646.647a.5.5 0 0 1-.708 0L4 1.707l-.646.647a.5.5 0 0 1-.708 0l-.509-.51z"
-                                />
-                                <path
-                                  d="M3 4.5a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5zm8-6a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5z"
-                                />
-                              </svg>
-                              Detail
-                            </span>
-                          </span>
-                        </a>
-                      </td>
-                      <td class="h-px w-px whitespace-nowrap">
-                        <div class="px-6 py-1.5">
-                          <button
-                            onclick="terimaApply('#TERIMA#')"
-                            class="inline-flex items-center gap-x-1.5 text-sm text-blue-600 decoration-2 hover:underline font-medium pr-5"
-                          >
-                            Terima
-                          </button>
-                          <a
-                            class="inline-flex items-center gap-x-1.5 text-sm text-red-600 decoration-2 hover:underline font-medium"
-                            href="#"
-                          >
-                            Tidak
-                          </a>
-                        </div>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-                <!-- End Table -->
+                                <span class="px-6 py-1.5">
+                                  <span
+                                    class="py-1 px-2 inline-flex justify-center items-center gap-2 rounded-lg border font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-600 transition-all text-sm"
+                                  >
+                                    <svg
+                                      class="flex-shrink-0 w-4 h-4"
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      width="16"
+                                      height="16"
+                                      fill="currentColor"
+                                      viewBox="0 0 16 16"
+                                    >
+                                      <path
+                                        d="M1.92.506a.5.5 0 0 1 .434.14L3 1.293l.646-.647a.5.5 0 0 1 .708 0L5 1.293l.646-.647a.5.5 0 0 1 .708 0L7 1.293l.646-.647a.5.5 0 0 1 .708 0L9 1.293l.646-.647a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .801.13l.5 1A.5.5 0 0 1 15 2v12a.5.5 0 0 1-.053.224l-.5 1a.5.5 0 0 1-.8.13L13 14.707l-.646.647a.5.5 0 0 1-.708 0L11 14.707l-.646.647a.5.5 0 0 1-.708 0L9 14.707l-.646.647a.5.5 0 0 1-.708 0L7 14.707l-.646.647a.5.5 0 0 1-.708 0L5 14.707l-.646.647a.5.5 0 0 1-.708 0L3 14.707l-.646.647a.5.5 0 0 1-.801-.13l-.5-1A.5.5 0 0 1 1 14V2a.5.5 0 0 1 .053-.224l.5-1a.5.5 0 0 1 .367-.27zm.217 1.338L2 2.118v11.764l.137.274.51-.51a.5.5 0 0 1 .707 0l.646.647.646-.646a.5.5 0 0 1 .708 0l.646.646.646-.646a.5.5 0 0 1 .708 0l.646.646.646-.646a.5.5 0 0 1 .708 0l.646.646.646-.646a.5.5 0 0 1 .708 0l.646.646.646-.646a.5.5 0 0 1 .708 0l.509.509.137-.274V2.118l-.137-.274-.51.51a.5.5 0 0 1-.707 0L12 1.707l-.646.647a.5.5 0 0 1-.708 0L10 1.707l-.646.647a.5.5 0 0 1-.708 0L8 1.707l-.646.647a.5.5 0 0 1-.708 0L6 1.707l-.646.647a.5.5 0 0 1-.708 0L4 1.707l-.646.647a.5.5 0 0 1-.708 0l-.509-.51z"
+                                      />
+                                      <path
+                                        d="M3 4.5a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5zm8-6a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5z"
+                                      />
+                                    </svg>
+                                    Detail
+                                  </span>
+                                </span>
+                              </a>
+                            </td>
+                            <td class="h-px w-px whitespace-nowrap">
+                              <div class="px-6 py-1.5">
+                                <button
+                                  onclick="terimaApply('#TERIMA#')"
+                                  class="inline-flex items-center gap-x-1.5 text-sm text-blue-600 decoration-2 hover:underline font-medium pr-5"
+                                >
+                                  Terima
+                                </button>
+                                <a
+                                  class="inline-flex items-center gap-x-1.5 text-sm text-red-600 decoration-2 hover:underline font-medium"
+                                  href="#"
+                                >
+                                  Tidak
+                                </a>
+                              </div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <!-- End Pending -->
+
+                    <!-- Lolos -->
+                    <div
+                      id="basic-tabs-2"
+                      class="hidden"
+                      role="tabpanel"
+                      aria-labelledby="basic-tabs-item-2"
+                    >
+                      <table class="min-w-full divide-y divide-gray-200">
+                        <thead class="bg-gray-50">
+                          <tr>
+                            <th scope="col" class="px-6 py-3 text-left">
+                              <div class="flex items-center gap-x-2">
+                                <span
+                                  class="text-xs font-semibold uppercase tracking-wide text-gray-800"
+                                >
+                                  Nama
+                                </span>
+                              </div>
+                            </th>
+
+                            <th scope="col" class="px-6 py-3 text-left">
+                              <div class="flex items-center gap-x-2">
+                                <span
+                                  class="text-xs font-semibold uppercase tracking-wide text-gray-800"
+                                >
+                                  Prodi
+                                </span>
+                              </div>
+                            </th>
+
+                            <th scope="col" class="px-6 py-3 text-left">
+                              <div class="flex justify-center gap-x-2">
+                                <span
+                                  class="text-xs font-semibold uppercase tracking-wide text-gray-800"
+                                >
+                                  Status
+                                </span>
+                              </div>
+                            </th>
+
+                            <th scope="col" class="px-6 py-3 text-left">
+                              <div class="flex items-center gap-x-2">
+                                <span
+                                  class="text-xs font-semibold uppercase tracking-wide text-gray-800"
+                                >
+                                  Detail
+                                </span>
+                              </div>
+                            </th>
+                          </tr>
+                        </thead>
+
+                        <tbody
+                          id="lolosSeleksi"
+                          class="divide-y divide-gray-200"
+                        >
+                          <tr>
+                            <td class="h-px w-px whitespace-nowrap">
+                              <div class="pl-6 pr-6 py-3">
+                                <div class="flex items-center gap-x-3">
+                                  <img
+                                    class="inline-block h-[2.375rem] w-[2.375rem] rounded-full"
+                                    src="https://images.unsplash.com/photo-1531927557220-a9e23c1e4794?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80"
+                                    alt="Image Description"
+                                  />
+                                  <div class="grow">
+                                    <span
+                                      class="block text-sm font-semibold text-gray-800"
+                                      >#NAMA#</span
+                                    >
+                                    <span class="block text-sm text-gray-500"
+                                      >#NIM#</span
+                                    >
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                            <td class="h-px w-72 whitespace-nowrap">
+                              <div class="px-6 py-3">
+                                <span
+                                  class="block text-sm font-semibold text-gray-800"
+                                  >#PRODI#</span
+                                >
+                                <span class="block text-sm text-gray-500"
+                                  >#PERGURUAN#</span
+                                >
+                              </div>
+                            </td>
+                            <td class="h-px w-px whitespace-nowrap">
+                              <div class="flex justify-center py-3">
+                                <span
+                                  class="#BACKGROUND_COLOR# inline-flex items-center gap-1.5 py-0.5 px-2 rounded-full text-xs font-medium text-gray-900"
+                                >
+                                  #LOLOS#
+                                </span>
+                              </div>
+                            </td>
+                            <td class="h-px w-px whitespace-nowrap">
+                              <a
+                                href="detailSeleksiMahasiswa?seleksiId=#DETAIL#"
+                                type="button"
+                                class="block"
+                              >
+                                <span class="px-6 py-1.5">
+                                  <span
+                                    class="py-1 px-2 inline-flex justify-center items-center gap-2 rounded-lg border font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-600 transition-all text-sm"
+                                  >
+                                    <svg
+                                      class="flex-shrink-0 w-4 h-4"
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      width="16"
+                                      height="16"
+                                      fill="currentColor"
+                                      viewBox="0 0 16 16"
+                                    >
+                                      <path
+                                        d="M1.92.506a.5.5 0 0 1 .434.14L3 1.293l.646-.647a.5.5 0 0 1 .708 0L5 1.293l.646-.647a.5.5 0 0 1 .708 0L7 1.293l.646-.647a.5.5 0 0 1 .708 0L9 1.293l.646-.647a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .801.13l.5 1A.5.5 0 0 1 15 2v12a.5.5 0 0 1-.053.224l-.5 1a.5.5 0 0 1-.8.13L13 14.707l-.646.647a.5.5 0 0 1-.708 0L11 14.707l-.646.647a.5.5 0 0 1-.708 0L9 14.707l-.646.647a.5.5 0 0 1-.708 0L7 14.707l-.646.647a.5.5 0 0 1-.708 0L5 14.707l-.646.647a.5.5 0 0 1-.708 0L3 14.707l-.646.647a.5.5 0 0 1-.801-.13l-.5-1A.5.5 0 0 1 1 14V2a.5.5 0 0 1 .053-.224l.5-1a.5.5 0 0 1 .367-.27zm.217 1.338L2 2.118v11.764l.137.274.51-.51a.5.5 0 0 1 .707 0l.646.647.646-.646a.5.5 0 0 1 .708 0l.646.646.646-.646a.5.5 0 0 1 .708 0l.646.646.646-.646a.5.5 0 0 1 .708 0l.646.646.646-.646a.5.5 0 0 1 .708 0l.646.646.646-.646a.5.5 0 0 1 .708 0l.509.509.137-.274V2.118l-.137-.274-.51.51a.5.5 0 0 1-.707 0L12 1.707l-.646.647a.5.5 0 0 1-.708 0L10 1.707l-.646.647a.5.5 0 0 1-.708 0L8 1.707l-.646.647a.5.5 0 0 1-.708 0L6 1.707l-.646.647a.5.5 0 0 1-.708 0L4 1.707l-.646.647a.5.5 0 0 1-.708 0l-.509-.51z"
+                                      />
+                                      <path
+                                        d="M3 4.5a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5zm8-6a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5z"
+                                      />
+                                    </svg>
+                                    Detail
+                                  </span>
+                                </span>
+                              </a>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <!-- End Lolos -->
+
+                    <!-- Tidak Lolos -->
+                    <div
+                      id="basic-tabs-3"
+                      class="hidden"
+                      role="tabpanel"
+                      aria-labelledby="basic-tabs-item-3"
+                    >
+                      <table class="min-w-full divide-y divide-gray-200">
+                        <thead class="bg-gray-50">
+                          <tr>
+                            <th scope="col" class="px-6 py-3 text-left">
+                              <div class="flex items-center gap-x-2">
+                                <span
+                                  class="text-xs font-semibold uppercase tracking-wide text-gray-800"
+                                >
+                                  Nama
+                                </span>
+                              </div>
+                            </th>
+
+                            <th scope="col" class="px-6 py-3 text-left">
+                              <div class="flex items-center gap-x-2">
+                                <span
+                                  class="text-xs font-semibold uppercase tracking-wide text-gray-800"
+                                >
+                                  Prodi
+                                </span>
+                              </div>
+                            </th>
+
+                            <th scope="col" class="px-6 py-3 text-left">
+                              <div class="flex justify-center gap-x-2">
+                                <span
+                                  class="text-xs font-semibold uppercase tracking-wide text-gray-800"
+                                >
+                                  Status
+                                </span>
+                              </div>
+                            </th>
+
+                            <th scope="col" class="px-6 py-3 text-left">
+                              <div class="flex items-center gap-x-2">
+                                <span
+                                  class="text-xs font-semibold uppercase tracking-wide text-gray-800"
+                                >
+                                  Detail
+                                </span>
+                              </div>
+                            </th>
+                          </tr>
+                        </thead>
+
+                        <tbody
+                          id="tidakLolosSeleksi"
+                          class="divide-y divide-gray-200"
+                        >
+                          <tr>
+                            <td class="h-px w-px whitespace-nowrap">
+                              <div class="pl-6 pr-6 py-3">
+                                <div class="flex items-center gap-x-3">
+                                  <img
+                                    class="inline-block h-[2.375rem] w-[2.375rem] rounded-full"
+                                    src="https://images.unsplash.com/photo-1531927557220-a9e23c1e4794?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80"
+                                    alt="Image Description"
+                                  />
+                                  <div class="grow">
+                                    <span
+                                      class="block text-sm font-semibold text-gray-800"
+                                      >#NAMA#</span
+                                    >
+                                    <span class="block text-sm text-gray-500"
+                                      >#NIM#</span
+                                    >
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                            <td class="h-px w-72 whitespace-nowrap">
+                              <div class="px-6 py-3">
+                                <span
+                                  class="block text-sm font-semibold text-gray-800"
+                                  >#PRODI#</span
+                                >
+                                <span class="block text-sm text-gray-500"
+                                  >#PERGURUAN#</span
+                                >
+                              </div>
+                            </td>
+                            <td class="h-px w-px whitespace-nowrap">
+                              <div class="flex justify-center py-3">
+                                <span
+                                  class="#BACKGROUND_COLOR# inline-flex items-center gap-1.5 py-0.5 px-2 rounded-full text-xs font-medium text-gray-900"
+                                >
+                                  #TIDAKLOLOS#
+                                </span>
+                              </div>
+                            </td>
+                            <td class="h-px w-px whitespace-nowrap">
+                              <a
+                                href="detailSeleksiMahasiswa?seleksiId=#DETAIL#"
+                                type="button"
+                                class="block"
+                              >
+                                <span class="px-6 py-1.5">
+                                  <span
+                                    class="py-1 px-2 inline-flex justify-center items-center gap-2 rounded-lg border font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-600 transition-all text-sm"
+                                  >
+                                    <svg
+                                      class="flex-shrink-0 w-4 h-4"
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      width="16"
+                                      height="16"
+                                      fill="currentColor"
+                                      viewBox="0 0 16 16"
+                                    >
+                                      <path
+                                        d="M1.92.506a.5.5 0 0 1 .434.14L3 1.293l.646-.647a.5.5 0 0 1 .708 0L5 1.293l.646-.647a.5.5 0 0 1 .708 0L7 1.293l.646-.647a.5.5 0 0 1 .708 0L9 1.293l.646-.647a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .801.13l.5 1A.5.5 0 0 1 15 2v12a.5.5 0 0 1-.053.224l-.5 1a.5.5 0 0 1-.8.13L13 14.707l-.646.647a.5.5 0 0 1-.708 0L11 14.707l-.646.647a.5.5 0 0 1-.708 0L9 14.707l-.646.647a.5.5 0 0 1-.708 0L7 14.707l-.646.647a.5.5 0 0 1-.708 0L5 14.707l-.646.647a.5.5 0 0 1-.708 0L3 14.707l-.646.647a.5.5 0 0 1-.801-.13l-.5-1A.5.5 0 0 1 1 14V2a.5.5 0 0 1 .053-.224l.5-1a.5.5 0 0 1 .367-.27zm.217 1.338L2 2.118v11.764l.137.274.51-.51a.5.5 0 0 1 .707 0l.646.647.646-.646a.5.5 0 0 1 .708 0l.646.646.646-.646a.5.5 0 0 1 .708 0l.646.646.646-.646a.5.5 0 0 1 .708 0l.646.646.646-.646a.5.5 0 0 1 .708 0l.646.646.646-.646a.5.5 0 0 1 .708 0l.509.509.137-.274V2.118l-.137-.274-.51.51a.5.5 0 0 1-.707 0L12 1.707l-.646.647a.5.5 0 0 1-.708 0L10 1.707l-.646.647a.5.5 0 0 1-.708 0L8 1.707l-.646.647a.5.5 0 0 1-.708 0L6 1.707l-.646.647a.5.5 0 0 1-.708 0L4 1.707l-.646.647a.5.5 0 0 1-.708 0l-.509-.51z"
+                                      />
+                                      <path
+                                        d="M3 4.5a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5zm8-6a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5z"
+                                      />
+                                    </svg>
+                                    Detail
+                                  </span>
+                                </span>
+                              </a>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <!-- End Tidak Lolos -->
+                  </div>
+                  <!-- End Tabel -->
+                </div>
+                <!-- End Filter -->
 
                 <!-- Footer -->
                 <div
