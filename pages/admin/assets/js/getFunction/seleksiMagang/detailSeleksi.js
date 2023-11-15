@@ -10,7 +10,7 @@ export const dataSeleksi = `
   ></span>
   <div class="absolute top-0 left-0 p-4">
     <a
-      href="seleksiMahasiswa.html"
+      href="seleksiMagang.html"
       class="py-2 px-3 inline-flex cursor-pointer justify-center items-center gap-2 rounded-md border font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-600 transition-all text-sm"
     >
       Kembali
@@ -267,5 +267,5 @@ export function isiRow(value) {
     .replace("#TENTANG#", value.magang.mitra.tentang)
     .replace("#ALAMAT#", value.magang.mitra.alamat)
     .replace("#WEBSITE#", value.magang.mitra.website);
-  addInner("detailSeleksi", content);
+  addInner("detailSeleksiMagang", content);
 }

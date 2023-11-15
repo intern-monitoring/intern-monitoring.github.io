@@ -58,7 +58,7 @@ export const tableSeleksi = `
 </td>
 <td class="h-px w-px whitespace-nowrap">
   <a
-    href="detailSeleksi?seleksiId=#DETAIL#"
+    href="detailSeleksiMagang?seleksiMagangId=#DETAIL#"
     type="button"
     class="block"
   >
