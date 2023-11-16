@@ -78,17 +78,21 @@ export const tablePending = `
 <td class="h-px w-px whitespace-nowrap">
   <div class="px-6 py-1.5">
     <button
+      id="buttonTerima"
+      value="1"
       onclick="terimaMhs('#TERIMA#')"
       class="inline-flex items-center gap-x-1.5 text-sm text-blue-600 decoration-2 hover:underline font-medium pr-5"
     >
       Terima
     </button>
-    <a
+    <button
+      id="buttonTolak"
+      value="2"
       class="inline-flex items-center gap-x-1.5 text-sm text-red-600 decoration-2 hover:underline font-medium"
-      href="#"
+      onclick="tolakMhs('#TOLAK#')"
     >
       Tidak
-    </a>
+    </button>
   </div>
 </td>
 </tr>
@@ -252,7 +256,7 @@ export function responseData(results) {
 }
 
 export function isiRowPending(value) {
-  if (value.seleksikampus === 0) {
+  if (value.seleksiKampus === null) {
     const pendingStatus = "Pending";
 
     const pending = tablePending
@@ -262,6 +266,7 @@ export function isiRowPending(value) {
       .replace("#PERGURUAN#", value.mahasiswa.perguruantinggi)
       .replace("#PENDING#", pendingStatus)
       .replace("#TERIMA#", value._id)
+      .replace("#TOLAK#", value._id)
       .replace("#DETAIL#", value._id);
 
     addInner(pending);
@@ -269,7 +274,7 @@ export function isiRowPending(value) {
 }
 
 export function isiRowLolos(value) {
-  if (value.seleksikampus === 1) {
+  if (value.seleksiKampus === 1) {
     const lolosStatus = "Lolos";
 
     const lolos = tableLolos
@@ -285,7 +290,7 @@ export function isiRowLolos(value) {
 }
 
 export function isiRowTidakLolos(value) {
-  if (value.seleksikampus === 2) {
+  if (value.seleksiKampus === 2) {
     const tidakLolosStatus = "Tidak Lolos";
 
     const tidaklolos = tableTidakLolos
