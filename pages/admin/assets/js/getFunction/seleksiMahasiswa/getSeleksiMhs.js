@@ -256,7 +256,14 @@ export function responseData(results) {
 }
 
 export function isiRowPending(value) {
-  if (value.seleksiKampus == 0) {
+  pendingg(value);
+  function pendingg(value) {
+    for (let seleksiKampus in value) {
+      if (value.hasOwnProperty(seleksiKampus)) return false;
+    }
+    return true;
+  }
+  if (value.seleksiKampus === undefined || value.seleksiKampus === null) {
     const pendingStatus = "Pending";
 
     const pending = tablePending
