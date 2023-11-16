@@ -8,7 +8,6 @@ const putData = (
   tokenvalue,
   responseFunction
 ) => {
-  console.log(raw);
   const myHeaders = new Headers();
   myHeaders.append(tokenkey, tokenvalue);
   myHeaders.append("Content-Type", "application/json");
