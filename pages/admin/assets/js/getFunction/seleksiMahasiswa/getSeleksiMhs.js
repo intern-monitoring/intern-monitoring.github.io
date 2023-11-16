@@ -257,16 +257,15 @@ export function responseData(results) {
 
 function pendingg(value) {
   for (let seleksiKampus in value) {
-    if (value.hasOwnProperty(seleksiKampus)) return false;
+    if (value.hasOwnProperty(seleksiKampus)) return true;
   }
-  return true;
+  return false;
 }
 
 export function isiRowPending(value) {
   console.log(pendingg(value));
-  pendingg(value);
 
-  if (value.seleksiKampus === undefined || value.seleksiKampus === null) {
+  if (pendingg(value)) {
     const pendingStatus = "Pending";
 
     const pending = tablePending
