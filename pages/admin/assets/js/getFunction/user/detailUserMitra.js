@@ -37,7 +37,9 @@ export const dataUserMitra = `
                     #NAMAPERUSAHAAN#
                   </h2>
                 </div>
-
+                <div class="flex justify-center gap-5 pt-1">
+                  <h3 class="text-base text-gray-900 font-normal">#EMAIL#</h3>
+                </div>
                 <div class="flex justify-center gap-2 pt-10">
                   <label class="text-base text-gray-900 font-semibold"
                     >Narahubung :</label

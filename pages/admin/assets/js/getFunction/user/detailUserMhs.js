@@ -36,10 +36,16 @@ export const dataUserMhs = `
         #NAMALENGKAP#
       </h2>
     </div>
-    <div class="flex justify-center gap-2">
-      <h3 class="text-base text-gray-900 font-normal">#NIM#</h3>
+    <div class="flex justify-center gap-5 pt-1">
+      <h3 class="text-base text-gray-900 font-normal">#EMAIL#</h3>
     </div>
     <div class="flex justify-center gap-2 pt-5">
+      <label class="text-base text-gray-900 font-semibold"
+        >NIM :</label
+      >
+      <h3 class="text-base text-gray-900 font-normal">#NIM#</h3>
+    </div>
+    <div class="flex justify-center gap-2">
       <label class="text-base text-gray-900 font-semibold"
         >Tanggal Lahir :</label
       >
@@ -121,6 +127,7 @@ export function isiRowMahasiswa(value) {
     .replace("#GENDER#", value.jeniskelamin)
     .replace("#NIM#", value.nim)
     .replace("#PERGURUAN#", value.perguruantinggi)
+    .replace("#EMAIL#", value.akun.email)
     .replace("#PRODI#", value.prodi);
   addInner("detailUser", content);
 }
