@@ -56,6 +56,28 @@ export const dataProfileMitra = `
         #NAMAPERUSAHAAN#
       </h2>
     </div>
+    <div class="flex justify-center gap-5 pt-1">
+      <h3 class="text-base text-gray-900 font-normal">#EMAIL#</h3>
+      <a
+        id="updateButton"
+        href="editAccountMitra?userId=#EDITACCOUNT#"
+        class="py-1 px-1 text-xs inline-flex cursor-pointer justify-center items-center gap-2 rounded-md border font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-600 transition-all"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="currentColor"
+          class="bi bi-lock w-3 h-3"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2zM5 8h6a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z"
+          />
+        </svg>
+        Edit Account
+      </a>
+    </div>
 
     <div class="flex justify-center gap-2 pt-10">
       <label class="text-base text-gray-900 font-semibold"
@@ -69,17 +91,13 @@ export const dataProfileMitra = `
       <label class="text-base text-gray-900 font-semibold"
         >Nomor Narahubung :</label
       >
-      <h3 class="text-base text-gray-900 font-normal">
-        #NOHP#
-      </h3>
+      <h3 class="text-base text-gray-900 font-normal">#NOHP#</h3>
     </div>
     <div class="flex justify-center gap-2">
       <label class="text-base text-gray-900 font-semibold"
         >Website :</label
       >
-      <h3 class="text-base text-gray-900 font-normal">
-        #WEBSITE#
-      </h3>
+      <h3 class="text-base text-gray-900 font-normal">#WEBSITE#</h3>
     </div>
   </div>
   <div class="mt-2 border-b border-gray-200"></div>
@@ -134,21 +152,21 @@ export const dataProfileMitra = `
         <p
           class="inline-flex justify-center items-center gap-x-3 text-base text-center font-semibold text-gray-900 lg:text-lg"
         >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="16"
-          height="16"
-          fill="currentColor"
-          class="bi bi-geo-alt"
-          viewBox="0 0 16 16"
-        >
-          <path
-            d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"
-          />
-          <path
-            d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"
-          />
-        </svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-geo-alt"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"
+            />
+            <path
+              d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"
+            />
+          </svg>
           Alamat
         </p>
       </div>
@@ -206,6 +224,8 @@ export function isiRow(value) {
     .replace("#TENTANG#", value.tentang)
     .replace("#ALAMAT#", value.alamat)
     .replace("#WEBSITE#", value.website)
+    .replace("#EMAIL#", value.akun.email)
+    .replace("#EDITACCOUNT#", value.akun._id)
     .replace("#IDEDIT#", value._id);
   addInner("profileMitra", content);
 }
