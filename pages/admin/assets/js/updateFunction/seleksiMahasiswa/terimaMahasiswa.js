@@ -46,7 +46,7 @@ const terimaMhs = (TERIMA) => {
 
       const responseFunction = (result) => responseData(result);
       const datajson = {
-        statusKampus: getValue("buttonTerima"),
+        statusKampus: parseInt(getValue("buttonTerima")),
       };
 
       putData(target_url, datajson, tokenkey, tokenvalue, responseFunction);

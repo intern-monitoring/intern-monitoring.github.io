@@ -7,7 +7,7 @@ const putData = (target_url, tokenkey, tokenvalue, responseFunction) => {
   myHeaders.append("Content-Type", "application/json");
 
   const raw = JSON.stringify({
-    statusKampus: getValue("buttonTolak"),
+    statusKampus: parseInt(getValue("buttonTolak")),
   });
 
   const requestOptions = {
@@ -23,7 +23,7 @@ const putData = (target_url, tokenkey, tokenvalue, responseFunction) => {
     .catch((error) => console.log("error", error));
 };
 
-const tolakMhs = (TERIMA) => {
+const tolakMhs = (TOLAK) => {
   Swal.fire({
     title: "Konfirmasi Seleksi",
     text: "Tolak Mahasiswa ini?",
@@ -36,7 +36,7 @@ const tolakMhs = (TERIMA) => {
     if (result.isConfirmed) {
       const target_url =
         "https://asia-southeast2-bursakerja-project.cloudfunctions.net/intermoni-mahasiswa?id=" +
-        TERIMA;
+        TOLAK;
       const tokenvalue = getCookie("Authorization");
       const tokenkey = "Authorization";
 
