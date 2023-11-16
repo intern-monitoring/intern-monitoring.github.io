@@ -260,10 +260,10 @@ export function isiRowPending(value) {
     const pendingStatus = "Pending";
 
     const pending = tablePending
-      .replace("#NAMA#", value.mahasiswa.namalengkap)
-      .replace("#NIM#", value.mahasiswa.nim)
-      .replace("#PRODI#", value.mahasiswa.prodi)
-      .replace("#PERGURUAN#", value.mahasiswa.perguruantinggi)
+      .replace("#NAMA#", value.namalengkap)
+      .replace("#NIM#", value.nim)
+      .replace("#PRODI#", value.prodi)
+      .replace("#PERGURUAN#", value.perguruantinggi)
       .replace("#PENDING#", pendingStatus)
       .replace("#TERIMA#", value._id)
       .replace("#TOLAK#", value._id)
@@ -278,10 +278,10 @@ export function isiRowLolos(value) {
     const lolosStatus = "Lolos";
 
     const lolos = tableLolos
-      .replace("#NAMA#", value.mahasiswa.namalengkap)
-      .replace("#NIM#", value.mahasiswa.nim)
-      .replace("#PRODI#", value.mahasiswa.prodi)
-      .replace("#PERGURUAN#", value.mahasiswa.perguruantinggi)
+      .replace("#NAMA#", value.namalengkap)
+      .replace("#NIM#", value.nim)
+      .replace("#PRODI#", value.prodi)
+      .replace("#PERGURUAN#", value.perguruantinggi)
       .replace("#LOLOS#", lolosStatus)
       .replace("#DETAIL#", value._id);
 
@@ -294,10 +294,10 @@ export function isiRowTidakLolos(value) {
     const tidakLolosStatus = "Tidak Lolos";
 
     const tidaklolos = tableTidakLolos
-      .replace("#NAMA#", value.mahasiswa.namalengkap)
-      .replace("#NIM#", value.mahasiswa.nim)
-      .replace("#PRODI#", value.mahasiswa.prodi)
-      .replace("#PERGURUAN#", value.mahasiswa.perguruantinggi)
+      .replace("#NAMA#", value.namalengkap)
+      .replace("#NIM#", value.nim)
+      .replace("#PRODI#", value.prodi)
+      .replace("#PERGURUAN#", value.perguruantinggi)
       .replace("#TIDAKLOLOS#", tidakLolosStatus)
       .replace("#DETAIL#", value._id);
 
