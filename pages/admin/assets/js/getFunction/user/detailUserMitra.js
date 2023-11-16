@@ -184,6 +184,7 @@ export function isiRowMitra(value) {
     .replace("#SEKTOR#", value.sektorindustri)
     .replace("#TENTANG#", value.tentang)
     .replace("#ALAMAT#", value.alamat)
+    .replace("#EMAIL#", value.akun.email)
     .replace("#WEBSITE#", value.website);
   addInner("detailUser", content);
 }
