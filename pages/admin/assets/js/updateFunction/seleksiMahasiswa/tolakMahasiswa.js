@@ -2,6 +2,7 @@ import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
 import { getValue } from "https://jscroot.github.io/element/croot.js";
 
 const putData = (target_url, tokenkey, tokenvalue, responseFunction) => {
+  console.log(raw);
   const myHeaders = new Headers();
   myHeaders.append(tokenkey, tokenvalue);
   myHeaders.append("Content-Type", "application/json");
@@ -43,7 +44,6 @@ const tolakMhs = (TOLAK) => {
       const responseFunction = (result) => responseData(result);
 
       putData(target_url, tokenkey, tokenvalue, responseFunction);
-      console.log(raw);
     }
   });
 };
