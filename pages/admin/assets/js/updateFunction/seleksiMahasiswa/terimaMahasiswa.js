@@ -1,14 +1,18 @@
 import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
 import { getValue } from "https://jscroot.github.io/element/croot.js";
 
-const putData = (target_url, tokenkey, tokenvalue, responseFunction) => {
+const putData = (
+  target_url,
+  datajson,
+  tokenkey,
+  tokenvalue,
+  responseFunction
+) => {
   const myHeaders = new Headers();
   myHeaders.append(tokenkey, tokenvalue);
   myHeaders.append("Content-Type", "application/json");
 
-  const raw = JSON.stringify({
-    statusKampus: getValue("buttonTerima"),
-  });
+  const raw = JSON.stringify(datajson);
 
   const requestOptions = {
     method: "PUT",
@@ -41,8 +45,11 @@ const terimaMhs = (TERIMA) => {
       const tokenkey = "Authorization";
 
       const responseFunction = (result) => responseData(result);
+      const datajson = {
+        statusKampus: getValue("buttonTerima"),
+      };
 
-      putData(target_url, tokenkey, tokenvalue, responseFunction);
+      putData(target_url, datajson, tokenkey, tokenvalue, responseFunction);
     }
   });
 };
