@@ -256,7 +256,7 @@ export function responseData(results) {
 }
 
 export function isiRowPending(value) {
-  if (!value.seleksiKampus) {
+  if (value.seleksiKampus == 0) {
     const pendingStatus = "Pending";
 
     const pending = tablePending
