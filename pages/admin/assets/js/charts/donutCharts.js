@@ -1,5 +1,38 @@
+import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
+
+const URLGetUser =
+  "https://asia-southeast2-bursakerja-project.cloudfunctions.net/intermoni-user";
+
+const get = (target_url, responseFunction) => {
+  const myHeaders = new Headers();
+  myHeaders.append("Authorization", getCookie("Authorization"));
+  const requestOptions = {
+    method: "GET",
+    headers: myHeaders,
+    redirect: "follow",
+  };
+
+  fetch(target_url, requestOptions)
+    .then((response) => response.text())
+    .then((result) => {
+      const parsedResult = JSON.parse(result);
+
+      // Count the number of "Mahasiswa" and "Mitra"
+      const mahasiswaCount = parsedResult.filter(
+        (user) => user.role === "mahasiswa"
+      ).length;
+      const mitraCount = parsedResult.filter(
+        (user) => user.role === "mitra"
+      ).length;
+
+      // Call the response function with the filtered data
+      responseFunction(mahasiswaCount, mitraCount);
+    })
+    .catch((error) => console.log("error", error));
+};
+
 window.addEventListener("load", () => {
-  (function () {
+  get(URLGetUser, (mahasiswaCount, mitraCount) => {
     buildChart(
       "#hs-donut-chart",
       () => ({
@@ -18,7 +51,7 @@ window.addEventListener("load", () => {
             },
           },
         },
-        series: [60, 50],
+        series: [mahasiswaCount, mitraCount],
         labels: ["Mahasiswa", "Mitra"],
         legend: {
           show: false,
@@ -58,5 +91,5 @@ window.addEventListener("load", () => {
         },
       }
     );
-  })();
+  });
 });
