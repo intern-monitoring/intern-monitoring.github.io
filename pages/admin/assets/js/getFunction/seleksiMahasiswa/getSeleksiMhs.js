@@ -1,7 +1,7 @@
 import { addInner } from "https://jscroot.github.io/element/croot.js";
 
 export const URLGetSeleksiMhs =
-  "https://asia-southeast2-bursakerja-project.cloudfunctions.net/intermoni-mahasiswa-magang";
+  "https://asia-southeast2-bursakerja-project.cloudfunctions.net/intermoni-mahasiswa";
 
 export const tablePending = `
 <tr>
@@ -47,7 +47,7 @@ export const tablePending = `
 </td>
 <td class="h-px w-px whitespace-nowrap">
   <a
-    href="detailSeleksiMahasiswa?seleksiId=#DETAIL#"
+    href="detailSeleksiMahasiswa?seleksiMhsId=#DETAIL#"
     type="button"
     class="block"
   >
@@ -137,7 +137,7 @@ export const tableLolos = `
 </td>
 <td class="h-px w-px whitespace-nowrap">
   <a
-    href="detailSeleksiMahasiswa?seleksiId=#DETAIL#"
+    href="detailSeleksiMahasiswa?seleksiMhsId=#DETAIL#"
     type="button"
     class="block"
   >
@@ -211,7 +211,7 @@ export const tableTidakLolos = `
 </td>
 <td class="h-px w-px whitespace-nowrap">
   <a
-    href="detailSeleksiMahasiswa?seleksiId=#DETAIL#"
+    href="detailSeleksiMahasiswa?seleksiMhsId=#DETAIL#"
     type="button"
     class="block"
   >
@@ -243,51 +243,59 @@ export const tableTidakLolos = `
 `;
 
 export function responseData(results) {
-  results.forEach(isiRowPending, isiRowLolos, isiRowTidakLolos);
+  console.log(results);
+  results.forEach((result) => {
+    isiRowPending(result);
+    isiRowLolos(result);
+    isiRowTidakLolos(result);
+  });
 }
 
 export function isiRowPending(value) {
-  const pendingStatus = value.seleksikampus == 0;
+  if (value.statuskampus === 0) {
+    const pendingStatus = "Pending";
 
-  const pending = tablePending
-    .replace("#NAMA#", value.mahasiswa.namalengkap)
-    .replace("#NIM#", value.mahasiswa.nim)
-    .replace("#PRODI#", value.mahasiswa.prodi)
-    .replace("#PERGURUAN#", value.mahasiswa.perguruantinggi)
-    .replace("#PENDING#", pendingStatus)
-    .replace("#POSISI#", value.magang.posisi)
-    .replace("#MITRA#", value.magang.mitra.nama)
-    .replace("#TERIMA#", value._id)
-    .replace("#DETAIL#", value._id);
-  addInner("pendingSeleksi", pending);
+    const pending = tablePending
+      .replace("#NAMA#", value.mahasiswa.namalengkap)
+      .replace("#NIM#", value.mahasiswa.nim)
+      .replace("#PRODI#", value.mahasiswa.prodi)
+      .replace("#PERGURUAN#", value.mahasiswa.perguruantinggi)
+      .replace("#PENDING#", pendingStatus)
+      .replace("#TERIMA#", value._id)
+      .replace("#DETAIL#", value._id);
+
+    addInner(pending);
+  }
 }
 
 export function isiRowLolos(value) {
-  const lolosStatus = value.seleksikampus == 1;
+  if (value.seleksikampus === 1) {
+    const lolosStatus = "Lolos";
 
-  const lolos = tableLolos
-    .replace("#NAMA#", value.mahasiswa.namalengkap)
-    .replace("#NIM#", value.mahasiswa.nim)
-    .replace("#PRODI#", value.mahasiswa.prodi)
-    .replace("#PERGURUAN#", value.mahasiswa.perguruantinggi)
-    .replace("#LOLOS#", lolosStatus)
-    .replace("#POSISI#", value.magang.posisi)
-    .replace("#MITRA#", value.magang.mitra.nama)
-    .replace("#DETAIL#", value._id);
-  addInner("lolosSeleksi", lolos);
+    const lolos = tableLolos
+      .replace("#NAMA#", value.mahasiswa.namalengkap)
+      .replace("#NIM#", value.mahasiswa.nim)
+      .replace("#PRODI#", value.mahasiswa.prodi)
+      .replace("#PERGURUAN#", value.mahasiswa.perguruantinggi)
+      .replace("#LOLOS#", lolosStatus)
+      .replace("#DETAIL#", value._id);
+
+    addInner("lolosSeleksi", lolos);
+  }
 }
 
 export function isiRowTidakLolos(value) {
-  const tidakLolosStatus = value.seleksikampus == 2;
+  if (value.seleksikampus === 2) {
+    const tidakLolosStatus = "Tidak Lolos";
 
-  const tidaklolos = tableTidakLolos
-    .replace("#NAMA#", value.mahasiswa.namalengkap)
-    .replace("#NIM#", value.mahasiswa.nim)
-    .replace("#PRODI#", value.mahasiswa.prodi)
-    .replace("#PERGURUAN#", value.mahasiswa.perguruantinggi)
-    .replace("#TIDAKLOLOS#", tidakLolosStatus)
-    .replace("#POSISI#", value.magang.posisi)
-    .replace("#MITRA#", value.magang.mitra.nama)
-    .replace("#DETAIL#", value._id);
-  addInner("tidakLolosSeleksi", tidaklolos);
+    const tidaklolos = tableTidakLolos
+      .replace("#NAMA#", value.mahasiswa.namalengkap)
+      .replace("#NIM#", value.mahasiswa.nim)
+      .replace("#PRODI#", value.mahasiswa.prodi)
+      .replace("#PERGURUAN#", value.mahasiswa.perguruantinggi)
+      .replace("#TIDAKLOLOS#", tidakLolosStatus)
+      .replace("#DETAIL#", value._id);
+
+    addInner("tidakLolosSeleksi", tidaklolos);
+  }
 }
