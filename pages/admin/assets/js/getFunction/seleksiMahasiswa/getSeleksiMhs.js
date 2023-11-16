@@ -255,17 +255,8 @@ export function responseData(results) {
   });
 }
 
-function pendingg(value) {
-  for (let seleksiKampus in value) {
-    if (value.hasOwnProperty(seleksiKampus)) return true;
-  }
-  return false;
-}
-
 export function isiRowPending(value) {
-  console.log(pendingg(value));
-
-  if (pendingg(value)) {
+  if (value.seleksiKampus === null) {
     const pendingStatus = "Pending";
 
     const pending = tablePending
@@ -278,7 +269,7 @@ export function isiRowPending(value) {
       .replace("#TOLAK#", value._id)
       .replace("#DETAIL#", value._id);
 
-    addInner(pending);
+    addInner("pendingSeleksi", pending);
   }
 }
 
