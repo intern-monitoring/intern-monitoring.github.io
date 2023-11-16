@@ -30,9 +30,10 @@ const get = (target_url, responseFunction) => {
     })
     .catch((error) => console.log("error", error));
 };
+get(URLGetUser);
 
-window.addEventListener("load", () => {
-  get(URLGetUser, (mahasiswaCount, mitraCount) => {
+window.addEventListener("load", (mitraCount, mahasiswaCount) => {
+  (function () {
     buildChart(
       "#hs-donut-chart",
       () => ({
@@ -51,7 +52,7 @@ window.addEventListener("load", () => {
             },
           },
         },
-        series: [mahasiswaCount, mitraCount],
+        series: [mitraCount, mahasiswaCount],
         labels: ["Mahasiswa", "Mitra"],
         legend: {
           show: false,
@@ -91,5 +92,5 @@ window.addEventListener("load", () => {
         },
       }
     );
-  });
+  })();
 });
