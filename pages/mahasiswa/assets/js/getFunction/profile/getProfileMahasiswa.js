@@ -55,10 +55,35 @@ export const dataMahasiswa = `
         #NAMALENGKAP#
       </h2>
     </div>
-    <div class="flex justify-center gap-2">
-      <h3 class="text-base text-gray-900 font-normal">#NIM#</h3>
+    <div class="flex justify-center gap-5 pt-1">
+      <h3 class="text-base text-gray-900 font-normal">#EMAIL#</h3>
+      <a
+        id="updateButton"
+        href="editAccountMahasiswa?userId=#EDITACCOUNT#"
+        class="py-1 px-1 text-xs inline-flex cursor-pointer justify-center items-center gap-2 rounded-md border font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-600 transition-all"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="currentColor"
+          class="bi bi-lock w-3 h-3"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2zM5 8h6a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z"
+          />
+        </svg>
+        Edit Account
+      </a>
     </div>
     <div class="flex justify-center gap-2 pt-5">
+      <label class="text-base text-gray-900 font-semibold"
+        >NIM :</label
+      >
+      <h3 class="text-base text-gray-900 font-normal">#NIM#</h3>
+    </div>
+    <div class="flex justify-center gap-2">
       <label class="text-base text-gray-900 font-semibold"
         >Tanggal Lahir :</label
       >
@@ -141,6 +166,8 @@ export function isiRow(value) {
     .replace("#NIM#", value.nim)
     .replace("#PERGURUAN#", value.perguruantinggi)
     .replace("#PRODI#", value.prodi)
+    .replace("#EMAIL#", value.akun.email)
+    .replace("#EDITACCOUNT#", value.akun._id)
     .replace("#IDEDIT#", value._id);
   addInner("profileMahasiswa", content);
 }
