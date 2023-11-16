@@ -8,7 +8,7 @@ const putData = (target_url, tokenkey, tokenvalue, responseFunction) => {
   myHeaders.append("Content-Type", "application/json");
 
   const raw = JSON.stringify({
-    statusKampus: parseInt(getValue("buttonTolak")),
+    seleksiKampus: parseInt(getValue("buttonTolak")),
   });
 
   const requestOptions = {
