@@ -43,6 +43,7 @@ const tolakMhs = (TOLAK) => {
       const responseFunction = (result) => responseData(result);
 
       putData(target_url, tokenkey, tokenvalue, responseFunction);
+      console.log(raw);
     }
   });
 };

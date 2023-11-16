@@ -50,6 +50,7 @@ const terimaMhs = (TERIMA) => {
       };
 
       putData(target_url, datajson, tokenkey, tokenvalue, responseFunction);
+      console.log(datajson);
     }
   });
 };
