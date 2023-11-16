@@ -110,7 +110,10 @@ export const tableUserMitra = `
 
 export function responseData(results) {
   console.log(results);
-  results.forEach(isiRowMhs, isiRowMitra);
+  results.forEach((result) => {
+    isiRowMhs(result);
+    isiRowMitra(result);
+  });
 }
 
 export function isiRowMhs(value) {
