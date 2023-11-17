@@ -43,7 +43,7 @@ export const pendingSeleksiMitra = `
     <span
       class="block text-center text-sm font-semibold text-gray-800"
     >
-      #EMAIL#
+     #ALAMAT#
     </span>
   </div>
 </td>
@@ -147,7 +147,7 @@ export const lolosSeleksiMitra = `
     <span
       class="block text-center text-sm font-semibold text-gray-800"
     >
-      #EMAIL#
+     #ALAMAT#
     </span>
   </div>
 </td>
@@ -231,7 +231,7 @@ export const tidakLolosSeleksiMitra = `
     <span
       class="block text-center text-sm font-semibold text-gray-800"
     >
-      #EMAIL#
+     #ALAMAT#
     </span>
   </div>
 </td>
