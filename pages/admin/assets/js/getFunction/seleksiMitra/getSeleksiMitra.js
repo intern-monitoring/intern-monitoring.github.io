@@ -288,7 +288,7 @@ export function isiRowPending(value) {
   if (!value.mou) {
     const statusmou = "Pending";
 
-    const pending = tablePending
+    const pending = pendingSeleksiMitra
       .replace("#NAMAPERUSAHAAN#", value.nama)
       .replace("#SEKTOR#", value.sektorindustri)
       .replace("#NARAHUBUNG#", value.namanarahubung)
@@ -306,7 +306,7 @@ export function isiRowLolos(value) {
   if (value.mou === 1) {
     const statusmou = "Lolos";
 
-    const lolos = tablePending
+    const lolos = lolosSeleksiMitra
       .replace("#NAMAPERUSAHAAN#", value.nama)
       .replace("#SEKTOR#", value.sektorindustri)
       .replace("#NARAHUBUNG#", value.namanarahubung)
@@ -322,7 +322,7 @@ export function isiRowTidakLolos(value) {
   if (value.mou === 2) {
     const statusmou = "Tidak Lolos";
 
-    const tidaklolos = tablePending
+    const tidaklolos = tidakLolosSeleksiMitra
       .replace("#NAMAPERUSAHAAN#", value.nama)
       .replace("#SEKTOR#", value.sektorindustri)
       .replace("#NARAHUBUNG#", value.namanarahubung)
