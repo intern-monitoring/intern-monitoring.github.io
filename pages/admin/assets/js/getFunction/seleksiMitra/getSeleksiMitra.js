@@ -41,7 +41,7 @@ export const pendingSeleksiMitra = `
 <td class="h-px w-px whitespace-nowrap">
   <div class="px-6 py-3">
     <span
-      class="block text-center text-sm font-semibold text-gray-800"
+      class="block text-left text-sm font-semibold text-gray-800"
     >
      #ALAMAT#
     </span>
@@ -145,7 +145,7 @@ export const lolosSeleksiMitra = `
 <td class="h-px w-px whitespace-nowrap">
   <div class="px-6 py-3">
     <span
-      class="block text-center text-sm font-semibold text-gray-800"
+      class="block text-left text-sm font-semibold text-gray-800"
     >
      #ALAMAT#
     </span>
@@ -229,7 +229,7 @@ export const tidakLolosSeleksiMitra = `
 <td class="h-px w-px whitespace-nowrap">
   <div class="px-6 py-3">
     <span
-      class="block text-center text-sm font-semibold text-gray-800"
+      class="block text-left text-sm font-semibold text-gray-800"
     >
      #ALAMAT#
     </span>
