@@ -1,4 +1,5 @@
 import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
+import { responseData } from "../getFunction/seleksiMahasiswa/getSeleksiMhs";
 
 const URLGetSeleksiKampus =
   "https://asia-southeast2-bursakerja-project.cloudfunctions.net/intermoni-mahasiswa";
@@ -13,12 +14,8 @@ const seleksiKampusTidakLolosCount = (count) => {
   );
   resultCountElement.innerHTML = `<h3 class="mt-1 text-xl font-medium text-gray-800">${count}</h3>`;
 };
-// const mahasiswaMagangCount = (count) => {
-//   const resultCountElement = document.getElementById("mahasiswaMagangCount");
-//   resultCountElement.innerHTML = `<h3 class="mt-1 text-xl font-medium text-gray-800">${count}</h3>`;
-// };
 
-const get = (target_url) => {
+const get = (target_url, responseFunction) => {
   const myHeaders = new Headers();
   myHeaders.append("Authorization", getCookie("Authorization"));
   const requestOptions = {
@@ -42,9 +39,8 @@ const get = (target_url) => {
 
       seleksiKampusLolosCount(lolosCount);
       seleksiKampusTidakLolosCount(tidaklolosCount);
-      //   mahasiswaMagangCount(count);
     })
     .catch((error) => console.log("error", error));
 };
 
-get(URLGetSeleksiKampus);
+get(URLGetSeleksiKampus, responseData);
