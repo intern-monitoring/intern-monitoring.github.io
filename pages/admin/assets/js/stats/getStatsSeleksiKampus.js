@@ -14,7 +14,7 @@ const seleksiKampusTidakLolosCount = (count) => {
   resultCountElement.innerHTML = `<h3 class="mt-1 text-xl font-medium text-gray-800">${count}</h3>`;
 };
 
-const get = (target_url, responseFunction) => {
+const getSeleksiKampus = (target_url) => {
   const myHeaders = new Headers();
   myHeaders.append("Authorization", getCookie("Authorization"));
   const requestOptions = {
@@ -27,7 +27,6 @@ const get = (target_url, responseFunction) => {
     .then((response) => response.text())
     .then((result) => {
       const jsonData = JSON.parse(result);
-      responseFunction(jsonData);
 
       const lolosCount = jsonData.filter(
         (item) => item.seleksiKampus === 1
@@ -41,5 +40,34 @@ const get = (target_url, responseFunction) => {
     })
     .catch((error) => console.log("error", error));
 };
+getSeleksiKampus(URLGetSeleksiKampus, (lolosCount, tidaklolosCount));
 
-get(URLGetSeleksiKampus);
+// const get = (target_url, responseFunction) => {
+//   const myHeaders = new Headers();
+//   myHeaders.append("Authorization", getCookie("Authorization"));
+//   const requestOptions = {
+//     method: "GET",
+//     headers: myHeaders,
+//     redirect: "follow",
+//   };
+
+//   fetch(target_url, requestOptions)
+//     .then((response) => response.text())
+//     .then((result) => {
+//       const jsonData = JSON.parse(result);
+//       responseFunction(jsonData);
+
+//       const lolosCount = jsonData.filter(
+//         (item) => item.seleksiKampus === 1
+//       ).length;
+//       const tidaklolosCount = jsonData.filter(
+//         (item) => item.seleksiKampus === 2
+//       ).length;
+
+//       seleksiKampusLolosCount(lolosCount);
+//       seleksiKampusTidakLolosCount(tidaklolosCount);
+//     })
+//     .catch((error) => console.log("error", error));
+// };
+
+// get(URLGetSeleksiKampus);
