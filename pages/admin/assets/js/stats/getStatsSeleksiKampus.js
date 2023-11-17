@@ -18,7 +18,7 @@ const seleksiKampusTidakLolosCount = (count) => {
 //   resultCountElement.innerHTML = `<h3 class="mt-1 text-xl font-medium text-gray-800">${count}</h3>`;
 // };
 
-const get = (target_url, responseFunction) => {
+const get = (target_url) => {
   const myHeaders = new Headers();
   myHeaders.append("Authorization", getCookie("Authorization"));
   const requestOptions = {
