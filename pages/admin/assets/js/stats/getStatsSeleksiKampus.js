@@ -1,5 +1,4 @@
 import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
-import { responseData } from "../getFunction/seleksiMahasiswa/getSeleksiMhs";
 
 const URLGetSeleksiKampus =
   "https://asia-southeast2-bursakerja-project.cloudfunctions.net/intermoni-mahasiswa";
@@ -43,4 +42,4 @@ const get = (target_url, responseFunction) => {
     .catch((error) => console.log("error", error));
 };
 
-get(URLGetSeleksiKampus, responseData);
+get(URLGetSeleksiKampus);
