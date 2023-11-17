@@ -1,15 +1,15 @@
 import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
 
-const URLGetMahasiswaMagang =
-  "https://asia-southeast2-bursakerja-project.cloudfunctions.net/intermoni-user";
+const URLGetSeleksiKampus =
+  "https://asia-southeast2-bursakerja-project.cloudfunctions.net/intermoni-mahasiswa";
 
-const mahasiswaLolosCount = (count) => {
-  const resultCountElement = document.getElementById("mahasiswaLolosCount");
+const seleksiKampusLolosCount = (count) => {
+  const resultCountElement = document.getElementById("seleksiKampusLolosCount");
   resultCountElement.innerHTML = `<h3 class="mt-1 text-xl font-medium text-gray-800">${count}</h3>`;
 };
-const mahasiswaTidakLolosCount = (count) => {
+const seleksiKampusTidakLolosCount = (count) => {
   const resultCountElement = document.getElementById(
-    "mahasiswaTidakLolosCount"
+    "seleksiKampusTidakLolosCount"
   );
   resultCountElement.innerHTML = `<h3 class="mt-1 text-xl font-medium text-gray-800">${count}</h3>`;
 };
@@ -33,16 +33,18 @@ const get = (target_url, responseFunction) => {
       const jsonData = JSON.parse(result);
       responseFunction(jsonData);
 
-      const lolosCount = jsonData.filter((item) => item.status === 1).length;
+      const lolosCount = jsonData.filter(
+        (item) => item.seleksiKampus === 1
+      ).length;
       const tidaklolosCount = jsonData.filter(
-        (item) => item.status === 2
+        (item) => item.seleksiKampus === 2
       ).length;
 
-      mahasiswaLolosCount(lolosCount);
-      mahasiswaTidakLolosCount(tidaklolosCount);
+      seleksiKampusLolosCount(lolosCount);
+      seleksiKampusTidakLolosCount(tidaklolosCount);
       //   mahasiswaMagangCount(count);
     })
     .catch((error) => console.log("error", error));
 };
 
-get(URLGetMahasiswaMagang);
+get(URLGetSeleksiKampus);

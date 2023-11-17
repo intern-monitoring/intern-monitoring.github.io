@@ -495,9 +495,11 @@
         <div class="flex flex-col bg-white shadow-md rounded-xl">
           <div class="p-4 md:p-5 flex justify-between gap-x-3">
             <div>
-              <p class="text-xs tracking-wide text-gray-500">Mahasiswa Lolos</p>
+              <p class="text-xs tracking-wide text-gray-500">
+                Lolos Seleksi Kampus
+              </p>
               <div
-                id="mahasiswaLolosCount"
+                id="seleksiKampusLolosCount"
                 class="mt-1 flex items-center gap-x-1"
               >
                 <h3 class="mt-1 text-xl font-medium text-gray-800">0</h3>
@@ -528,10 +530,10 @@
           <div class="p-4 md:p-5 flex justify-between gap-x-3">
             <div>
               <p class="text-xs tracking-wide text-gray-500">
-                Mahasiswa Tidak Lolos
+                Tidak Lolos Seleksi Kampus
               </p>
               <div
-                id="mahasiswaTidakLolosCount"
+                id="seleksiKampusTidakLolosCount"
                 class="mt-1 flex items-center gap-x-1"
               >
                 <h3 class="mt-1 text-xl font-medium text-gray-800">0</h3>
@@ -1027,7 +1029,10 @@
     ></script>
 
     <!-- Get Stats -->
-    <script type="module" src="./assets/js/stats/getStatsMhsMagang.js"></script>
+    <script
+      type="module"
+      src="./assets/js/stats/getStatsSeleksiKampus.js"
+    ></script>
 
     <!-- Charts -->
     <link
