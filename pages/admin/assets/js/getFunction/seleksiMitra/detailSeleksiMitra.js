@@ -177,12 +177,14 @@ export function responseData(results) {
 
 export function isiRow(value) {
   const content = detailSeleksiMitra
-    .replace("#NAMALENGKAP#", value.namalengkap)
-    .replace("#TANGGALLAHIR#", value.tanggallahir)
-    .replace("#GENDER#", value.jeniskelamin)
-    .replace("#NIM#", value.nim)
-    .replace("#PERGURUAN#", value.perguruantinggi)
-    .replace("#EMAIL#", value.akun.email)
-    .replace("#PRODI#", value.prodi);
+    .replace("#NAMAPERUSAHAAN#", value.nama)
+    .replace("#NAMANARAHUBUNG#", value.namanarahubung)
+    .replace("#NOHP#", value.nohpnarahubung)
+    .replace("#WEBSITE#", value.website)
+    .replace("#TENTANG#", value.tentang)
+    .replace("#SEKTOR#", value.sektorindustri)
+    .replace("#KATEGORI#", value.kategori)
+    .replace("#ALAMAT#", value.alamat)
+    .replace("#EMAIL#", value.akun.email);
   addInner("detailSeleksiMitra", content);
 }

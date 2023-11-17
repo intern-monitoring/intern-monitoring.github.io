@@ -529,70 +529,265 @@
                 </div>
                 <!-- End Header -->
 
-                <!-- Table -->
-                <table class="min-w-full divide-y divide-gray-200">
-                  <thead class="bg-gray-50">
-                    <tr>
-                      <th scope="col" class="px-6 py-3 text-left">
-                        <div class="flex items-center gap-x-2">
-                          <span
-                            class="text-xs font-semibold uppercase tracking-wide text-gray-800"
-                          >
-                            Perusahaan
-                          </span>
-                        </div>
-                      </th>
+                <!-- Filter -->
+                <div>
+                  <!-- Nav -->
+                  <div class="border-b border-gray-200 px-4">
+                    <nav
+                      class="flex space-x-2 justify-center"
+                      aria-label="Tabs"
+                      role="tablist"
+                    >
+                      <button
+                        type="button"
+                        class="hs-tab-active:font-semibold hs-tab-active:border-blue-600 hs-tab-active:text-blue-600 py-4 px-1 inline-flex items-center gap-x-2 border-b-2 border-transparent text-sm whitespace-nowrap text-gray-500 hover:text-blue-600 disabled:opacity-50 disabled:pointer-events-none active"
+                        id="basic-tabs-item-1"
+                        data-hs-tab="#basic-tabs-1"
+                        aria-controls="basic-tabs-1"
+                        role="tab"
+                      >
+                        Pending
+                      </button>
+                      <button
+                        type="button"
+                        class="hs-tab-active:font-semibold hs-tab-active:border-blue-600 hs-tab-active:text-blue-600 py-4 px-1 inline-flex items-center gap-x-2 border-b-2 border-transparent text-sm whitespace-nowrap text-gray-500 hover:text-blue-600 disabled:opacity-50 disabled:pointer-events-none"
+                        id="basic-tabs-item-2"
+                        data-hs-tab="#basic-tabs-2"
+                        aria-controls="basic-tabs-2"
+                        role="tab"
+                      >
+                        Lolos
+                      </button>
+                      <button
+                        type="button"
+                        class="hs-tab-active:font-semibold hs-tab-active:border-blue-600 hs-tab-active:text-blue-600 py-4 px-1 inline-flex items-center gap-x-2 border-b-2 border-transparent text-sm whitespace-nowrap text-gray-500 hover:text-blue-600 disabled:opacity-50 disabled:pointer-events-none"
+                        id="basic-tabs-item-3"
+                        data-hs-tab="#basic-tabs-3"
+                        aria-controls="basic-tabs-3"
+                        role="tab"
+                      >
+                        Tidak Lolos
+                      </button>
+                    </nav>
+                  </div>
+                  <!-- End Nav -->
 
-                      <th scope="col" class="px-6 py-3 text-left">
-                        <div class="flex items-center gap-x-2">
-                          <span
-                            class="text-xs font-semibold uppercase tracking-wide text-gray-800"
-                          >
-                            Narahubung
-                          </span>
-                        </div>
-                      </th>
+                  <!-- Tabel -->
+                  <div>
+                    <!-- Pending -->
+                    <div
+                      id="basic-tabs-1"
+                      role="tabpanel"
+                      aria-labelledby="basic-tabs-item-1"
+                    >
+                      <table class="min-w-full divide-y divide-gray-200">
+                        <thead class="bg-gray-50">
+                          <tr>
+                            <th scope="col" class="px-6 py-3 text-left">
+                              <div class="flex items-center gap-x-2">
+                                <span
+                                  class="text-xs font-semibold uppercase tracking-wide text-gray-800"
+                                >
+                                  Perusahaan
+                                </span>
+                              </div>
+                            </th>
 
-                      <th scope="col" class="px-6 py-3 text-left">
-                        <div class="flex items-center gap-x-2">
-                          <span
-                            class="text-xs font-semibold uppercase tracking-wide text-gray-800"
-                          >
-                            Lokasi
-                          </span>
-                        </div>
-                      </th>
+                            <th scope="col" class="px-6 py-3 text-left">
+                              <div class="flex items-center gap-x-2">
+                                <span
+                                  class="text-xs font-semibold uppercase tracking-wide text-gray-800"
+                                >
+                                  Narahubung
+                                </span>
+                              </div>
+                            </th>
 
-                      <th scope="col" class="px-6 py-3 text-center">
-                        <div class="flex justify-center gap-x-2">
-                          <span
-                            class="text-xs font-semibold uppercase tracking-wide text-gray-800"
-                          >
-                            Seleksi
-                          </span>
-                        </div>
-                      </th>
+                            <th scope="col" class="px-6 py-3 text-left">
+                              <div class="flex justify-center gap-x-2">
+                                <span
+                                  class="text-xs font-semibold uppercase tracking-wide text-gray-800"
+                                >
+                                  Email
+                                </span>
+                              </div>
+                            </th>
 
-                      <th scope="col" class="px-6 py-3 text-left">
-                        <div class="flex items-center gap-x-2">
-                          <span
-                            class="text-xs font-semibold uppercase tracking-wide text-gray-800"
-                          >
-                            Detail
-                          </span>
-                        </div>
-                      </th>
+                            <th scope="col" class="px-6 py-3 text-left">
+                              <div class="flex items-center gap-x-2">
+                                <span
+                                  class="text-xs font-semibold uppercase tracking-wide text-gray-800"
+                                >
+                                  Seleksi
+                                </span>
+                              </div>
+                            </th>
 
-                      <th scope="col" class="px-6 py-3 text-left"></th>
-                    </tr>
-                  </thead>
+                            <th scope="col" class="px-6 py-3 text-left">
+                              <div class="flex items-center gap-x-2">
+                                <span
+                                  class="text-xs font-semibold uppercase tracking-wide text-gray-800"
+                                >
+                                  Detail
+                                </span>
+                              </div>
+                            </th>
 
-                  <tbody
-                    id="seleksiMitra"
-                    class="divide-y divide-gray-200"
-                  ></tbody>
-                </table>
-                <!-- End Table -->
+                            <th scope="col" class="px-6 py-3 text-right"></th>
+                          </tr>
+                        </thead>
+
+                        <tbody
+                          id="pendingSeleksiMitra"
+                          class="divide-y divide-gray-200"
+                        ></tbody>
+                      </table>
+                    </div>
+                    <!-- End Pending -->
+
+                    <!-- Lolos -->
+                    <div
+                      id="basic-tabs-2"
+                      class="hidden"
+                      role="tabpanel"
+                      aria-labelledby="basic-tabs-item-2"
+                    >
+                      <table class="min-w-full divide-y divide-gray-200">
+                        <thead class="bg-gray-50">
+                          <tr>
+                            <th scope="col" class="px-6 py-3 text-left">
+                              <div class="flex items-center gap-x-2">
+                                <span
+                                  class="text-xs font-semibold uppercase tracking-wide text-gray-800"
+                                >
+                                  Perusahaan
+                                </span>
+                              </div>
+                            </th>
+
+                            <th scope="col" class="px-6 py-3 text-left">
+                              <div class="flex items-center gap-x-2">
+                                <span
+                                  class="text-xs font-semibold uppercase tracking-wide text-gray-800"
+                                >
+                                  Narahubung
+                                </span>
+                              </div>
+                            </th>
+
+                            <th scope="col" class="px-6 py-3 text-left">
+                              <div class="flex justify-center gap-x-2">
+                                <span
+                                  class="text-xs font-semibold uppercase tracking-wide text-gray-800"
+                                >
+                                  Email
+                                </span>
+                              </div>
+                            </th>
+
+                            <th scope="col" class="px-6 py-3 text-left">
+                              <div class="flex items-center gap-x-2">
+                                <span
+                                  class="text-xs font-semibold uppercase tracking-wide text-gray-800"
+                                >
+                                  Seleksi
+                                </span>
+                              </div>
+                            </th>
+
+                            <th scope="col" class="px-6 py-3 text-left">
+                              <div class="flex items-center gap-x-2">
+                                <span
+                                  class="text-xs font-semibold uppercase tracking-wide text-gray-800"
+                                >
+                                  Detail
+                                </span>
+                              </div>
+                            </th>
+                          </tr>
+                        </thead>
+
+                        <tbody
+                          id="lolosSeleksiMitra"
+                          class="divide-y divide-gray-200"
+                        ></tbody>
+                      </table>
+                    </div>
+                    <!-- End Lolos -->
+
+                    <!-- Tidak Lolos -->
+                    <div
+                      id="basic-tabs-3"
+                      class="hidden"
+                      role="tabpanel"
+                      aria-labelledby="basic-tabs-item-3"
+                    >
+                      <table class="min-w-full divide-y divide-gray-200">
+                        <thead class="bg-gray-50">
+                          <tr>
+                            <th scope="col" class="px-6 py-3 text-left">
+                              <div class="flex items-center gap-x-2">
+                                <span
+                                  class="text-xs font-semibold uppercase tracking-wide text-gray-800"
+                                >
+                                  Perusahaan
+                                </span>
+                              </div>
+                            </th>
+
+                            <th scope="col" class="px-6 py-3 text-left">
+                              <div class="flex items-center gap-x-2">
+                                <span
+                                  class="text-xs font-semibold uppercase tracking-wide text-gray-800"
+                                >
+                                  Narahubung
+                                </span>
+                              </div>
+                            </th>
+
+                            <th scope="col" class="px-6 py-3 text-left">
+                              <div class="flex justify-center gap-x-2">
+                                <span
+                                  class="text-xs font-semibold uppercase tracking-wide text-gray-800"
+                                >
+                                  Email
+                                </span>
+                              </div>
+                            </th>
+
+                            <th scope="col" class="px-6 py-3 text-left">
+                              <div class="flex items-center gap-x-2">
+                                <span
+                                  class="text-xs font-semibold uppercase tracking-wide text-gray-800"
+                                >
+                                  Seleksi
+                                </span>
+                              </div>
+                            </th>
+
+                            <th scope="col" class="px-6 py-3 text-left">
+                              <div class="flex items-center gap-x-2">
+                                <span
+                                  class="text-xs font-semibold uppercase tracking-wide text-gray-800"
+                                >
+                                  Detail
+                                </span>
+                              </div>
+                            </th>
+                          </tr>
+                        </thead>
+
+                        <tbody
+                          id="tidakLolosSeleksiMitra"
+                          class="divide-y divide-gray-200"
+                        ></tbody>
+                      </table>
+                    </div>
+                    <!-- End Tidak Lolos -->
+                  </div>
+                  <!-- End Tabel -->
+                </div>
+                <!-- End Filter -->
 
                 <!-- Footer -->
                 <div
