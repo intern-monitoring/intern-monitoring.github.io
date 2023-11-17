@@ -40,7 +40,8 @@ const getSeleksiKampus = (target_url) => {
     })
     .catch((error) => console.log("error", error));
 };
-getSeleksiKampus(URLGetSeleksiKampus, (lolosCount, tidaklolosCount));
+console.log(seleksiKampusLolosCount, seleksiKampusTidakLolosCount);
+getSeleksiKampus(URLGetSeleksiKampus);
 
 // const get = (target_url, responseFunction) => {
 //   const myHeaders = new Headers();
