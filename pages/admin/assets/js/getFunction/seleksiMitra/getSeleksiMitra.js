@@ -43,7 +43,7 @@ export const pendingSeleksiMitra = `
     <span
       class="block text-left text-sm font-semibold text-gray-800"
     >
-     #ALAMAT#
+     #EMAIL#
     </span>
   </div>
 </td>
@@ -147,7 +147,7 @@ export const lolosSeleksiMitra = `
     <span
       class="block text-left text-sm font-semibold text-gray-800"
     >
-     #ALAMAT#
+     #EMAIL#
     </span>
   </div>
 </td>
@@ -231,7 +231,7 @@ export const tidakLolosSeleksiMitra = `
     <span
       class="block text-left text-sm font-semibold text-gray-800"
     >
-     #ALAMAT#
+     #EMAIL#
     </span>
   </div>
 </td>
@@ -293,7 +293,7 @@ export function isiRowPending(value) {
       .replace("#SEKTOR#", value.sektorindustri)
       .replace("#NARAHUBUNG#", value.namanarahubung)
       .replace("#NOHPNARAHUBUNG#", value.nohpnarahubung)
-      .replace("#ALAMAT#", value.alamat)
+      .replace("#EMAIL#", value.akun.email)
       .replace("#PENDINGMOU#", statusmou)
       .replace("#DETAIL#", value._id)
       .replace("#TOLAK#", value._id)
@@ -311,7 +311,7 @@ export function isiRowLolos(value) {
       .replace("#SEKTOR#", value.sektorindustri)
       .replace("#NARAHUBUNG#", value.namanarahubung)
       .replace("#NOHPNARAHUBUNG#", value.nohpnarahubung)
-      .replace("#ALAMAT#", value.alamat)
+      .replace("#EMAIL#", value.akun.email)
       .replace("#LOLOSMOU#", statusmou)
       .replace("#DETAIL#", value._id);
     addInner("lolosSeleksiMitra", lolos);
@@ -327,7 +327,7 @@ export function isiRowTidakLolos(value) {
       .replace("#SEKTOR#", value.sektorindustri)
       .replace("#NARAHUBUNG#", value.namanarahubung)
       .replace("#NOHPNARAHUBUNG#", value.nohpnarahubung)
-      .replace("#ALAMAT#", value.alamat)
+      .replace("#EMAIL#", value.akun.email)
       .replace("#TIDAKLOLOSMOU#", statusmou)
       .replace("#DETAIL#", value._id);
     addInner("tidakLolosSeleksiMitra", tidaklolos);
