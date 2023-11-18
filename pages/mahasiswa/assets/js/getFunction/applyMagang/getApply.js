@@ -1,7 +1,7 @@
 import { addInner } from "https://jscroot.github.io/element/croot.js";
 
 export const URLGetApply =
-  "https://asia-southeast2-bursakerja-project.cloudfunctions.net/intermoni-mahasiswa-magang";
+  "https://asia-southeast2-bursakerja-project.cloudfunctions.net/intermoni-seleksi";
 
 export const tableApply = `
 <tr>
@@ -44,7 +44,7 @@ export const tableApply = `
     <span
       class="#BGKAMPUS# inline-flex items-center gap-1.5 py-0.5 px-2 rounded-full text-xs font-medium text-gray-900"
     >
-      #SELEKSIKAMPUS#
+      #SELEKSIBERKAS#
     </span>
   </div>
 </td>
@@ -53,7 +53,7 @@ export const tableApply = `
     <span
       class="#BGMITRA# inline-flex items-center gap-1.5 py-0.5 px-2 rounded-full text-xs font-medium text-gray-900"
     >
-      #SELEKSIMITRA#
+      #SELEKSIWAWANCARA#
     </span>
   </div>
 </td>
@@ -95,31 +95,31 @@ export function responseData(results) {
 }
 
 export function isiRow(value) {
-  const statuskampus =
-    value.seleksikampus === true
+  const statusberkas =
+    value.seleksiberkas === 1
       ? "Lolos"
-      : value.seleksikampus === false
+      : value.seleksiberkas === 2
       ? "Tidak Lolos"
-      : "Proses";
+      : "Pending";
 
-  const statusmitra =
-    value.seleksimitra === true
+  const statuswawancara =
+    value.seleksiwewancara === 1
       ? "Lolos"
-      : value.seleksimitra === false
+      : value.seleksiwewancara === 2
       ? "Tidak Lolos"
-      : "Proses";
+      : "Pending";
 
-  const bgkampus =
-    value.seleksikampus === true
+  const bgberkas =
+    value.seleksiberkas === 1
       ? "bg-green-200"
-      : value.seleksikampus === false
+      : value.seleksiberkas === 2
       ? "bg-red-200"
       : "bg-gray-200";
 
-  const bgmitra =
-    value.seleksimitra === true
+  const bgwawancara =
+    value.seleksiwewancara === 1
       ? "bg-green-200"
-      : value.seleksimitra === false
+      : value.seleksiwewancara === 2
       ? "bg-red-200"
       : "bg-gray-200";
 
@@ -127,10 +127,10 @@ export function isiRow(value) {
     .replace("#NAMAPERUSAHAAN#", value.magang.mitra.nama)
     .replace("#POSISI#", value.magang.posisi)
     .replace("#LOKASI#", value.magang.lokasi)
-    .replace("#SELEKSIKAMPUS#", statuskampus)
-    .replace("#SELEKSIMITRA#", statusmitra)
-    .replace("#BGKAMPUS#", bgkampus)
-    .replace("#BGMITRA#", bgmitra)
+    .replace("#SELEKSIKAMPUS#", statusberkas)
+    .replace("#SELEKSIMITRA#", statuswawancara)
+    .replace("#BGKAMPUS#", bgberkas)
+    .replace("#BGMITRA#", bgwawancara)
     .replace("#IDHAPUS#", value._id)
     .replace("#DETAIL#", value._id);
   addInner("applyMagang", content);
