@@ -4,7 +4,7 @@ import { addInner } from "https://jscroot.github.io/element/croot.js";
 const URLGetEmail =
   "https://asia-southeast2-bursakerja-project.cloudfunctions.net/intermoni-user";
 
-const userEmail = `
+const userEmailTemplate = `
 <p class="text-sm text-gray-500">Signed in as</p>
 <p class="text-sm font-medium text-gray-800">
   #EMAILUSER#
@@ -12,12 +12,19 @@ const userEmail = `
 `;
 
 const responseData = (results) => {
-  emailUser(results);
-};
+  // Filter berdasarkan role admin
+  const adminData = results.filter((item) => item.role === "admin");
 
-const emailUser = (value) => {
-  const email = userEmail.replace("#EMAILUSER#", value.email);
-  addInner("emailUser", email);
+  // Jika ada data admin, set nilai inner HTML
+  if (adminData.length > 0) {
+    const adminEmail = adminData[0].email;
+    const email = userEmailTemplate.replace("#EMAILUSER#", adminEmail);
+
+    // Set nilai inner HTML pada elemen dengan id "emailUser"
+    addInner("emailUser", email);
+  } else {
+    console.error("No admin data found");
+  }
 };
 
 const get = (target_url, responseFunction) => {
@@ -30,8 +37,10 @@ const get = (target_url, responseFunction) => {
   };
 
   fetch(target_url, requestOptions)
-    .then((response) => response.text())
-    .then((result) => responseFunction(JSON.parse(result)))
+    .then((response) => response.json()) // Mengubah dari response.text() menjadi response.json()
+    .then((result) => responseFunction(result))
     .catch((error) => console.log("error", error));
 };
+
+// Panggil fungsi get dengan URL dan fungsi responseData
 get(URLGetEmail, responseData);
