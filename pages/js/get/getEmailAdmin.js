@@ -16,7 +16,7 @@ const responseData = (results) => {
 };
 
 const emailUser = (value) => {
-  const email = userEmail.replace("#EMAILUSER#", value.akun.email);
+  const email = userEmail.replace("#EMAILUSER#", value.email);
   addInner("emailUser", email);
 };
 
