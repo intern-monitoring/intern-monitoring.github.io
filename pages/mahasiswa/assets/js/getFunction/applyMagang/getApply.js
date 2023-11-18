@@ -42,7 +42,7 @@ export const tableApply = `
 <td class="h-px w-px whitespace-nowrap">
   <div class="flex justify-center py-3">
     <span
-      class="#BGKAMPUS# inline-flex items-center gap-1.5 py-0.5 px-2 rounded-full text-xs font-medium text-gray-900"
+      class="#BGBERKAS# inline-flex items-center gap-1.5 py-0.5 px-2 rounded-full text-xs font-medium text-gray-900"
     >
       #SELEKSIBERKAS#
     </span>
@@ -51,7 +51,7 @@ export const tableApply = `
 <td class="h-px w-px whitespace-nowrap">
   <div class="flex justify-center py-3">
     <span
-      class="#BGMITRA# inline-flex items-center gap-1.5 py-0.5 px-2 rounded-full text-xs font-medium text-gray-900"
+      class="#BGWAWANCARA# inline-flex items-center gap-1.5 py-0.5 px-2 rounded-full text-xs font-medium text-gray-900"
     >
       #SELEKSIWAWANCARA#
     </span>
@@ -127,10 +127,10 @@ export function isiRow(value) {
     .replace("#NAMAPERUSAHAAN#", value.magang.mitra.nama)
     .replace("#POSISI#", value.magang.posisi)
     .replace("#LOKASI#", value.magang.lokasi)
-    .replace("#SELEKSIKAMPUS#", statusberkas)
-    .replace("#SELEKSIMITRA#", statuswawancara)
-    .replace("#BGKAMPUS#", bgberkas)
-    .replace("#BGMITRA#", bgwawancara)
+    .replace("#SELEKSIBERKAS#", statusberkas)
+    .replace("#SELEKSIWAWANCARA#", statuswawancara)
+    .replace("#BGBERKAS#", bgberkas)
+    .replace("#BGWAWANCARA#", bgwawancara)
     .replace("#IDHAPUS#", value._id)
     .replace("#DETAIL#", value._id);
   addInner("applyMagang", content);
