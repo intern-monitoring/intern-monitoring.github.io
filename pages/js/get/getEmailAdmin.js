@@ -15,12 +15,10 @@ const responseData = (results) => {
   // Filter berdasarkan role admin
   const adminData = results.filter((item) => item.role === "admin");
 
-  // Jika ada data admin, set nilai inner HTML
   if (adminData.length > 0) {
     const adminEmail = adminData[0].email;
     const email = userEmailTemplate.replace("#EMAILUSER#", adminEmail);
 
-    // Set nilai inner HTML pada elemen dengan id "emailUser"
     addInner("emailUser", email);
   } else {
     console.error("No admin data found");
@@ -37,10 +35,8 @@ const get = (target_url, responseFunction) => {
   };
 
   fetch(target_url, requestOptions)
-    .then((response) => response.json()) // Mengubah dari response.text() menjadi response.json()
+    .then((response) => response.json())
     .then((result) => responseFunction(result))
     .catch((error) => console.log("error", error));
 };
-
-// Panggil fungsi get dengan URL dan fungsi responseData
 get(URLGetEmail, responseData);
