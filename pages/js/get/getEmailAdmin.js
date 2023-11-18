@@ -1,4 +1,3 @@
-import { URLGetEmail, responseData } from "./getEmailMhs.js";
 import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
 import { addInner } from "https://jscroot.github.io/element/croot.js";
 
