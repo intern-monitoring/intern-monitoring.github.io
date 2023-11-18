@@ -256,7 +256,7 @@ export function responseData(results) {
 }
 
 export function isiRowPending(value) {
-  if (!value.seleksiKampus) {
+  if (!value.seleksikampus) {
     const pendingStatus = "Pending";
 
     const pending = tablePending
@@ -274,7 +274,7 @@ export function isiRowPending(value) {
 }
 
 export function isiRowLolos(value) {
-  if (value.seleksiKampus === 1) {
+  if (value.seleksikampus === 1) {
     const lolosStatus = "Lolos";
 
     const lolos = tableLolos
@@ -290,7 +290,7 @@ export function isiRowLolos(value) {
 }
 
 export function isiRowTidakLolos(value) {
-  if (value.seleksiKampus === 2) {
+  if (value.seleksikampus === 2) {
     const tidakLolosStatus = "Tidak Lolos";
 
     const tidaklolos = tableTidakLolos
