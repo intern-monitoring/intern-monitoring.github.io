@@ -1,9 +1,9 @@
-import { URLGetEmail, responseData } from "./getEmailMitra.js";
+import { URLGetEmail, responseData } from "./getEmailMhs.js";
 import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
 import { addInner } from "https://jscroot.github.io/element/croot.js";
 
 const URLGetEmail =
-  "https://asia-southeast2-bursakerja-project.cloudfunctions.net/intermoni-mitra";
+  "https://asia-southeast2-bursakerja-project.cloudfunctions.net/intermoni-user";
 
 const userEmail = `
 <p class="text-sm text-gray-500">Signed in as</p>
@@ -11,6 +11,7 @@ const userEmail = `
   #EMAILUSER#
 </p>
 `;
+
 const responseData = (results) => {
   emailUser(results);
 };
@@ -31,8 +32,17 @@ const get = (target_url, responseFunction) => {
 
   fetch(target_url, requestOptions)
     .then((response) => response.text())
-    .then((result) => responseFunction(JSON.parse(result)))
+    .then((result) => {
+      const parsedResult = JSON.parse(result);
+
+      // Filter data for "mahasiswa" and "mitra" roles
+      const filteredData = parsedResult.filter((user) =>
+        ["admin"].includes(user.role)
+      );
+
+      // Call the response function with the filtered data
+      responseFunction(filteredData);
+    })
     .catch((error) => console.log("error", error));
 };
-
 get(URLGetEmail, responseData);
