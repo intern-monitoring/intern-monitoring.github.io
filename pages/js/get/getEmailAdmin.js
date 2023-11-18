@@ -34,12 +34,10 @@ const get = (target_url, responseFunction) => {
     .then((result) => {
       const parsedResult = JSON.parse(result);
 
-      // Filter data for "mahasiswa" and "mitra" roles
       const filteredData = parsedResult.filter((user) =>
-        ["admin"].includes(user.role)
+        ["admin@gmail.com"].includes(user.email)
       );
 
-      // Call the response function with the filtered data
       responseFunction(filteredData);
     })
     .catch((error) => console.log("error", error));
