@@ -31,15 +31,7 @@ const get = (target_url, responseFunction) => {
 
   fetch(target_url, requestOptions)
     .then((response) => response.text())
-    .then((result) => {
-      const parsedResult = JSON.parse(result);
-
-      const filteredData = parsedResult.filter((user) =>
-        ["admin@gmail.com"].includes(user.email)
-      );
-
-      responseFunction(filteredData);
-    })
+    .then((result) => responseFunction(JSON.parse(result)))
     .catch((error) => console.log("error", error));
 };
 get(URLGetEmail, responseData);
