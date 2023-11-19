@@ -284,7 +284,7 @@
             class="text-sm font-semibold text-gray-800 truncate"
             aria-current="page"
           >
-            Peserta Seleksi
+            Mahasiswa Magang
           </li>
         </ol>
         <!-- End Breadcrumb -->
@@ -415,7 +415,7 @@
           </li>
           <li>
             <a
-              class="flex items-center gap-x-3.5 py-2 px-2.5 bg-gradient-to-tl from-blue-600 to-violet-600 text-sm font-semibold text-white rounded-md hover:bg-gray-100"
+              class="flex items-center gap-x-3.5 py-2 px-2.5 bg-white text-sm font-semibold text-slate-700 rounded-md hover:bg-gray-100"
               href="seleksiWawancara.html"
             >
               <svg
@@ -438,7 +438,7 @@
           </li>
           <li>
             <a
-              class="flex items-center gap-x-3.5 py-2 px-2.5 bg-white text-sm font-semibold text-slate-700 rounded-md hover:bg-gray-100"
+              class="flex items-center gap-x-3.5 py-2 px-2.5 bg-gradient-to-tl from-blue-600 to-violet-600 text-sm font-semibold text-white rounded-md hover:bg-gray-100"
               href="konfirmasiMagang.html"
             >
               <svg
@@ -482,291 +482,84 @@
                 >
                   <div>
                     <h2 class="text-xl font-semibold text-gray-800">
-                      Daftar peserta seleksi wawancara
+                      Daftar konfirmasi magang
                     </h2>
                     <p class="text-sm text-gray-600">
-                      Berikut merupakan data mahasiswa yang telah apply dan akan
-                      mengikuti seleksi wawancara
+                      Berikut merupakan data mahasiswa yang sudah memberikan
+                      konfirmasi magang.
                     </p>
                   </div>
                 </div>
                 <!-- End Header -->
 
-                <!-- Filter -->
-                <div>
-                  <!-- Nav -->
-                  <div class="border-b border-gray-200 px-4">
-                    <nav
-                      class="flex space-x-2 justify-center"
-                      aria-label="Tabs"
-                      role="tablist"
-                    >
-                      <button
-                        type="button"
-                        class="hs-tab-active:font-semibold hs-tab-active:border-blue-600 hs-tab-active:text-blue-600 py-4 px-1 inline-flex items-center gap-x-2 border-b-2 border-transparent text-sm whitespace-nowrap text-gray-500 hover:text-blue-600 disabled:opacity-50 disabled:pointer-events-none active"
-                        id="basic-tabs-item-1"
-                        data-hs-tab="#basic-tabs-1"
-                        aria-controls="basic-tabs-1"
-                        role="tab"
-                      >
-                        Pending
-                      </button>
-                      <button
-                        type="button"
-                        class="hs-tab-active:font-semibold hs-tab-active:border-blue-600 hs-tab-active:text-blue-600 py-4 px-1 inline-flex items-center gap-x-2 border-b-2 border-transparent text-sm whitespace-nowrap text-gray-500 hover:text-blue-600 disabled:opacity-50 disabled:pointer-events-none"
-                        id="basic-tabs-item-2"
-                        data-hs-tab="#basic-tabs-2"
-                        aria-controls="basic-tabs-2"
-                        role="tab"
-                      >
-                        Lolos
-                      </button>
-                      <button
-                        type="button"
-                        class="hs-tab-active:font-semibold hs-tab-active:border-blue-600 hs-tab-active:text-blue-600 py-4 px-1 inline-flex items-center gap-x-2 border-b-2 border-transparent text-sm whitespace-nowrap text-gray-500 hover:text-blue-600 disabled:opacity-50 disabled:pointer-events-none"
-                        id="basic-tabs-item-3"
-                        data-hs-tab="#basic-tabs-3"
-                        aria-controls="basic-tabs-3"
-                        role="tab"
-                      >
-                        Tidak Lolos
-                      </button>
-                    </nav>
-                  </div>
-                  <!-- End Nav -->
+                <!-- Table -->
+                <table class="min-w-full divide-y divide-gray-200">
+                  <thead class="bg-gray-50">
+                    <tr>
+                      <th scope="col" class="px-6 py-3 text-left">
+                        <div class="flex items-center gap-x-2">
+                          <span
+                            class="text-xs font-semibold uppercase tracking-wide text-gray-800"
+                          >
+                            Mahasiswa
+                          </span>
+                        </div>
+                      </th>
 
-                  <!-- Tabel -->
-                  <div>
-                    <!-- Pending -->
-                    <div
-                      id="basic-tabs-1"
-                      role="tabpanel"
-                      aria-labelledby="basic-tabs-item-1"
-                    >
-                      <table class="min-w-full divide-y divide-gray-200">
-                        <thead class="bg-gray-50">
-                          <tr>
-                            <th scope="col" class="px-6 py-3 text-left">
-                              <div class="flex items-center gap-x-2">
-                                <span
-                                  class="text-xs font-semibold uppercase tracking-wide text-gray-800"
-                                >
-                                  Mahasiswa
-                                </span>
-                              </div>
-                            </th>
+                      <th scope="col" class="px-6 py-3 text-left">
+                        <div class="flex items-center gap-x-2">
+                          <span
+                            class="text-xs font-semibold uppercase tracking-wide text-gray-800"
+                          >
+                            Universitas
+                          </span>
+                        </div>
+                      </th>
 
-                            <th scope="col" class="px-6 py-3 text-left">
-                              <div class="flex items-center gap-x-2">
-                                <span
-                                  class="text-xs font-semibold uppercase tracking-wide text-gray-800"
-                                >
-                                  Universitas
-                                </span>
-                              </div>
-                            </th>
+                      <th scope="col" class="px-6 py-3 text-left">
+                        <div class="flex items-center gap-x-2">
+                          <span
+                            class="text-xs font-semibold uppercase tracking-wide text-gray-800"
+                          >
+                            Posisi
+                          </span>
+                        </div>
+                      </th>
 
-                            <th scope="col" class="px-6 py-3 text-left">
-                              <div class="flex items-center gap-x-2">
-                                <span
-                                  class="text-xs font-semibold uppercase tracking-wide text-gray-800"
-                                >
-                                  Posisi
-                                </span>
-                              </div>
-                            </th>
+                      <th scope="col" class="py-3 text-center">
+                        <div class="flex justify-center items-center gap-x-2">
+                          <span
+                            class="text-xs font-semibold uppercase tracking-wide text-gray-800"
+                          >
+                            Konfirmasi
+                          </span>
+                        </div>
+                      </th>
 
-                            <th scope="col" class="px-6 py-3 text-center">
-                              <div
-                                class="flex justify-center items-center gap-x-2"
-                              >
-                                <span
-                                  class="text-xs font-semibold uppercase tracking-wide text-gray-800"
-                                >
-                                  Status
-                                </span>
-                              </div>
-                            </th>
+                      <th scope="col" class="px-6 py-3 text-left">
+                        <div class="flex items-center gap-x-2">
+                          <span
+                            class="text-xs font-semibold uppercase tracking-wide text-gray-800"
+                          >
+                            Detail
+                          </span>
+                        </div>
+                      </th>
+                    </tr>
+                  </thead>
 
-                            <th scope="col" class="px-6 py-3 text-left">
-                              <div class="flex items-center gap-x-2">
-                                <span
-                                  class="text-xs font-semibold uppercase tracking-wide text-gray-800"
-                                >
-                                  Detail
-                                </span>
-                              </div>
-                            </th>
-
-                            <th scope="col" class="px-6 py-3 text-right"></th>
-                          </tr>
-                        </thead>
-
-                        <tbody
-                          id="pendingSeleksiWawancara"
-                          class="divide-y divide-gray-200"
-                        ></tbody>
-                      </table>
-                    </div>
-                    <!-- End Pending -->
-
-                    <!-- Lolos -->
-                    <div
-                      id="basic-tabs-2"
-                      class="hidden"
-                      role="tabpanel"
-                      aria-labelledby="basic-tabs-item-2"
-                    >
-                      <table class="min-w-full divide-y divide-gray-200">
-                        <thead class="bg-gray-50">
-                          <tr>
-                            <th scope="col" class="px-6 py-3 text-left">
-                              <div class="flex items-center gap-x-2">
-                                <span
-                                  class="text-xs font-semibold uppercase tracking-wide text-gray-800"
-                                >
-                                  Mahasiswa
-                                </span>
-                              </div>
-                            </th>
-
-                            <th scope="col" class="px-6 py-3 text-left">
-                              <div class="flex items-center gap-x-2">
-                                <span
-                                  class="text-xs font-semibold uppercase tracking-wide text-gray-800"
-                                >
-                                  Universitas
-                                </span>
-                              </div>
-                            </th>
-
-                            <th scope="col" class="px-6 py-3 text-left">
-                              <div class="flex items-center gap-x-2">
-                                <span
-                                  class="text-xs font-semibold uppercase tracking-wide text-gray-800"
-                                >
-                                  Posisi
-                                </span>
-                              </div>
-                            </th>
-
-                            <th scope="col" class="px-6 py-3 text-center">
-                              <div
-                                class="flex justify-center items-center gap-x-2"
-                              >
-                                <span
-                                  class="text-xs font-semibold uppercase tracking-wide text-gray-800"
-                                >
-                                  Status
-                                </span>
-                              </div>
-                            </th>
-
-                            <th scope="col" class="px-6 py-3 text-left">
-                              <div class="flex items-center gap-x-2">
-                                <span
-                                  class="text-xs font-semibold uppercase tracking-wide text-gray-800"
-                                >
-                                  Detail
-                                </span>
-                              </div>
-                            </th>
-                          </tr>
-                        </thead>
-
-                        <tbody
-                          id="lolosSeleksiWawancara"
-                          class="divide-y divide-gray-200"
-                        ></tbody>
-                      </table>
-                    </div>
-                    <!-- End Lolos -->
-
-                    <!-- Tidak Lolos -->
-                    <div
-                      id="basic-tabs-3"
-                      class="hidden"
-                      role="tabpanel"
-                      aria-labelledby="basic-tabs-item-3"
-                    >
-                      <div class="overflow-x-auto">
-                        <table
-                          class="min-w-full divide-y divide-gray-200 table-auto sm:table-responsive"
-                        >
-                          <thead class="bg-gray-50">
-                            <tr>
-                              <th scope="col" class="px-6 py-3 text-left">
-                                <div class="flex items-center gap-x-2">
-                                  <span
-                                    class="text-xs font-semibold uppercase tracking-wide text-gray-800"
-                                  >
-                                    Mahasiswa
-                                  </span>
-                                </div>
-                              </th>
-
-                              <th scope="col" class="px-6 py-3 text-left">
-                                <div class="flex items-center gap-x-2">
-                                  <span
-                                    class="text-xs font-semibold uppercase tracking-wide text-gray-800"
-                                  >
-                                    Universitas
-                                  </span>
-                                </div>
-                              </th>
-
-                              <th scope="col" class="px-6 py-3 text-left">
-                                <div class="flex items-center gap-x-2">
-                                  <span
-                                    class="text-xs font-semibold uppercase tracking-wide text-gray-800"
-                                  >
-                                    Posisi
-                                  </span>
-                                </div>
-                              </th>
-
-                              <th scope="col" class="px-6 py-3 text-center">
-                                <div
-                                  class="flex justify-center items-center gap-x-2"
-                                >
-                                  <span
-                                    class="text-xs font-semibold uppercase tracking-wide text-gray-800"
-                                  >
-                                    Status
-                                  </span>
-                                </div>
-                              </th>
-
-                              <th scope="col" class="px-6 py-3 text-left">
-                                <div class="flex items-center gap-x-2">
-                                  <span
-                                    class="text-xs font-semibold uppercase tracking-wide text-gray-800"
-                                  >
-                                    Detail
-                                  </span>
-                                </div>
-                              </th>
-                            </tr>
-                          </thead>
-
-                          <tbody
-                            id="tidakLolosSeleksiWawancara"
-                            class="divide-y divide-gray-200"
-                          ></tbody>
-                        </table>
-                      </div>
-                    </div>
-                    <!-- End Tidak Lolos -->
-                  </div>
-                  <!-- End Tabel -->
-                </div>
-                <!-- End Filter -->
+                  <tbody
+                    id="tableKonfirmasiMagang"
+                    class="divide-y divide-gray-200"
+                  ></tbody>
+                </table>
+                <!-- End Table -->
 
                 <!-- Footer -->
                 <div
                   class="px-6 py-4 grid gap-3 md:flex md:justify-between md:items-center border-t border-gray-200"
                 >
-                  <div id="seleksiWawancaraCount">
+                  <div id="konfirmasiCount">
                     <p class="text-sm text-gray-600">
                       <span class="font-semibold text-gray-800">0</span>
                       results
@@ -834,20 +627,10 @@
       src="https://cdn.jsdelivr.net/gh/intern-monitoring/jsintermoni@0.0.6/components/dropdown.js"
     ></script>
 
-    <!-- Get Seleksi Wawancara -->
+    <!-- Get Konfirmasi -->
     <script
       type="module"
-      src="./assets/js/getFunction/seleksiWawancara/getSeleksiWawancaraFunction.js"
-    ></script>
-
-    <!-- Handler Seleksi Wawancara -->
-    <script
-      type="module"
-      src="./assets/js/updateFunction/seleksiWawancara/terimaWawancara.js"
-    ></script>
-    <script
-      type="module"
-      src="./assets/js/updateFunction/seleksiWawancara/tolakWawancara.js"
+      src="./assets/js/getFunction/konfirmasiMagang/getKonfirmasiFunction.js"
     ></script>
 
     <!-- Logout Function -->
