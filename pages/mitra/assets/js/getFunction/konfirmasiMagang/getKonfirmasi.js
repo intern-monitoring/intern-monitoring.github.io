@@ -92,30 +92,28 @@ export function responseData(results) {
 }
 
 export function isiRow(value) {
-  if (value.status === 1 || value.status === 2) {
-    const konfirmasiMagang =
-      value.status === 1
-        ? "Bersedia Magang"
-        : value.status === 2
-        ? "Tidak Bersedia Magang"
-        : "";
+  const konfirmasiMagang =
+    value.status === 1
+      ? "Bersedia Magang"
+      : value.status === 2
+      ? "Tidak Bersedia Magang"
+      : "";
 
-    const bgKonfirmasi =
-      value.status === 1
-        ? "bg-green-200"
-        : value.status === 2
-        ? "bg-red-200"
-        : "";
+  const bgKonfirmasi =
+    value.status === 1
+      ? "bg-green-200"
+      : value.status === 2
+      ? "bg-red-200"
+      : "";
 
-    const konfirmasi = tableKonfirmasiMagang
-      .replace("#NAMA#", value.mahasiswa.namalengkap)
-      .replace("#NIM#", value.mahasiswa.nim)
-      .replace("#PRODI#", value.mahasiswa.prodi)
-      .replace("#PERGURUAN#", value.mahasiswa.perguruantinggi)
-      .replace("#KONFIRMASI#", konfirmasiMagang)
-      .replace("#BGKONFIRMASI#", bgKonfirmasi)
-      .replace("#POSISI#", value.magang.posisi)
-      .replace("#DETAIL#", value._id);
-    addInner("tableKonfirmasiMagang", konfirmasi);
-  }
+  const konfirmasi = tableKonfirmasiMagang
+    .replace("#NAMA#", value.mahasiswa.namalengkap)
+    .replace("#NIM#", value.mahasiswa.nim)
+    .replace("#PRODI#", value.mahasiswa.prodi)
+    .replace("#PERGURUAN#", value.mahasiswa.perguruantinggi)
+    .replace("#KONFIRMASI#", konfirmasiMagang)
+    .replace("#BGKONFIRMASI#", bgKonfirmasi)
+    .replace("#POSISI#", value.magang.posisi)
+    .replace("#DETAIL#", value._id);
+  addInner("tableKonfirmasiMagang", konfirmasi);
 }
