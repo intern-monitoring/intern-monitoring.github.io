@@ -274,5 +274,5 @@ export function isiRow(value) {
     .replace("#TENTANG#", value.magang.mitra.tentang)
     .replace("#ALAMAT#", value.magang.mitra.alamat)
     .replace("#WEBSITE#", value.magang.mitra.website);
-  addInner("detailPeserta", content);
+  addInner("detailSeleksiBerkas", content);
 }
