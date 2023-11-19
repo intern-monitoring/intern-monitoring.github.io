@@ -272,7 +272,11 @@ export const seleksiTidakLolos = `
 
 export function responseData(results) {
   console.log(results);
-  results.forEach(isiRow);
+  results.forEach((result) => {
+    isiRowPending(result);
+    isiRowLolos(result);
+    isiRowTidakLolos(result);
+  });
 }
 
 export function isiRowPending(value) {
