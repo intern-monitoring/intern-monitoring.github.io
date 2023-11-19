@@ -23,9 +23,7 @@ const get = (target_url, responseFunction) => {
     .then((result) => {
       const parsedResult = JSON.parse(result);
 
-      const filteredData = parsedResult.filter((user) =>
-        [1, 2].includes(user.status)
-      );
+      const filteredData = parsedResult.filter((user) => user.status);
 
       // Call the response function with the filtered data
       responseFunction(filteredData);
