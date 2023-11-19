@@ -29,8 +29,8 @@ const putData = (
 
 const tidakPilihMagang = (TOLAK) => {
   Swal.fire({
-    title: "Konfirmasi Seleksi",
-    text: "Tolak Mahasiswa ini?",
+    title: "Konfirmasi Magang",
+    text: "Tidak bersedia magang di perusahaan ini?",
     icon: "warning",
     showCancelButton: true,
     confirmButtonColor: "#3085d6",
@@ -39,7 +39,7 @@ const tidakPilihMagang = (TOLAK) => {
   }).then((result) => {
     if (result.isConfirmed) {
       const target_url =
-        "https://asia-southeast2-bursakerja-project.cloudfunctions.net/intermoni-seleksi?id=" +
+        "https://asia-southeast2-bursakerja-project.cloudfunctions.net/intermoni-mahasiswa-magang?id=" +
         TOLAK;
       const tokenvalue = getCookie("Authorization");
       const tokenkey = "Authorization";
@@ -58,7 +58,7 @@ const responseData = (result) => {
   if (result.status) {
     Swal.fire({
       icon: "success",
-      title: "Tolak Mahasiswa Berhasil",
+      title: "Konfirmasi Berhasil",
       text: result.message,
     }).then(() => {
       window.location.reload();
