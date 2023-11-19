@@ -87,8 +87,7 @@ export const tableKonfirmasiMagang = `
 `;
 
 export function responseData(results) {
-  console.log(results);
-  isiRow(results);
+  console.log(results), isiRow(results);
 }
 
 export function isiRow(value) {
