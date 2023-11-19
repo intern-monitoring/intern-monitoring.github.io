@@ -308,7 +308,7 @@ export function isiRowKonfirmasi(value) {
 
     const statusKonfirmasi =
       value.status === 1
-        ? "Bersedia magang di perusahaan ini"
+        ? "Bersedia magang"
         : value.status === 2
         ? "Tidak bersedia"
         : "";
