@@ -1,8 +1,8 @@
-import { URLGetPeserta, responseData } from "./getPeserta.js";
+import { URLGetSeleksiWawancara, responseData } from "./getSeleksiWawancara.js";
 import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
 
-const CountPeserta = (count) => {
-  const resultCountElement = document.getElementById("pesertaCount");
+const CountWawancara = (count) => {
+  const resultCountElement = document.getElementById("seleksiWawancaraCount");
   resultCountElement.innerHTML = `
     <p class="text-sm text-gray-600">
       <span class="font-semibold text-gray-800">${count}</span> results
@@ -31,4 +31,4 @@ const get = (target_url, responseFunction) => {
     .catch((error) => console.log("error", error));
 };
 
-get(URLGetPeserta, responseData);
+get(URLGetSeleksiWawancara, responseData);

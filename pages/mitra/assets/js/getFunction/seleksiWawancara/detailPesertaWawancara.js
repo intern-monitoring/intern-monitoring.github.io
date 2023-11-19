@@ -10,7 +10,7 @@ export const detailPeserta = `
   ></span>
   <div class="absolute top-0 left-0 p-4">
     <a
-      href="pesertaSeleksi.html"
+      href="seleksiWawancara.html"
       class="py-2 px-3 inline-flex cursor-pointer justify-center items-center gap-2 rounded-md border font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-600 transition-all text-sm"
     >
       Kembali
@@ -36,10 +36,16 @@ export const detailPeserta = `
         #NAMALENGKAP#
       </h2>
     </div>
-    <div class="flex justify-center gap-2">
-      <h3 class="text-base text-gray-900 font-normal">#NIM#</h3>
+    <div class="flex justify-center gap-5 pt-1">
+      <h3 class="text-base text-gray-900 font-normal">#EMAIL#</h3>
     </div>
     <div class="flex justify-center gap-2 pt-5">
+      <label class="text-base text-gray-900 font-semibold"
+        >NIM :</label
+      >
+      <h3 class="text-base text-gray-900 font-normal">#NIM#</h3>
+    </div>
+    <div class="flex justify-center gap-2">
       <label class="text-base text-gray-900 font-semibold"
         >Tanggal Lahir :</label
       >
@@ -254,6 +260,7 @@ export function isiRow(value) {
     .replace("#NAMALENGKAP#", value.mahasiswa.namalengkap)
     .replace("#TANGGALLAHIR#", value.mahasiswa.tanggallahir)
     .replace("#GENDER#", value.mahasiswa.jeniskelamin)
+    .replace("#EMAIL#", value.mahasiswa.akun.email)
     .replace("#NIM#", value.mahasiswa.nim)
     .replace("#PERGURUAN#", value.mahasiswa.perguruantinggi)
     .replace("#PRODI#", value.mahasiswa.prodi)

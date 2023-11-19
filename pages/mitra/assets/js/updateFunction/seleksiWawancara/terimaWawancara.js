@@ -17,10 +17,10 @@ const putData = (target_url, tokenkey, tokenvalue, responseFunction) => {
     .catch((error) => console.log("error", error));
 };
 
-const terimaPeserta = (TERIMA) => {
+const terimaWawancara = (TERIMA) => {
   Swal.fire({
     title: "Konfirmasi Seleksi",
-    text: "Terima Peserta ini?",
+    text: "Terima seleksi wawancara?",
     icon: "warning",
     showCancelButton: true,
     confirmButtonColor: "#3085d6",
@@ -29,7 +29,7 @@ const terimaPeserta = (TERIMA) => {
   }).then((result) => {
     if (result.isConfirmed) {
       const target_url =
-        "https://asia-southeast2-bursakerja-project.cloudfunctions.net/intermoni-mahasiswa-magang?id=" +
+        "https://asia-southeast2-bursakerja-project.cloudfunctions.net/intermoni-seleksi?id=" +
         TERIMA;
       const tokenvalue = getCookie("Authorization");
       const tokenkey = "Authorization";
@@ -45,7 +45,7 @@ const responseData = (result) => {
   if (result.status) {
     Swal.fire({
       icon: "success",
-      title: "Terima Peserta Berhasil",
+      title: "Terima seleksi wawancara berhasil",
       text: result.message,
     }).then(() => {
       window.location.reload();
@@ -59,4 +59,4 @@ const responseData = (result) => {
   }
 };
 
-window.terimaPeserta = terimaPeserta;
+window.terimaWawancara = terimaWawancara;

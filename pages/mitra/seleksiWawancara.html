@@ -8,11 +8,6 @@
     <script src="../../node_modules/preline/dist/preline.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="./assets/css/styleMitra.css" />
-
-    <script
-      type="module"
-      src="./assets/js/updateFunction/account/updateAccountMitra.js"
-    ></script>
   </head>
   <body class="bg-gray-50">
     <!-- Header -->
@@ -286,31 +281,10 @@
             </svg>
           </li>
           <li
-            class="flex items-center text-sm text-gray-800"
-            aria-current="page"
-          >
-            Profile
-            <svg
-              class="flex-shrink-0 mx-3 overflow-visible h-2.5 w-2.5 text-gray-400"
-              width="16"
-              height="16"
-              viewBox="0 0 16 16"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M5 1L10.6869 7.16086C10.8637 7.35239 10.8637 7.64761 10.6869 7.83914L5 14"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-              />
-            </svg>
-          </li>
-          <li
             class="text-sm font-semibold text-gray-800 truncate"
             aria-current="page"
           >
-            Edit Account
+            Peserta Seleksi
           </li>
         </ol>
         <!-- End Breadcrumb -->
@@ -441,7 +415,7 @@
           </li>
           <li>
             <a
-              class="flex items-center gap-x-3.5 py-2 px-2.5 bg-white text-sm font-semibold text-slate-700 rounded-md hover:bg-gray-100"
+              class="flex items-center gap-x-3.5 py-2 px-2.5 bg-gradient-to-tl from-blue-600 to-violet-600 text-sm font-semibold text-white rounded-md hover:bg-gray-100"
               href="seleksiWawancara.html"
             >
               <svg
@@ -469,166 +443,365 @@
     <!-- End Sidebar -->
 
     <!-- Content Section -->
-    <div class="w-full bg-gray-50 lg:pl-64">
-      <!-- Card Section -->
+    <div class="w-full bg-gray-50 h-screen lg:pl-64">
+      <!-- Table Section -->
       <div class="px-4 py-10 sm:px-6 lg:px-8 mx-auto">
-        <!-- Grid Email -->
-        <div class="relative mx-auto w-full">
-          <!-- Card -->
-          <div class="bg-white rounded-xl border shadow-md p-4 sm:p-7">
-            <div class="mb-8">
-              <h2 class="text-xl font-bold text-gray-800 mb-2">Edit Email</h2>
-              <p class="text-sm text-gray-600">Ubah email akun anda</p>
-            </div>
-
-            <!-- Display Email -->
-            <div class="grid sm:grid-cols-12 gap-2 sm:gap-6">
-              <!-- Email -->
-              <div class="sm:col-span-3">
-                <label
-                  for="af-account-email"
-                  class="inline-block text-sm text-gray-800 mt-2.5"
+        <!-- Card -->
+        <div class="flex flex-col">
+          <div class="-m-1.5 overflow-x-auto">
+            <div class="p-1.5 min-w-full inline-block align-middle">
+              <div
+                class="bg-white border border-gray-200 rounded-xl shadow-sm overflow-hidden"
+              >
+                <!-- Header -->
+                <div
+                  class="px-6 py-4 grid gap-3 md:flex md:justify-between md:items-center border-b border-gray-200"
                 >
-                  Email
-                </label>
-              </div>
-              <!-- End Col -->
-              <div class="sm:col-span-9">
-                <div class="sm:flex">
-                  <input
-                    id="email"
-                    type="text"
-                    placeholder="Email akun anda"
-                    class="py-2 px-3 pr-11 block w-full border-[1px] border-gray-200 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500"
-                  />
+                  <div>
+                    <h2 class="text-xl font-semibold text-gray-800">
+                      Daftar peserta seleksi wawancara
+                    </h2>
+                    <p class="text-sm text-gray-600">
+                      Berikut merupakan data mahasiswa yang telah apply dan akan
+                      mengikuti seleksi wawancara
+                    </p>
+                  </div>
                 </div>
+                <!-- End Header -->
+
+                <!-- Filter -->
+                <div>
+                  <!-- Nav -->
+                  <div class="border-b border-gray-200 px-4">
+                    <nav
+                      class="flex space-x-2 justify-center"
+                      aria-label="Tabs"
+                      role="tablist"
+                    >
+                      <button
+                        type="button"
+                        class="hs-tab-active:font-semibold hs-tab-active:border-blue-600 hs-tab-active:text-blue-600 py-4 px-1 inline-flex items-center gap-x-2 border-b-2 border-transparent text-sm whitespace-nowrap text-gray-500 hover:text-blue-600 disabled:opacity-50 disabled:pointer-events-none active"
+                        id="basic-tabs-item-1"
+                        data-hs-tab="#basic-tabs-1"
+                        aria-controls="basic-tabs-1"
+                        role="tab"
+                      >
+                        Pending
+                      </button>
+                      <button
+                        type="button"
+                        class="hs-tab-active:font-semibold hs-tab-active:border-blue-600 hs-tab-active:text-blue-600 py-4 px-1 inline-flex items-center gap-x-2 border-b-2 border-transparent text-sm whitespace-nowrap text-gray-500 hover:text-blue-600 disabled:opacity-50 disabled:pointer-events-none"
+                        id="basic-tabs-item-2"
+                        data-hs-tab="#basic-tabs-2"
+                        aria-controls="basic-tabs-2"
+                        role="tab"
+                      >
+                        Lolos
+                      </button>
+                      <button
+                        type="button"
+                        class="hs-tab-active:font-semibold hs-tab-active:border-blue-600 hs-tab-active:text-blue-600 py-4 px-1 inline-flex items-center gap-x-2 border-b-2 border-transparent text-sm whitespace-nowrap text-gray-500 hover:text-blue-600 disabled:opacity-50 disabled:pointer-events-none"
+                        id="basic-tabs-item-3"
+                        data-hs-tab="#basic-tabs-3"
+                        aria-controls="basic-tabs-3"
+                        role="tab"
+                      >
+                        Tidak Lolos
+                      </button>
+                    </nav>
+                  </div>
+                  <!-- End Nav -->
+
+                  <!-- Tabel -->
+                  <div>
+                    <!-- Pending -->
+                    <div
+                      id="basic-tabs-1"
+                      role="tabpanel"
+                      aria-labelledby="basic-tabs-item-1"
+                    >
+                      <table class="min-w-full divide-y divide-gray-200">
+                        <thead class="bg-gray-50">
+                          <tr>
+                            <th scope="col" class="px-6 py-3 text-left">
+                              <div class="flex items-center gap-x-2">
+                                <span
+                                  class="text-xs font-semibold uppercase tracking-wide text-gray-800"
+                                >
+                                  Mahasiswa
+                                </span>
+                              </div>
+                            </th>
+
+                            <th scope="col" class="px-6 py-3 text-left">
+                              <div class="flex items-center gap-x-2">
+                                <span
+                                  class="text-xs font-semibold uppercase tracking-wide text-gray-800"
+                                >
+                                  Universitas
+                                </span>
+                              </div>
+                            </th>
+
+                            <th scope="col" class="px-6 py-3 text-left">
+                              <div class="flex items-center gap-x-2">
+                                <span
+                                  class="text-xs font-semibold uppercase tracking-wide text-gray-800"
+                                >
+                                  Posisi
+                                </span>
+                              </div>
+                            </th>
+
+                            <th scope="col" class="px-6 py-3 text-center">
+                              <div
+                                class="flex justify-center items-center gap-x-2"
+                              >
+                                <span
+                                  class="text-xs font-semibold uppercase tracking-wide text-gray-800"
+                                >
+                                  Status
+                                </span>
+                              </div>
+                            </th>
+
+                            <th scope="col" class="px-6 py-3 text-left">
+                              <div class="flex items-center gap-x-2">
+                                <span
+                                  class="text-xs font-semibold uppercase tracking-wide text-gray-800"
+                                >
+                                  Detail
+                                </span>
+                              </div>
+                            </th>
+
+                            <th scope="col" class="px-6 py-3 text-right"></th>
+                          </tr>
+                        </thead>
+
+                        <tbody
+                          id="pendingSeleksiWawancara"
+                          class="divide-y divide-gray-200"
+                        ></tbody>
+                      </table>
+                    </div>
+                    <!-- End Pending -->
+
+                    <!-- Lolos -->
+                    <div
+                      id="basic-tabs-2"
+                      class="hidden"
+                      role="tabpanel"
+                      aria-labelledby="basic-tabs-item-2"
+                    >
+                      <table class="min-w-full divide-y divide-gray-200">
+                        <thead class="bg-gray-50">
+                          <tr>
+                            <th scope="col" class="px-6 py-3 text-left">
+                              <div class="flex items-center gap-x-2">
+                                <span
+                                  class="text-xs font-semibold uppercase tracking-wide text-gray-800"
+                                >
+                                  Mahasiswa
+                                </span>
+                              </div>
+                            </th>
+
+                            <th scope="col" class="px-6 py-3 text-left">
+                              <div class="flex items-center gap-x-2">
+                                <span
+                                  class="text-xs font-semibold uppercase tracking-wide text-gray-800"
+                                >
+                                  Universitas
+                                </span>
+                              </div>
+                            </th>
+
+                            <th scope="col" class="px-6 py-3 text-left">
+                              <div class="flex items-center gap-x-2">
+                                <span
+                                  class="text-xs font-semibold uppercase tracking-wide text-gray-800"
+                                >
+                                  Posisi
+                                </span>
+                              </div>
+                            </th>
+
+                            <th scope="col" class="px-6 py-3 text-center">
+                              <div
+                                class="flex justify-center items-center gap-x-2"
+                              >
+                                <span
+                                  class="text-xs font-semibold uppercase tracking-wide text-gray-800"
+                                >
+                                  Status
+                                </span>
+                              </div>
+                            </th>
+
+                            <th scope="col" class="px-6 py-3 text-left">
+                              <div class="flex items-center gap-x-2">
+                                <span
+                                  class="text-xs font-semibold uppercase tracking-wide text-gray-800"
+                                >
+                                  Detail
+                                </span>
+                              </div>
+                            </th>
+                          </tr>
+                        </thead>
+
+                        <tbody
+                          id="lolosSeleksiWawancara"
+                          class="divide-y divide-gray-200"
+                        ></tbody>
+                      </table>
+                    </div>
+                    <!-- End Lolos -->
+
+                    <!-- Tidak Lolos -->
+                    <div
+                      id="basic-tabs-3"
+                      class="hidden"
+                      role="tabpanel"
+                      aria-labelledby="basic-tabs-item-3"
+                    >
+                      <div class="overflow-x-auto">
+                        <table
+                          class="min-w-full divide-y divide-gray-200 table-auto sm:table-responsive"
+                        >
+                          <thead class="bg-gray-50">
+                            <tr>
+                              <th scope="col" class="px-6 py-3 text-left">
+                                <div class="flex items-center gap-x-2">
+                                  <span
+                                    class="text-xs font-semibold uppercase tracking-wide text-gray-800"
+                                  >
+                                    Mahasiswa
+                                  </span>
+                                </div>
+                              </th>
+
+                              <th scope="col" class="px-6 py-3 text-left">
+                                <div class="flex items-center gap-x-2">
+                                  <span
+                                    class="text-xs font-semibold uppercase tracking-wide text-gray-800"
+                                  >
+                                    Universitas
+                                  </span>
+                                </div>
+                              </th>
+
+                              <th scope="col" class="px-6 py-3 text-left">
+                                <div class="flex items-center gap-x-2">
+                                  <span
+                                    class="text-xs font-semibold uppercase tracking-wide text-gray-800"
+                                  >
+                                    Posisi
+                                  </span>
+                                </div>
+                              </th>
+
+                              <th scope="col" class="px-6 py-3 text-center">
+                                <div
+                                  class="flex justify-center items-center gap-x-2"
+                                >
+                                  <span
+                                    class="text-xs font-semibold uppercase tracking-wide text-gray-800"
+                                  >
+                                    Status
+                                  </span>
+                                </div>
+                              </th>
+
+                              <th scope="col" class="px-6 py-3 text-left">
+                                <div class="flex items-center gap-x-2">
+                                  <span
+                                    class="text-xs font-semibold uppercase tracking-wide text-gray-800"
+                                  >
+                                    Detail
+                                  </span>
+                                </div>
+                              </th>
+                            </tr>
+                          </thead>
+
+                          <tbody
+                            id="tidakLolosSeleksiWawancara"
+                            class="divide-y divide-gray-200"
+                          ></tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <!-- End Tidak Lolos -->
+                  </div>
+                  <!-- End Tabel -->
+                </div>
+                <!-- End Filter -->
+
+                <!-- Footer -->
+                <div
+                  class="px-6 py-4 grid gap-3 md:flex md:justify-between md:items-center border-t border-gray-200"
+                >
+                  <div id="seleksiWawancaraCount">
+                    <p class="text-sm text-gray-600">
+                      <span class="font-semibold text-gray-800">0</span>
+                      results
+                    </p>
+                  </div>
+
+                  <div>
+                    <div class="inline-flex gap-x-2">
+                      <button
+                        type="button"
+                        class="py-2 px-3 inline-flex justify-center items-center gap-2 rounded-md border font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-600 transition-all text-sm"
+                      >
+                        <svg
+                          class="w-3 h-3"
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"
+                          />
+                        </svg>
+                        Prev
+                      </button>
+
+                      <button
+                        type="button"
+                        class="py-2 px-3 inline-flex justify-center items-center gap-2 rounded-md border font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-600 transition-all text-sm"
+                      >
+                        Next
+                        <svg
+                          class="w-3 h-3"
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
+                          />
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <!-- End Footer -->
               </div>
-              <!-- End Col -->
-              <!-- End Email -->
-            </div>
-            <!-- End Display Email-->
-            <div class="mt-5 flex justify-end gap-x-2">
-              <a
-                href="profileMitra.html"
-                class="py-2 px-3 inline-flex cursor-pointer justify-center items-center gap-2 rounded-md border font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-600 transition-all text-sm"
-              >
-                Cancel
-              </a>
-              <button
-                id="updateEmail"
-                class="inline-flex justify-center items-center gap-x-3 text-center bg-gradient-to-tl from-blue-600 to-violet-600 shadow-lg shadow-transparent hover:shadow-blue-700/50 border border-transparent text-white text-sm font-medium rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 focus:ring-offset-white py-2 px-5"
-              >
-                Save
-              </button>
             </div>
           </div>
-          <!-- End Card -->
         </div>
-        <!-- End Grid Email -->
-
-        <!-- Grid Edit Password-->
-        <div class="relative mx-auto w-full pt-5">
-          <!-- Card -->
-          <div class="bg-white rounded-xl border shadow-md p-4 sm:p-7">
-            <div class="mb-8">
-              <h2 class="text-xl font-bold text-gray-800 mb-2">
-                Edit Password
-              </h2>
-              <p class="text-sm text-gray-600">Ubah password akun anda</p>
-            </div>
-
-            <!-- Display Account -->
-            <div class="grid sm:grid-cols-12 gap-2 sm:gap-6">
-              <!-- Password Lama -->
-              <div class="sm:col-span-3">
-                <label
-                  for="af-account-pass"
-                  class="inline-block text-sm text-gray-800 mt-2.5"
-                >
-                  Password Lama
-                </label>
-              </div>
-              <!-- End Col -->
-              <div class="sm:col-span-9">
-                <div class="sm:flex">
-                  <input
-                    id="password"
-                    type="password"
-                    class="py-2 px-3 pr-11 block w-full border-[1px] border-gray-200 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500"
-                    placeholder="Password Lama"
-                  />
-                </div>
-              </div>
-              <!-- End Col -->
-              <!-- End Password Lama -->
-
-              <!-- Password Baru -->
-              <div class="sm:col-span-3">
-                <label
-                  for="af-account-pass"
-                  class="inline-block text-sm text-gray-800 mt-2.5"
-                >
-                  Password Baru
-                </label>
-              </div>
-              <!-- End Col -->
-              <div class="sm:col-span-9">
-                <div class="sm:flex">
-                  <input
-                    id="newpass"
-                    type="password"
-                    class="py-2 px-3 pr-11 block w-full border-[1px] border-gray-200 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500"
-                    placeholder="Password Baru"
-                  />
-                </div>
-              </div>
-              <!-- End Col -->
-              <!-- End Password Baru -->
-
-              <!-- Confirm Password -->
-              <div class="sm:col-span-3">
-                <label
-                  for="af-account-cpass"
-                  class="inline-block text-sm text-gray-800 mt-2.5"
-                >
-                  Konfirmasi Password
-                </label>
-              </div>
-              <!-- End Col -->
-              <div class="sm:col-span-9">
-                <div class="sm:flex">
-                  <input
-                    id="confirmpass"
-                    type="password"
-                    class="py-2 px-3 pr-11 block w-full border-[1px] border-gray-200 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500"
-                    placeholder="Konfirmasi Password Baru"
-                  />
-                </div>
-              </div>
-              <!-- End Col -->
-              <!-- End Confirm Password -->
-            </div>
-            <!-- End Display Account-->
-            <div class="mt-5 flex justify-end gap-x-2">
-              <a
-                href="profileMitra.html"
-                class="py-2 px-3 inline-flex cursor-pointer justify-center items-center gap-2 rounded-md border font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-600 transition-all text-sm"
-              >
-                Cancel
-              </a>
-              <button
-                id="updatePassword"
-                class="inline-flex justify-center items-center gap-x-3 text-center bg-gradient-to-tl from-blue-600 to-violet-600 shadow-lg shadow-transparent hover:shadow-blue-700/50 border border-transparent text-white text-sm font-medium rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 focus:ring-offset-white py-2 px-5"
-              >
-                Save
-              </button>
-            </div>
-          </div>
-          <!-- End Card -->
-        </div>
-        <!-- End Grid Edit Password -->
+        <!-- End Card -->
       </div>
-      <!-- End Card Section -->
+      <!-- End Table Section -->
     </div>
     <!-- End Content Section -->
 
@@ -638,7 +811,21 @@
       src="https://cdn.jsdelivr.net/gh/intern-monitoring/jsintermoni@0.0.6/components/dropdown.js"
     ></script>
 
-    <!-- Get Function -->
+    <!-- Get Seleksi Wawancara -->
+    <script
+      type="module"
+      src="./assets/js/getFunction/seleksiWawancara/getSeleksiWawancaraFunction.js"
+    ></script>
+
+    <!-- Handler Seleksi Wawancara -->
+    <script
+      type="module"
+      src="./assets/js/updateFunction/seleksiWawancara/terimaWawancara.js"
+    ></script>
+    <script
+      type="module"
+      src="./assets/js/updateFunction/seleksiWawancara/tolakWawancara.js"
+    ></script>
 
     <!-- Logout Function -->
     <script
