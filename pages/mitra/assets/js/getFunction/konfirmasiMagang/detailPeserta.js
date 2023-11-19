@@ -1,5 +1,4 @@
 import { addInner } from "https://jscroot.github.io/element/croot.js";
-import { tableKonfirmasiMagang } from "./getKonfirmasi";
 
 export const detailPeserta = `
 <div class="bg-white rounded-xl shadow-md">

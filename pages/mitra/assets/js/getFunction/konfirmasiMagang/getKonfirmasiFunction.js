@@ -21,12 +21,16 @@ const get = (target_url, responseFunction) => {
   fetch(target_url, requestOptions)
     .then((response) => response.text())
     .then((result) => {
-      const jsonData = JSON.parse(result);
-      responseFunction(jsonData);
+      const parsedResult = JSON.parse(result);
 
-      // Hitung jumlah data dan perbarui tampilan
-      const count = jsonData.length;
-      CountKonfirmasi(count);
+      const filteredData = parsedResult.filter((user) =>
+        [1, 2].includes(user.status)
+      );
+
+      // Call the response function with the filtered data
+      responseFunction(filteredData);
+
+      CountKonfirmasi(filteredData.length);
     })
     .catch((error) => console.log("error", error));
 };

@@ -107,7 +107,7 @@ export function isiRow(value) {
         ? "bg-red-200"
         : "";
 
-    const konfirmasi = tableKonfirmasiMagang
+    const konfirmMagang = tableKonfirmasiMagang
       .replace("#NAMA#", value.mahasiswa.namalengkap)
       .replace("#NIM#", value.mahasiswa.nim)
       .replace("#PRODI#", value.mahasiswa.prodi)
@@ -116,6 +116,6 @@ export function isiRow(value) {
       .replace("#BGKONFIRMASI#", bgKonfirmasi)
       .replace("#POSISI#", value.magang.posisi)
       .replace("#DETAIL#", value._id);
-    addInner("tableKonfirmasiMagang", konfirmasi);
+    addInner("tableKonfirmasiMagang", konfirmMagang);
   }
 }
