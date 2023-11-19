@@ -264,7 +264,6 @@ export function isiRow(value) {
     .replace("#NIM#", value.mahasiswa.nim)
     .replace("#PERGURUAN#", value.mahasiswa.perguruantinggi)
     .replace("#PRODI#", value.mahasiswa.prodi)
-    .replace("#PRODI#", value.mahasiswa.prodi)
     .replace("#NAMAPERUSAHAAN#", value.magang.mitra.nama)
     .replace("#POSISI#", value.magang.posisi)
     .replace("#NAMANARAHUBUNG#", value.magang.mitra.namanarahubung)
