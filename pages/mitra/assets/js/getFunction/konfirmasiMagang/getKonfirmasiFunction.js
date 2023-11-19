@@ -1,4 +1,4 @@
-import { URLGetKonfirmasi, responseData } from "./getSeleksiBerkas.js";
+import { URLGetKonfirmasi, responseData } from "./getKonfirmasi.js";
 import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
 
 const CountKonfirmasi = (count) => {
