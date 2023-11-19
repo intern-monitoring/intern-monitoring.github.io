@@ -1,13 +1,22 @@
 import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
 
-const putData = (target_url, tokenkey, tokenvalue, responseFunction) => {
+const putData = (
+  target_url,
+  datajson,
+  tokenkey,
+  tokenvalue,
+  responseFunction
+) => {
   const myHeaders = new Headers();
   myHeaders.append(tokenkey, tokenvalue);
   myHeaders.append("Content-Type", "application/json");
 
+  const raw = JSON.stringify(datajson);
+
   const requestOptions = {
     method: "PUT",
     headers: myHeaders,
+    body: raw,
     redirect: "follow",
   };
 
@@ -35,8 +44,11 @@ const terimaBerkas = (TERIMA) => {
       const tokenkey = "Authorization";
 
       const responseFunction = (result) => responseData(result);
+      const datajson = {
+        seleksiberkas: parseInt(getValue("buttonTerima")),
+      };
 
-      putData(target_url, tokenkey, tokenvalue, responseFunction);
+      putData(target_url, datajson, tokenkey, tokenvalue, responseFunction);
     }
   });
 };
