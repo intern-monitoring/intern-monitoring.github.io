@@ -210,8 +210,8 @@ export const tableKonfirmasi = `
     </span>
   </a>
 </td>
-<td class="h-px w-px whitespace-nowrap">
-  <div class="flex justify-center py-3">
+<td class="h-px w-px pr-6 whitespace-nowrap">
+  <div class="flex py-3">
     <span
       class="#BGKONFIRMASI# inline-flex items-center gap-1.5 py-0.5 px-2 rounded-full text-xs font-medium text-gray-900"
     >

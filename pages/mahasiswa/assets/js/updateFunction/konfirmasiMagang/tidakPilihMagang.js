@@ -35,7 +35,7 @@ const tidakPilihMagang = (TOLAK) => {
     showCancelButton: true,
     confirmButtonColor: "#3085d6",
     cancelButtonColor: "#d33",
-    confirmButtonText: "Ya, Tolak",
+    confirmButtonText: "Ya, Tidak Pilih",
   }).then((result) => {
     if (result.isConfirmed) {
       const target_url =
@@ -59,7 +59,7 @@ const responseData = (result) => {
     Swal.fire({
       icon: "success",
       title: "Konfirmasi Berhasil",
-      text: result.message,
+      text: "Anda tidak memilih magang di perusahaan ini",
     }).then(() => {
       window.location.reload();
     });

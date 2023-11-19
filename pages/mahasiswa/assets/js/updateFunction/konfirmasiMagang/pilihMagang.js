@@ -59,7 +59,7 @@ const responseData = (result) => {
     Swal.fire({
       icon: "success",
       title: "Berhasil Konfirmasi",
-      text: result.message,
+      text: "Anda memilih magang di perusahaan ini",
     }).then(() => {
       window.location.reload();
     });
