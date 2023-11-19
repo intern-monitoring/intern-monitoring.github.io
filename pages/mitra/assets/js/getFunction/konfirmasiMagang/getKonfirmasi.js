@@ -92,7 +92,7 @@ export function responseData(results) {
 }
 
 export function isiRow(value) {
-  if (!value.status) {
+  if (value.status === 1 || value.status === 2) {
     const konfirmasiMagang =
       value.status === 1
         ? "Bersedia Magang"
