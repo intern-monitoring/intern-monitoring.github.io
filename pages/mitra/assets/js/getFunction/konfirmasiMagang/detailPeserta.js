@@ -138,7 +138,7 @@ export const detailPeserta = `
           >Seleksi Berkas :</label
         >
         <h3
-          class="#BGBERKAS# inline-flex items-center gap-1.5 py-0.5 px-2 rounded-full text-sm text-gray-900 font-normal lg:text-base"
+          class="#BGBERKAS# inline-flex items-center gap-1.5 py-0.5 px-2 rounded-full text-xs text-gray-900 font-normal"
         >
           #BERKAS#
         </h3>
@@ -158,7 +158,7 @@ export const detailPeserta = `
           >Seleksi Wawancara :</label
         >
         <h3
-          class="#BGWAWANCARA# inline-flex items-center gap-1.5 py-0.5 px-2 rounded-full text-sm text-gray-900 font-normal lg:text-base"
+          class="#BGWAWANCARA# inline-flex items-center gap-1.5 py-0.5 px-2 rounded-full text-xs text-gray-900 font-normal "
         >
           #WAWANCARA#
         </h3>
