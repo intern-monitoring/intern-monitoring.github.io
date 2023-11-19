@@ -26,7 +26,7 @@ const get = (target_url, responseFunction) => {
 
       // Hitung jumlah data dan perbarui tampilan
       const count = jsonData.length;
-      CountPeserta(count);
+      CountWawancara(count);
     })
     .catch((error) => console.log("error", error));
 };
