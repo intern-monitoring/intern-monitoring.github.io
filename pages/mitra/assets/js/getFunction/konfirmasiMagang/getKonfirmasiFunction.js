@@ -1,4 +1,4 @@
-import { URLGetKonfirmasi, responseData } from "./getKonfirmasi.js";
+import { URLGetKonfirmasi, responseData } from "./getSeleksiBerkas.js";
 import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
 
 const CountKonfirmasi = (count) => {
@@ -21,17 +21,12 @@ const get = (target_url, responseFunction) => {
   fetch(target_url, requestOptions)
     .then((response) => response.text())
     .then((result) => {
-      const parsedResult = JSON.parse(result);
+      const jsonData = JSON.parse(result);
+      responseFunction(jsonData);
 
-      // Filter data for "mahasiswa" and "mitra" roles
-      const filteredData = parsedResult.filter((user) =>
-        [1, 2].includes(user.status)
-      );
-
-      // Call the response function with the filtered data
-      responseFunction(filteredData);
-
-      CountKonfirmasi(filteredData.length);
+      // Hitung jumlah data dan perbarui tampilan
+      const count = jsonData.length;
+      CountKonfirmasi(count);
     })
     .catch((error) => console.log("error", error));
 };
