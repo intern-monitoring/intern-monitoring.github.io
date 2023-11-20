@@ -50,9 +50,18 @@ export const tableSeleksi = `
 <td class="h-px w-px whitespace-nowrap">
   <div class="flex justify-center py-3">
     <span
-      class="#BACKGROUND_COLOR# inline-flex items-center gap-1.5 py-0.5 px-2 rounded-full text-xs font-medium text-gray-900"
+      class="#BGBERKAS# inline-flex items-center gap-1.5 py-0.5 px-2 rounded-full text-xs font-medium text-gray-900"
     >
-      #STATUS#
+      #STATUSBERKAS#
+    </span>
+  </div>
+</td>
+<td class="h-px w-px whitespace-nowrap">
+  <div class="flex justify-center py-3">
+    <span
+      class="#BGWAWANCARA# inline-flex items-center gap-1.5 py-0.5 px-2 rounded-full text-xs font-medium text-gray-900"
+    >
+      #STATUSWAWANCARA#
     </span>
   </div>
 </td>
@@ -86,22 +95,6 @@ export const tableSeleksi = `
     </span>
   </a>
 </td>
-<td class="h-px w-px whitespace-nowrap">
-  <div class="px-6 py-1.5">
-    <button
-      onclick="terimaApply('#TERIMA#')"
-      class="inline-flex items-center gap-x-1.5 text-sm text-blue-600 decoration-2 hover:underline font-medium pr-5"
-    >
-      Terima
-    </button>
-    <a
-      class="inline-flex items-center gap-x-1.5 text-sm text-red-600 decoration-2 hover:underline font-medium"
-      href="#"
-    >
-      Tidak
-    </a>
-  </div>
-</td>
 </tr>
 `;
 
@@ -111,16 +104,28 @@ export function responseData(results) {
 }
 
 export function isiRow(value) {
-  const statusText =
-    value.seleksikampus === true
+  const statusBerkas =
+    value.seleksiberkas === true
       ? "Lolos"
-      : value.seleksikampus === false
+      : value.seleksiberkas === false
       ? "Tidak Lolos"
-      : "Proses";
-  const backgroundColor =
-    value.seleksikampus === true
+      : "Pending";
+  const bgBerkas =
+    value.seleksiberkas === true
       ? "bg-green-200"
-      : value.seleksikampus === false
+      : value.seleksiberkas === false
+      ? "bg-red-200"
+      : "bg-gray-200";
+  const statusWawancara =
+    value.seleksiwewancara === true
+      ? "Lolos"
+      : value.seleksiwewancara === false
+      ? "Tidak Lolos"
+      : "Pending";
+  const bgWawancara =
+    value.seleksiwewancara === true
+      ? "bg-green-200"
+      : value.seleksiwewancara === false
       ? "bg-red-200"
       : "bg-gray-200";
   const content = tableSeleksi
@@ -128,11 +133,12 @@ export function isiRow(value) {
     .replace("#NIM#", value.mahasiswa.nim)
     .replace("#PRODI#", value.mahasiswa.prodi)
     .replace("#PERGURUAN#", value.mahasiswa.perguruantinggi)
-    .replace("#STATUS#", statusText)
     .replace("#POSISI#", value.magang.posisi)
     .replace("#MITRA#", value.magang.mitra.nama)
-    .replace("#BACKGROUND_COLOR#", backgroundColor)
-    .replace("#TERIMA#", value._id)
+    .replace("#STATUSBERKAS#", statusBerkas)
+    .replace("#STATUSWAWANCARA#", statusWawancara)
+    .replace("#BGBERKAS#", bgBerkas)
+    .replace("#BGWAWANCARA#", bgWawancara)
     .replace("#DETAIL#", value._id);
   addInner("seleksiMagang", content);
 }
