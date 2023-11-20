@@ -96,16 +96,18 @@ export function responseData(results) {
 export function isiRow(value) {
   if (value.status === 1) {
     // Mentor
-    const mentorNama = value.mentor
+    const mentorNama = value.mentor.namalengkap
       ? value.mentor.namalengkap
       : "Mentor belum ditetapkan";
-    const mentorEmail = value.mentor ? value.mentor.akun.email : "";
+    const mentorEmail = value.mentor.akun.email ? value.mentor.akun.email : "";
 
     // Pembimbing
-    const pembimbingNama = value.pembimbing
+    const pembimbingNama = value.pembimbing.namalengkap
       ? value.pembimbing.namalengkap
       : "Pembimbing belum ditetapkan";
-    const pembimbingEmail = value.pembimbing ? value.pembimbing.akun.email : "";
+    const pembimbingEmail = value.pembimbing.akun.email
+      ? value.pembimbing.akun.email
+      : "";
 
     const mhsMagang = tableMahasiswaMagang
       .replace("#NAMAMHS#", value.mahasiswa.namalengkap)
