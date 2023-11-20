@@ -46,59 +46,61 @@ window.addEventListener("load", () => {
   get(
     URLGetUser,
     (mahasiswaCount, mitraCount, pembimbingCount, mentorCount) => {
-      buildChart("#hs-donut-chart", () => ({
-        chart: {
-          height: 170,
-          width: 170,
-          type: "donut",
-          zoom: {
+      buildChart(
+        "#hs-donut-chart",
+        () => ({
+          chart: {
+            height: 170,
+            width: 170,
+            type: "donut",
+            zoom: {
+              enabled: false,
+            },
+          },
+          plotOptions: {
+            pie: {
+              donut: {
+                size: "76%",
+              },
+            },
+          },
+          series: [mahasiswaCount, mitraCount, pembimbingCount, mentorCount],
+          labels: ["Mahasiswa", "Mitra", "Pembimbing", "Mentor"],
+          legend: {
+            show: false,
+          },
+          dataLabels: {
             enabled: false,
           },
-        },
-        plotOptions: {
-          pie: {
-            donut: {
-              size: "76%",
+          stroke: {
+            width: 5,
+          },
+          grid: {
+            padding: {
+              top: -12,
+              bottom: -11,
+              left: -12,
+              right: -12,
             },
           },
-        },
-        series: [mahasiswaCount, mitraCount, pembimbingCount, mentorCount],
-        labels: ["Mahasiswa", "Mitra", "Pembimbing", "Mentor"],
-        legend: {
-          show: false,
-        },
-        dataLabels: {
-          enabled: false,
-        },
-        stroke: {
-          width: 5,
-        },
-        grid: {
-          padding: {
-            top: -12,
-            bottom: -11,
-            left: -12,
-            right: -12,
-          },
-        },
-        states: {
-          hover: {
-            filter: {
-              type: "none",
+          states: {
+            hover: {
+              filter: {
+                type: "none",
+              },
             },
           },
-        },
-        colors: [
-          "#3b82f6",
-          "#22d3ee",
-          "#7dd3fc",
-          "#3b82f6",
-          "#bfdbfe",
-          "#60a5fa",
-          "#93c5fd",
-          "#1e3a8a",
-        ],
-      }));
+        }),
+        {
+          // Tentukan empat warna berbeda untuk peran-peran
+          colors: ["#3b82f6", "#22d3ee", "#7dd3fc", "#60a5fa"],
+
+          // Warna stroke untuk kontras yang lebih baik
+          stroke: {
+            colors: ["rgb(255, 255, 255)"],
+          },
+        }
+      );
     }
   );
 });
