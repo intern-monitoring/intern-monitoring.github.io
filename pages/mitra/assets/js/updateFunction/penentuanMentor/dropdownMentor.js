@@ -43,6 +43,7 @@ fetch(
       option.text = item.posisi;
       mentorDropdown.appendChild(option);
     });
+    console.log(data);
 
     // Event listener for polyclinic code dropdown change
     mentorDropdown.addEventListener("change", () => {
