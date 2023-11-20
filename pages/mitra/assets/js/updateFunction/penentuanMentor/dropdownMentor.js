@@ -36,25 +36,31 @@ fetch(
   .then((data) => {
     const mentorDropdown = document.getElementById("namalengkapmentor");
 
-    // Generate options for each data item
-    data.forEach((item) => {
-      const option = document.createElement("option");
-      option.value = item._id;
-      option.text = item.posisi;
-      mentorDropdown.appendChild(option);
-    });
-    console.log(data);
+    if (Array.isArray(data)) {
+      // Iterasi setiap item dalam array
+      data.forEach((item) => {
+        const option = document.createElement("option");
+        option.value = item._id;
+        option.text = item.posisi;
+        mentorDropdown.appendChild(option);
+      });
+      console.log(data);
 
-    // Event listener for polyclinic code dropdown change
-    mentorDropdown.addEventListener("change", () => {
-      const selectedId = mentorDropdown.value;
-      const selectedMentor = data.find((item) => item._id === selectedId);
+      // Event listener untuk perubahan dropdown
+      mentorDropdown.addEventListener("change", () => {
+        const selectedId = mentorDropdown.value;
+        const selectedMentor = data.find((item) => item._id === selectedId);
 
-      if (selectedMentor) {
-        namaMentorInput.value = selectedMentor.posisi;
-      } else {
-        namaMentorInput.value = "";
-      }
-    });
+        console.log(selectedMentor);
+        // Lakukan sesuatu dengan selectedMentor...
+        if (selectedMentor) {
+          namaMentorInput.value = selectedMentor.posisi;
+        } else {
+          namaMentorInput.value = "";
+        }
+      });
+    } else {
+      console.error("Data is not an array."); // Handle kasus di mana data bukan array
+    }
   })
   .catch((error) => console.log(error));
