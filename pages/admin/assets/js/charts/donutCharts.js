@@ -92,8 +92,8 @@ window.addEventListener("load", () => {
           },
         }),
         {
-          // Tentukan empat warna berbeda untuk peran-peran
-          colors: ["#3b82f6", "#22d3ee", "#7dd3fc", "#60a5fa"],
+          // Tentukan empat warna biru yang berbeda dari sangat tua ke sangat muda
+          colors: ["#001f3f", "#0050a1", "#3b82f6", "#a5c3f7"],
 
           // Warna stroke untuk kontras yang lebih baik
           stroke: {
