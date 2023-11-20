@@ -5,16 +5,15 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     // Mengambil data dari API
     const response = await fetch(
-      "https://asia-southeast2-bursakerja-project.cloudfunctions.net/intermoni-mentor"
+      "https://asia-southeast2-bursakerja-project.cloudfunctions.net/intermoni-magang"
     );
     const data = await response.json();
 
-    // Memasukkan data dari API ke dalam dropdown (hanya mentor)
-    const mentors = data.filter((user) => user.role === "mentor");
-    mentors.forEach((mentor) => {
+    // Memasukkan data dari API ke dalam dropdown
+    data.forEach((mentor) => {
       const option = document.createElement("option");
-      option.value = mentor.namalengkap;
-      option.text = mentor.namalengkap;
+      option.value = mentor.posisi;
+      option.text = mentor.posisi;
       dropdown.appendChild(option);
     });
   } catch (error) {
