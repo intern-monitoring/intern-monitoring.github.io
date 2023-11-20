@@ -574,6 +574,26 @@
                       >
                         Mitra
                       </button>
+                      <button
+                        type="button"
+                        class="hs-tab-active:font-semibold hs-tab-active:border-blue-600 hs-tab-active:text-blue-600 py-4 px-1 inline-flex items-center gap-x-2 border-b-2 border-transparent text-sm whitespace-nowrap text-gray-500 hover:text-blue-600 disabled:opacity-50 disabled:pointer-events-none"
+                        id="basic-tabs-item-3"
+                        data-hs-tab="#basic-tabs-3"
+                        aria-controls="basic-tabs-3"
+                        role="tab"
+                      >
+                        Pembimbing
+                      </button>
+                      <button
+                        type="button"
+                        class="hs-tab-active:font-semibold hs-tab-active:border-blue-600 hs-tab-active:text-blue-600 py-4 px-1 inline-flex items-center gap-x-2 border-b-2 border-transparent text-sm whitespace-nowrap text-gray-500 hover:text-blue-600 disabled:opacity-50 disabled:pointer-events-none"
+                        id="basic-tabs-item-4"
+                        data-hs-tab="#basic-tabs-4"
+                        aria-controls="basic-tabs-4"
+                        role="tab"
+                      >
+                        Mentor
+                      </button>
                     </nav>
                   </div>
                   <!-- End Nav -->
@@ -653,7 +673,83 @@
                         ></tbody>
                       </table>
                     </div>
-                    <!-- End Lolos -->
+                    <!-- End Mitra -->
+
+                    <!-- Pembimbing -->
+                    <div
+                      id="basic-tabs-3"
+                      class="hidden"
+                      role="tabpanel"
+                      aria-labelledby="basic-tabs-item-3"
+                    >
+                      <table class="min-w-full divide-y divide-gray-200">
+                        <thead class="bg-gray-50">
+                          <tr>
+                            <th scope="col" class="px-6 py-3 text-left">
+                              <div class="flex items-center gap-x-2">
+                                <span
+                                  class="text-xs font-semibold uppercase tracking-wide text-gray-800"
+                                  >Email</span
+                                >
+                              </div>
+                            </th>
+                            <th scope="col" class="px-6 py-3 text-left"></th>
+                            <th scope="col" class="px-6 py-3 text-left">
+                              <div class="flex items-center gap-x-2">
+                                <span
+                                  class="text-xs font-semibold uppercase tracking-wide text-gray-800"
+                                  >Role</span
+                                >
+                              </div>
+                            </th>
+                            <th scope="col" class="px-6 py-3 text-right"></th>
+                          </tr>
+                        </thead>
+                        <tbody
+                          id="userPembimbing"
+                          class="divide-y divide-gray-200"
+                        ></tbody>
+                      </table>
+                    </div>
+                    <!-- End Pembimbing -->
+
+                    <!-- Mentor -->
+                    <div
+                      id="basic-tabs-4"
+                      class="hidden"
+                      role="tabpanel"
+                      aria-labelledby="basic-tabs-item-4"
+                    >
+                      <table class="min-w-full divide-y divide-gray-200">
+                        <thead class="bg-gray-50">
+                          <tr>
+                            <th scope="col" class="px-6 py-3 text-left">
+                              <div class="flex items-center gap-x-2">
+                                <span
+                                  class="text-xs font-semibold uppercase tracking-wide text-gray-800"
+                                  >Email</span
+                                >
+                              </div>
+                            </th>
+                            <th scope="col" class="px-6 py-3 text-left"></th>
+                            <th scope="col" class="px-6 py-3 text-left">
+                              <div class="flex items-center gap-x-2">
+                                <span
+                                  class="text-xs font-semibold uppercase tracking-wide text-gray-800"
+                                  >Role</span
+                                >
+                              </div>
+                            </th>
+                            <th scope="col" class="px-6 py-3 text-right"></th>
+                          </tr>
+                        </thead>
+                        <tbody
+                          id="userMentor"
+                          class="divide-y divide-gray-200"
+                        ></tbody>
+                      </table>
+                    </div>
+                    <!-- End Mentor -->
                   </div>
                   <!-- End Tabel -->
                 </div>

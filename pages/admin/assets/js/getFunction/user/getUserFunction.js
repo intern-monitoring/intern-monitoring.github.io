@@ -22,7 +22,7 @@ const get = (target_url, responseFunction) => {
 
       // Filter data for "mahasiswa" and "mitra" roles
       const filteredData = parsedResult.filter((user) =>
-        ["mahasiswa", "mitra"].includes(user.role)
+        ["mahasiswa", "mitra", "pembimbing", "mentor"].includes(user.role)
       );
 
       // Call the response function with the filtered data

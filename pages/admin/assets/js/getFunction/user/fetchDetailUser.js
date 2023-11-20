@@ -3,6 +3,8 @@ import { urlFetch } from "./urlDetailUser.js";
 
 import { responseDataMitra } from "./detailUserMitra.js";
 import { responseDataMhs } from "./detailUserMhs.js";
+import { responseDataPembimbing } from "./detailUserPembimbing.js";
+import { responseDataMentor } from "./detailUserMentor.js";
 
 function get(target_url) {
   const myHeaders = new Headers();
@@ -27,6 +29,10 @@ function get(target_url) {
         responseDataMhs(parsedResult);
       } else if (role === "mitra") {
         responseDataMitra(parsedResult);
+      } else if (role === "pembimbing") {
+        responseDataPembimbing(parsedResult);
+      } else if (role === "mentor") {
+        responseDataMentor(parsedResult);
       } else {
         // Tangani peran lain atau berikan perilaku default
         console.log("Peran tidak diketahui:", role);
