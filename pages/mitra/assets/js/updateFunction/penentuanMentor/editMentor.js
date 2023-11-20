@@ -14,17 +14,6 @@ export const isiData = (results) => {
     const value = getNestedValue(results, path, index, property);
     inputElement.value = value;
   });
-
-  const inputMappingTiptap = [
-    { id: "deskripsimagang", path: "deskripsimagang" },
-    { id: "infotambahanmagang", path: "infotambahanmagang" },
-  ];
-
-  inputMappingTiptap.forEach(({ id, path, index, property }) => {
-    const inputElement = document.getElementById(id);
-    const value = getNestedValue(results, path, index, property);
-    inputElement.innerHTML = value;
-  });
 };
 
 const getNestedValue = (obj, path, index, property) => {
