@@ -2,7 +2,7 @@ export const isiData = (results) => {
   const inputMapping = [
     { id: "namalengkap", path: "mahasiswa.namalengkap" },
     { id: "email", path: "mahasiswa.akun.email" },
-    { id: "posisi", path: "magang.posisi" },
+    { id: "perguruantinggi", path: "mahasiswa.perguruantinggi" },
     { id: "posisi", path: "magang.posisi" },
     { id: "namalengkapmentor", path: "mentor.namalengkap" },
     { id: "nik", path: "mentor.nik" },
