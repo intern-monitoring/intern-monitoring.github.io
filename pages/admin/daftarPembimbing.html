@@ -381,7 +381,7 @@
           </li>
           <li>
             <a
-              class="flex items-center gap-x-3.5 py-2 px-2.5 bg-white text-sm font-semibold text-slate-700 rounded-md hover:bg-gray-100"
+              class="flex items-center gap-x-3.5 py-2 px-2.5 bg-gradient-to-tl from-blue-600 to-violet-600 text-sm font-semibold text-white rounded-md hover:bg-gray-100"
               href="daftarPembimbing.html"
             >
               <svg
@@ -460,7 +460,7 @@
           </li>
           <li>
             <a
-              class="flex items-center gap-x-3.5 py-2 px-2.5 bg-gradient-to-tl from-blue-600 to-violet-600 text-sm font-semibold text-white rounded-md hover:bg-gray-100"
+              class="flex items-center gap-x-3.5 py-2 px-2.5 bg-white text-sm font-semibold text-slate-700 rounded-md hover:bg-gray-100"
               href="seleksiMagang.html"
             >
               <svg
@@ -492,18 +492,373 @@
     <!-- End Sidebar -->
 
     <!-- Content Section -->
-    <div class="w-full bg-gray-50 lg:pl-64">
-      <!-- Card Section -->
+    <div class="w-full bg-gray-50 h-screen lg:pl-64">
+      <!-- Table Section -->
       <div class="px-4 py-10 sm:px-6 lg:px-8 mx-auto">
-        <!-- Grid -->
-        <div id="detailSeleksiMagang" class="relative mx-auto w-full">
-          <!-- Card -->
+        <!-- Card -->
+        <div class="flex flex-col">
+          <div class="-m-1.5 overflow-x-auto">
+            <div class="p-1.5 min-w-full inline-block align-middle">
+              <div
+                class="bg-white border border-gray-200 rounded-xl shadow-sm overflow-hidden"
+              >
+                <!-- Header -->
+                <div
+                  class="px-6 py-4 grid gap-3 md:flex md:justify-between md:items-center border-b border-gray-200"
+                >
+                  <div>
+                    <h2 class="text-xl font-semibold text-gray-800">
+                      Daftar Pembimbing
+                    </h2>
+                    <p class="text-sm text-gray-600">
+                      Berikut merupakan data pembimbing yang sudah terdaftar.
+                    </p>
+                  </div>
 
-          <!-- End Card -->
+                  <div>
+                    <div class="inline-flex gap-x-2">
+                      <button
+                        data-ripple-light="true"
+                        data-dialog-target="dialog"
+                        class="py-2 px-3 inline-flex justify-center items-center gap-2 rounded-md border border-transparent font-semibold bg-gradient-to-tl from-blue-600 to-violet-600 text-white text-sm"
+                      >
+                        <svg
+                          class="w-3 h-3"
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          viewBox="0 0 16 16"
+                          fill="none"
+                        >
+                          <path
+                            d="M2.63452 7.50001L13.6345 7.5M8.13452 13V2"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                          />
+                        </svg>
+                        Tambah Pembimbing
+                      </button>
+                      <div
+                        data-dialog-backdrop="dialog"
+                        data-dialog-backdrop-close="true"
+                        class="pointer-events-none fixed inset-0 z-[999] grid h-screen w-screen place-items-center bg-black bg-opacity-60 opacity-0 backdrop-blur-sm transition-opacity duration-300"
+                      >
+                        <div
+                          data-dialog="dialog"
+                          class="relative w-full h-full top-0 left-0 overflow-x-hidden overflow-y-auto"
+                        >
+                          <div
+                            class="opacity-100 h-full w-full py-10 px-5 md:px-16 lg:px-20"
+                          >
+                            <div
+                              class="max-h-full overflow-hidden flex flex-col bg-white border shadow-sm rounded-xl"
+                            >
+                              <div
+                                class="flex shrink-0 items-center p-4 font-sans text-2xl font-semibold leading-snug text-gray-800 antialiased"
+                              >
+                                Tambah Pembimbing
+                              </div>
+                              <div class="p-5 overflow-y-auto">
+                                <!-- Grid -->
+                                <div
+                                  class="grid sm:grid-cols-12 gap-2 sm:gap-6"
+                                >
+                                  <div class="sm:col-span-3">
+                                    <label
+                                      class="inline-block text-sm text-gray-800 mt-2.5"
+                                    >
+                                      Profile photo
+                                    </label>
+                                  </div>
+                                  <!-- End Col -->
+
+                                  <div class="sm:col-span-9">
+                                    <div class="flex items-center gap-5">
+                                      <img
+                                        class="inline-block h-16 w-16 rounded-full ring-2 ring-white"
+                                        src="../../images/netflix_logo.jpg"
+                                        alt="Image Description"
+                                      />
+                                      <div class="flex gap-x-2">
+                                        <div>
+                                          <button
+                                            type="button"
+                                            class="py-2 px-3 inline-flex justify-center items-center gap-2 rounded-md border font-medium bg-white text-gray-700 shadow-sm align-middle text-sm"
+                                          >
+                                            <svg
+                                              class="w-3 h-3"
+                                              xmlns="http://www.w3.org/2000/svg"
+                                              width="16"
+                                              height="16"
+                                              fill="currentColor"
+                                              viewBox="0 0 16 16"
+                                            >
+                                              <path
+                                                d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"
+                                              />
+                                              <path
+                                                d="M7.646 1.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 2.707V11.5a.5.5 0 0 1-1 0V2.707L5.354 4.854a.5.5 0 1 1-.708-.708l3-3z"
+                                              />
+                                            </svg>
+                                            Upload photo
+                                          </button>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <!-- End Col -->
+                                  <!-- Pembimbing -->
+                                  <div class="sm:col-span-3">
+                                    <label
+                                      for="af-account-full-name"
+                                      class="inline-block text-sm text-gray-800 mt-2.5"
+                                    >
+                                      Nama Pembimbing
+                                    </label>
+                                  </div>
+                                  <!-- End Col -->
+                                  <div class="sm:col-span-9">
+                                    <div class="sm:flex">
+                                      <input
+                                        id="namalengkap"
+                                        type="text"
+                                        class="py-2 px-3 pr-11 block w-full border-[1px] border-gray-200 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500"
+                                        placeholder="Nama lengkap pembimbing"
+                                      />
+                                    </div>
+                                  </div>
+                                  <!-- End Col -->
+                                  <!-- End Pembimbing -->
+
+                                  <!-- NIK -->
+                                  <div class="sm:col-span-3">
+                                    <label
+                                      for="af-account-nik"
+                                      class="inline-block text-sm text-gray-800 mt-2.5"
+                                    >
+                                      NIK
+                                    </label>
+                                  </div>
+                                  <!-- End Col -->
+                                  <div class="sm:col-span-9">
+                                    <div class="sm:flex">
+                                      <input
+                                        id="nik"
+                                        type="number"
+                                        class="py-2 px-3 pr-11 block w-full border-[1px] border-gray-200 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500"
+                                        placeholder="Nomor induk kepegawaian"
+                                      />
+                                    </div>
+                                  </div>
+                                  <!-- End Col -->
+                                  <!-- End NIK -->
+
+                                  <!-- Email -->
+                                  <div class="sm:col-span-3">
+                                    <label
+                                      for="af-account-email"
+                                      class="inline-block text-sm text-gray-800 mt-2.5"
+                                    >
+                                      Email
+                                    </label>
+                                  </div>
+                                  <!-- End Col -->
+                                  <div class="sm:col-span-9">
+                                    <div class="sm:flex">
+                                      <input
+                                        id="email"
+                                        type="text"
+                                        class="py-2 px-3 pr-11 block w-full border-[1px] border-gray-200 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500"
+                                        placeholder="pembimbing@gmail.com"
+                                      />
+                                    </div>
+                                  </div>
+                                  <!-- End Col -->
+                                  <!-- End Email -->
+
+                                  <!-- Password -->
+                                  <div class="sm:col-span-3">
+                                    <label
+                                      for="af-account-password"
+                                      class="inline-block text-sm text-gray-800 mt-2.5"
+                                    >
+                                      Password
+                                    </label>
+                                  </div>
+                                  <!-- End Col -->
+                                  <div class="sm:col-span-9">
+                                    <div class="sm:flex">
+                                      <input
+                                        id="password"
+                                        type="password"
+                                        class="py-2 px-3 pr-11 block w-full border-[1px] border-gray-200 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500"
+                                        placeholder="Password"
+                                      />
+                                    </div>
+                                  </div>
+                                  <!-- End Col -->
+                                  <!-- End Password -->
+
+                                  <!-- Confirm Password-->
+                                  <div class="sm:col-span-3">
+                                    <label
+                                      for="af-account-confirm-pass"
+                                      class="inline-block text-sm text-gray-800 mt-2.5"
+                                    >
+                                      Confirm Password
+                                    </label>
+                                  </div>
+                                  <!-- End Col -->
+
+                                  <div class="sm:col-span-9">
+                                    <input
+                                      id="confirmpass"
+                                      type="password"
+                                      class="py-2 px-3 pr-11 block w-full border-[1px] border-gray-200 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500"
+                                      placeholder="Confirm Password"
+                                    />
+                                  </div>
+                                  <!-- End Col -->
+                                  <!-- End Confirm Password -->
+                                </div>
+                                <!-- End Grid -->
+                              </div>
+                              <div
+                                class="flex shrink-0 flex-wrap items-center justify-end p-4 text-blue-gray-500"
+                              >
+                                <button
+                                  data-ripple-dark="true"
+                                  data-dialog-close="true"
+                                  class="middle none center mr-1 rounded-lg py-3 px-6 font-sans text-xs font-bold uppercase text-red-500 transition-all hover:bg-red-500/10 active:bg-red-500/30 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                                >
+                                  Cancel
+                                </button>
+                                <button
+                                  onclick="PostPembimbing()"
+                                  data-ripple-light="true"
+                                  data-dialog-close="true"
+                                  class="middle none center rounded-lg bg-gradient-to-tr from-green-600 to-green-400 py-3 px-6 font-sans text-xs font-bold uppercase text-white shadow-md shadow-green-500/20 transition-all hover:shadow-lg hover:shadow-green-500/40 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                                >
+                                  Save
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- End Header -->
+
+                <!-- Table -->
+                <table class="min-w-full divide-y divide-gray-200">
+                  <thead class="bg-gray-50">
+                    <tr>
+                      <th scope="col" class="px-6 py-3 text-left">
+                        <div class="flex items-center gap-x-2">
+                          <span
+                            class="text-xs font-semibold uppercase tracking-wide text-gray-800"
+                          >
+                            Nama
+                          </span>
+                        </div>
+                      </th>
+
+                      <th scope="col" class="px-6 py-3 text-left">
+                        <div class="flex items-center gap-x-2">
+                          <span
+                            class="text-xs font-semibold uppercase tracking-wide text-gray-800"
+                          >
+                            Email
+                          </span>
+                        </div>
+                      </th>
+
+                      <th scope="col" class="px-6 py-3 text-left">
+                        <div class="flex items-center gap-x-2">
+                          <span
+                            class="text-xs font-semibold uppercase tracking-wide text-gray-800"
+                          >
+                            Detail
+                          </span>
+                        </div>
+                      </th>
+                    </tr>
+                  </thead>
+
+                  <tbody
+                    id="tableDaftarPembimbing"
+                    class="divide-y divide-gray-200"
+                  ></tbody>
+                </table>
+                <!-- End Table -->
+
+                <!-- Footer -->
+                <div
+                  class="px-6 py-4 grid gap-3 md:flex md:justify-between md:items-center border-t border-gray-200"
+                >
+                  <div id="pembimbingCount">
+                    <p class="text-sm text-gray-600">
+                      <span class="font-semibold text-gray-800">0</span>
+                      results
+                    </p>
+                  </div>
+
+                  <div>
+                    <div class="inline-flex gap-x-2">
+                      <button
+                        type="button"
+                        class="py-2 px-3 inline-flex justify-center items-center gap-2 rounded-md border font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-600 transition-all text-sm"
+                      >
+                        <svg
+                          class="w-3 h-3"
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"
+                          />
+                        </svg>
+                        Prev
+                      </button>
+
+                      <button
+                        type="button"
+                        class="py-2 px-3 inline-flex justify-center items-center gap-2 rounded-md border font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-600 transition-all text-sm"
+                      >
+                        Next
+                        <svg
+                          class="w-3 h-3"
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
+                          />
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <!-- End Footer -->
+              </div>
+            </div>
+          </div>
         </div>
-        <!-- End Grid -->
+        <!-- End Card -->
       </div>
-      <!-- End Card Section -->
+      <!-- End Table Section -->
     </div>
     <!-- End Content Section -->
 
@@ -513,14 +868,14 @@
       src="https://cdn.jsdelivr.net/gh/intern-monitoring/jsintermoni@0.0.6/components/dropdown.js"
     ></script>
 
-    <!-- Get Email -->
-    <script type="module" src="../js/get/getEmailAdmin.js"></script>
-
-    <!-- DetailSeleksi -->
+    <!-- Post Pembimbing -->
     <script
       type="module"
-      src="./assets/js/getFunction/seleksiMagang/fetchDetailSeleksiMagang.js"
+      src="./assets/js/postFunction/daftarPembimbing/postPembimbing.js"
     ></script>
+
+    <!-- Get Email -->
+    <script type="module" src="../js/get/getEmailAdmin.js"></script>
 
     <!-- Logout Function -->
     <script
@@ -528,11 +883,6 @@
       src="https://cdn.jsdelivr.net/gh/intern-monitoring/jsintermoni@0.2.0/logOut.js"
     ></script>
 
-    <!-- Logout Function -->
-    <!-- <script
-      type="module"
-      src="https://cdn.jsdelivr.net/gh/intern-monitoring/jsintermoni@0.0.6/logOut.js"
-    ></script> -->
     <!-- autentikasi function -->
     <!-- <script
       type="module"
@@ -543,4 +893,5 @@
       localStorage.setItem("previousPageURL", window.location.href);
     </script>
   </body>
+  <script src="https://unpkg.com/@material-tailwind/html@latest/scripts/dialog.js"></script>
 </html>
