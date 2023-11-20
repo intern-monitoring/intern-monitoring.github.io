@@ -3,10 +3,18 @@ document.addEventListener("DOMContentLoaded", async () => {
     // Mendapatkan elemen dropdown
     const dropdown = document.getElementById("namalengkapmentor");
 
+    // Clear existing options
+    dropdown.innerHTML = "";
+
     // Mengambil data dari API
     const response = await fetch(
       "https://asia-southeast2-bursakerja-project.cloudfunctions.net/intermoni-magang"
     );
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+
     const data = await response.json();
 
     // Memasukkan data dari API ke dalam dropdown
@@ -17,6 +25,6 @@ document.addEventListener("DOMContentLoaded", async () => {
       dropdown.appendChild(option);
     });
   } catch (error) {
-    console.error("Error fetching data:", error);
+    console.error("Error fetching or parsing data:", error);
   }
 });
