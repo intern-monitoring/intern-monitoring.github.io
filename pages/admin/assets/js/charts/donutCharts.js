@@ -32,7 +32,12 @@ const get = (target_url, responseFunction) => {
       ).length;
 
       // Call the response function with the filtered data
-      responseFunction(mahasiswaCount, mitraCount);
+      responseFunction(
+        mahasiswaCount,
+        mitraCount,
+        pembimbingCount,
+        mentorCount
+      );
     })
     .catch((error) => console.log("error", error));
 };
