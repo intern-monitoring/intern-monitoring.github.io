@@ -57,7 +57,7 @@ export const tableMahasiswaMagang = `
 </td>
 <td class="h-px w-px whitespace-nowrap">
   <a
-    href="detailMahasiswaMagang?pesertaId=#DETAIL#"
+    href="detailMahasiswaMagang?mahasiswaId=#DETAIL#"
     type="button"
     class="block"
   >
@@ -81,6 +81,21 @@ export const tableMahasiswaMagang = `
           />
         </svg>
         Detail
+      </span>
+    </span>
+  </a>
+</td>
+<td class="h-px w-px whitespace-nowrap">
+  <a
+    href="penentuanMentor?mahasiswaId=#PENENTUANMENTOR#"
+    type="button"
+    class="block"
+  >
+    <span class="px-6 py-1.5">
+      <span
+        class="py-1 px-2 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-blue-100 text-blue-800 hover:bg-blue-200 disabled:opacity-50 disabled:pointer-events-none"
+      >
+        Tentukan Mentor
       </span>
     </span>
   </a>
@@ -120,7 +135,8 @@ export function isiRow(value) {
       .replace("#EMAILMENTOR#", mentorEmail)
       .replace("#NAMAPEMBIMBING#", pembimbingNama)
       .replace("#EMAILPEMBIMBING#", pembimbingEmail)
-      .replace("#DETAIL#", value._id);
+      .replace("#DETAIL#", value._id)
+      .replace("#PENENTUANMENTOR#", value._id);
 
     addInner("tableMahasiswaMagang", mhsMagang);
   }
