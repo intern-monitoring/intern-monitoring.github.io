@@ -29,10 +29,10 @@ const getSeleksiKampus = (target_url) => {
       const jsonData = JSON.parse(result);
 
       const lolosCount = jsonData.filter(
-        (item) => item.seleksiKampus === 1
+        (item) => item.seleksikampus === 1
       ).length;
       const tidaklolosCount = jsonData.filter(
-        (item) => item.seleksiKampus === 2
+        (item) => item.seleksikampus === 2
       ).length;
 
       seleksiKampusLolosCount(lolosCount);
@@ -41,33 +41,3 @@ const getSeleksiKampus = (target_url) => {
     .catch((error) => console.log("error", error));
 };
 getSeleksiKampus(URLGetSeleksiKampus);
-
-// const get = (target_url, responseFunction) => {
-//   const myHeaders = new Headers();
-//   myHeaders.append("Authorization", getCookie("Authorization"));
-//   const requestOptions = {
-//     method: "GET",
-//     headers: myHeaders,
-//     redirect: "follow",
-//   };
-
-//   fetch(target_url, requestOptions)
-//     .then((response) => response.text())
-//     .then((result) => {
-//       const jsonData = JSON.parse(result);
-//       responseFunction(jsonData);
-
-//       const lolosCount = jsonData.filter(
-//         (item) => item.seleksiKampus === 1
-//       ).length;
-//       const tidaklolosCount = jsonData.filter(
-//         (item) => item.seleksiKampus === 2
-//       ).length;
-
-//       seleksiKampusLolosCount(lolosCount);
-//       seleksiKampusTidakLolosCount(tidaklolosCount);
-//     })
-//     .catch((error) => console.log("error", error));
-// };
-
-// get(URLGetSeleksiKampus);
