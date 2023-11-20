@@ -3,6 +3,13 @@ import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
 const URLGetUser =
   "https://asia-southeast2-bursakerja-project.cloudfunctions.net/intermoni-user";
 
+const colors = {
+  blue: "bg-blue-500",
+  teal: "bg-teal-500",
+  indigo: "bg-indigo-500",
+  gray: "bg-gray-500",
+};
+
 const get = (target_url, responseFunction) => {
   const myHeaders = new Headers();
   myHeaders.append("Authorization", getCookie("Authorization"));
@@ -36,7 +43,8 @@ const get = (target_url, responseFunction) => {
         mahasiswaCount,
         mitraCount,
         pembimbingCount,
-        mentorCount
+        mentorCount,
+        colors
       );
     })
     .catch((error) => console.log("error", error));
@@ -45,7 +53,7 @@ const get = (target_url, responseFunction) => {
 window.addEventListener("load", () => {
   get(
     URLGetUser,
-    (mahasiswaCount, mitraCount, pembimbingCount, mentorCount) => {
+    (mahasiswaCount, mitraCount, pembimbingCount, mentorCount, colors) => {
       buildChart(
         "#hs-donut-chart",
         () => ({
@@ -92,27 +100,27 @@ window.addEventListener("load", () => {
           },
         }),
         {
-          colors: ["#3b82f6", "#22d3ee"],
+          colors: [colors.blue],
           stroke: {
-            colors: ["rgb(255, 255, 255)"],
+            colors: [colors.blue],
           },
         },
         {
-          colors: ["#7dd3fc", "#3b82f6"],
+          colors: [colors.teal],
           stroke: {
-            colors: ["rgb(38, 38, 38)"],
+            colors: [colors.teal],
           },
         },
         {
-          colors: ["#bfdbfe", "#60a5fa"],
+          colors: [colors.indigo],
           stroke: {
-            colors: ["rgb(38, 38, 38)"],
+            colors: [colors.indigo],
           },
         },
         {
-          colors: ["#93c5fd", "#1e3a8a"],
+          colors: [colors.gray],
           stroke: {
-            colors: ["rgb(38, 38, 38)"],
+            colors: [colors.gray],
           },
         }
       );
