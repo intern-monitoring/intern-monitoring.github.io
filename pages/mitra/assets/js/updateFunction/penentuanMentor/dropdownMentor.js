@@ -35,6 +35,7 @@ fetch(
   .then((response) => response.json())
   .then((data) => {
     const mentorDropdown = document.getElementById("namalengkapmentor");
+    console.log(data);
 
     if (Array.isArray(data)) {
       // Iterasi setiap item dalam array
@@ -44,7 +45,6 @@ fetch(
         option.text = item.posisi;
         mentorDropdown.appendChild(option);
       });
-      console.log(data);
 
       // Event listener untuk perubahan dropdown
       mentorDropdown.addEventListener("change", () => {
