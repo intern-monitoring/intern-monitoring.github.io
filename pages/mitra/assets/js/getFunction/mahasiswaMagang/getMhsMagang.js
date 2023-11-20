@@ -95,15 +95,28 @@ export function responseData(results) {
 
 export function isiRow(value) {
   if (value.status === 1) {
+    // Mentor
+    const mentorNama = value.mentor
+      ? value.mentor.namalengkap
+      : "Mentor belum ditetapkan";
+    const mentorEmail = value.mentor ? value.mentor.akun.email : "";
+
+    // Pembimbing
+    const pembimbingNama = value.pembimbing
+      ? value.pembimbing.namalengkap
+      : "Pembimbing belum ditetapkan";
+    const pembimbingEmail = value.pembimbing ? value.pembimbing.akun.email : "";
+
     const mhsMagang = tableMahasiswaMagang
       .replace("#NAMAMHS#", value.mahasiswa.namalengkap)
-      .replace("#EMAILMHS#", value.mahasiswa.namalengkap)
+      .replace("#EMAILMHS#", value.mahasiswa.akun.email)
       .replace("#POSISI#", value.magang.posisi)
-      // .replace("#NAMAMENTOR#", value.mentor.namalengkap)
-      // .replace("#EMAILMENTOR#", value.mentor.akun.email)
-      // .replace("#NAMAPEMBIMBING#", value.pembimbing.namalengkap)
-      // .replace("#EMAILPEMBIMBING#", value.pembimbing.akun.email)
+      .replace("#NAMAMENTOR#", mentorNama)
+      .replace("#EMAILMENTOR#", mentorEmail)
+      .replace("#NAMAPEMBIMBING#", pembimbingNama)
+      .replace("#EMAILPEMBIMBING#", pembimbingEmail)
       .replace("#DETAIL#", value._id);
+
     addInner("tableMahasiswaMagang", mhsMagang);
   }
 }
