@@ -105,27 +105,27 @@ export function responseData(results) {
 
 export function isiRow(value) {
   const statusBerkas =
-    value.seleksiberkas === true
+    value.seleksiberkas === 1
       ? "Lolos"
-      : value.seleksiberkas === false
+      : value.seleksiberkas === 2
       ? "Tidak Lolos"
       : "Pending";
   const bgBerkas =
-    value.seleksiberkas === true
+    value.seleksiberkas === 1
       ? "bg-green-200"
-      : value.seleksiberkas === false
+      : value.seleksiberkas === 2
       ? "bg-red-200"
       : "bg-gray-200";
   const statusWawancara =
-    value.seleksiwewancara === true
+    value.seleksiwewancara === 1
       ? "Lolos"
-      : value.seleksiwewancara === false
+      : value.seleksiwewancara === 2
       ? "Tidak Lolos"
       : "Pending";
   const bgWawancara =
-    value.seleksiwewancara === true
+    value.seleksiwewancara === 1
       ? "bg-green-200"
-      : value.seleksiwewancara === false
+      : value.seleksiwewancara === 2
       ? "bg-red-200"
       : "bg-gray-200";
   const content = tableSeleksi
