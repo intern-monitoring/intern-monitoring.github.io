@@ -65,25 +65,30 @@
 //   })
 //   .catch((error) => console.log(error));
 
+// Import fungsi getCookie dari library eksternal
 import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
 
-// Dapatkan nilai Authorization dari cookie
+// Mendapatkan nilai Authorization dari cookie
 const authorizationToken = getCookie("Authorization");
 
 // Pastikan bahwa token Authorization ada sebelum menambahkannya ke header
 if (authorizationToken) {
+  // Mendefinisikan URL API
+  const apiUrl =
+    "https://asia-southeast2-bursakerja-project.cloudfunctions.net/intermoni-magang";
+
+  // Membuat header dengan token Authorization
   const myHeaders = new Headers();
   myHeaders.append("Authorization", authorizationToken);
 
+  // Membuat objek requestOptions
   const requestOptions = {
     method: "GET",
     headers: myHeaders,
     redirect: "follow",
   };
 
-  const apiUrl =
-    "https://asia-southeast2-bursakerja-project.cloudfunctions.net/intermoni-magang";
-
+  // Fetch data dari API
   fetch(apiUrl, requestOptions)
     .then((response) => response.json())
     .then((data) => {
@@ -92,13 +97,28 @@ if (authorizationToken) {
 
       // Memastikan data adalah objek
       if (typeof data === "object" && data !== null) {
+        // Hapus opsi yang ada sebelumnya (jika ada)
+        mentorDropdown.innerHTML = "";
+
         // Iterasi setiap properti dalam objek
-        Object.entries(data).forEach(([id, item]) => {
+        Object.entries(data).forEach(([item]) => {
           const option = document.createElement("option");
-          option.value = id;
+          option.value = item._id;
           option.text = item.posisi;
           mentorDropdown.appendChild(option);
         });
+
+        // Perbarui tampilan dropdown
+        // Sesuaikan dengan cara kerja script atau framework eksternal
+        if (mentorDropdown.dispatchEvent) {
+          mentorDropdown.dispatchEvent(new Event("input", { bubbles: true }));
+        } else {
+          // Jika tidak mendukung dispatchEvent (misalnya, Alpine.js tidak mendukung)
+          // Anda mungkin perlu menyesuaikan dengan cara kerja script/framework yang digunakan
+          console.warn(
+            "Dropdown update may not work as expected with the current framework."
+          );
+        }
 
         // Event listener untuk perubahan dropdown
         mentorDropdown.addEventListener("change", () => {
