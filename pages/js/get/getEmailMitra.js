@@ -2,7 +2,7 @@ import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
 import { addInner } from "https://jscroot.github.io/element/croot.js";
 
 const URLGetEmail =
-  "https://asia-southeast2-bursakerja-project.cloudfunctions.net/intermoni-mitra";
+  "https://asia-southeast2-bursakerja-project.cloudfunctions.net/intermoni-user";
 
 const userEmail = `
 <p class="text-sm text-gray-500">Signed in as</p>
@@ -15,8 +15,8 @@ const responseData = (results) => {
 };
 
 const emailUser = (value) => {
-  const email = userEmail.replace("#EMAILUSER#", value.akun.email);
-  addInner("emailUser", email);
+  const emailuser = userEmail.replace("#EMAILUSER#", value.email);
+  addInner("emailUser", emailuser);
 };
 
 const get = (target_url, responseFunction) => {
