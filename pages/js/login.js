@@ -48,6 +48,10 @@ const responseData = (result) => {
         window.location.href = "./mitra/index.html";
       } else if (result.role === "admin") {
         window.location.href = "./admin/index.html";
+      } else if (result.role === "pembimbing") {
+        window.location.href = "./pembimbing/index.html";
+      } else if (result.role === "mentor") {
+        window.location.href = "./mentor/index.html";
       } else {
         // Handle other roles or scenarios if needed
         // For example, redirect to a default page or show an error message
