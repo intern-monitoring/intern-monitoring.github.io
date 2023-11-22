@@ -61,10 +61,8 @@ export function responseData(results) {
 
 export function isiRow(value) {
   const content = dataMentor
-    .replace("#POSISI#", value.posisi)
-    .replace("#LOKASI#", value.lokasi)
-    .replace("#DESKRIPSI#", value.deskripsimagang)
-    .replace("#INFO#", value.infotambahanmagang)
-    .replace("#EXPIRED#", value.expired);
+    .replace("#NAMAMENTOR#", value.namalengkap)
+    .replace("#EMAIL#", value.akun.email)
+    .replace("#NIK#", value.nik);
   addInner("detailMentor", content);
 }
