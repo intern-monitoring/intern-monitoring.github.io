@@ -1,4 +1,7 @@
-import { URLGetProfileMentor, responseData } from "./getProfilePembimbing.js";
+import {
+  URLGetProfilePembimbing,
+  responseData,
+} from "./getProfilePembimbing.js";
 import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
 
 // Get Profile Mahasiswa
@@ -17,4 +20,4 @@ const getProfile = (target_url, responseFunction) => {
     .catch((error) => console.log("error", error));
 };
 
-getProfile(URLGetProfileMentor, responseData);
+getProfile(URLGetProfilePembimbing, responseData);
