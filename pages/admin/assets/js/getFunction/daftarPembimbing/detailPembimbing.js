@@ -1,6 +1,6 @@
 import { addInner } from "https://jscroot.github.io/element/croot.js";
 
-export const dataMentor = `
+export const dataPembimbing = `
 <div class="bg-white rounded-xl shadow-md">
 <div
   class="relative h-48 rounded-t-xl bg-[url('https://images.unsplash.com/photo-1655635643532-fa9ba2648cbe?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=2232&amp;q=80')] bg-no-repeat bg-cover bg-center"
@@ -10,7 +10,7 @@ export const dataMentor = `
   ></span>
   <div class="absolute top-0 left-0 p-4">
     <a
-      href="dataUser.html"
+      href="daftarPembimbing.html"
       class="py-2 px-3 inline-flex cursor-pointer justify-center items-center gap-2 rounded-md border font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-600 transition-all text-sm"
     >
       Kembali
@@ -33,7 +33,7 @@ export const dataMentor = `
     </div>
     <div class="flex justify-center gap-5 pt-5">
       <h2 class="text-2xl text-gray-900 font-semibold">
-        #NAMAMENTOR#
+        #NAMAPEMBIMBING#
       </h2>
     </div>
     <div class="flex justify-center gap-5 pt-5">
@@ -54,15 +54,15 @@ export const dataMentor = `
 </div>
 `;
 
-export function responseDataMentor(results) {
+export function responseData(results) {
   console.log(results);
-  isiRowMentor(results);
+  isiRow(results);
 }
 
-export function isiRowMentor(value) {
-  const content = dataMentor
-    .replace("#NAMAMENTOR#", value.namalengkap)
+export function isiRow(value) {
+  const content = dataPembimbing
+    .replace("#NAMAPEMBIMBING#", value.namalengkap)
     .replace("#EMAIL#", value.akun.email)
     .replace("#NIK#", value.nik);
-  addInner("detailUser", content);
+  addInner("detailPembimbing", content);
 }
