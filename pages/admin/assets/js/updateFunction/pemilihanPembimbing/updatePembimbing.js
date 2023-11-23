@@ -28,7 +28,7 @@ const pushData = () => {
 
   // Create the updated data object
   const data = {
-    mentor: {
+    pembimbing: {
       _id: pembimbingValue,
     },
   };
