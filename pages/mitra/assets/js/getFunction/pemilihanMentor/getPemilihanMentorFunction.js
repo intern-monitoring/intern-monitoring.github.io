@@ -1,8 +1,8 @@
-import { URLGetMahasiswaMagang, responseData } from "./getMhsMagang.js";
+import { URLGetPemilihanMentor, responseData } from "./getPemilihanMentor.js";
 import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
 
-const CountMahasiswaMagang = (count) => {
-  const resultCountElement = document.getElementById("countMahasiswaMagang");
+const CountPemilihanMentor = (count) => {
+  const resultCountElement = document.getElementById("countPemilihanMentor");
   resultCountElement.innerHTML = `
     <p class="text-sm text-gray-600">
       <span class="font-semibold text-gray-800">${count}</span> results
@@ -28,9 +28,9 @@ const get = (target_url, responseFunction) => {
       // Call the response function with the filtered data
       responseFunction(filteredData);
 
-      CountMahasiswaMagang(filteredData.length);
+      CountPemilihanMentor(filteredData.length);
     })
     .catch((error) => console.log("error", error));
 };
 
-get(URLGetMahasiswaMagang, responseData);
+get(URLGetPemilihanMentor, responseData);

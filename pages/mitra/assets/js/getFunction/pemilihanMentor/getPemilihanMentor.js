@@ -1,9 +1,9 @@
 import { addInner } from "https://jscroot.github.io/element/croot.js";
 
-export const URLGetMahasiswaMagang =
+export const URLGetPemilihanMentor =
   "https://asia-southeast2-bursakerja-project.cloudfunctions.net/intermoni-mahasiswa-magang/seleksi";
 
-export const tableMahasiswaMagang = `
+export const tablePemilihanMentor = `
 <tr>
 <td class="h-px w-px whitespace-nowrap">
   <div class="pl-6 pr-6 py-3">
@@ -87,7 +87,7 @@ export const tableMahasiswaMagang = `
 </td>
 <td class="h-px w-px whitespace-nowrap">
   <a
-    href="penentuanMentor?mahasiswaId=#PENENTUANMENTOR#"
+    href="updatePemilihanMentor?mahasiswaId=#PENENTUANMENTOR#"
     type="button"
     class="block"
   >
@@ -127,7 +127,7 @@ export function isiRow(value) {
     const pembimbingEmail =
       value.pembimbing.akun.email === null ? value.pembimbing.akun.email : "";
 
-    const mhsMagang = tableMahasiswaMagang
+    const pemilihanmentor = tablePemilihanMentor
       .replace("#NAMAMHS#", value.mahasiswa.namalengkap)
       .replace("#EMAILMHS#", value.mahasiswa.akun.email)
       .replace("#POSISI#", value.magang.posisi)
@@ -138,6 +138,6 @@ export function isiRow(value) {
       .replace("#DETAIL#", value._id)
       .replace("#PENENTUANMENTOR#", value._id);
 
-    addInner("tableMahasiswaMagang", mhsMagang);
+    addInner("tablePemilihanMentor", pemilihanmentor);
   }
 }

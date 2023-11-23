@@ -158,7 +158,7 @@ export function responseData(results) {
 }
 
 export function isiRow(value) {
-  const mhsMagang = detailPemilihanMentor
+  const pemilihanmentor = detailPemilihanMentor
     .replace("#NAMALENGKAP#", value.mahasiswa.namalengkap)
     .replace("#TANGGALLAHIR#", value.mahasiswa.tanggallahir)
     .replace("#GENDER#", value.mahasiswa.jeniskelamin)
@@ -170,5 +170,5 @@ export function isiRow(value) {
     .replace("#NAMAMENTOR#", value.mentor.namalengkap)
     .replace("#NIK#", value.mentor.nik)
     .replace("#EMAILMENTOR#", value.mentor.akun.email);
-  addInner("detailPemilihanMentor", mhsMagang);
+  addInner("detailPemilihanMentor", pemilihanmentor);
 }
