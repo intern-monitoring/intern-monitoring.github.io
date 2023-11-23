@@ -284,7 +284,7 @@
             class="text-sm font-semibold text-gray-800 truncate"
             aria-current="page"
           >
-            Mahasiswa Magang
+            Dashboard
           </li>
         </ol>
         <!-- End Breadcrumb -->
@@ -314,7 +314,7 @@
         <ul class="space-y-1.5">
           <li>
             <a
-              class="flex items-center gap-x-3.5 py-2 px-2.5 bg-white text-sm font-semibold text-slate-700 rounded-md hover:bg-gray-100"
+              class="flex items-center gap-x-3.5 py-2 px-2.5 bg-gradient-to-tl from-blue-600 to-violet-600 text-sm font-semibold text-white rounded-md hover:bg-gray-100"
               href="index.html"
             >
               <svg
@@ -390,7 +390,7 @@
           </li>
           <li>
             <a
-              class="flex items-center gap-x-3.5 py-2 px-2.5 bg-white text-sm font-semibold text-slate-700 rounded-md hover:bg-gray-100"
+              class="flex items-center gap-x-3.5 py-2 px-2.5 bg-gradient-to-tl from-blue-600 to-violet-600 text-sm font-semibold text-white rounded-md hover:bg-gray-100"
               href="mahasiswaMagang.html"
             >
               <svg
@@ -514,160 +514,158 @@
     <!-- End Sidebar -->
 
     <!-- Content Section -->
-    <div class="w-full bg-gray-50 lg:pl-64">
-      <!-- Card Section -->
+    <div class="w-full bg-gray-50 h-screen lg:pl-64">
+      <!-- Table Section -->
       <div class="px-4 py-10 sm:px-6 lg:px-8 mx-auto">
-        <!-- Grid -->
-        <div class="relative mx-auto w-full">
-          <!-- Card -->
-          <div class="bg-white rounded-xl border shadow-md p-4 sm:p-7">
-            <div class="mb-8">
-              <h2 class="text-xl font-bold text-gray-800 mb-2">
-                Penentuan Mentor Magang
-              </h2>
-              <p class="text-sm text-gray-600">
-                Tentukan mentor pembimbing untuk mahasiswa magang.
-              </p>
-            </div>
-
-            <!-- Grid -->
-            <div class="grid sm:grid-cols-12 gap-2 sm:gap-6">
-              <!-- Nama Mahasiswa -->
-              <div class="sm:col-span-3">
-                <label
-                  for="af-account-full-name"
-                  class="inline-block text-sm text-gray-800 mt-2.5"
-                >
-                  Nama Mahasiswa
-                </label>
-              </div>
-              <!-- End Col -->
-              <div class="sm:col-span-9">
-                <div class="sm:flex">
-                  <input
-                    id="namalengkap"
-                    type="text"
-                    class="py-2 px-3 pr-11 block w-full border-[1px] border-gray-200 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500"
-                    disabled
-                  />
-                </div>
-              </div>
-              <!-- End Col -->
-              <!-- End Nama Mahasiswa -->
-
-              <!-- Email -->
-              <div class="sm:col-span-3">
-                <label
-                  for="af-account-email"
-                  class="inline-block text-sm text-gray-800 mt-2.5"
-                >
-                  Email
-                </label>
-              </div>
-              <!-- End Col -->
-              <div class="sm:col-span-9">
-                <div class="sm:flex">
-                  <input
-                    id="email"
-                    type="text"
-                    class="py-2 px-3 pr-11 block w-full border-[1px] border-gray-200 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500"
-                    disabled
-                  />
-                </div>
-              </div>
-              <!-- End Col -->
-              <!-- End Email -->
-
-              <!-- Perguruan Tinggi -->
-              <div class="sm:col-span-3">
-                <label
-                  for="af-account-perguruan"
-                  class="inline-block text-sm text-gray-800 mt-2.5"
-                >
-                  Perguruan Tinggi
-                </label>
-              </div>
-              <!-- End Col -->
-              <div class="sm:col-span-9">
-                <div class="sm:flex">
-                  <input
-                    id="perguruantinggi"
-                    type="text"
-                    class="py-2 px-3 pr-11 block w-full border-[1px] border-gray-200 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500"
-                    disabled
-                  />
-                </div>
-              </div>
-              <!-- End Col -->
-              <!-- End Perguruan Tinggi -->
-
-              <!-- Posisi -->
-              <div class="sm:col-span-3">
-                <label
-                  for="af-account-posisi"
-                  class="inline-block text-sm text-gray-800 mt-2.5"
-                >
-                  Posisi Magang
-                </label>
-              </div>
-              <!-- End Col -->
-              <div class="sm:col-span-9">
-                <div class="sm:flex">
-                  <input
-                    id="posisi"
-                    type="text"
-                    class="py-2 px-3 pr-11 block w-full border-[1px] border-gray-200 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500"
-                    disabled
-                  />
-                </div>
-              </div>
-              <!-- End Col -->
-              <!-- End Posisi -->
-
-              <!-- Mentor -->
-              <div class="sm:col-span-3">
-                <label
-                  for="af-account-nik"
-                  class="inline-block text-sm text-gray-800 mt-2.5"
-                >
-                  Mentor
-                </label>
-              </div>
-              <!-- End Col -->
-              <div class="sm:col-span-9">
-                <select
-                  aria-placeholder="Pilih Mentor"
-                  id="namalengkapmentor"
-                  class="py-2 px-3 pr-9 w-full border-[1px] border-gray-200 rounded-lg text-sm focus:border-gray-800 focus:ring-gray-900"
-                >
-                  <option selected>Pilih Mentor :</option>
-                </select>
-              </div>
-              <!-- End Col -->
-              <!-- End Mentor -->
-            </div>
-            <!-- End Grid -->
-            <div class="mt-5 flex justify-end gap-x-2">
-              <a
-                href="pemilihanMentor.html"
-                class="py-2 px-3 inline-flex cursor-pointer justify-center items-center gap-2 rounded-md border font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-600 transition-all text-sm"
+        <!-- Card -->
+        <div class="flex flex-col">
+          <div class="-m-1.5 overflow-x-auto">
+            <div class="p-1.5 min-w-full inline-block align-middle">
+              <div
+                class="bg-white border border-gray-200 rounded-xl shadow-sm overflow-hidden"
               >
-                Cancel
-              </a>
-              <button
-                type="submit"
-                id="updateButton"
-                class="inline-flex justify-center items-center gap-x-3 text-center bg-gradient-to-tl from-blue-600 to-violet-600 shadow-lg shadow-transparent hover:shadow-blue-700/50 border border-transparent text-white text-sm font-medium rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 focus:ring-offset-white py-2 px-5"
-              >
-                Save
-              </button>
+                <!-- Header -->
+                <div
+                  class="px-6 py-4 grid gap-3 md:flex md:justify-between md:items-center border-b border-gray-200"
+                >
+                  <div>
+                    <h2 class="text-xl font-semibold text-gray-800">
+                      Daftar Mahasiswa Magang
+                    </h2>
+                    <p class="text-sm text-gray-600">
+                      Berikut merupakan data mahasiswa yang telah menjalani
+                      proses magang
+                    </p>
+                  </div>
+                </div>
+                <!-- End Header -->
+
+                <!-- Table -->
+                <table class="min-w-full divide-y divide-gray-200">
+                  <thead class="bg-gray-50">
+                    <tr>
+                      <th scope="col" class="px-6 py-3 text-left">
+                        <div class="flex items-center gap-x-2">
+                          <span
+                            class="text-xs font-semibold uppercase tracking-wide text-gray-800"
+                          >
+                            Nama
+                          </span>
+                        </div>
+                      </th>
+
+                      <th scope="col" class="px-6 py-3 text-left">
+                        <div class="flex items-center gap-x-2">
+                          <span
+                            class="text-xs font-semibold uppercase tracking-wide text-gray-800"
+                          >
+                            Perusahaan
+                          </span>
+                        </div>
+                      </th>
+
+                      <th scope="col" class="px-6 py-3 text-left">
+                        <div class="flex items-center gap-x-2">
+                          <span
+                            class="text-xs font-semibold uppercase tracking-wide text-gray-800"
+                          >
+                            Pembimbing
+                          </span>
+                        </div>
+                      </th>
+
+                      <th scope="col" class="px-6 py-3 text-left">
+                        <div class="flex items-center gap-x-2">
+                          <span
+                            class="text-xs font-semibold uppercase tracking-wide text-gray-800"
+                          >
+                            Mentor
+                          </span>
+                        </div>
+                      </th>
+
+                      <th scope="col" class="px-6 py-3 text-right">
+                        <div class="flex items-center gap-x-2">
+                          <span
+                            class="text-xs font-semibold uppercase tracking-wide text-gray-800"
+                          >
+                            Detail
+                          </span>
+                        </div>
+                      </th>
+                    </tr>
+                  </thead>
+
+                  <tbody
+                    id="tableMahasiswaMagang"
+                    class="divide-y divide-gray-200"
+                  ></tbody>
+                </table>
+                <!-- End Table -->
+
+                <!-- Footer -->
+                <div
+                  class="px-6 py-4 grid gap-3 md:flex md:justify-between md:items-center border-t border-gray-200"
+                >
+                  <div id="countMahasiswaMagang">
+                    <p class="text-sm text-gray-600">
+                      <span class="font-semibold text-gray-800">0</span>
+                      results
+                    </p>
+                  </div>
+
+                  <div>
+                    <div class="inline-flex gap-x-2">
+                      <button
+                        type="button"
+                        class="py-2 px-3 inline-flex justify-center items-center gap-2 rounded-md border font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-600 transition-all text-sm"
+                      >
+                        <svg
+                          class="w-3 h-3"
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"
+                          />
+                        </svg>
+                        Prev
+                      </button>
+
+                      <button
+                        type="button"
+                        class="py-2 px-3 inline-flex justify-center items-center gap-2 rounded-md border font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-600 transition-all text-sm"
+                      >
+                        Next
+                        <svg
+                          class="w-3 h-3"
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
+                          />
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <!-- End Footer -->
+              </div>
             </div>
           </div>
-          <!-- End Card -->
         </div>
-        <!-- End Grid -->
+        <!-- End Card -->
       </div>
-      <!-- End Card Section -->
+      <!-- End Table Section -->
     </div>
     <!-- End Content Section -->
 
@@ -677,26 +675,16 @@
       src="https://cdn.jsdelivr.net/gh/intern-monitoring/jsintermoni@0.0.6/components/dropdown.js"
     ></script>
 
-    <!-- Get Data mentor -->
-    <script
-      type="module"
-      src="./assets/js/updateFunction/pemilihanMentor/dropdownMentor.js"
-    ></script>
-
-    <!-- Pemilihan Mentor -->
-    <script
-      type="module"
-      src="./assets/js/updateFunction/pemilihanMentor/fetchEditMentor.js"
-    ></script>
-    <script
-      type="module"
-      src="./assets/js/updateFunction/pemilihanMentor/updateMentor.js"
-    ></script>
-
     <!-- Logout Function -->
     <script
       type="module"
       src="https://cdn.jsdelivr.net/gh/intern-monitoring/jsintermoni@0.2.0/logOut.js"
+    ></script>
+
+    <!-- Get Mahasiswa Magang -->
+    <script
+      type="module"
+      src="./assets/js/getFunction/mahasiswaMagang/getMahasiswaMagangFunction.js"
     ></script>
 
     <script type="module" src="../js/get/getEmailMitra.js"></script>
