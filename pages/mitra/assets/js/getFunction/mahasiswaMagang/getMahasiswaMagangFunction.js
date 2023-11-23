@@ -9,7 +9,23 @@ const CountMahasiswaMagang = (count) => {
     </p>`;
 };
 
-const get = (target_url, responseFunction) => {
+const initializeData = () => {
+  // Call the get function without a search value to get the initial data
+  get(URLGetMahasiswaMagang, responseData);
+};
+
+document.addEventListener("DOMContentLoaded", initializeData);
+
+// Function to filter data based on search input
+const filterData = (data, searchValue) => {
+  const lowercasedSearch = searchValue.toLowerCase();
+  return data.filter((user) =>
+    user.name.toLowerCase().includes(lowercasedSearch)
+  );
+};
+
+// Modify the get function to include the search functionality
+const get = (target_url, responseFunction, searchValue) => {
   const myHeaders = new Headers();
   myHeaders.append("Authorization", getCookie("Authorization"));
   const requestOptions = {
@@ -25,12 +41,23 @@ const get = (target_url, responseFunction) => {
 
       const filteredData = parsedResult.filter((user) => user.status);
 
-      // Call the response function with the filtered data
-      responseFunction(filteredData);
+      // Filter data based on the search input
+      const searchData = searchValue
+        ? filterData(filteredData, searchValue)
+        : filteredData;
 
-      CountMahasiswaMagang(filteredData.length);
+      // Call the response function with the filtered data
+      responseFunction(searchData);
+
+      CountMahasiswaMagang(searchData.length);
     })
     .catch((error) => console.log("error", error));
 };
 
-get(URLGetMahasiswaMagang, responseData);
+// Add an event listener to the search input
+const searchInput = document.getElementById("search-mahasiswa-magang");
+searchInput.addEventListener("input", () => {
+  const searchValue = searchInput.value.trim();
+  // Call the get function with the search value
+  get(URLGetMahasiswaMagang, responseData, searchValue);
+});
