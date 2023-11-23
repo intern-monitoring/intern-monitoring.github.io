@@ -24,21 +24,6 @@ const get = (target_url) => {
         option.text = item.namalengkap;
         mentorDropdown.appendChild(option);
       });
-
-      // Event listener for mentor dropdown change
-      mentorDropdown.addEventListener("change", () => {
-        const selectedId = mentorDropdown.value;
-        const selectedMentor = data.find((item) => item._id === selectedId);
-
-        // Assuming namaMentorInput is the input field for displaying mentor's position
-        const namaMentorInput = document.getElementById("namalengkapmentor");
-
-        if (selectedMentor) {
-          namaMentorInput.value = selectedMentor._id;
-        } else {
-          namaMentorInput.value = "";
-        }
-      });
     })
     .catch((error) => console.error("Error fetching data:", error));
 };
