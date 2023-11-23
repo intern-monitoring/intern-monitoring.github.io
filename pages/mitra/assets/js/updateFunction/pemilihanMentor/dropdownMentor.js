@@ -31,7 +31,7 @@ const get = (target_url) => {
         const selectedMentor = data.find((item) => item._id === selectedId);
 
         // Assuming namaMentorInput is the input field for displaying mentor's position
-        const namaMentorInput = document.getElementById("namaMentorInput");
+        const namaMentorInput = document.getElementById("namalengkapmentor");
 
         if (selectedMentor) {
           namaMentorInput.value = selectedMentor.namalengkap;
