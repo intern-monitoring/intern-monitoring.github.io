@@ -120,8 +120,10 @@ const searchData = async () => {
         return nama.includes(namaInput);
       });
 
-      const magangContainer = document.getElementById("magang");
-      magangContainer.innerHTML = "";
+      const mhsMagangContainer = document.getElementById(
+        "tableMahasiswaMagang"
+      );
+      mhsMagangContainer.innerHTML = "";
       if (namaInput === "") {
         // Jika semua input kosong, tampilkan semua data
         responseData(data);
