@@ -24,21 +24,13 @@ const putData = (target_url, datajson, responseFunction) => {
 };
 
 const pushData = () => {
-  const posisiValue = getValue("posisi");
-  const lokasiValue = getValue("lokasi");
-  const deskripsiMagangValue =
-    document.getElementById("deskripsimagang").innerHTML;
-  const infoTambahanMagangValue =
-    document.getElementById("infotambahanmagang").innerHTML;
-  const expiredValue = getValue("expired");
+  const mentorValue = getValue("namalengkapmentor");
 
   // Create the updated data object
   const data = {
-    posisi: posisiValue,
-    lokasi: lokasiValue,
-    deskripsimagang: deskripsiMagangValue,
-    infotambahanmagang: infoTambahanMagangValue,
-    expired: expiredValue,
+    mentor: {
+      _id: mentorValue,
+    },
   };
   putData(urlPUT, data, AmbilResponse);
 };

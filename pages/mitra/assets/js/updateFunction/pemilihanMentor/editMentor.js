@@ -5,8 +5,6 @@ export const isiData = (results) => {
     { id: "perguruantinggi", path: "mahasiswa.perguruantinggi" },
     { id: "posisi", path: "magang.posisi" },
     { id: "namalengkapmentor", path: "mentor.namalengkap" },
-    { id: "nik", path: "mentor.nik" },
-    { id: "emailmentor", path: "mentor.akun.email" },
   ];
 
   inputMapping.forEach(({ id, path, index, property }) => {
