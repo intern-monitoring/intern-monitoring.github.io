@@ -404,7 +404,7 @@
           </li>
           <li>
             <a
-              class="flex items-center gap-x-3.5 py-2 px-2.5 bg-white text-sm font-semibold text-slate-700 rounded-md hover:bg-gray-100"
+              class="flex items-center gap-x-3.5 py-2 px-2.5 bg-gradient-to-tl from-blue-600 to-violet-600 text-sm font-semibold text-white rounded-md hover:bg-gray-100"
               href="mahasiswaMagang.html"
             >
               <svg
@@ -431,7 +431,7 @@
         <ul class="space-y-1.5">
           <li>
             <a
-              class="flex items-center gap-x-3.5 py-2 px-2.5 bg-gradient-to-tl from-blue-600 to-violet-600 text-sm font-semibold text-white rounded-md hover:bg-gray-100"
+              class="flex items-center gap-x-3.5 py-2 px-2.5 bg-white text-sm font-semibold text-slate-700 rounded-md hover:bg-gray-100"
               href="seleksiMahasiswa.html"
             >
               <svg
@@ -540,7 +540,7 @@
       <!-- Card Section -->
       <div class="px-4 py-10 sm:px-6 lg:px-8 mx-auto">
         <!-- Grid -->
-        <div id="detailSeleksiMahasiswa" class="relative mx-auto w-full">
+        <div id="detailMahasiswaMagang" class="relative mx-auto w-full">
           <!-- Card -->
 
           <!-- End Card -->
@@ -557,13 +557,10 @@
       src="https://cdn.jsdelivr.net/gh/intern-monitoring/jsintermoni@0.0.6/components/dropdown.js"
     ></script>
 
-    <!-- Get Email -->
-    <script type="module" src="../js/get/getEmailAdmin.js"></script>
-
-    <!-- Detail Seleksi Mahasiswa -->
+    <!-- Get Pemilihan Pembimbing -->
     <script
       type="module"
-      src="./assets/js/getFunction/seleksiMahasiswa/fetchDetailSeleksiMhs.js"
+      src="./assets/js/getFunction/pemilihanPembimbing/getPemilihanPembimbingFunction.js"
     ></script>
 
     <!-- Logout Function -->
@@ -571,6 +568,15 @@
       type="module"
       src="https://cdn.jsdelivr.net/gh/intern-monitoring/jsintermoni@0.2.0/logOut.js"
     ></script>
+
+    <!-- Detail Mahasiswa Magang -->
+    <script
+      type="module"
+      src="./assets/js/getFunction/mahasiswaMagang/fetchDetailMahasiswaMagang.js"
+    ></script>
+
+    <!-- Get Email -->
+    <script type="module" src="../js/get/getEmailAdmin.js"></script>
 
     <!-- autentikasi function -->
     <!-- <script
