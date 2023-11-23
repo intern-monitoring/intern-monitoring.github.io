@@ -110,20 +110,7 @@ export function responseData(results) {
 }
 
 export function isiRow(value) {
-  const konfirmasiMagang =
-    value.status === 1
-      ? "Bersedia Magang"
-      : value.status === 2
-      ? "Tidak Bersedia Magang"
-      : "Belum Konfirmasi";
-
-  const bgKonfirmasi =
-    value.status === 1
-      ? "bg-green-200"
-      : value.status === 2
-      ? "bg-red-200"
-      : "bg-gray-200";
-
+  // if (value.status === 1 || value.status === 2) {
   const statusberkas =
     value.seleksiberkas === 1
       ? "Lolos"
@@ -152,6 +139,20 @@ export function isiRow(value) {
       ? "bg-red-200"
       : "bg-gray-200";
 
+  const konfirmasiMagang =
+    value.status === 1
+      ? "Bersedia Magang"
+      : value.status === 2
+      ? "Tidak Bersedia Magang"
+      : "Belum Konfirmasi";
+
+  const bgKonfirmasi =
+    value.status === 1
+      ? "bg-green-200"
+      : value.status === 2
+      ? "bg-red-200"
+      : "bg-gray-200";
+
   const konfirmMagang = tableKonfirmasiMagang
     .replace("#NAMA#", value.mahasiswa.namalengkap)
     .replace("#NIM#", value.mahasiswa.nim)
@@ -167,3 +168,4 @@ export function isiRow(value) {
     .replace("#DETAIL#", value._id);
   addInner("tableKonfirmasiMagang", konfirmMagang);
 }
+// }
