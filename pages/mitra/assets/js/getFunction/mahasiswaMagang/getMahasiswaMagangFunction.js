@@ -27,15 +27,11 @@ const get = (target_url, responseFunction) => {
       const searchInput = document.getElementById("search-mahasiswa-magang");
       const searchQuery = searchInput.value.toLowerCase();
 
-      let filteredData = parsedResult.filter((user) => user.status);
+      let filteredData = parsedResult;
 
       if (searchQuery) {
         filteredData = filteredData.filter((user) => {
-          return (
-            user.nama.toLowerCase().includes(searchQuery) ||
-            user.nim.toLowerCase().includes(searchQuery) ||
-            user.prodi.toLowerCase().includes(searchQuery)
-          );
+          return user.mahasiswa.namalengkap.toLowerCase().includes(searchQuery);
         });
       }
 
