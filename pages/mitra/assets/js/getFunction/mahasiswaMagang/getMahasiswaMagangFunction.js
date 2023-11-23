@@ -23,6 +23,9 @@ import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
 //     .then((result) => {
 //       const parsedResult = JSON.parse(result);
 
+//       // Store the initial data
+//       const initialData = parsedResult;
+
 //       // Listen for changes to the search input value
 //       const searchInput = document.getElementById("search-mahasiswa-magang");
 //       searchInput.addEventListener("keyup", () => {
@@ -37,8 +40,8 @@ import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
 //               .includes(searchQuery);
 //           });
 //         } else {
-//           // If the search query is empty, use the entire parsedResult
-//           filteredData = parsedResult;
+//           // Use the initial data
+//           filteredData = initialData;
 //         }
 
 //         // Update the result count and call the response function with the filtered data
