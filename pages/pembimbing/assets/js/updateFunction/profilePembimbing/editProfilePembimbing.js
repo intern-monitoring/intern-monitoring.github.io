@@ -1,7 +1,6 @@
 export const isiDataProfile = (results) => {
   const inputMapping = [
     { id: "namalengkap", path: "namalengkap" },
-    { id: "tanggallahir", path: "tanggallahir" },
     { id: "nik", path: "nik" },
     { id: "prodi", path: "prodi" },
   ];

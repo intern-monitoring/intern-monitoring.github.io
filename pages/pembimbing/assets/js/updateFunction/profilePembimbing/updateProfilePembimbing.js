@@ -25,14 +25,12 @@ const putData = (target_url, datajson, responseFunction) => {
 
 const pushData = () => {
   const namalengkapValue = getValue("namalengkap");
-  const tanggallahirValue = getValue("tanggallahir");
   const nikValue = getValue("nik");
   const prodiValue = getValue("prodi");
 
   // Create the updated data object
   const data = {
     namalengkap: namalengkapValue,
-    tanggallahir: tanggallahirValue,
     nik: nikValue,
     prodi: prodiValue,
   };
