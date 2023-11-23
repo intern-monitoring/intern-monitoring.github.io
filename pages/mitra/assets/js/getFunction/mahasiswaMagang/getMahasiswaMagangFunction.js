@@ -76,6 +76,7 @@ const fetchData = async () => {
     localStorage.setItem("mahasiswaMagang", JSON.stringify(data));
 
     responseData(data);
+    updateCountElement(data.length); // Update count based on the fetched data
   } catch (error) {
     console.error("Error fetching or processing data: ", error);
   }
@@ -88,6 +89,25 @@ const updateCountElement = (count) => {
   </p>`;
 };
 
+const countInitialData = async () => {
+  try {
+    const myHeaders = new Headers();
+    myHeaders.append("Authorization", getCookie("Authorization"));
+    const requestOptions = {
+      method: "GET",
+      headers: myHeaders,
+      redirect: "follow",
+    };
+
+    const response = await fetch(URLGetMahasiswaMagang, requestOptions);
+    const data = await response.json();
+
+    updateCountElement(data.length); // Update count based on the initial fetched data
+  } catch (error) {
+    console.error("Error counting initial data: ", error);
+  }
+};
+
 const searchData = async () => {
   const namaInput = document
     .getElementById("search-mahasiswa-magang")
@@ -97,17 +117,9 @@ const searchData = async () => {
     let data = localStorage.getItem("mahasiswaMagang");
 
     if (!data) {
-      const myHeaders = new Headers();
-      myHeaders.append("Authorization", getCookie("Authorization"));
-      const requestOptions = {
-        method: "GET",
-        headers: myHeaders,
-        redirect: "follow",
-      };
-
-      const response = await fetch(URLGetMahasiswaMagang, requestOptions);
-      data = await response.json();
-      localStorage.setItem("mahasiswaMagang", JSON.stringify(data));
+      await fetchData(); // Call fetchData to ensure data is fetched
+      data = localStorage.getItem("mahasiswaMagang");
+      countInitialData(); // Count initial data
     } else {
       data = JSON.parse(data);
     }
@@ -129,7 +141,7 @@ const searchData = async () => {
         responseData(filteredResults);
       }
 
-      updateCountElement(data.length);
+      updateCountElement(filteredResults.length);
     } else {
       console.error("Data is not an array:", data);
     }
