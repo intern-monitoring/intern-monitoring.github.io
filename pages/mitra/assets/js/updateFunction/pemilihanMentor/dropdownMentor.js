@@ -28,12 +28,13 @@ const get = (target_url) => {
       // Event listener for mentor dropdown change
       mentorDropdown.addEventListener("change", () => {
         const selectedId = mentorDropdown.value;
+        const selectedMentor = data.find((item) => item._id === selectedId);
 
         // Assuming namaMentorInput is the input field for displaying mentor's position
         const namaMentorInput = document.getElementById("namalengkapmentor");
 
-        if (selectedId) {
-          namaMentorInput.value = item.namalengkap;
+        if (selectedMentor) {
+          namaMentorInput.value = selectedMentor.namalengkap;
         } else {
           namaMentorInput.value = "";
         }
