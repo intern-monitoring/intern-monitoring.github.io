@@ -129,7 +129,7 @@ const searchData = async () => {
         responseData(filteredResults);
       }
 
-      updateCountElement(filteredResults.length);
+      updateCountElement(data.length);
     } else {
       console.error("Data is not an array:", data);
     }
