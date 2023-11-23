@@ -128,8 +128,6 @@ export function isiRow(value) {
     .replace("#EMAIL#", value.mahasiswa.akun.email)
     .replace("#NIM#", value.mahasiswa.nim)
     .replace("#PERGURUAN#", value.mahasiswa.perguruantinggi)
-    .replace("#PRODI#", value.mahasiswa.prodi)
-    .replace("#WEBSITE#", value.magang.mitra.website);
-
+    .replace("#PRODI#", value.mahasiswa.prodi);
   addInner("detailPemilihanPembimbing", pemilihanpembimbing);
 }

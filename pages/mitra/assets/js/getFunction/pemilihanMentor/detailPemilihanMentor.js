@@ -111,43 +111,6 @@ export const detailPemilihanMentor = `
       <p class="text-center text-base text-gray-500">#PRODI#</p>
     </div>
   </div>
-  <div class="border-b border-gray-200"></div>
-
-  <div class="pt-5">
-    <div class="flex justify-center pb-2">
-      <h2 class="text-xl text-gray-900 font-semibold">
-        Mentor Magang :
-      </h2>
-    </div>
-    <div class="flex items-center justify-center gap-x-5">
-      <img
-        class="inline-block h-32 w-32 mx-auto sm:mx-0 rounded-full ring-4 ring-white"
-        src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80"
-        alt="Image Description"
-      />
-    </div>
-    <div class="flex justify-center gap-5 pt-5">
-      <h2 class="text-2xl text-gray-900 font-semibold">
-        #NAMAMENTOR#
-      </h2>
-    </div>
-
-    <div class="flex justify-center gap-2 pt-5">
-      <label class="text-base text-gray-900 font-semibold"
-        >Email :</label
-      >
-      <h3 class="text-base text-gray-900 font-normal">
-        #EMAILMENTOR#
-      </h3>
-    </div>
-    <div class="flex justify-center gap-2 pb-2">
-      <label class="text-base text-gray-900 font-semibold"
-        >NIK :</label
-      >
-      <h3 class="text-base text-gray-900 font-normal">#NIK#</h3>
-    </div>
-    <div class="border-b border-gray-200"></div>
-  </div>
 </div>
 </div>
 `;
@@ -165,10 +128,6 @@ export function isiRow(value) {
     .replace("#EMAIL#", value.mahasiswa.akun.email)
     .replace("#NIM#", value.mahasiswa.nim)
     .replace("#PERGURUAN#", value.mahasiswa.perguruantinggi)
-    .replace("#PRODI#", value.mahasiswa.prodi)
-    .replace("#WEBSITE#", value.magang.mitra.website)
-    .replace("#NAMAMENTOR#", value.mentor.namalengkap)
-    .replace("#NIK#", value.mentor.nik)
-    .replace("#EMAILMENTOR#", value.mentor.akun.email);
+    .replace("#PRODI#", value.mahasiswa.prodi);
   addInner("detailPemilihanMentor", pemilihanmentor);
 }
