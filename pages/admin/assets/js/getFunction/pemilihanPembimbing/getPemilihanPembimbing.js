@@ -31,6 +31,9 @@ export const tablePemilihanPembimbing = `
       class="block text-sm font-semibold text-gray-800"
       >#POSISI#</span
     >
+    <span class="block text-sm text-gray-500"
+      >#PERUSAHAAN#</span
+    >
   </div>
 </td>
 <td class="h-px w-px whitespace-nowrap">
@@ -92,9 +95,9 @@ export function isiRow(value) {
       .replace("#NAMAMHS#", value.mahasiswa.namalengkap)
       .replace("#EMAILMHS#", value.mahasiswa.akun.email)
       .replace("#POSISI#", value.magang.posisi)
+      .replace("#PERUSAHAAN#", value.magang.mitra.nama)
       .replace("#DETAIL#", value._id)
       .replace("#PENENTUANPEMBIMBING#", value._id);
-
     addInner("tablePemilihanPembimbing", pemilihanpembimbing);
   }
 }
