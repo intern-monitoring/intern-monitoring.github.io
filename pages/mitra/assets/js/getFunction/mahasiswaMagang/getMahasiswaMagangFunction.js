@@ -89,25 +89,6 @@ const updateCountElement = (count) => {
   </p>`;
 };
 
-const countInitialData = async () => {
-  try {
-    const myHeaders = new Headers();
-    myHeaders.append("Authorization", getCookie("Authorization"));
-    const requestOptions = {
-      method: "GET",
-      headers: myHeaders,
-      redirect: "follow",
-    };
-
-    const response = await fetch(URLGetMahasiswaMagang, requestOptions);
-    const data = await response.json();
-
-    updateCountElement(data.length); // Update count based on the initial fetched data
-  } catch (error) {
-    console.error("Error counting initial data: ", error);
-  }
-};
-
 const searchData = async () => {
   const namaInput = document
     .getElementById("search-mahasiswa-magang")
