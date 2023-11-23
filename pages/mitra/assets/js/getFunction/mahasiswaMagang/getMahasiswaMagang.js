@@ -78,7 +78,6 @@ export const tableMahasiswaMagang = `
 `;
 
 export function responseData(results) {
-  console.log(results);
   results.forEach(isiRow);
 }
 
