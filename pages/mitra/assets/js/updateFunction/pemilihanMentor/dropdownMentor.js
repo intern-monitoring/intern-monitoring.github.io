@@ -34,7 +34,7 @@ const get = (target_url) => {
         const namaMentorInput = document.getElementById("namaMentorInput");
 
         if (selectedMentor) {
-          namaMentorInput.value = selectedMentor.posisi;
+          namaMentorInput.value = selectedMentor.namalengkap;
         } else {
           namaMentorInput.value = "";
         }
