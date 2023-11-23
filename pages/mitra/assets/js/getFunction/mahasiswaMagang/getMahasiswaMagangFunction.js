@@ -38,7 +38,7 @@ const get = (target_url, responseFunction) => {
         filteredData = parsedResult;
       }
 
-      console.log(searchInput.value);
+      console.log(searchQuery);
       // Update the result count before calling the response function
       CountMahasiswaMagang(filteredData.length);
 
