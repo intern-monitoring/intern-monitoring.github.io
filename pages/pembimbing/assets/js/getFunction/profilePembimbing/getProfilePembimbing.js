@@ -83,6 +83,12 @@ export const dataPembimbing = `
       >
       <h3 class="text-base text-gray-900 font-normal">#NIK#</h3>
     </div>
+    <div class="flex justify-center gap-2">
+      <label class="text-base text-gray-900 font-semibold"
+        >Dosen Prodi :</label
+      >
+      <h3 class="text-base text-gray-900 font-normal">#PRODI#</h3>
+    </div>
   </div>
   <div class="mt-2 border-b border-gray-200"></div>
 </div>
