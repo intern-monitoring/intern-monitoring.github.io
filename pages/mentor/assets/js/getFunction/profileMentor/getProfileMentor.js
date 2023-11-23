@@ -83,7 +83,7 @@ export const dataMentor = `
       >
       <h3 class="text-base text-gray-900 font-normal">#NIK#</h3>
     </div>
-    <div class="flex justify-center gap-2 pt-5">
+    <div class="flex justify-center gap-2">
       <label class="text-base text-gray-900 font-semibold"
         >Nama Perusahaan :</label
       >
