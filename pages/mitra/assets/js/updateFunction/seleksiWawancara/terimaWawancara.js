@@ -67,7 +67,7 @@ const responseData = (result) => {
     Swal.fire({
       icon: "error",
       title: "Konfirmasi Gagal",
-      text: result.message,
+      text: "Anda belum melakukan seleksi berkas",
     });
   }
 };
