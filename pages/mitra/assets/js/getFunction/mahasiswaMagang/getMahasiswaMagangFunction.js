@@ -9,26 +9,7 @@ const CountMahasiswaMagang = (count) => {
     </p>`;
 };
 
-const clearTable = () => {
-  const tableElement = document.getElementById("tableMahasiswaMagang");
-  removeAllChildren(tableElement);
-};
-
-// Function to initialize the data
-const initializeData = () => {
-  // Clear the existing table contents
-  clearTable();
-
-  // Call the get function without a search value to get the initial data
-  get(URLGetMahasiswaMagang, responseData);
-};
-
-document.addEventListener("DOMContentLoaded", initializeData);
-
-// ... (your existing code)
-
-// Modify the get function to include the search functionality
-const get = (target_url, responseFunction, searchValue) => {
+const get = (target_url, responseFunction) => {
   const myHeaders = new Headers();
   myHeaders.append("Authorization", getCookie("Authorization"));
   const requestOptions = {
@@ -42,39 +23,28 @@ const get = (target_url, responseFunction, searchValue) => {
     .then((result) => {
       const parsedResult = JSON.parse(result);
 
-      const filteredData = parsedResult.filter((user) => user.status);
+      // Filter the data based on the search query
+      const searchInput = document.getElementById("search-mahasiswa-magang");
+      const searchQuery = searchInput.value.toLowerCase();
 
-      // Filter data based on the search input
-      const searchData = searchValue
-        ? filterData(filteredData, searchValue)
-        : filteredData;
+      let filteredData = parsedResult.filter((user) => user.status);
 
-      // Clear the existing table contents before populating with new data
-      clearTable();
+      if (searchQuery) {
+        filteredData = filteredData.filter((user) => {
+          return (
+            user.nama.toLowerCase().includes(searchQuery) ||
+            user.nim.toLowerCase().includes(searchQuery) ||
+            user.prodi.toLowerCase().includes(searchQuery)
+          );
+        });
+      }
 
       // Call the response function with the filtered data
-      responseFunction(searchData);
+      responseFunction(filteredData);
 
-      CountMahasiswaMagang(searchData.length);
+      CountMahasiswaMagang(filteredData.length);
     })
     .catch((error) => console.log("error", error));
 };
 
-// ... (your existing code)
-
-// Add an event listener to the search input
-const searchInput = document.getElementById("search-mahasiswa-magang");
-searchInput.addEventListener("input", () => {
-  const searchValue = searchInput.value.trim();
-  // Call the get function with the search value
-  get(URLGetMahasiswaMagang, responseData, searchValue);
-});
-
-// Add an event listener to handle the case when the search input is cleared
-searchInput.addEventListener("change", () => {
-  const searchValue = searchInput.value.trim();
-  // If the search input is empty, call the get function without a search value
-  if (!searchValue) {
-    get(URLGetMahasiswaMagang, responseData);
-  }
-});
+get(URLGetMahasiswaMagang, responseData);
