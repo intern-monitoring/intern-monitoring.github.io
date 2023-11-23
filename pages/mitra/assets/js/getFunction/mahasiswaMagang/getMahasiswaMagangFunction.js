@@ -23,8 +23,8 @@ const get = (target_url, responseFunction) => {
     .then((result) => {
       const parsedResult = JSON.parse(result);
 
-      // Store the initial data in local storage
-      localStorage.setItem("initialData", JSON.stringify(parsedResult));
+      // Store the initial data
+      const initialData = parsedResult;
 
       // Listen for changes to the search input value
       const searchInput = document.getElementById("search-mahasiswa-magang");
@@ -40,10 +40,8 @@ const get = (target_url, responseFunction) => {
               .includes(searchQuery);
           });
         } else {
-          // Use the initial data from local storage
-          filteredData = localStorage.getItem("initialData")
-            ? JSON.parse(localStorage.getItem("initialData"))
-            : [];
+          // Use the initial data
+          filteredData = initialData;
         }
 
         // Update the result count and call the response function with the filtered data
@@ -53,6 +51,7 @@ const get = (target_url, responseFunction) => {
     })
     .catch((error) => console.log("error", error));
 };
+
 get(URLGetMahasiswaMagang, responseData);
 
 // Test
