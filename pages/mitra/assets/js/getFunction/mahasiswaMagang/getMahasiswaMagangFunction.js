@@ -3,6 +3,8 @@ import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
 
 const CountMahasiswaMagang = (count) => {
   const resultCountElement = document.getElementById("countMahasiswaMagang");
+  resultCountElement.innerHTML = ""; // Clear the existing data
+
   resultCountElement.innerHTML = `
     <p class="text-sm text-gray-600">
       <span class="font-semibold text-gray-800">${count}</span> results
@@ -43,6 +45,9 @@ const get = (target_url, responseFunction) => {
           // Use the initial data
           filteredData = initialData;
         }
+
+        // Clear the existing data before adding the filtered data
+        CountMahasiswaMagang(0); // Reset the count
 
         // Update the result count and call the response function with the filtered data
         CountMahasiswaMagang(filteredData.length);
