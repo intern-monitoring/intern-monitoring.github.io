@@ -1,60 +1,45 @@
-// document.addEventListener("DOMContentLoaded", async () => {
-//   try {
-//     // Mendapatkan elemen dropdown
-//     const dropdown = document.getElementById("namalengkapmentor");
+import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
 
-//     // Clear existing options
-//     dropdown.innerHTML = "";
+const URLGetMentor =
+  "https://asia-southeast2-bursakerja-project.cloudfunctions.net/intermoni-mentor";
 
-//     // Mengambil data dari API
-//     const response = await fetch(
-//       "https://asia-southeast2-bursakerja-project.cloudfunctions.net/intermoni-magang"
-//     );
+const get = (target_url) => {
+  const myHeaders = new Headers();
+  myHeaders.append("Authorization", getCookie("Authorization"));
+  const requestOptions = {
+    method: "GET",
+    headers: myHeaders,
+    redirect: "follow",
+  };
 
-//     if (!response.ok) {
-//       throw new Error(`HTTP error! Status: ${response.status}`);
-//     }
+  fetch(target_url, requestOptions)
+    .then((response) => response.json())
+    .then((data) => {
+      const mentorDropdown = document.getElementById("namalengkapmentor");
 
-//     const data = await response.json();
+      // Generate options for each data item
+      data.forEach((item) => {
+        const option = document.createElement("option");
+        option.value = item._id;
+        option.text = item.namalengkap;
+        mentorDropdown.appendChild(option);
+      });
 
-//     // Memasukkan data dari API ke dalam dropdown
-//     data.forEach((mentor) => {
-//       const option = document.createElement("option");
-//       option.value = mentor.posisi;
-//       option.text = mentor.posisi;
-//       dropdown.appendChild(option);
-//     });
-//   } catch (error) {
-//     console.error("Error fetching or parsing data:", error);
-//   }
-// });
+      // Event listener for mentor dropdown change
+      mentorDropdown.addEventListener("change", () => {
+        const selectedId = mentorDropdown.value;
+        const selectedMentor = data.find((item) => item._id === selectedId);
 
-fetch(
-  "https://asia-southeast2-bursakerja-project.cloudfunctions.net/intermoni-magang"
-)
-  .then((response) => response.json())
-  .then((data) => {
-    const mentorDropdown = document.getElementById("namalengkapmentor");
+        // Assuming namaMentorInput is the input field for displaying mentor's position
+        const namaMentorInput = document.getElementById("namaMentorInput");
 
-    // Generate options for each data item
-    data.forEach((item) => {
-      const option = document.createElement("option");
-      option.value = item._id;
-      option.text = item.posisi;
-      mentorDropdown.appendChild(option);
-    });
-    console.log(data);
-
-    // Event listener for polyclinic code dropdown change
-    mentorDropdown.addEventListener("change", () => {
-      const selectedId = mentorDropdown.value;
-      const selectedMentor = data.find((item) => item._id === selectedId);
-
-      if (selectedMentor) {
-        namaMentorInput.value = selectedMentor.posisi;
-      } else {
-        namaMentorInput.value = "";
-      }
-    });
-  })
-  .catch((error) => console.log(error));
+        if (selectedMentor) {
+          namaMentorInput.value = selectedMentor.posisi;
+        } else {
+          namaMentorInput.value = "";
+        }
+      });
+    })
+    .catch((error) => console.error("Error fetching data:", error));
+};
+get(URLGetMentor);
