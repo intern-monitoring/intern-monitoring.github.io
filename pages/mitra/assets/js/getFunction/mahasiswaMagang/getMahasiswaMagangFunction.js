@@ -3,46 +3,48 @@ import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
 
 const CountMahasiswaMagang = (count) => {
   const resultCountElement = document.getElementById("countMahasiswaMagang");
-  resultCountElement.innerHTML = `
+  resultCountElement.textContent = `
     <p class="text-sm text-gray-600">
       <span class="font-semibold text-gray-800">${count}</span> results
     </p>`;
 };
 
-const get = (target_url, responseFunction) => {
+const get = async (target_url, responseFunction) => {
   const myHeaders = new Headers();
-  myHeaders.append("Authorization", getCookie("Authorization"));
+  myHeaders.append("Authorization", await getCookie("Authorization"));
   const requestOptions = {
     method: "GET",
     headers: myHeaders,
     redirect: "follow",
   };
 
-  fetch(target_url, requestOptions)
-    .then((response) => response.text())
-    .then((result) => {
-      const parsedResult = JSON.parse(result);
+  const response = await fetch(target_url, requestOptions);
+  const result = await response.text();
 
-      // Filter the data based on the search query
-      const searchInput = document.getElementById("search-mahasiswa-magang");
-      const searchQuery = searchInput.value.toLowerCase();
+  const parsedResult = JSON.parse(result);
 
-      let filteredData = parsedResult;
+  // Filter the data based on the search query
+  const searchInput = document.getElementById("search-mahasiswa-magang");
+  const searchQuery = searchInput.value.toLowerCase();
 
-      if (searchQuery) {
-        filteredData = filteredData.filter((user) => {
-          return user.nama.toLowerCase().includes(searchQuery);
-        });
-      } else {
-        filteredData = parsedResult;
-      }
+  let filteredData;
 
-      // Call the response function with the filtered data
-      responseFunction(filteredData);
+  if (searchQuery) {
+    filteredData = parsedResult.filter((user) => {
+      return user.nama.toLowerCase().includes(searchQuery);
+    });
+  } else {
+    // If the search query is empty, use the entire parsedResult
+    filteredData = parsedResult;
+  }
 
-      CountMahasiswaMagang(filteredData.length);
-    })
-    .catch((error) => console.log("error", error));
+  console.log(filteredData);
+  console.log(searchInput.value);
+  // Update the result count before calling the response function
+  CountMahasiswaMagang(filteredData.length);
+
+  // Call the response function with the filtered data
+  await responseFunction(filteredData);
 };
 
 get(URLGetMahasiswaMagang, responseData);
