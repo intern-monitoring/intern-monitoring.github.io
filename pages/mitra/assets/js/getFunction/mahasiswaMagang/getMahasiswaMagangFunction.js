@@ -31,8 +31,10 @@ const get = (target_url, responseFunction) => {
 
       if (searchQuery) {
         filteredData = filteredData.filter((user) => {
-          return user.mahasiswa.namalengkap.toLowerCase().includes(searchQuery);
+          return user.nama.toLowerCase().includes(searchQuery);
         });
+      } else {
+        filteredData = parsedResult;
       }
 
       // Call the response function with the filtered data
