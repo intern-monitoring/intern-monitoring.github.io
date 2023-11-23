@@ -33,7 +33,7 @@ const get = (target_url) => {
         const namaMentorInput = document.getElementById("namalengkapmentor");
 
         if (selectedId) {
-          namaMentorInput.value = selectedMentor.namalengkap;
+          namaMentorInput.value = item.namalengkap;
         } else {
           namaMentorInput.value = "";
         }
