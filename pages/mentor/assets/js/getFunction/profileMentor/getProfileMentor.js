@@ -83,6 +83,14 @@ export const dataMentor = `
       >
       <h3 class="text-base text-gray-900 font-normal">#NIK#</h3>
     </div>
+    <div class="flex justify-center gap-2 pt-5">
+      <label class="text-base text-gray-900 font-semibold"
+        >Nama Perusahaan :</label
+      >
+      <h3 class="text-base text-gray-900 font-normal">
+        #PERUSAHAAN#
+      </h3>
+    </div>
   </div>
   <div class="mt-2 border-b border-gray-200"></div>
 </div>
@@ -99,7 +107,7 @@ export function isiRow(value) {
     .replace("#NAMAMENTOR#", value.namalengkap)
     .replace("#TANGGALLAHIR#", value.tanggallahir)
     .replace("#NIK#", value.nik)
-    .replace("#PRODI#", value.prodi)
+    .replace("#PERUSAHAAN#", value.mitra.nama)
     .replace("#EMAIL#", value.akun.email)
     .replace("#EDITACCOUNT#", value.akun._id)
     .replace("#IDEDIT#", value._id);

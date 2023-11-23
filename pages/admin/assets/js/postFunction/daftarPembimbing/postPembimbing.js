@@ -10,6 +10,7 @@ const PostPembimbing = () => {
   const datainjson = {
     namalengkap: getValue("namalengkap"),
     nik: getValue("nik"),
+    prodi: getValue("prodi"),
     akun: {
       email: getValue("email"),
       password: getValue("password"),
