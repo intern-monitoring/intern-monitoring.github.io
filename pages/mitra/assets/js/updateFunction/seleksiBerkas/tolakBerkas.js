@@ -46,7 +46,7 @@ const tolakBerkas = (TOLAK) => {
 
       const responseFunction = (result) => responseData(result);
       const datajson = {
-        seleksiberkas: parseInt(getValue("buttonTolak")),
+        seleksiberkas: parseInt(getValue("buttonTolakBerkas")),
       };
 
       putData(target_url, datajson, tokenkey, tokenvalue, responseFunction);

@@ -46,7 +46,7 @@ const tolakWawancara = (TOLAK) => {
 
       const responseFunction = (result) => responseData(result);
       const datajson = {
-        seleksiwewancara: parseInt(getValue("buttonTolak")),
+        seleksiwewancara: parseInt(getValue("buttonTolakWawancara")),
       };
 
       putData(target_url, datajson, tokenkey, tokenvalue, responseFunction);

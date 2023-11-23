@@ -46,7 +46,7 @@ const terimaBerkas = (TERIMA) => {
 
       const responseFunction = (result) => responseData(result);
       const datajson = {
-        seleksiberkas: parseInt(getValue("buttonTerima")),
+        seleksiberkas: parseInt(getValue("buttonTerimaBerkas")),
       };
 
       putData(target_url, datajson, tokenkey, tokenvalue, responseFunction);

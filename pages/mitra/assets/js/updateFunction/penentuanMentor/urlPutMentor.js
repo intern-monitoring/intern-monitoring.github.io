@@ -13,6 +13,6 @@ export const AmbilResponse = (result) => {
     showConfirmButton: false,
     timer: 1500,
   }).then(() => {
-    window.location.href = "mahasiswaMagang.html";
+    window.location.href = "pemilihanMentor.html";
   });
 };

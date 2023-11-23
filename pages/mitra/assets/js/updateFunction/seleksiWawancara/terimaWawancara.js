@@ -46,7 +46,7 @@ const terimaWawancara = (TERIMA) => {
 
       const responseFunction = (result) => responseData(result);
       const datajson = {
-        seleksiwewancara: parseInt(getValue("buttonTerima")),
+        seleksiwewancara: parseInt(getValue("buttonTerimaWawancara")),
       };
 
       putData(target_url, datajson, tokenkey, tokenvalue, responseFunction);

@@ -86,7 +86,7 @@ export const seleksiPending = `
 <td class="h-px w-px whitespace-nowrap">
   <div class="px-6 py-1.5">
     <button
-      id="buttonTerima"
+      id="buttonTerimaBerkas"
       value="1"
       onclick="terimaBerkas('#TERIMA#')"
       class="inline-flex items-center gap-x-1.5 text-sm text-blue-600 decoration-2 hover:underline font-medium pr-5"
@@ -94,7 +94,7 @@ export const seleksiPending = `
       Terima
     </button>
     <button
-      id="buttonTolak"
+      id="buttonTolakBerkas"
       value="2"
       onclick="tolakBerkas('#TOLAK#')"
       class="inline-flex items-center gap-x-1.5 text-sm text-red-600 decoration-2 hover:underline font-medium"

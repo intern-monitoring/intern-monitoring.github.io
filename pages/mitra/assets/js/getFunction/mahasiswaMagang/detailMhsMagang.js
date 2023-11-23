@@ -1,6 +1,6 @@
 import { addInner } from "https://jscroot.github.io/element/croot.js";
 
-export const detailMahasiswaMagang = `
+export const detailPemilihanMentor = `
 <div class="bg-white rounded-xl shadow-md">
 <div
   class="relative h-48 rounded-t-xl bg-[url('https://images.unsplash.com/photo-1655635643532-fa9ba2648cbe?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=2232&amp;q=80')] bg-no-repeat bg-cover bg-center"
@@ -10,7 +10,7 @@ export const detailMahasiswaMagang = `
   ></span>
   <div class="absolute top-0 left-0 p-4">
     <a
-      href="mahasiswaMagang.html"
+      href="pemilihanMentor.html"
       class="py-2 px-3 inline-flex cursor-pointer justify-center items-center gap-2 rounded-md border font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-600 transition-all text-sm"
     >
       Kembali
@@ -158,7 +158,7 @@ export function responseData(results) {
 }
 
 export function isiRow(value) {
-  const mhsMagang = detailMahasiswaMagang
+  const mhsMagang = detailPemilihanMentor
     .replace("#NAMALENGKAP#", value.mahasiswa.namalengkap)
     .replace("#TANGGALLAHIR#", value.mahasiswa.tanggallahir)
     .replace("#GENDER#", value.mahasiswa.jeniskelamin)
@@ -170,5 +170,5 @@ export function isiRow(value) {
     .replace("#NAMAMENTOR#", value.mentor.namalengkap)
     .replace("#NIK#", value.mentor.nik)
     .replace("#EMAILMENTOR#", value.mentor.akun.email);
-  addInner("detailMahasiswaMagang", mhsMagang);
+  addInner("detailPemilihanMentor", mhsMagang);
 }
