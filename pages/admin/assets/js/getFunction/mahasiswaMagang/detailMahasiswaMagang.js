@@ -120,16 +120,16 @@ export const detailMahasiswaMagang = `
       </h2>
     </div>
     <div class="flex justify-center pb-10">
-      <h2 class="text-lg text-gray-900 font-semibold">#POSISI#</h2>
+      <h2 class="text-lg text-gray-900 font-semibold">#NAMAPERUSAHAAN#</h2>
     </div>
     <div class="grid grid-cols-1 lg:grid-cols-2">
       <div class="flex justify-center gap-2">
         <label
           class="text-sm text-gray-900 font-semibold lg:text-base"
-          >Nama Perusahaan :</label
+          >Posisi Magang :</label
         >
         <h2 class="text-sm text-gray-900 font-normal lg:text-base">
-          #NAMAPERUSAHAAN#
+          #POSISI#
         </h2>
       </div>
       <div class="flex justify-center gap-2">
