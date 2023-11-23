@@ -54,10 +54,23 @@ const get = (target_url, responseFunction, searchValue) => {
     .catch((error) => console.log("error", error));
 };
 
+// Your existing code for CountMahasiswaMagang and other functions
+
+// Your existing code for responseData and isiRow functions
+
 // Add an event listener to the search input
 const searchInput = document.getElementById("search-mahasiswa-magang");
 searchInput.addEventListener("input", () => {
   const searchValue = searchInput.value.trim();
   // Call the get function with the search value
   get(URLGetMahasiswaMagang, responseData, searchValue);
+});
+
+// Add an event listener to handle the case when the search input is cleared
+searchInput.addEventListener("change", () => {
+  const searchValue = searchInput.value.trim();
+  // If the search input is empty, call the get function without a search value
+  if (!searchValue) {
+    get(URLGetMahasiswaMagang, responseData);
+  }
 });
