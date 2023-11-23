@@ -146,6 +146,8 @@ export function isiRow(value) {
       ? "Tidak Bersedia Magang"
       : value.status === 3
       ? "Sudah Magang"
+      : value.status === false
+      ? "Belum Konfirmasi"
       : "Belum Konfirmasi";
 
   const bgKonfirmasi =
