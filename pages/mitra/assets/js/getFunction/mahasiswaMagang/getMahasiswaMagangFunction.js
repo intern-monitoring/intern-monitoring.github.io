@@ -9,20 +9,23 @@ const CountMahasiswaMagang = (count) => {
     </p>`;
 };
 
+const clearTable = () => {
+  const tableElement = document.getElementById("tableMahasiswaMagang");
+  removeAllChildren(tableElement);
+};
+
+// Function to initialize the data
 const initializeData = () => {
+  // Clear the existing table contents
+  clearTable();
+
   // Call the get function without a search value to get the initial data
   get(URLGetMahasiswaMagang, responseData);
 };
 
 document.addEventListener("DOMContentLoaded", initializeData);
 
-// Function to filter data based on search input
-const filterData = (data, searchValue) => {
-  const lowercasedSearch = searchValue.toLowerCase();
-  return data.filter((user) =>
-    user.name.toLowerCase().includes(lowercasedSearch)
-  );
-};
+// ... (your existing code)
 
 // Modify the get function to include the search functionality
 const get = (target_url, responseFunction, searchValue) => {
@@ -46,6 +49,9 @@ const get = (target_url, responseFunction, searchValue) => {
         ? filterData(filteredData, searchValue)
         : filteredData;
 
+      // Clear the existing table contents before populating with new data
+      clearTable();
+
       // Call the response function with the filtered data
       responseFunction(searchData);
 
@@ -54,9 +60,7 @@ const get = (target_url, responseFunction, searchValue) => {
     .catch((error) => console.log("error", error));
 };
 
-// Your existing code for CountMahasiswaMagang and other functions
-
-// Your existing code for responseData and isiRow functions
+// ... (your existing code)
 
 // Add an event listener to the search input
 const searchInput = document.getElementById("search-mahasiswa-magang");
