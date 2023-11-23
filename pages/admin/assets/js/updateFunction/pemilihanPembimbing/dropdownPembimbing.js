@@ -1,6 +1,6 @@
 import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
 
-const URLGetMentor =
+const URLGetPembimbing =
   "https://asia-southeast2-bursakerja-project.cloudfunctions.net/intermoni-pembimbing";
 
 const get = (target_url) => {
@@ -29,4 +29,4 @@ const get = (target_url) => {
     })
     .catch((error) => console.error("Error fetching data:", error));
 };
-get(URLGetMentor);
+get(URLGetPembimbing);

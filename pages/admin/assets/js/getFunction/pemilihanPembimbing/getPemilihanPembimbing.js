@@ -93,7 +93,7 @@ export function isiRow(value) {
       .replace("#EMAILMHS#", value.mahasiswa.akun.email)
       .replace("#POSISI#", value.magang.posisi)
       .replace("#DETAIL#", value._id)
-      .replace("#PENENTUANMENTOR#", value._id);
+      .replace("#PENENTUANPEMBIMBING#", value._id);
 
     addInner("tablePemilihanPembimbing", pemilihanpembimbing);
   }
