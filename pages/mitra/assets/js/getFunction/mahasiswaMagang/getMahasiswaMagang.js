@@ -37,17 +37,6 @@ export const tableMahasiswaMagang = `
   <div class="px-6 py-3">
     <span
       class="block text-sm font-semibold text-gray-800"
-      >#PEMBIMBING#</span
-    >
-    <span class="block text-sm text-gray-500"
-      >#EMAILPEMBIMBING#</span
-    >
-  </div>
-</td>
-<td class="h-px w-72 whitespace-nowrap">
-  <div class="px-6 py-3">
-    <span
-      class="block text-sm font-semibold text-gray-800"
       >#MENTOR#</span
     >
     <span class="block text-sm text-gray-500"
@@ -98,8 +87,6 @@ export function isiRow(value) {
     .replace("#NAMAMHS#", value.mahasiswa.namalengkap)
     .replace("#EMAILMHS#", value.mahasiswa.akun.email)
     .replace("#POSISI#", value.magang.posisi)
-    .replace("#PEMBIMBING#", value.pembimbing.namalengkap)
-    .replace("#EMAILPEMBIMBING#", value.pembimbing.akun.email)
     .replace("#MENTOR#", value.mentor.namalengkap)
     .replace("#EMAILMENTOR#", value.mentor.akun.email)
     .replace("#DETAIL#", value._id);
