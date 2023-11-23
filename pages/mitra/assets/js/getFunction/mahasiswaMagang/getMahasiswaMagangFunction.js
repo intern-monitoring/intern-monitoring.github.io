@@ -31,7 +31,7 @@ const get = (target_url, responseFunction) => {
 
       if (searchQuery) {
         filteredData = parsedResult.filter((user) => {
-          return user.nama.toLowerCase().includes(searchQuery);
+          return user.mahasiswa.namalengkap.toLowerCase().includes(searchQuery);
         });
       } else {
         // If the search query is empty, use the entire parsedResult
