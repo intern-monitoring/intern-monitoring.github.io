@@ -23,27 +23,31 @@ const get = (target_url, responseFunction) => {
     .then((result) => {
       const parsedResult = JSON.parse(result);
 
-      // Filter the data based on the search query
+      // Listen for changes to the search input value
       const searchInput = document.getElementById("search-mahasiswa-magang");
-      const searchQuery = searchInput.value.toLowerCase();
+      searchInput.addEventListener("keyup", () => {
+        // Filter the data based on the current search query
+        const searchQuery = searchInput.value.toLowerCase();
+        let filteredData;
 
-      let filteredData;
+        if (searchQuery) {
+          filteredData = parsedResult.filter((user) => {
+            return user.mahasiswa.namalengkap
+              .toLowerCase()
+              .includes(searchQuery);
+          });
+        } else {
+          // If the search query is empty, use the entire parsedResult
+          filteredData = parsedResult;
+        }
 
-      if (searchQuery) {
-        filteredData = parsedResult.filter((user) => {
-          return user.mahasiswa.namalengkap.toLowerCase().includes(searchQuery);
-        });
-      } else {
-        // If the search query is empty, use the entire parsedResult
-        filteredData = parsedResult;
-      }
+        // Update the result count and call the response function with the filtered data
+        CountMahasiswaMagang(filteredData.length);
+        responseFunction(filteredData);
 
-      console.log(searchQuery);
-      // Update the result count before calling the response function
-      CountMahasiswaMagang(filteredData.length);
-
-      // Call the response function with the filtered data
-      responseFunction(filteredData);
+        // Print the search query to the console log
+        console.log(searchInput.value);
+      });
     })
     .catch((error) => console.log("error", error));
 };
