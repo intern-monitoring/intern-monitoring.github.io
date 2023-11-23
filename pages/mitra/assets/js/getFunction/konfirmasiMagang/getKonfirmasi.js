@@ -110,62 +110,62 @@ export function responseData(results) {
 }
 
 export function isiRow(value) {
-  // if (value.status === 1 || value.status === 2) {
-  const statusberkas =
-    value.seleksiberkas === 1
-      ? "Lolos"
-      : value.seleksiberkas === 2
-      ? "Tidak Lolos"
-      : "Pending";
+  if (value.status === null || value.status === 1 || value.status === 2) {
+    const statusberkas =
+      value.seleksiberkas === 1
+        ? "Lolos"
+        : value.seleksiberkas === 2
+        ? "Tidak Lolos"
+        : "Pending";
 
-  const statuswawancara =
-    value.seleksiwewancara === 1
-      ? "Lolos"
-      : value.seleksiwewancara === 2
-      ? "Tidak Lolos"
-      : "Pending";
+    const statuswawancara =
+      value.seleksiwewancara === 1
+        ? "Lolos"
+        : value.seleksiwewancara === 2
+        ? "Tidak Lolos"
+        : "Pending";
 
-  const bgberkas =
-    value.seleksiberkas === 1
-      ? "bg-green-200"
-      : value.seleksiberkas === 2
-      ? "bg-red-200"
-      : "bg-gray-200";
+    const bgberkas =
+      value.seleksiberkas === 1
+        ? "bg-green-200"
+        : value.seleksiberkas === 2
+        ? "bg-red-200"
+        : "bg-gray-200";
 
-  const bgwawancara =
-    value.seleksiwewancara === 1
-      ? "bg-green-200"
-      : value.seleksiwewancara === 2
-      ? "bg-red-200"
-      : "bg-gray-200";
+    const bgwawancara =
+      value.seleksiwewancara === 1
+        ? "bg-green-200"
+        : value.seleksiwewancara === 2
+        ? "bg-red-200"
+        : "bg-gray-200";
 
-  const konfirmasiMagang =
-    value.status === 1
-      ? "Bersedia Magang"
-      : value.status === 2
-      ? "Tidak Bersedia Magang"
-      : "Belum Konfirmasi";
+    const konfirmasiMagang =
+      value.status === 1
+        ? "Bersedia Magang"
+        : value.status === 2
+        ? "Tidak Bersedia Magang"
+        : "Belum Konfirmasi";
 
-  const bgKonfirmasi =
-    value.status === 1
-      ? "bg-green-200"
-      : value.status === 2
-      ? "bg-red-200"
-      : "bg-gray-200";
+    const bgKonfirmasi =
+      value.status === 1
+        ? "bg-green-200"
+        : value.status === 2
+        ? "bg-red-200"
+        : "bg-gray-200";
 
-  const konfirmMagang = tableKonfirmasiMagang
-    .replace("#NAMA#", value.mahasiswa.namalengkap)
-    .replace("#NIM#", value.mahasiswa.nim)
-    .replace("#PRODI#", value.mahasiswa.prodi)
-    .replace("#PERGURUAN#", value.mahasiswa.perguruantinggi)
-    .replace("#SELEKSIBERKAS#", statusberkas)
-    .replace("#SELEKSIWAWANCARA#", statuswawancara)
-    .replace("#BGBERKAS#", bgberkas)
-    .replace("#BGWAWANCARA#", bgwawancara)
-    .replace("#KONFIRMASI#", konfirmasiMagang)
-    .replace("#BGKONFIRMASI#", bgKonfirmasi)
-    .replace("#POSISI#", value.magang.posisi)
-    .replace("#DETAIL#", value._id);
-  addInner("tableKonfirmasiMagang", konfirmMagang);
+    const konfirmMagang = tableKonfirmasiMagang
+      .replace("#NAMA#", value.mahasiswa.namalengkap)
+      .replace("#NIM#", value.mahasiswa.nim)
+      .replace("#PRODI#", value.mahasiswa.prodi)
+      .replace("#PERGURUAN#", value.mahasiswa.perguruantinggi)
+      .replace("#SELEKSIBERKAS#", statusberkas)
+      .replace("#SELEKSIWAWANCARA#", statuswawancara)
+      .replace("#BGBERKAS#", bgberkas)
+      .replace("#BGWAWANCARA#", bgwawancara)
+      .replace("#KONFIRMASI#", konfirmasiMagang)
+      .replace("#BGKONFIRMASI#", bgKonfirmasi)
+      .replace("#POSISI#", value.magang.posisi)
+      .replace("#DETAIL#", value._id);
+    addInner("tableKonfirmasiMagang", konfirmMagang);
+  }
 }
-// }
