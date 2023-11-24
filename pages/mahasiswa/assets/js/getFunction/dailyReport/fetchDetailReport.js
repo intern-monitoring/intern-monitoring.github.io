@@ -1,10 +1,12 @@
-import { URLGetMahasiswaMagang, responseData } from "./getMhsMagang.js";
+import { responseData } from "./detailApply.js";
 import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
+import { urlFetch } from "./urlDetailApply.js";
 
-export const get = (target_url, responseFunction) => {
+function get(target_url, responseFunction) {
   const myHeaders = new Headers();
   myHeaders.append("Authorization", getCookie("Authorization"));
-  const requestOptions = {
+
+  var requestOptions = {
     method: "GET",
     headers: myHeaders,
     redirect: "follow",
@@ -14,6 +16,5 @@ export const get = (target_url, responseFunction) => {
     .then((response) => response.text())
     .then((result) => responseFunction(JSON.parse(result)))
     .catch((error) => console.log("error", error));
-};
-
-get(URLGetMahasiswaMagang, responseData);
+}
+get(urlFetch, responseData);

@@ -592,7 +592,7 @@
                     <div class="inline-flex gap-x-2">
                       <button
                         data-ripple-light="true"
-                        data-dialog-target="dialog"
+                        data-dialog-target="dialogPembimbing"
                         class="py-2 px-3 inline-flex justify-center items-center gap-2 rounded-md border border-transparent font-semibold bg-gradient-to-tl from-blue-600 to-violet-600 text-white text-sm"
                       >
                         <svg
@@ -613,12 +613,12 @@
                         Kirim Reporting
                       </button>
                       <div
-                        data-dialog-backdrop="dialog"
+                        data-dialog-backdrop="dialogPembimbing"
                         data-dialog-backdrop-close="true"
                         class="pointer-events-none fixed inset-0 z-[999] grid h-screen w-screen place-items-center bg-black bg-opacity-60 opacity-0 backdrop-blur-sm transition-opacity duration-300"
                       >
                         <div
-                          data-dialog="dialog"
+                          data-dialog="dialogPembimbing"
                           class="relative w-full h-full top-0 left-0 overflow-x-hidden overflow-y-auto"
                         >
                           <div
@@ -635,33 +635,10 @@
                               <div class="p-5 overflow-y-auto">
                                 <!-- Grid -->
                                 <div class="grid gap-2">
-                                  <!-- Judul -->
-                                  <div class="sm:col-span-3">
-                                    <label
-                                      for="af-account-judul"
-                                      class="inline-block text-sm text-gray-800 mt-2.5"
-                                    >
-                                      Judul Report
-                                    </label>
-                                  </div>
-                                  <!-- End Col -->
-                                  <div class="sm:col-span-9">
-                                    <div class="sm:flex">
-                                      <input
-                                        id="namalengkap"
-                                        type="text"
-                                        class="py-2 px-3 pr-11 block w-full border-[1px] border-gray-200 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500"
-                                        placeholder="Contoh : Daily Report 1"
-                                      />
-                                    </div>
-                                  </div>
-                                  <!-- End Col -->
-                                  <!-- End Judul -->
-
                                   <!-- Task -->
                                   <div class="sm:col-span-3">
                                     <label
-                                      for="af-account-task"
+                                      for="af-account-judul"
                                       class="inline-block text-sm text-gray-800 mt-2.5"
                                     >
                                       Task magang yang dikerjakan
@@ -671,7 +648,7 @@
                                   <div class="sm:col-span-9">
                                     <div class="sm:flex">
                                       <input
-                                        id="namalengkap"
+                                        id="judulReportPembimbing"
                                         type="text"
                                         class="py-2 px-3 pr-11 block w-full border-[1px] border-gray-200 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500"
                                         placeholder="Contoh : Membuat desain web"
@@ -684,7 +661,7 @@
                                   <!-- Deskripsi -->
                                   <div class="sm:col-span-3">
                                     <label
-                                      for="af-account-deskripsi"
+                                      for="af-account-isi"
                                       class="inline-block text-sm text-gray-800 mt-2.5"
                                     >
                                       Deskripsi
@@ -991,7 +968,7 @@
                                         </div>
 
                                         <div
-                                          id="deskripsi"
+                                          id="isiReportPembimbing"
                                           class="min-h-[200px] pb-10 px-3 text-gray-300 text-sm"
                                           data-hs-editor-field
                                         ></div>
@@ -1014,7 +991,7 @@
                                   Cancel
                                 </button>
                                 <button
-                                  onclick="PostMentor()"
+                                  onclick="PostDailyReportPembimbing()"
                                   data-ripple-light="true"
                                   data-dialog-close="true"
                                   class="middle none center rounded-lg bg-gradient-to-tr from-green-600 to-green-400 py-3 px-6 font-sans text-xs font-bold uppercase text-white shadow-md shadow-green-500/20 transition-all hover:shadow-lg hover:shadow-green-500/40 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
@@ -1044,16 +1021,6 @@
                           >
                             <thead class="bg-gray-50">
                               <tr>
-                                <th scope="col" class="px-6 py-3 text-left">
-                                  <div class="flex items-center gap-x-2">
-                                    <span
-                                      class="text-xs font-semibold uppercase tracking-wide text-gray-800"
-                                    >
-                                      Judul Report
-                                    </span>
-                                  </div>
-                                </th>
-
                                 <th scope="col" class="px-6 py-3 text-left">
                                   <div class="flex items-center gap-x-2">
                                     <span
@@ -1089,17 +1056,7 @@
                                     <span
                                       class="text-xs font-semibold uppercase tracking-wide text-gray-800"
                                     >
-                                      Approve Mentor
-                                    </span>
-                                  </div>
-                                </th>
-
-                                <th scope="col" class="px-6 py-3 text-left">
-                                  <div class="flex items-center gap-x-2">
-                                    <span
-                                      class="text-xs font-semibold uppercase tracking-wide text-gray-800"
-                                    >
-                                      Status Report
+                                      Detail
                                     </span>
                                   </div>
                                 </th>
@@ -1107,325 +1064,9 @@
                             </thead>
 
                             <tbody
-                              id="tableDailyReport"
+                              id="tableDailyReportPembimbing"
                               class="divide-y divide-gray-200"
-                            >
-                              <tr
-                                class="bg-white hover:bg-gray-50 dark:bg-slate-900 dark:hover:bg-slate-800"
-                              >
-                                <td
-                                  class="h-px w-px whitespace-nowrap align-top"
-                                >
-                                  <a class="block p-6" href="#">
-                                    <div class="flex items-center gap-x-4">
-                                      <div>
-                                        <span
-                                          class="block text-sm font-semibold text-gray-800 dark:text-gray-200"
-                                          >Daily Report Minggu ke-1</span
-                                        >
-                                      </div>
-                                    </div>
-                                  </a>
-                                </td>
-                                <td
-                                  class="h-px w-px whitespace-nowrap align-top"
-                                >
-                                  <a class="block p-6" href="#">
-                                    <div class="flex items-center gap-x-3">
-                                      <img
-                                        class="inline-block h-[2.375rem] w-[2.375rem] rounded-full"
-                                        src="https://images.unsplash.com/photo-1531927557220-a9e23c1e4794?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80"
-                                        alt="Image Description"
-                                      />
-                                      <div class="grow">
-                                        <span
-                                          class="block text-sm font-semibold text-gray-800 dark:text-gray-200"
-                                          >Roni Habibi</span
-                                        >
-                                        <span
-                                          class="block text-sm text-gray-500"
-                                          >ronihabibi@gmail.com</span
-                                        >
-                                      </div>
-                                    </div>
-                                  </a>
-                                </td>
-                                <td class="h-px w-72 min-w-[18rem] align-top">
-                                  <a class="block p-6" href="#">
-                                    <span class="block text-sm text-gray-500"
-                                      >Membuat table data pegawai untuk sistem
-                                      pendataan pegawai perusahaan</span
-                                    >
-                                  </a>
-                                </td>
-                                <td
-                                  class="h-px w-px whitespace-nowrap align-top"
-                                >
-                                  <a class="block p-6" href="#">
-                                    <span
-                                      class="text-sm text-gray-600 dark:text-gray-400"
-                                      >10 Jan 2022</span
-                                    >
-                                  </a>
-                                </td>
-                                <td
-                                  class="h-px w-px whitespace-nowrap align-top"
-                                >
-                                  <a class="block p-6" href="#">
-                                    <span
-                                      class="py-1 px-1.5 inline-flex items-center gap-x-1 text-xs font-medium bg-teal-100 text-teal-800 rounded-full dark:bg-teal-500/10 dark:text-teal-500"
-                                    >
-                                      <svg
-                                        class="w-2.5 h-2.5"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="16"
-                                        height="16"
-                                        fill="currentColor"
-                                        viewBox="0 0 16 16"
-                                      >
-                                        <path
-                                          d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"
-                                        />
-                                      </svg>
-                                      Approved
-                                    </span>
-                                  </a>
-                                </td>
-                                <td
-                                  class="h-px w-px whitespace-nowrap align-top"
-                                >
-                                  <a class="block p-6" href="#">
-                                    <span
-                                      class="py-1 px-1.5 inline-flex items-center gap-x-1 text-xs font-medium bg-teal-100 text-teal-800 rounded-full dark:bg-teal-500/10 dark:text-teal-500"
-                                    >
-                                      <svg
-                                        class="w-2.5 h-2.5"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="16"
-                                        height="16"
-                                        fill="currentColor"
-                                        viewBox="0 0 16 16"
-                                      >
-                                        <path
-                                          d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"
-                                        />
-                                      </svg>
-                                      Sudah Diperiksa
-                                    </span>
-                                  </a>
-                                </td>
-                              </tr>
-                              <tr
-                                class="bg-white hover:bg-gray-50 dark:bg-slate-900 dark:hover:bg-slate-800"
-                              >
-                                <td
-                                  class="h-px w-px whitespace-nowrap align-top"
-                                >
-                                  <a class="block p-6" href="#">
-                                    <div class="flex items-center gap-x-4">
-                                      <div>
-                                        <span
-                                          class="block text-sm font-semibold text-gray-800 dark:text-gray-200"
-                                          >Daily Report Minggu ke-2</span
-                                        >
-                                      </div>
-                                    </div>
-                                  </a>
-                                </td>
-                                <td
-                                  class="h-px w-px whitespace-nowrap align-top"
-                                >
-                                  <a class="block p-6" href="#">
-                                    <div class="flex items-center gap-x-3">
-                                      <img
-                                        class="inline-block h-[2.375rem] w-[2.375rem] rounded-full"
-                                        src="https://images.unsplash.com/photo-1531927557220-a9e23c1e4794?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80"
-                                        alt="Image Description"
-                                      />
-                                      <div class="grow">
-                                        <span
-                                          class="block text-sm font-semibold text-gray-800 dark:text-gray-200"
-                                          >Roni Habibi</span
-                                        >
-                                        <span
-                                          class="block text-sm text-gray-500"
-                                          >ronihabibi@gmail.com</span
-                                        >
-                                      </div>
-                                    </div>
-                                  </a>
-                                </td>
-                                <td class="h-px w-72 min-w-[18rem] align-top">
-                                  <a class="block p-6" href="#">
-                                    <span class="block text-sm text-gray-500"
-                                      >Membuat filter data untuk table data
-                                      pegawai perusahaan</span
-                                    >
-                                  </a>
-                                </td>
-                                <td
-                                  class="h-px w-px whitespace-nowrap align-top"
-                                >
-                                  <a class="block p-6" href="#">
-                                    <span
-                                      class="text-sm text-gray-600 dark:text-gray-400"
-                                      >17 Jan 2022</span
-                                    >
-                                  </a>
-                                </td>
-                                <td
-                                  class="h-px w-px whitespace-nowrap align-top"
-                                >
-                                  <a class="block p-6" href="#">
-                                    <span
-                                      class="py-1 px-1.5 inline-flex items-center gap-x-1 text-xs font-medium bg-teal-100 text-teal-800 rounded-full dark:bg-teal-500/10 dark:text-teal-500"
-                                    >
-                                      <svg
-                                        class="w-2.5 h-2.5"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="16"
-                                        height="16"
-                                        fill="currentColor"
-                                        viewBox="0 0 16 16"
-                                      >
-                                        <path
-                                          d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"
-                                        />
-                                      </svg>
-                                      Approved
-                                    </span>
-                                  </a>
-                                </td>
-                                <td
-                                  class="h-px w-px whitespace-nowrap align-top"
-                                >
-                                  <a class="block p-6" href="#">
-                                    <span
-                                      class="py-1 px-1.5 inline-flex items-center gap-x-1 text-xs font-medium bg-teal-100 text-teal-800 rounded-full dark:bg-teal-500/10 dark:text-teal-500"
-                                    >
-                                      <svg
-                                        class="w-2.5 h-2.5"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="16"
-                                        height="16"
-                                        fill="currentColor"
-                                        viewBox="0 0 16 16"
-                                      >
-                                        <path
-                                          d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"
-                                        />
-                                      </svg>
-                                      Sudah Diperiksa
-                                    </span>
-                                  </a>
-                                </td>
-                              </tr>
-                              <tr
-                                class="bg-white hover:bg-gray-50 dark:bg-slate-900 dark:hover:bg-slate-800"
-                              >
-                                <td
-                                  class="h-px w-px whitespace-nowrap align-top"
-                                >
-                                  <a class="block p-6" href="#">
-                                    <div class="flex items-center gap-x-4">
-                                      <div>
-                                        <span
-                                          class="block text-sm font-semibold text-gray-800 dark:text-gray-200"
-                                          >Daily Report Minggu ke-3</span
-                                        >
-                                      </div>
-                                    </div>
-                                  </a>
-                                </td>
-                                <td
-                                  class="h-px w-px whitespace-nowrap align-top"
-                                >
-                                  <a class="block p-6" href="#">
-                                    <div class="flex items-center gap-x-3">
-                                      <img
-                                        class="inline-block h-[2.375rem] w-[2.375rem] rounded-full"
-                                        src="https://images.unsplash.com/photo-1531927557220-a9e23c1e4794?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80"
-                                        alt="Image Description"
-                                      />
-                                      <div class="grow">
-                                        <span
-                                          class="block text-sm font-semibold text-gray-800 dark:text-gray-200"
-                                          >Roni Habibi</span
-                                        >
-                                        <span
-                                          class="block text-sm text-gray-500"
-                                          >ronihabibi@gmail.com</span
-                                        >
-                                      </div>
-                                    </div>
-                                  </a>
-                                </td>
-                                <td class="h-px w-72 min-w-[18rem] align-top">
-                                  <a class="block p-6" href="#">
-                                    <span class="block text-sm text-gray-500"
-                                      >Membuat filter data untuk table data
-                                      pegawai perusahaan</span
-                                    >
-                                  </a>
-                                </td>
-                                <td
-                                  class="h-px w-px whitespace-nowrap align-top"
-                                >
-                                  <a class="block p-6" href="#">
-                                    <span
-                                      class="text-sm text-gray-600 dark:text-gray-400"
-                                      >17 Jan 2022</span
-                                    >
-                                  </a>
-                                </td>
-                                <td
-                                  class="h-px w-px whitespace-nowrap align-top"
-                                >
-                                  <a class="block p-6" href="#">
-                                    <span
-                                      class="py-1 px-1.5 inline-flex items-center gap-x-1 text-xs font-medium bg-teal-100 text-teal-800 rounded-full dark:bg-teal-500/10 dark:text-teal-500"
-                                    >
-                                      <svg
-                                        class="w-2.5 h-2.5"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="16"
-                                        height="16"
-                                        fill="currentColor"
-                                        viewBox="0 0 16 16"
-                                      >
-                                        <path
-                                          d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"
-                                        />
-                                      </svg>
-                                      Approved
-                                    </span>
-                                  </a>
-                                </td>
-                                <td
-                                  class="h-px w-px whitespace-nowrap align-top"
-                                >
-                                  <a class="block p-6" href="#">
-                                    <span
-                                      class="py-1 px-1.5 inline-flex items-center gap-x-1 text-xs font-medium bg-teal-100 text-teal-800 rounded-full dark:bg-teal-500/10 dark:text-teal-500"
-                                    >
-                                      <svg
-                                        class="w-2.5 h-2.5"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="16"
-                                        height="16"
-                                        fill="currentColor"
-                                        viewBox="0 0 16 16"
-                                      >
-                                        <path
-                                          d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"
-                                        />
-                                      </svg>
-                                      Sudah Diperiksa
-                                    </span>
-                                  </a>
-                                </td>
-                              </tr>
-                            </tbody>
+                            ></tbody>
                           </table>
                           <!-- End Table -->
                         </div>
@@ -1438,7 +1079,7 @@
                 <div
                   class="px-6 py-4 grid gap-3 md:flex md:justify-between md:items-center border-y border-gray-200"
                 >
-                  <div id="mentorCount">
+                  <div id="countReportPembimbing">
                     <p class="text-sm text-gray-600">
                       <span class="font-semibold text-gray-800">0</span>
                       results
@@ -1633,7 +1274,7 @@
                     <div class="inline-flex gap-x-2">
                       <button
                         data-ripple-light="true"
-                        data-dialog-target="dialog"
+                        data-dialog-target="dialogMentor"
                         class="py-2 px-3 inline-flex justify-center items-center gap-2 rounded-md border border-transparent font-semibold bg-gradient-to-tl from-blue-600 to-violet-600 text-white text-sm"
                       >
                         <svg
@@ -1654,12 +1295,12 @@
                         Kirim Reporting
                       </button>
                       <div
-                        data-dialog-backdrop="dialog"
+                        data-dialog-backdrop="dialogMentor"
                         data-dialog-backdrop-close="true"
                         class="pointer-events-none fixed inset-0 z-[999] grid h-screen w-screen place-items-center bg-black bg-opacity-60 opacity-0 backdrop-blur-sm transition-opacity duration-300"
                       >
                         <div
-                          data-dialog="dialog"
+                          data-dialog="dialogMentor"
                           class="relative w-full h-full top-0 left-0 overflow-x-hidden overflow-y-auto"
                         >
                           <div
@@ -1676,33 +1317,10 @@
                               <div class="p-5 overflow-y-auto">
                                 <!-- Grid -->
                                 <div class="grid gap-2">
-                                  <!-- Judul -->
-                                  <div class="sm:col-span-3">
-                                    <label
-                                      for="af-account-judul"
-                                      class="inline-block text-sm text-gray-800 mt-2.5"
-                                    >
-                                      Judul Report
-                                    </label>
-                                  </div>
-                                  <!-- End Col -->
-                                  <div class="sm:col-span-9">
-                                    <div class="sm:flex">
-                                      <input
-                                        id="namalengkap"
-                                        type="text"
-                                        class="py-2 px-3 pr-11 block w-full border-[1px] border-gray-200 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500"
-                                        placeholder="Contoh : Daily Report 1"
-                                      />
-                                    </div>
-                                  </div>
-                                  <!-- End Col -->
-                                  <!-- End Judul -->
-
                                   <!-- Task -->
                                   <div class="sm:col-span-3">
                                     <label
-                                      for="af-account-task"
+                                      for="af-account-judul"
                                       class="inline-block text-sm text-gray-800 mt-2.5"
                                     >
                                       Task magang yang dikerjakan
@@ -1712,7 +1330,7 @@
                                   <div class="sm:col-span-9">
                                     <div class="sm:flex">
                                       <input
-                                        id="namalengkap"
+                                        id="judulReportMentor"
                                         type="text"
                                         class="py-2 px-3 pr-11 block w-full border-[1px] border-gray-200 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500"
                                         placeholder="Contoh : Membuat desain web"
@@ -2032,7 +1650,7 @@
                                         </div>
 
                                         <div
-                                          id="deskripsi"
+                                          id="isiReportMentor"
                                           class="min-h-[200px] pb-10 px-3 text-gray-300 text-sm"
                                           data-hs-editor-field
                                         ></div>
@@ -2055,7 +1673,7 @@
                                   Cancel
                                 </button>
                                 <button
-                                  onclick="PostMentor()"
+                                  onclick="PostDailyReportMentor()"
                                   data-ripple-light="true"
                                   data-dialog-close="true"
                                   class="middle none center rounded-lg bg-gradient-to-tr from-green-600 to-green-400 py-3 px-6 font-sans text-xs font-bold uppercase text-white shadow-md shadow-green-500/20 transition-all hover:shadow-lg hover:shadow-green-500/40 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
@@ -2085,16 +1703,6 @@
                           >
                             <thead class="bg-gray-50">
                               <tr>
-                                <th scope="col" class="px-6 py-3 text-left">
-                                  <div class="flex items-center gap-x-2">
-                                    <span
-                                      class="text-xs font-semibold uppercase tracking-wide text-gray-800"
-                                    >
-                                      Judul Report
-                                    </span>
-                                  </div>
-                                </th>
-
                                 <th scope="col" class="px-6 py-3 text-left">
                                   <div class="flex items-center gap-x-2">
                                     <span
@@ -2130,17 +1738,7 @@
                                     <span
                                       class="text-xs font-semibold uppercase tracking-wide text-gray-800"
                                     >
-                                      Approve Mentor
-                                    </span>
-                                  </div>
-                                </th>
-
-                                <th scope="col" class="px-6 py-3 text-left">
-                                  <div class="flex items-center gap-x-2">
-                                    <span
-                                      class="text-xs font-semibold uppercase tracking-wide text-gray-800"
-                                    >
-                                      Status Report
+                                      Detail
                                     </span>
                                   </div>
                                 </th>
@@ -2148,325 +1746,9 @@
                             </thead>
 
                             <tbody
-                              id="tableDailyReport"
+                              id="tableDailyReportMentor"
                               class="divide-y divide-gray-200"
-                            >
-                              <tr
-                                class="bg-white hover:bg-gray-50 dark:bg-slate-900 dark:hover:bg-slate-800"
-                              >
-                                <td
-                                  class="h-px w-px whitespace-nowrap align-top"
-                                >
-                                  <a class="block p-6" href="#">
-                                    <div class="flex items-center gap-x-4">
-                                      <div>
-                                        <span
-                                          class="block text-sm font-semibold text-gray-800 dark:text-gray-200"
-                                          >Daily Report Minggu ke-1</span
-                                        >
-                                      </div>
-                                    </div>
-                                  </a>
-                                </td>
-                                <td
-                                  class="h-px w-px whitespace-nowrap align-top"
-                                >
-                                  <a class="block p-6" href="#">
-                                    <div class="flex items-center gap-x-3">
-                                      <img
-                                        class="inline-block h-[2.375rem] w-[2.375rem] rounded-full"
-                                        src="https://images.unsplash.com/photo-1531927557220-a9e23c1e4794?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80"
-                                        alt="Image Description"
-                                      />
-                                      <div class="grow">
-                                        <span
-                                          class="block text-sm font-semibold text-gray-800 dark:text-gray-200"
-                                          >Roni Habibi</span
-                                        >
-                                        <span
-                                          class="block text-sm text-gray-500"
-                                          >ronihabibi@gmail.com</span
-                                        >
-                                      </div>
-                                    </div>
-                                  </a>
-                                </td>
-                                <td class="h-px w-72 min-w-[18rem] align-top">
-                                  <a class="block p-6" href="#">
-                                    <span class="block text-sm text-gray-500"
-                                      >Membuat table data pegawai untuk sistem
-                                      pendataan pegawai perusahaan</span
-                                    >
-                                  </a>
-                                </td>
-                                <td
-                                  class="h-px w-px whitespace-nowrap align-top"
-                                >
-                                  <a class="block p-6" href="#">
-                                    <span
-                                      class="text-sm text-gray-600 dark:text-gray-400"
-                                      >10 Jan 2022</span
-                                    >
-                                  </a>
-                                </td>
-                                <td
-                                  class="h-px w-px whitespace-nowrap align-top"
-                                >
-                                  <a class="block p-6" href="#">
-                                    <span
-                                      class="py-1 px-1.5 inline-flex items-center gap-x-1 text-xs font-medium bg-teal-100 text-teal-800 rounded-full dark:bg-teal-500/10 dark:text-teal-500"
-                                    >
-                                      <svg
-                                        class="w-2.5 h-2.5"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="16"
-                                        height="16"
-                                        fill="currentColor"
-                                        viewBox="0 0 16 16"
-                                      >
-                                        <path
-                                          d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"
-                                        />
-                                      </svg>
-                                      Approved
-                                    </span>
-                                  </a>
-                                </td>
-                                <td
-                                  class="h-px w-px whitespace-nowrap align-top"
-                                >
-                                  <a class="block p-6" href="#">
-                                    <span
-                                      class="py-1 px-1.5 inline-flex items-center gap-x-1 text-xs font-medium bg-teal-100 text-teal-800 rounded-full dark:bg-teal-500/10 dark:text-teal-500"
-                                    >
-                                      <svg
-                                        class="w-2.5 h-2.5"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="16"
-                                        height="16"
-                                        fill="currentColor"
-                                        viewBox="0 0 16 16"
-                                      >
-                                        <path
-                                          d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"
-                                        />
-                                      </svg>
-                                      Sudah Diperiksa
-                                    </span>
-                                  </a>
-                                </td>
-                              </tr>
-                              <tr
-                                class="bg-white hover:bg-gray-50 dark:bg-slate-900 dark:hover:bg-slate-800"
-                              >
-                                <td
-                                  class="h-px w-px whitespace-nowrap align-top"
-                                >
-                                  <a class="block p-6" href="#">
-                                    <div class="flex items-center gap-x-4">
-                                      <div>
-                                        <span
-                                          class="block text-sm font-semibold text-gray-800 dark:text-gray-200"
-                                          >Daily Report Minggu ke-2</span
-                                        >
-                                      </div>
-                                    </div>
-                                  </a>
-                                </td>
-                                <td
-                                  class="h-px w-px whitespace-nowrap align-top"
-                                >
-                                  <a class="block p-6" href="#">
-                                    <div class="flex items-center gap-x-3">
-                                      <img
-                                        class="inline-block h-[2.375rem] w-[2.375rem] rounded-full"
-                                        src="https://images.unsplash.com/photo-1531927557220-a9e23c1e4794?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80"
-                                        alt="Image Description"
-                                      />
-                                      <div class="grow">
-                                        <span
-                                          class="block text-sm font-semibold text-gray-800 dark:text-gray-200"
-                                          >Roni Habibi</span
-                                        >
-                                        <span
-                                          class="block text-sm text-gray-500"
-                                          >ronihabibi@gmail.com</span
-                                        >
-                                      </div>
-                                    </div>
-                                  </a>
-                                </td>
-                                <td class="h-px w-72 min-w-[18rem] align-top">
-                                  <a class="block p-6" href="#">
-                                    <span class="block text-sm text-gray-500"
-                                      >Membuat filter data untuk table data
-                                      pegawai perusahaan</span
-                                    >
-                                  </a>
-                                </td>
-                                <td
-                                  class="h-px w-px whitespace-nowrap align-top"
-                                >
-                                  <a class="block p-6" href="#">
-                                    <span
-                                      class="text-sm text-gray-600 dark:text-gray-400"
-                                      >17 Jan 2022</span
-                                    >
-                                  </a>
-                                </td>
-                                <td
-                                  class="h-px w-px whitespace-nowrap align-top"
-                                >
-                                  <a class="block p-6" href="#">
-                                    <span
-                                      class="py-1 px-1.5 inline-flex items-center gap-x-1 text-xs font-medium bg-teal-100 text-teal-800 rounded-full dark:bg-teal-500/10 dark:text-teal-500"
-                                    >
-                                      <svg
-                                        class="w-2.5 h-2.5"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="16"
-                                        height="16"
-                                        fill="currentColor"
-                                        viewBox="0 0 16 16"
-                                      >
-                                        <path
-                                          d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"
-                                        />
-                                      </svg>
-                                      Approved
-                                    </span>
-                                  </a>
-                                </td>
-                                <td
-                                  class="h-px w-px whitespace-nowrap align-top"
-                                >
-                                  <a class="block p-6" href="#">
-                                    <span
-                                      class="py-1 px-1.5 inline-flex items-center gap-x-1 text-xs font-medium bg-teal-100 text-teal-800 rounded-full dark:bg-teal-500/10 dark:text-teal-500"
-                                    >
-                                      <svg
-                                        class="w-2.5 h-2.5"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="16"
-                                        height="16"
-                                        fill="currentColor"
-                                        viewBox="0 0 16 16"
-                                      >
-                                        <path
-                                          d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"
-                                        />
-                                      </svg>
-                                      Sudah Diperiksa
-                                    </span>
-                                  </a>
-                                </td>
-                              </tr>
-                              <tr
-                                class="bg-white hover:bg-gray-50 dark:bg-slate-900 dark:hover:bg-slate-800"
-                              >
-                                <td
-                                  class="h-px w-px whitespace-nowrap align-top"
-                                >
-                                  <a class="block p-6" href="#">
-                                    <div class="flex items-center gap-x-4">
-                                      <div>
-                                        <span
-                                          class="block text-sm font-semibold text-gray-800 dark:text-gray-200"
-                                          >Daily Report Minggu ke-3</span
-                                        >
-                                      </div>
-                                    </div>
-                                  </a>
-                                </td>
-                                <td
-                                  class="h-px w-px whitespace-nowrap align-top"
-                                >
-                                  <a class="block p-6" href="#">
-                                    <div class="flex items-center gap-x-3">
-                                      <img
-                                        class="inline-block h-[2.375rem] w-[2.375rem] rounded-full"
-                                        src="https://images.unsplash.com/photo-1531927557220-a9e23c1e4794?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80"
-                                        alt="Image Description"
-                                      />
-                                      <div class="grow">
-                                        <span
-                                          class="block text-sm font-semibold text-gray-800 dark:text-gray-200"
-                                          >Roni Habibi</span
-                                        >
-                                        <span
-                                          class="block text-sm text-gray-500"
-                                          >ronihabibi@gmail.com</span
-                                        >
-                                      </div>
-                                    </div>
-                                  </a>
-                                </td>
-                                <td class="h-px w-72 min-w-[18rem] align-top">
-                                  <a class="block p-6" href="#">
-                                    <span class="block text-sm text-gray-500"
-                                      >Membuat filter data untuk table data
-                                      pegawai perusahaan</span
-                                    >
-                                  </a>
-                                </td>
-                                <td
-                                  class="h-px w-px whitespace-nowrap align-top"
-                                >
-                                  <a class="block p-6" href="#">
-                                    <span
-                                      class="text-sm text-gray-600 dark:text-gray-400"
-                                      >17 Jan 2022</span
-                                    >
-                                  </a>
-                                </td>
-                                <td
-                                  class="h-px w-px whitespace-nowrap align-top"
-                                >
-                                  <a class="block p-6" href="#">
-                                    <span
-                                      class="py-1 px-1.5 inline-flex items-center gap-x-1 text-xs font-medium bg-teal-100 text-teal-800 rounded-full dark:bg-teal-500/10 dark:text-teal-500"
-                                    >
-                                      <svg
-                                        class="w-2.5 h-2.5"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="16"
-                                        height="16"
-                                        fill="currentColor"
-                                        viewBox="0 0 16 16"
-                                      >
-                                        <path
-                                          d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"
-                                        />
-                                      </svg>
-                                      Approved
-                                    </span>
-                                  </a>
-                                </td>
-                                <td
-                                  class="h-px w-px whitespace-nowrap align-top"
-                                >
-                                  <a class="block p-6" href="#">
-                                    <span
-                                      class="py-1 px-1.5 inline-flex items-center gap-x-1 text-xs font-medium bg-teal-100 text-teal-800 rounded-full dark:bg-teal-500/10 dark:text-teal-500"
-                                    >
-                                      <svg
-                                        class="w-2.5 h-2.5"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="16"
-                                        height="16"
-                                        fill="currentColor"
-                                        viewBox="0 0 16 16"
-                                      >
-                                        <path
-                                          d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"
-                                        />
-                                      </svg>
-                                      Sudah Diperiksa
-                                    </span>
-                                  </a>
-                                </td>
-                              </tr>
-                            </tbody>
+                            ></tbody>
                           </table>
                           <!-- End Table -->
                         </div>
@@ -2479,7 +1761,7 @@
                 <div
                   class="px-6 py-4 grid gap-3 md:flex md:justify-between md:items-center border-y border-gray-200"
                 >
-                  <div id="mentorCount">
+                  <div id="countReportMentor">
                     <p class="text-sm text-gray-600">
                       <span class="font-semibold text-gray-800">0</span>
                       results
@@ -2562,6 +1844,20 @@
       src="./assets/js/getFunction/mahasiswaMagang/getMhsMagangFunction.js"
     ></script>
 
+    <!-- Get Daily Report -->
+    <script
+      type="module"
+      src="./assets/js/getFunction/dailyReport/getReportFunction.js"
+    ></script>
+
+    <!-- Post Report -->
+    <script
+      type="module"
+      src="./assets/js/postFunction/postDailyReportPembimbing/postDailyReportPembimbing.js"
+    ></script>
+    <!-- <script type="module" src="./assets/js/postFunction/postDailyReportMentor/postDailyReportMentor.js"></script> -->
+
+    <!-- Get Email -->
     <script type="module" src="../js/get/getEmailMhs.js"></script>
 
     <!-- autentikasi function -->
