@@ -79,6 +79,6 @@ export function isiRowMentor(value) {
   const mentor = dataMentor
     .replace("#MENTOR#", value.mentor.namalengkap)
     .replace("#EMAILMENTOR#", value.mentor.akun.email)
-    .replace("#PERUSAHAAN#", value.mentor.mitra.nama);
+    .replace("#PERUSAHAAN#", value.magang.mitra.nama);
   addInner("dataMentor", mentor);
 }
