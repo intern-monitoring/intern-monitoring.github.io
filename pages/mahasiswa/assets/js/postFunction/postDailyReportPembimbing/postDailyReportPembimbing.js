@@ -2,13 +2,10 @@ import { postWithToken } from "https://jscroot.github.io/api/croot.js";
 import { getValue } from "https://jscroot.github.io/element/croot.js";
 import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
 import { get } from "../../getFunction/mahasiswaMagang/getMhsMagangFunction.js";
+import { URLGetMahasiswaMagang } from "../../getFunction/mahasiswaMagang/getMhsMagang.js";
 
 let pembimbingID;
 let idMhsMgn;
-
-const URLGetMahasiswaMagang =
-  "https://asia-southeast2-bursakerja-project.cloudfunctions.net/intermoni-mahasiswa-magang?id=" +
-  idMhsMgn;
 
 get(URLGetMahasiswaMagang, responseIDPembimbing);
 
@@ -32,7 +29,8 @@ function getIDMahasiswaMagang(value) {
 
 const PostDailyReportPembimbing = () => {
   const target_url =
-    "https://asia-southeast2-bursakerja-project.cloudfunctions.net/intermoni-report";
+    "https://asia-southeast2-bursakerja-project.cloudfunctions.net/intermoni-report?id=" +
+    idMhsMgn;
   const tokenvalue = getCookie("Authorization");
   const tokenkey = "Authorization";
   const datainjson = {
