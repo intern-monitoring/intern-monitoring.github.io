@@ -2,22 +2,32 @@ import { postWithToken } from "https://jscroot.github.io/api/croot.js";
 import { getValue } from "https://jscroot.github.io/element/croot.js";
 import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
 import { get } from "../../getFunction/mahasiswaMagang/getMhsMagangFunction.js";
-import { URLGetMahasiswaMagang } from "../../getFunction/mahasiswaMagang/getMhsMagang.js";
-
-get(URLGetMahasiswaMagang, responseIDPembimbing);
 
 let pembimbingID;
+let idMhsMgn;
+
+const URLGetMahasiswaMagang =
+  "https://asia-southeast2-bursakerja-project.cloudfunctions.net/intermoni-mahasiswa-magang?id=" +
+  idMhsMgn;
+
+get(URLGetMahasiswaMagang, responseIDPembimbing);
 
 function responseIDPembimbing(results) {
   console.log(results);
   results.forEach((result) => {
     getIDPembimbing(result);
+    getIDMahasiswaMagang(result);
   });
 }
 
 function getIDPembimbing(value) {
   console.log(value.pembimbing._id);
   return (pembimbingID = value.pembimbing._id);
+}
+
+function getIDMahasiswaMagang(value) {
+  console.log(value._id);
+  return (idMhsMgn = value._id);
 }
 
 const PostDailyReportPembimbing = () => {
