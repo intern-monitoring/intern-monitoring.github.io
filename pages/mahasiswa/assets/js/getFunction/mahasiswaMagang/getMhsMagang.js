@@ -60,9 +60,6 @@ export const dataMentor = `
 `;
 
 export const dataMagang = `
-<h3 class="font-semibold text-gray-900 pb-3">
-Informasi Magang
-</h3>
 <div class="flex gap-x-3 text-sm">
 <h4
   class="min-w-[150px] max-w-[200px] font-semibold text-gray-800"
@@ -124,9 +121,10 @@ export function isiRowMentor(value) {
 
 export function isiRowMagang(value) {
   const magangdata = dataMagang
-    .replace("#PERUSAHAAN#", value.magang.mitra.nama)
+    .replace("#NAMAPERUSAHAAN#", value.magang.mitra.nama)
     .replace("#EMAILPERUSAHAAN#", value.magang.mitra.akun.email)
     .replace("#LOKASI#", value.magang.lokasi)
     .replace("#POSISI#", value.magang.posisi);
-  addInner("dataMentor", magangdata);
+  addInner("dataMagangM", magangdata);
+  addInner("dataMagangP", magangdata);
 }
