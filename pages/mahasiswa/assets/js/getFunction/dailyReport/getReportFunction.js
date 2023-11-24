@@ -1,4 +1,4 @@
-import { URLGetReport, responseData } from "./getReport";
+import { URLGetReport, responseData } from "./getReport.js";
 import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
 
 const CountReportPembimbing = (count) => {
