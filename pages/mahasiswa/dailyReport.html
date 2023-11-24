@@ -420,979 +420,2191 @@
 
     <!-- Content Section -->
     <div class="w-full bg-gray-50 lg:pl-64">
-      <!-- Daily Report -->
-      <div class="px-4 py-10 sm:px-6 lg:px-8 mx-auto">
-        <div class="p-5 mx-auto bg-white shadow-md rounded-lg">
-          <!-- Grid -->
-          <div
-            class="pb-2 flex justify-between items-center border-b border-gray-200 dark:border-gray-700"
+      <!-- Filter -->
+      <div class="pt-10 px-4 sm:px-6 lg:px-8 mx-auto">
+        <!-- Nav -->
+        <div
+          class="px-4 bg-white shadow-md rounded-t-lg border-b border-gray-200"
+        >
+          <nav
+            class="flex space-x-2 justify-start"
+            aria-label="Tabs"
+            role="tablist"
           >
-            <div>
-              <h2
-                class="text-2xl font-semibold text-gray-800 dark:text-gray-200"
-              >
-                Daily Report
-              </h2>
-              <p class="text-sm text-gray-600">
-                Laporan harian tentang kegiatan mahasiswa saat magang
-              </p>
-            </div>
-            <!-- Col -->
-          </div>
-          <!-- End Grid -->
+            <button
+              type="button"
+              class="hs-tab-active:font-semibold hs-tab-active:border-blue-600 hs-tab-active:text-blue-600 py-4 px-1 inline-flex items-center gap-x-2 border-b-2 border-transparent text-sm whitespace-nowrap text-gray-500 hover:text-blue-600 disabled:opacity-50 disabled:pointer-events-none active"
+              id="basic-tabs-item-1"
+              data-hs-tab="#basic-tabs-1"
+              aria-controls="basic-tabs-1"
+              role="tab"
+            >
+              Pembimbing
+            </button>
+            <button
+              type="button"
+              class="hs-tab-active:font-semibold hs-tab-active:border-blue-600 hs-tab-active:text-blue-600 py-4 px-1 inline-flex items-center gap-x-2 border-b-2 border-transparent text-sm whitespace-nowrap text-gray-500 hover:text-blue-600 disabled:opacity-50 disabled:pointer-events-none"
+              id="basic-tabs-item-2"
+              data-hs-tab="#basic-tabs-2"
+              aria-controls="basic-tabs-2"
+              role="tab"
+            >
+              Mentor
+            </button>
+          </nav>
+        </div>
+        <!-- End Nav -->
 
-          <!-- Grid -->
-          <div class="grid lg:grid-cols-2 gap-7 py-5">
-            <div>
-              <div class="grid space-y-2">
-                <!-- Mentor -->
-                <div class="flex gap-x-8 text-sm items-center">
-                  <div class="pb-3">
-                    <img
-                      class="inline-block h-32 w-32 rounded-full ring-2 ring-white"
-                      src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80"
-                      alt="Image Description"
-                    />
-                  </div>
-                  <div class="space-y-1">
-                    <div>
-                      <h3 class="font-semibold text-gray-800">
-                        Nama Pembimbing :
-                      </h3>
-                      <p class="text-gray-500">Roni Habibi</p>
-                    </div>
-                    <div>
-                      <span class="block font-semibold">Email :</span>
-                      <p class="text-blue-700">ronihabibi@gmail.com</p>
-                    </div>
-                    <div>
-                      <span class="block font-semibold">Dosen Prodi :</span>
-                      <p class="text-gray-500">D4 Teknik Informatika</p>
-                    </div>
-                  </div>
-                </div>
-                <!-- End Mentor -->
-              </div>
-            </div>
-            <!-- Col -->
-
-            <div>
-              <div class="grid space-y-2">
-                <!-- Perusahaan -->
-                <div>
-                  <h3 class="font-semibold text-gray-900 pb-3">
-                    Informasi Magang
-                  </h3>
-                  <div class="flex gap-x-3 text-sm">
-                    <h4
-                      class="min-w-[150px] max-w-[200px] font-semibold text-gray-800"
-                    >
-                      Nama Perusahaan :
-                    </h4>
-                    <p class="text-gray-500">Ardiant Company</p>
-                  </div>
-                  <div class="flex gap-x-3 text-sm">
-                    <h4
-                      class="min-w-[150px] max-w-[200px] font-semibold text-gray-800"
-                    >
-                      Email :
-                    </h4>
-                    <p class="text-blue-700">ardiantcompany@gmail.com</p>
-                  </div>
-                  <div class="flex gap-x-3 text-sm">
-                    <h4
-                      class="min-w-[150px] max-w-[200px] font-semibold text-gray-800"
-                    >
-                      Lokasi :
-                    </h4>
-                    <p class="text-gray-500">Kota Bandung</p>
-                  </div>
-                  <div class="flex gap-x-3 text-sm">
-                    <h4
-                      class="min-w-[150px] max-w-[200px] font-semibold text-gray-800"
-                    >
-                      Posisi Magang :
-                    </h4>
-                    <p class="text-gray-500">Front End Developer</p>
-                  </div>
-                </div>
-                <!-- End Perusahaan -->
-              </div>
-            </div>
-            <!-- Col -->
-          </div>
-          <!-- Stats Task -->
-
-          <div class="h-[200px]">
-            <!-- Grid -->
-            <div class="grid grid-cols-3 h-20 border-y border-gray-200">
-              <!-- Card -->
-              <a
-                class="flex justify-center items-center border-r border-gray-200 bg-white hover:bg-gray-50 before:absolute before:top-0 before:start-0 before:w-full before:h-px md:before:w-px md:before:h-full before:bg-gray-200 before:first:bg-transparent"
-                href="#"
-              >
-                <div class="text-center">
-                  <p
-                    class="text-xs uppercase tracking-wide font-medium text-gray-800"
-                  >
-                    Task sedang dikerjakan
-                  </p>
-                  <h3 class="mt-1 text-3xl font-semibold text-gray-600">10</h3>
-                </div>
-              </a>
-              <!-- End Card -->
-              <!-- Card -->
-              <a
-                class="flex justify-center items-center border-r border-gray-200 bg-white hover:bg-gray-50 before:absolute before:top-0 before:start-0 before:w-full before:h-px md:before:w-px md:before:h-full before:bg-gray-200 before:first:bg-transparent"
-                href="#"
-              >
-                <div class="text-center">
-                  <p
-                    class="text-xs uppercase tracking-wide font-medium text-gray-800"
-                  >
-                    Task sudah dikerjakan
-                  </p>
-                  <h3 class="mt-1 text-3xl font-semibold text-green-600">20</h3>
-                </div>
-              </a>
-              <!-- End Card -->
-              <!-- Card -->
-              <a
-                class="flex justify-center items-center bg-white hover:bg-gray-50 before:absolute before:top-0 before:start-0 before:w-full before:h-px md:before:w-px md:before:h-full before:bg-gray-200 before:first:bg-transparent"
-                href="#"
-              >
-                <div class="text-center">
-                  <p
-                    class="text-xs uppercase tracking-wide font-medium text-gray-800"
-                  >
-                    Task belum dikerjakan
-                  </p>
-                  <h3 class="mt-1 text-3xl font-semibold text-red-600">15</h3>
-                </div>
-              </a>
-              <!-- End Card -->
-            </div>
-            <!-- End Grid -->
-            <h3 class="flex justify-center pt-10">COOMING SOON</h3>
-          </div>
-          <!-- End Stats Task -->
-          <!-- End Grid -->
-
-          <!-- Table -->
-          <!-- Header Table -->
+        <!-- Tabel -->
+        <div>
+          <!-- Pembimbing -->
           <div
-            class="px-2 py-4 grid gap-3 md:flex md:justify-between md:items-center border-t border-gray-200"
+            id="basic-tabs-1"
+            role="tabpanel"
+            aria-labelledby="basic-tabs-item-1"
           >
-            <div>
-              <h2 class="text-xl font-semibold text-gray-800">Data report</h2>
-              <p class="text-sm text-gray-600">
-                Berikut merupakan data daily report magang.
-              </p>
-            </div>
-
-            <div>
-              <div class="inline-flex gap-x-2">
-                <button
-                  data-ripple-light="true"
-                  data-dialog-target="dialog"
-                  class="py-2 px-3 inline-flex justify-center items-center gap-2 rounded-md border border-transparent font-semibold bg-gradient-to-tl from-blue-600 to-violet-600 text-white text-sm"
-                >
-                  <svg
-                    class="w-3 h-3"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    viewBox="0 0 16 16"
-                    fill="none"
-                  >
-                    <path
-                      d="M2.63452 7.50001L13.6345 7.5M8.13452 13V2"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                    />
-                  </svg>
-                  Kirim Reporting
-                </button>
+            <!-- Daily Report -->
+            <div class="pb-10 mx-auto">
+              <div class="p-5 mx-auto bg-white shadow-md rounded-b-lg">
+                <!-- Grid -->
                 <div
-                  data-dialog-backdrop="dialog"
-                  data-dialog-backdrop-close="true"
-                  class="pointer-events-none fixed inset-0 z-[999] grid h-screen w-screen place-items-center bg-black bg-opacity-60 opacity-0 backdrop-blur-sm transition-opacity duration-300"
+                  class="pb-2 flex justify-between items-center border-b border-gray-200 dark:border-gray-700"
                 >
-                  <div
-                    data-dialog="dialog"
-                    class="relative w-full h-full top-0 left-0 overflow-x-hidden overflow-y-auto"
-                  >
-                    <div
-                      class="opacity-100 h-full w-full py-10 px-5 md:px-16 lg:px-20"
+                  <div>
+                    <h2
+                      class="text-2xl font-semibold text-gray-800 dark:text-gray-200"
                     >
+                      Daily Report
+                    </h2>
+                    <p class="text-sm text-gray-600">
+                      Laporan harian tentang kegiatan mahasiswa saat magang
+                    </p>
+                  </div>
+                  <!-- Col -->
+                </div>
+                <!-- End Grid -->
+
+                <!-- Grid -->
+                <div class="grid lg:grid-cols-2 gap-7 py-5">
+                  <div>
+                    <div class="grid space-y-2">
+                      <!-- Pembimbing -->
                       <div
-                        class="max-h-full overflow-hidden flex flex-col bg-white border shadow-sm rounded-xl"
+                        id="dataPembimbing"
+                        class="flex gap-x-8 text-sm items-center"
+                      ></div>
+                      <!-- End Pembimbing -->
+                    </div>
+                  </div>
+                  <!-- Col -->
+
+                  <div>
+                    <div class="grid space-y-2">
+                      <!-- Perusahaan -->
+                      <div>
+                        <h3 class="font-semibold text-gray-900 pb-3">
+                          Informasi Magang
+                        </h3>
+                        <div class="flex gap-x-3 text-sm">
+                          <h4
+                            class="min-w-[150px] max-w-[200px] font-semibold text-gray-800"
+                          >
+                            Nama Perusahaan :
+                          </h4>
+                          <p class="text-gray-500">Ardiant Company</p>
+                        </div>
+                        <div class="flex gap-x-3 text-sm">
+                          <h4
+                            class="min-w-[150px] max-w-[200px] font-semibold text-gray-800"
+                          >
+                            Email :
+                          </h4>
+                          <p class="text-blue-700">ardiantcompany@gmail.com</p>
+                        </div>
+                        <div class="flex gap-x-3 text-sm">
+                          <h4
+                            class="min-w-[150px] max-w-[200px] font-semibold text-gray-800"
+                          >
+                            Lokasi :
+                          </h4>
+                          <p class="text-gray-500">Kota Bandung</p>
+                        </div>
+                        <div class="flex gap-x-3 text-sm">
+                          <h4
+                            class="min-w-[150px] max-w-[200px] font-semibold text-gray-800"
+                          >
+                            Posisi Magang :
+                          </h4>
+                          <p class="text-gray-500">Front End Developer</p>
+                        </div>
+                      </div>
+                      <!-- End Perusahaan -->
+                    </div>
+                  </div>
+                  <!-- Col -->
+                </div>
+                <!-- Stats Task -->
+
+                <div class="h-[200px]">
+                  <!-- Grid -->
+                  <div class="grid grid-cols-3 h-20 border-y border-gray-200">
+                    <!-- Card -->
+                    <a
+                      class="flex justify-center items-center border-r border-gray-200 bg-white hover:bg-gray-50 before:absolute before:top-0 before:start-0 before:w-full before:h-px md:before:w-px md:before:h-full before:bg-gray-200 before:first:bg-transparent"
+                      href="#"
+                    >
+                      <div class="text-center">
+                        <p
+                          class="text-xs uppercase tracking-wide font-medium text-gray-800"
+                        >
+                          Task sedang dikerjakan
+                        </p>
+                        <h3 class="mt-1 text-3xl font-semibold text-gray-600">
+                          10
+                        </h3>
+                      </div>
+                    </a>
+                    <!-- End Card -->
+                    <!-- Card -->
+                    <a
+                      class="flex justify-center items-center border-r border-gray-200 bg-white hover:bg-gray-50 before:absolute before:top-0 before:start-0 before:w-full before:h-px md:before:w-px md:before:h-full before:bg-gray-200 before:first:bg-transparent"
+                      href="#"
+                    >
+                      <div class="text-center">
+                        <p
+                          class="text-xs uppercase tracking-wide font-medium text-gray-800"
+                        >
+                          Task sudah dikerjakan
+                        </p>
+                        <h3 class="mt-1 text-3xl font-semibold text-green-600">
+                          20
+                        </h3>
+                      </div>
+                    </a>
+                    <!-- End Card -->
+                    <!-- Card -->
+                    <a
+                      class="flex justify-center items-center bg-white hover:bg-gray-50 before:absolute before:top-0 before:start-0 before:w-full before:h-px md:before:w-px md:before:h-full before:bg-gray-200 before:first:bg-transparent"
+                      href="#"
+                    >
+                      <div class="text-center">
+                        <p
+                          class="text-xs uppercase tracking-wide font-medium text-gray-800"
+                        >
+                          Task belum dikerjakan
+                        </p>
+                        <h3 class="mt-1 text-3xl font-semibold text-red-600">
+                          15
+                        </h3>
+                      </div>
+                    </a>
+                    <!-- End Card -->
+                  </div>
+                  <!-- End Grid -->
+                  <h3 class="flex justify-center pt-10">COOMING SOON</h3>
+                </div>
+                <!-- End Stats Task -->
+                <!-- End Grid -->
+
+                <!-- Table -->
+                <!-- Header Table -->
+                <div
+                  class="px-2 py-4 grid gap-3 md:flex md:justify-between md:items-center border-t border-gray-200"
+                >
+                  <div>
+                    <h2 class="text-xl font-semibold text-gray-800">
+                      Data report
+                    </h2>
+                    <p class="text-sm text-gray-600">
+                      Berikut merupakan data daily report magang.
+                    </p>
+                  </div>
+
+                  <div>
+                    <div class="inline-flex gap-x-2">
+                      <button
+                        data-ripple-light="true"
+                        data-dialog-target="dialog"
+                        class="py-2 px-3 inline-flex justify-center items-center gap-2 rounded-md border border-transparent font-semibold bg-gradient-to-tl from-blue-600 to-violet-600 text-white text-sm"
+                      >
+                        <svg
+                          class="w-3 h-3"
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          viewBox="0 0 16 16"
+                          fill="none"
+                        >
+                          <path
+                            d="M2.63452 7.50001L13.6345 7.5M8.13452 13V2"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                          />
+                        </svg>
+                        Kirim Reporting
+                      </button>
+                      <div
+                        data-dialog-backdrop="dialog"
+                        data-dialog-backdrop-close="true"
+                        class="pointer-events-none fixed inset-0 z-[999] grid h-screen w-screen place-items-center bg-black bg-opacity-60 opacity-0 backdrop-blur-sm transition-opacity duration-300"
                       >
                         <div
-                          class="flex shrink-0 items-center p-4 font-sans text-2xl font-semibold leading-snug text-gray-800 antialiased"
+                          data-dialog="dialog"
+                          class="relative w-full h-full top-0 left-0 overflow-x-hidden overflow-y-auto"
                         >
-                          Deskripsi
-                        </div>
-                        <div class="p-5 overflow-y-auto">
-                          <!-- Grid -->
-                          <div class="grid gap-2">
-                            <!-- Judul -->
-                            <div class="sm:col-span-3">
-                              <label
-                                for="af-account-judul"
-                                class="inline-block text-sm text-gray-800 mt-2.5"
-                              >
-                                Judul Report
-                              </label>
-                            </div>
-                            <!-- End Col -->
-                            <div class="sm:col-span-9">
-                              <div class="sm:flex">
-                                <input
-                                  id="namalengkap"
-                                  type="text"
-                                  class="py-2 px-3 pr-11 block w-full border-[1px] border-gray-200 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500"
-                                  placeholder="Contoh : Daily Report 1"
-                                />
-                              </div>
-                            </div>
-                            <!-- End Col -->
-                            <!-- End Judul -->
-
-                            <!-- Task -->
-                            <div class="sm:col-span-3">
-                              <label
-                                for="af-account-task"
-                                class="inline-block text-sm text-gray-800 mt-2.5"
-                              >
-                                Task magang yang dikerjakan
-                              </label>
-                            </div>
-                            <!-- End Col -->
-                            <div class="sm:col-span-9">
-                              <div class="sm:flex">
-                                <input
-                                  id="namalengkap"
-                                  type="text"
-                                  class="py-2 px-3 pr-11 block w-full border-[1px] border-gray-200 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500"
-                                  placeholder="Contoh : Membuat desain web"
-                                />
-                              </div>
-                            </div>
-                            <!-- End Col -->
-                            <!-- End Task -->
-
-                            <!-- Deskripsi -->
-                            <div class="sm:col-span-3">
-                              <label
-                                for="af-account-deskripsi"
-                                class="inline-block text-sm text-gray-800 mt-2.5"
+                          <div
+                            class="opacity-100 h-full w-full py-10 px-5 md:px-16 lg:px-20"
+                          >
+                            <div
+                              class="max-h-full overflow-hidden flex flex-col bg-white border shadow-sm rounded-xl"
+                            >
+                              <div
+                                class="flex shrink-0 items-center p-4 font-sans text-2xl font-semibold leading-snug text-gray-800 antialiased"
                               >
                                 Deskripsi
-                              </label>
-                            </div>
-                            <!-- End Col -->
-
-                            <div class="sm:col-span-9">
-                              <div
-                                class="border border-gray-200 rounded-lg overflow-hidden"
-                              >
-                                <div id="hs-editor-tiptap">
-                                  <div
-                                    class="flex align-middle gap-x-0.5 border-b border-gray-200 p-2"
-                                  >
-                                    <button
-                                      class="w-8 h-8 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-full border border-transparent text-gray-800 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:hover:bg-gray-700 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-                                      type="button"
-                                      data-hs-editor-bold
+                              </div>
+                              <div class="p-5 overflow-y-auto">
+                                <!-- Grid -->
+                                <div class="grid gap-2">
+                                  <!-- Judul -->
+                                  <div class="sm:col-span-3">
+                                    <label
+                                      for="af-account-judul"
+                                      class="inline-block text-sm text-gray-800 mt-2.5"
                                     >
-                                      <svg
-                                        class="flex-shrink-0 w-4 h-4"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="24"
-                                        height="24"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-width="2"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                      >
-                                        <path d="M14 12a4 4 0 0 0 0-8H6v8" />
-                                        <path d="M15 20a4 4 0 0 0 0-8H6v8Z" />
-                                      </svg>
-                                    </button>
-                                    <button
-                                      class="w-8 h-8 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-full border border-transparent text-gray-800 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:hover:bg-gray-700 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-                                      type="button"
-                                      data-hs-editor-italic
-                                    >
-                                      <svg
-                                        class="flex-shrink-0 w-4 h-4"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="24"
-                                        height="24"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-width="2"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                      >
-                                        <line x1="19" x2="10" y1="4" y2="4" />
-                                        <line x1="14" x2="5" y1="20" y2="20" />
-                                        <line x1="15" x2="9" y1="4" y2="20" />
-                                      </svg>
-                                    </button>
-                                    <button
-                                      class="w-8 h-8 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-full border border-transparent text-gray-800 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:hover:bg-gray-700 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-                                      type="button"
-                                      data-hs-editor-underline
-                                    >
-                                      <svg
-                                        class="flex-shrink-0 w-4 h-4"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="24"
-                                        height="24"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-width="2"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                      >
-                                        <path d="M6 4v6a6 6 0 0 0 12 0V4" />
-                                        <line x1="4" x2="20" y1="20" y2="20" />
-                                      </svg>
-                                    </button>
-                                    <button
-                                      class="w-8 h-8 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-full border border-transparent text-gray-800 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:hover:bg-gray-700 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-                                      type="button"
-                                      data-hs-editor-strike
-                                    >
-                                      <svg
-                                        class="flex-shrink-0 w-4 h-4"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="24"
-                                        height="24"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-width="2"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                      >
-                                        <path d="M16 4H9a3 3 0 0 0-2.83 4" />
-                                        <path d="M14 12a4 4 0 0 1 0 8H6" />
-                                        <line x1="4" x2="20" y1="12" y2="12" />
-                                      </svg>
-                                    </button>
-                                    <button
-                                      class="w-8 h-8 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-full border border-transparent text-gray-800 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:hover:bg-gray-700 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-                                      type="button"
-                                      data-hs-editor-link
-                                    >
-                                      <svg
-                                        class="flex-shrink-0 w-4 h-4"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="24"
-                                        height="24"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-width="2"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                      >
-                                        <path
-                                          d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"
-                                        />
-                                        <path
-                                          d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"
-                                        />
-                                      </svg>
-                                    </button>
-                                    <button
-                                      class="w-8 h-8 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-full border border-transparent text-gray-800 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:hover:bg-gray-700 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-                                      type="button"
-                                      data-hs-editor-ol
-                                    >
-                                      <svg
-                                        class="flex-shrink-0 w-4 h-4"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="24"
-                                        height="24"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-width="2"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                      >
-                                        <line x1="10" x2="21" y1="6" y2="6" />
-                                        <line x1="10" x2="21" y1="12" y2="12" />
-                                        <line x1="10" x2="21" y1="18" y2="18" />
-                                        <path d="M4 6h1v4" />
-                                        <path d="M4 10h2" />
-                                        <path
-                                          d="M6 18H4c0-1 2-2 2-3s-1-1.5-2-1"
-                                        />
-                                      </svg>
-                                    </button>
-                                    <button
-                                      class="w-8 h-8 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-full border border-transparent text-gray-800 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:hover:bg-gray-700 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-                                      type="button"
-                                      data-hs-editor-ul
-                                    >
-                                      <svg
-                                        class="flex-shrink-0 w-4 h-4"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="24"
-                                        height="24"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-width="2"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                      >
-                                        <line x1="8" x2="21" y1="6" y2="6" />
-                                        <line x1="8" x2="21" y1="12" y2="12" />
-                                        <line x1="8" x2="21" y1="18" y2="18" />
-                                        <line x1="3" x2="3.01" y1="6" y2="6" />
-                                        <line
-                                          x1="3"
-                                          x2="3.01"
-                                          y1="12"
-                                          y2="12"
-                                        />
-                                        <line
-                                          x1="3"
-                                          x2="3.01"
-                                          y1="18"
-                                          y2="18"
-                                        />
-                                      </svg>
-                                    </button>
-                                    <button
-                                      class="w-8 h-8 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-full border border-transparent text-gray-800 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:hover:bg-gray-700 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-                                      type="button"
-                                      data-hs-editor-blockquote
-                                    >
-                                      <svg
-                                        class="flex-shrink-0 w-4 h-4"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="24"
-                                        height="24"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-width="2"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                      >
-                                        <path d="M17 6H3" />
-                                        <path d="M21 12H8" />
-                                        <path d="M21 18H8" />
-                                        <path d="M3 12v6" />
-                                      </svg>
-                                    </button>
-                                    <button
-                                      class="w-8 h-8 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-full border border-transparent text-gray-800 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:hover:bg-gray-700 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-                                      type="button"
-                                      data-hs-editor-code
-                                    >
-                                      <svg
-                                        class="flex-shrink-0 w-4 h-4"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="24"
-                                        height="24"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-width="2"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                      >
-                                        <path d="m18 16 4-4-4-4" />
-                                        <path d="m6 8-4 4 4 4" />
-                                        <path d="m14.5 4-5 16" />
-                                      </svg>
-                                    </button>
+                                      Judul Report
+                                    </label>
                                   </div>
+                                  <!-- End Col -->
+                                  <div class="sm:col-span-9">
+                                    <div class="sm:flex">
+                                      <input
+                                        id="namalengkap"
+                                        type="text"
+                                        class="py-2 px-3 pr-11 block w-full border-[1px] border-gray-200 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500"
+                                        placeholder="Contoh : Daily Report 1"
+                                      />
+                                    </div>
+                                  </div>
+                                  <!-- End Col -->
+                                  <!-- End Judul -->
 
-                                  <div
-                                    id="deskripsi"
-                                    class="min-h-[200px] pb-10 px-3 text-gray-300 text-sm"
-                                    data-hs-editor-field
-                                  ></div>
+                                  <!-- Task -->
+                                  <div class="sm:col-span-3">
+                                    <label
+                                      for="af-account-task"
+                                      class="inline-block text-sm text-gray-800 mt-2.5"
+                                    >
+                                      Task magang yang dikerjakan
+                                    </label>
+                                  </div>
+                                  <!-- End Col -->
+                                  <div class="sm:col-span-9">
+                                    <div class="sm:flex">
+                                      <input
+                                        id="namalengkap"
+                                        type="text"
+                                        class="py-2 px-3 pr-11 block w-full border-[1px] border-gray-200 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500"
+                                        placeholder="Contoh : Membuat desain web"
+                                      />
+                                    </div>
+                                  </div>
+                                  <!-- End Col -->
+                                  <!-- End Task -->
+
+                                  <!-- Deskripsi -->
+                                  <div class="sm:col-span-3">
+                                    <label
+                                      for="af-account-deskripsi"
+                                      class="inline-block text-sm text-gray-800 mt-2.5"
+                                    >
+                                      Deskripsi
+                                    </label>
+                                  </div>
+                                  <!-- End Col -->
+
+                                  <div class="sm:col-span-9">
+                                    <div
+                                      class="border border-gray-200 rounded-lg overflow-hidden"
+                                    >
+                                      <div id="hs-editor-tiptap">
+                                        <div
+                                          class="flex align-middle gap-x-0.5 border-b border-gray-200 p-2"
+                                        >
+                                          <button
+                                            class="w-8 h-8 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-full border border-transparent text-gray-800 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:hover:bg-gray-700 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                                            type="button"
+                                            data-hs-editor-bold
+                                          >
+                                            <svg
+                                              class="flex-shrink-0 w-4 h-4"
+                                              xmlns="http://www.w3.org/2000/svg"
+                                              width="24"
+                                              height="24"
+                                              viewBox="0 0 24 24"
+                                              fill="none"
+                                              stroke="currentColor"
+                                              stroke-width="2"
+                                              stroke-linecap="round"
+                                              stroke-linejoin="round"
+                                            >
+                                              <path
+                                                d="M14 12a4 4 0 0 0 0-8H6v8"
+                                              />
+                                              <path
+                                                d="M15 20a4 4 0 0 0 0-8H6v8Z"
+                                              />
+                                            </svg>
+                                          </button>
+                                          <button
+                                            class="w-8 h-8 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-full border border-transparent text-gray-800 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:hover:bg-gray-700 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                                            type="button"
+                                            data-hs-editor-italic
+                                          >
+                                            <svg
+                                              class="flex-shrink-0 w-4 h-4"
+                                              xmlns="http://www.w3.org/2000/svg"
+                                              width="24"
+                                              height="24"
+                                              viewBox="0 0 24 24"
+                                              fill="none"
+                                              stroke="currentColor"
+                                              stroke-width="2"
+                                              stroke-linecap="round"
+                                              stroke-linejoin="round"
+                                            >
+                                              <line
+                                                x1="19"
+                                                x2="10"
+                                                y1="4"
+                                                y2="4"
+                                              />
+                                              <line
+                                                x1="14"
+                                                x2="5"
+                                                y1="20"
+                                                y2="20"
+                                              />
+                                              <line
+                                                x1="15"
+                                                x2="9"
+                                                y1="4"
+                                                y2="20"
+                                              />
+                                            </svg>
+                                          </button>
+                                          <button
+                                            class="w-8 h-8 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-full border border-transparent text-gray-800 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:hover:bg-gray-700 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                                            type="button"
+                                            data-hs-editor-underline
+                                          >
+                                            <svg
+                                              class="flex-shrink-0 w-4 h-4"
+                                              xmlns="http://www.w3.org/2000/svg"
+                                              width="24"
+                                              height="24"
+                                              viewBox="0 0 24 24"
+                                              fill="none"
+                                              stroke="currentColor"
+                                              stroke-width="2"
+                                              stroke-linecap="round"
+                                              stroke-linejoin="round"
+                                            >
+                                              <path
+                                                d="M6 4v6a6 6 0 0 0 12 0V4"
+                                              />
+                                              <line
+                                                x1="4"
+                                                x2="20"
+                                                y1="20"
+                                                y2="20"
+                                              />
+                                            </svg>
+                                          </button>
+                                          <button
+                                            class="w-8 h-8 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-full border border-transparent text-gray-800 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:hover:bg-gray-700 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                                            type="button"
+                                            data-hs-editor-strike
+                                          >
+                                            <svg
+                                              class="flex-shrink-0 w-4 h-4"
+                                              xmlns="http://www.w3.org/2000/svg"
+                                              width="24"
+                                              height="24"
+                                              viewBox="0 0 24 24"
+                                              fill="none"
+                                              stroke="currentColor"
+                                              stroke-width="2"
+                                              stroke-linecap="round"
+                                              stroke-linejoin="round"
+                                            >
+                                              <path
+                                                d="M16 4H9a3 3 0 0 0-2.83 4"
+                                              />
+                                              <path
+                                                d="M14 12a4 4 0 0 1 0 8H6"
+                                              />
+                                              <line
+                                                x1="4"
+                                                x2="20"
+                                                y1="12"
+                                                y2="12"
+                                              />
+                                            </svg>
+                                          </button>
+                                          <button
+                                            class="w-8 h-8 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-full border border-transparent text-gray-800 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:hover:bg-gray-700 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                                            type="button"
+                                            data-hs-editor-link
+                                          >
+                                            <svg
+                                              class="flex-shrink-0 w-4 h-4"
+                                              xmlns="http://www.w3.org/2000/svg"
+                                              width="24"
+                                              height="24"
+                                              viewBox="0 0 24 24"
+                                              fill="none"
+                                              stroke="currentColor"
+                                              stroke-width="2"
+                                              stroke-linecap="round"
+                                              stroke-linejoin="round"
+                                            >
+                                              <path
+                                                d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"
+                                              />
+                                              <path
+                                                d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"
+                                              />
+                                            </svg>
+                                          </button>
+                                          <button
+                                            class="w-8 h-8 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-full border border-transparent text-gray-800 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:hover:bg-gray-700 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                                            type="button"
+                                            data-hs-editor-ol
+                                          >
+                                            <svg
+                                              class="flex-shrink-0 w-4 h-4"
+                                              xmlns="http://www.w3.org/2000/svg"
+                                              width="24"
+                                              height="24"
+                                              viewBox="0 0 24 24"
+                                              fill="none"
+                                              stroke="currentColor"
+                                              stroke-width="2"
+                                              stroke-linecap="round"
+                                              stroke-linejoin="round"
+                                            >
+                                              <line
+                                                x1="10"
+                                                x2="21"
+                                                y1="6"
+                                                y2="6"
+                                              />
+                                              <line
+                                                x1="10"
+                                                x2="21"
+                                                y1="12"
+                                                y2="12"
+                                              />
+                                              <line
+                                                x1="10"
+                                                x2="21"
+                                                y1="18"
+                                                y2="18"
+                                              />
+                                              <path d="M4 6h1v4" />
+                                              <path d="M4 10h2" />
+                                              <path
+                                                d="M6 18H4c0-1 2-2 2-3s-1-1.5-2-1"
+                                              />
+                                            </svg>
+                                          </button>
+                                          <button
+                                            class="w-8 h-8 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-full border border-transparent text-gray-800 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:hover:bg-gray-700 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                                            type="button"
+                                            data-hs-editor-ul
+                                          >
+                                            <svg
+                                              class="flex-shrink-0 w-4 h-4"
+                                              xmlns="http://www.w3.org/2000/svg"
+                                              width="24"
+                                              height="24"
+                                              viewBox="0 0 24 24"
+                                              fill="none"
+                                              stroke="currentColor"
+                                              stroke-width="2"
+                                              stroke-linecap="round"
+                                              stroke-linejoin="round"
+                                            >
+                                              <line
+                                                x1="8"
+                                                x2="21"
+                                                y1="6"
+                                                y2="6"
+                                              />
+                                              <line
+                                                x1="8"
+                                                x2="21"
+                                                y1="12"
+                                                y2="12"
+                                              />
+                                              <line
+                                                x1="8"
+                                                x2="21"
+                                                y1="18"
+                                                y2="18"
+                                              />
+                                              <line
+                                                x1="3"
+                                                x2="3.01"
+                                                y1="6"
+                                                y2="6"
+                                              />
+                                              <line
+                                                x1="3"
+                                                x2="3.01"
+                                                y1="12"
+                                                y2="12"
+                                              />
+                                              <line
+                                                x1="3"
+                                                x2="3.01"
+                                                y1="18"
+                                                y2="18"
+                                              />
+                                            </svg>
+                                          </button>
+                                          <button
+                                            class="w-8 h-8 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-full border border-transparent text-gray-800 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:hover:bg-gray-700 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                                            type="button"
+                                            data-hs-editor-blockquote
+                                          >
+                                            <svg
+                                              class="flex-shrink-0 w-4 h-4"
+                                              xmlns="http://www.w3.org/2000/svg"
+                                              width="24"
+                                              height="24"
+                                              viewBox="0 0 24 24"
+                                              fill="none"
+                                              stroke="currentColor"
+                                              stroke-width="2"
+                                              stroke-linecap="round"
+                                              stroke-linejoin="round"
+                                            >
+                                              <path d="M17 6H3" />
+                                              <path d="M21 12H8" />
+                                              <path d="M21 18H8" />
+                                              <path d="M3 12v6" />
+                                            </svg>
+                                          </button>
+                                          <button
+                                            class="w-8 h-8 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-full border border-transparent text-gray-800 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:hover:bg-gray-700 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                                            type="button"
+                                            data-hs-editor-code
+                                          >
+                                            <svg
+                                              class="flex-shrink-0 w-4 h-4"
+                                              xmlns="http://www.w3.org/2000/svg"
+                                              width="24"
+                                              height="24"
+                                              viewBox="0 0 24 24"
+                                              fill="none"
+                                              stroke="currentColor"
+                                              stroke-width="2"
+                                              stroke-linecap="round"
+                                              stroke-linejoin="round"
+                                            >
+                                              <path d="m18 16 4-4-4-4" />
+                                              <path d="m6 8-4 4 4 4" />
+                                              <path d="m14.5 4-5 16" />
+                                            </svg>
+                                          </button>
+                                        </div>
+
+                                        <div
+                                          id="deskripsi"
+                                          class="min-h-[200px] pb-10 px-3 text-gray-300 text-sm"
+                                          data-hs-editor-field
+                                        ></div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <!-- End Col -->
+                                  <!-- End Deskripsi -->
                                 </div>
+                                <!-- End Grid -->
+                              </div>
+                              <div
+                                class="flex shrink-0 flex-wrap items-center justify-end p-4 text-blue-gray-500"
+                              >
+                                <button
+                                  data-ripple-dark="true"
+                                  data-dialog-close="true"
+                                  class="middle none center mr-1 rounded-lg py-3 px-6 font-sans text-xs font-bold uppercase text-red-500 transition-all hover:bg-red-500/10 active:bg-red-500/30 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                                >
+                                  Cancel
+                                </button>
+                                <button
+                                  onclick="PostMentor()"
+                                  data-ripple-light="true"
+                                  data-dialog-close="true"
+                                  class="middle none center rounded-lg bg-gradient-to-tr from-green-600 to-green-400 py-3 px-6 font-sans text-xs font-bold uppercase text-white shadow-md shadow-green-500/20 transition-all hover:shadow-lg hover:shadow-green-500/40 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                                >
+                                  Save
+                                </button>
                               </div>
                             </div>
-                            <!-- End Col -->
-                            <!-- End Deskripsi -->
                           </div>
-                          <!-- End Grid -->
-                        </div>
-                        <div
-                          class="flex shrink-0 flex-wrap items-center justify-end p-4 text-blue-gray-500"
-                        >
-                          <button
-                            data-ripple-dark="true"
-                            data-dialog-close="true"
-                            class="middle none center mr-1 rounded-lg py-3 px-6 font-sans text-xs font-bold uppercase text-red-500 transition-all hover:bg-red-500/10 active:bg-red-500/30 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
-                          >
-                            Cancel
-                          </button>
-                          <button
-                            onclick="PostMentor()"
-                            data-ripple-light="true"
-                            data-dialog-close="true"
-                            class="middle none center rounded-lg bg-gradient-to-tr from-green-600 to-green-400 py-3 px-6 font-sans text-xs font-bold uppercase text-white shadow-md shadow-green-500/20 transition-all hover:shadow-lg hover:shadow-green-500/40 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
-                          >
-                            Save
-                          </button>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
-          </div>
-          <!-- End Header Table -->
-          <div class="">
-            <!-- Card -->
-            <div class="flex flex-col">
-              <div class="overflow-x-auto">
-                <div class="min-w-full inline-block align-middle">
-                  <div
-                    class="bg-white border-y border-gray-200 overflow-hidden"
-                  >
-                    <!-- Table -->
-                    <table
-                      class="min-w-full min-h-[200px] divide-y divide-gray-200"
-                    >
-                      <thead class="bg-gray-50">
-                        <tr>
-                          <th scope="col" class="px-6 py-3 text-left">
-                            <div class="flex items-center gap-x-2">
-                              <span
-                                class="text-xs font-semibold uppercase tracking-wide text-gray-800"
-                              >
-                                Judul Report
-                              </span>
-                            </div>
-                          </th>
+                <!-- End Header Table -->
+                <div class="">
+                  <!-- Card -->
+                  <div class="flex flex-col">
+                    <div class="overflow-x-auto">
+                      <div class="min-w-full inline-block align-middle">
+                        <div
+                          class="bg-white border-y border-gray-200 overflow-hidden"
+                        >
+                          <!-- Table -->
+                          <table
+                            class="min-w-full min-h-[200px] divide-y divide-gray-200"
+                          >
+                            <thead class="bg-gray-50">
+                              <tr>
+                                <th scope="col" class="px-6 py-3 text-left">
+                                  <div class="flex items-center gap-x-2">
+                                    <span
+                                      class="text-xs font-semibold uppercase tracking-wide text-gray-800"
+                                    >
+                                      Judul Report
+                                    </span>
+                                  </div>
+                                </th>
 
-                          <th scope="col" class="px-6 py-3 text-left">
-                            <div class="flex items-center gap-x-2">
-                              <span
-                                class="text-xs font-semibold uppercase tracking-wide text-gray-800"
-                              >
-                                Pembimbing
-                              </span>
-                            </div>
-                          </th>
+                                <th scope="col" class="px-6 py-3 text-left">
+                                  <div class="flex items-center gap-x-2">
+                                    <span
+                                      class="text-xs font-semibold uppercase tracking-wide text-gray-800"
+                                    >
+                                      Pembimbing
+                                    </span>
+                                  </div>
+                                </th>
 
-                          <th scope="col" class="px-6 py-3 text-left">
-                            <div class="flex items-center gap-x-2">
-                              <span
-                                class="text-xs font-semibold uppercase tracking-wide text-gray-800"
-                              >
-                                Task Magang
-                              </span>
-                            </div>
-                          </th>
+                                <th scope="col" class="px-6 py-3 text-left">
+                                  <div class="flex items-center gap-x-2">
+                                    <span
+                                      class="text-xs font-semibold uppercase tracking-wide text-gray-800"
+                                    >
+                                      Task Magang
+                                    </span>
+                                  </div>
+                                </th>
 
-                          <th scope="col" class="px-6 py-3 text-left">
-                            <div class="flex items-center gap-x-2">
-                              <span
-                                class="text-xs font-semibold uppercase tracking-wide text-gray-800"
-                              >
-                                Tanggal Report
-                              </span>
-                            </div>
-                          </th>
+                                <th scope="col" class="px-6 py-3 text-left">
+                                  <div class="flex items-center gap-x-2">
+                                    <span
+                                      class="text-xs font-semibold uppercase tracking-wide text-gray-800"
+                                    >
+                                      Tanggal Report
+                                    </span>
+                                  </div>
+                                </th>
 
-                          <th scope="col" class="px-6 py-3 text-left">
-                            <div class="flex items-center gap-x-2">
-                              <span
-                                class="text-xs font-semibold uppercase tracking-wide text-gray-800"
-                              >
-                                Approve Mentor
-                              </span>
-                            </div>
-                          </th>
+                                <th scope="col" class="px-6 py-3 text-left">
+                                  <div class="flex items-center gap-x-2">
+                                    <span
+                                      class="text-xs font-semibold uppercase tracking-wide text-gray-800"
+                                    >
+                                      Approve Mentor
+                                    </span>
+                                  </div>
+                                </th>
 
-                          <th scope="col" class="px-6 py-3 text-left">
-                            <div class="flex items-center gap-x-2">
-                              <span
-                                class="text-xs font-semibold uppercase tracking-wide text-gray-800"
-                              >
-                                Status Report
-                              </span>
-                            </div>
-                          </th>
-                        </tr>
-                      </thead>
+                                <th scope="col" class="px-6 py-3 text-left">
+                                  <div class="flex items-center gap-x-2">
+                                    <span
+                                      class="text-xs font-semibold uppercase tracking-wide text-gray-800"
+                                    >
+                                      Status Report
+                                    </span>
+                                  </div>
+                                </th>
+                              </tr>
+                            </thead>
 
-                      <tbody
-                        id="tableDailyReport"
-                        class="divide-y divide-gray-200"
+                            <tbody
+                              id="tableDailyReport"
+                              class="divide-y divide-gray-200"
+                            >
+                              <tr
+                                class="bg-white hover:bg-gray-50 dark:bg-slate-900 dark:hover:bg-slate-800"
+                              >
+                                <td
+                                  class="h-px w-px whitespace-nowrap align-top"
+                                >
+                                  <a class="block p-6" href="#">
+                                    <div class="flex items-center gap-x-4">
+                                      <div>
+                                        <span
+                                          class="block text-sm font-semibold text-gray-800 dark:text-gray-200"
+                                          >Daily Report Minggu ke-1</span
+                                        >
+                                      </div>
+                                    </div>
+                                  </a>
+                                </td>
+                                <td
+                                  class="h-px w-px whitespace-nowrap align-top"
+                                >
+                                  <a class="block p-6" href="#">
+                                    <div class="flex items-center gap-x-3">
+                                      <img
+                                        class="inline-block h-[2.375rem] w-[2.375rem] rounded-full"
+                                        src="https://images.unsplash.com/photo-1531927557220-a9e23c1e4794?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80"
+                                        alt="Image Description"
+                                      />
+                                      <div class="grow">
+                                        <span
+                                          class="block text-sm font-semibold text-gray-800 dark:text-gray-200"
+                                          >Roni Habibi</span
+                                        >
+                                        <span
+                                          class="block text-sm text-gray-500"
+                                          >ronihabibi@gmail.com</span
+                                        >
+                                      </div>
+                                    </div>
+                                  </a>
+                                </td>
+                                <td class="h-px w-72 min-w-[18rem] align-top">
+                                  <a class="block p-6" href="#">
+                                    <span class="block text-sm text-gray-500"
+                                      >Membuat table data pegawai untuk sistem
+                                      pendataan pegawai perusahaan</span
+                                    >
+                                  </a>
+                                </td>
+                                <td
+                                  class="h-px w-px whitespace-nowrap align-top"
+                                >
+                                  <a class="block p-6" href="#">
+                                    <span
+                                      class="text-sm text-gray-600 dark:text-gray-400"
+                                      >10 Jan 2022</span
+                                    >
+                                  </a>
+                                </td>
+                                <td
+                                  class="h-px w-px whitespace-nowrap align-top"
+                                >
+                                  <a class="block p-6" href="#">
+                                    <span
+                                      class="py-1 px-1.5 inline-flex items-center gap-x-1 text-xs font-medium bg-teal-100 text-teal-800 rounded-full dark:bg-teal-500/10 dark:text-teal-500"
+                                    >
+                                      <svg
+                                        class="w-2.5 h-2.5"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="16"
+                                        height="16"
+                                        fill="currentColor"
+                                        viewBox="0 0 16 16"
+                                      >
+                                        <path
+                                          d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"
+                                        />
+                                      </svg>
+                                      Approved
+                                    </span>
+                                  </a>
+                                </td>
+                                <td
+                                  class="h-px w-px whitespace-nowrap align-top"
+                                >
+                                  <a class="block p-6" href="#">
+                                    <span
+                                      class="py-1 px-1.5 inline-flex items-center gap-x-1 text-xs font-medium bg-teal-100 text-teal-800 rounded-full dark:bg-teal-500/10 dark:text-teal-500"
+                                    >
+                                      <svg
+                                        class="w-2.5 h-2.5"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="16"
+                                        height="16"
+                                        fill="currentColor"
+                                        viewBox="0 0 16 16"
+                                      >
+                                        <path
+                                          d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"
+                                        />
+                                      </svg>
+                                      Sudah Diperiksa
+                                    </span>
+                                  </a>
+                                </td>
+                              </tr>
+                              <tr
+                                class="bg-white hover:bg-gray-50 dark:bg-slate-900 dark:hover:bg-slate-800"
+                              >
+                                <td
+                                  class="h-px w-px whitespace-nowrap align-top"
+                                >
+                                  <a class="block p-6" href="#">
+                                    <div class="flex items-center gap-x-4">
+                                      <div>
+                                        <span
+                                          class="block text-sm font-semibold text-gray-800 dark:text-gray-200"
+                                          >Daily Report Minggu ke-2</span
+                                        >
+                                      </div>
+                                    </div>
+                                  </a>
+                                </td>
+                                <td
+                                  class="h-px w-px whitespace-nowrap align-top"
+                                >
+                                  <a class="block p-6" href="#">
+                                    <div class="flex items-center gap-x-3">
+                                      <img
+                                        class="inline-block h-[2.375rem] w-[2.375rem] rounded-full"
+                                        src="https://images.unsplash.com/photo-1531927557220-a9e23c1e4794?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80"
+                                        alt="Image Description"
+                                      />
+                                      <div class="grow">
+                                        <span
+                                          class="block text-sm font-semibold text-gray-800 dark:text-gray-200"
+                                          >Roni Habibi</span
+                                        >
+                                        <span
+                                          class="block text-sm text-gray-500"
+                                          >ronihabibi@gmail.com</span
+                                        >
+                                      </div>
+                                    </div>
+                                  </a>
+                                </td>
+                                <td class="h-px w-72 min-w-[18rem] align-top">
+                                  <a class="block p-6" href="#">
+                                    <span class="block text-sm text-gray-500"
+                                      >Membuat filter data untuk table data
+                                      pegawai perusahaan</span
+                                    >
+                                  </a>
+                                </td>
+                                <td
+                                  class="h-px w-px whitespace-nowrap align-top"
+                                >
+                                  <a class="block p-6" href="#">
+                                    <span
+                                      class="text-sm text-gray-600 dark:text-gray-400"
+                                      >17 Jan 2022</span
+                                    >
+                                  </a>
+                                </td>
+                                <td
+                                  class="h-px w-px whitespace-nowrap align-top"
+                                >
+                                  <a class="block p-6" href="#">
+                                    <span
+                                      class="py-1 px-1.5 inline-flex items-center gap-x-1 text-xs font-medium bg-teal-100 text-teal-800 rounded-full dark:bg-teal-500/10 dark:text-teal-500"
+                                    >
+                                      <svg
+                                        class="w-2.5 h-2.5"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="16"
+                                        height="16"
+                                        fill="currentColor"
+                                        viewBox="0 0 16 16"
+                                      >
+                                        <path
+                                          d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"
+                                        />
+                                      </svg>
+                                      Approved
+                                    </span>
+                                  </a>
+                                </td>
+                                <td
+                                  class="h-px w-px whitespace-nowrap align-top"
+                                >
+                                  <a class="block p-6" href="#">
+                                    <span
+                                      class="py-1 px-1.5 inline-flex items-center gap-x-1 text-xs font-medium bg-teal-100 text-teal-800 rounded-full dark:bg-teal-500/10 dark:text-teal-500"
+                                    >
+                                      <svg
+                                        class="w-2.5 h-2.5"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="16"
+                                        height="16"
+                                        fill="currentColor"
+                                        viewBox="0 0 16 16"
+                                      >
+                                        <path
+                                          d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"
+                                        />
+                                      </svg>
+                                      Sudah Diperiksa
+                                    </span>
+                                  </a>
+                                </td>
+                              </tr>
+                              <tr
+                                class="bg-white hover:bg-gray-50 dark:bg-slate-900 dark:hover:bg-slate-800"
+                              >
+                                <td
+                                  class="h-px w-px whitespace-nowrap align-top"
+                                >
+                                  <a class="block p-6" href="#">
+                                    <div class="flex items-center gap-x-4">
+                                      <div>
+                                        <span
+                                          class="block text-sm font-semibold text-gray-800 dark:text-gray-200"
+                                          >Daily Report Minggu ke-3</span
+                                        >
+                                      </div>
+                                    </div>
+                                  </a>
+                                </td>
+                                <td
+                                  class="h-px w-px whitespace-nowrap align-top"
+                                >
+                                  <a class="block p-6" href="#">
+                                    <div class="flex items-center gap-x-3">
+                                      <img
+                                        class="inline-block h-[2.375rem] w-[2.375rem] rounded-full"
+                                        src="https://images.unsplash.com/photo-1531927557220-a9e23c1e4794?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80"
+                                        alt="Image Description"
+                                      />
+                                      <div class="grow">
+                                        <span
+                                          class="block text-sm font-semibold text-gray-800 dark:text-gray-200"
+                                          >Roni Habibi</span
+                                        >
+                                        <span
+                                          class="block text-sm text-gray-500"
+                                          >ronihabibi@gmail.com</span
+                                        >
+                                      </div>
+                                    </div>
+                                  </a>
+                                </td>
+                                <td class="h-px w-72 min-w-[18rem] align-top">
+                                  <a class="block p-6" href="#">
+                                    <span class="block text-sm text-gray-500"
+                                      >Membuat filter data untuk table data
+                                      pegawai perusahaan</span
+                                    >
+                                  </a>
+                                </td>
+                                <td
+                                  class="h-px w-px whitespace-nowrap align-top"
+                                >
+                                  <a class="block p-6" href="#">
+                                    <span
+                                      class="text-sm text-gray-600 dark:text-gray-400"
+                                      >17 Jan 2022</span
+                                    >
+                                  </a>
+                                </td>
+                                <td
+                                  class="h-px w-px whitespace-nowrap align-top"
+                                >
+                                  <a class="block p-6" href="#">
+                                    <span
+                                      class="py-1 px-1.5 inline-flex items-center gap-x-1 text-xs font-medium bg-teal-100 text-teal-800 rounded-full dark:bg-teal-500/10 dark:text-teal-500"
+                                    >
+                                      <svg
+                                        class="w-2.5 h-2.5"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="16"
+                                        height="16"
+                                        fill="currentColor"
+                                        viewBox="0 0 16 16"
+                                      >
+                                        <path
+                                          d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"
+                                        />
+                                      </svg>
+                                      Approved
+                                    </span>
+                                  </a>
+                                </td>
+                                <td
+                                  class="h-px w-px whitespace-nowrap align-top"
+                                >
+                                  <a class="block p-6" href="#">
+                                    <span
+                                      class="py-1 px-1.5 inline-flex items-center gap-x-1 text-xs font-medium bg-teal-100 text-teal-800 rounded-full dark:bg-teal-500/10 dark:text-teal-500"
+                                    >
+                                      <svg
+                                        class="w-2.5 h-2.5"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="16"
+                                        height="16"
+                                        fill="currentColor"
+                                        viewBox="0 0 16 16"
+                                      >
+                                        <path
+                                          d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"
+                                        />
+                                      </svg>
+                                      Sudah Diperiksa
+                                    </span>
+                                  </a>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <!-- End Table -->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Card -->
+                </div>
+                <!-- Footer -->
+                <div
+                  class="px-6 py-4 grid gap-3 md:flex md:justify-between md:items-center border-y border-gray-200"
+                >
+                  <div id="mentorCount">
+                    <p class="text-sm text-gray-600">
+                      <span class="font-semibold text-gray-800">0</span>
+                      results
+                    </p>
+                  </div>
+
+                  <div>
+                    <div class="inline-flex gap-x-2">
+                      <button
+                        type="button"
+                        class="py-2 px-3 inline-flex justify-center items-center gap-2 rounded-md border font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-600 transition-all text-sm"
                       >
-                        <tr
-                          class="bg-white hover:bg-gray-50 dark:bg-slate-900 dark:hover:bg-slate-800"
+                        <svg
+                          class="w-3 h-3"
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          viewBox="0 0 16 16"
                         >
-                          <td class="h-px w-px whitespace-nowrap align-top">
-                            <a class="block p-6" href="#">
-                              <div class="flex items-center gap-x-4">
-                                <div>
-                                  <span
-                                    class="block text-sm font-semibold text-gray-800 dark:text-gray-200"
-                                    >Daily Report Minggu ke-1</span
-                                  >
-                                </div>
-                              </div>
-                            </a>
-                          </td>
-                          <td class="h-px w-px whitespace-nowrap align-top">
-                            <a class="block p-6" href="#">
-                              <div class="flex items-center gap-x-3">
-                                <img
-                                  class="inline-block h-[2.375rem] w-[2.375rem] rounded-full"
-                                  src="https://images.unsplash.com/photo-1531927557220-a9e23c1e4794?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80"
-                                  alt="Image Description"
-                                />
-                                <div class="grow">
-                                  <span
-                                    class="block text-sm font-semibold text-gray-800 dark:text-gray-200"
-                                    >Roni Habibi</span
-                                  >
-                                  <span class="block text-sm text-gray-500"
-                                    >ronihabibi@gmail.com</span
-                                  >
-                                </div>
-                              </div>
-                            </a>
-                          </td>
-                          <td class="h-px w-72 min-w-[18rem] align-top">
-                            <a class="block p-6" href="#">
-                              <span class="block text-sm text-gray-500"
-                                >Membuat table data pegawai untuk sistem
-                                pendataan pegawai perusahaan</span
-                              >
-                            </a>
-                          </td>
-                          <td class="h-px w-px whitespace-nowrap align-top">
-                            <a class="block p-6" href="#">
-                              <span
-                                class="text-sm text-gray-600 dark:text-gray-400"
-                                >10 Jan 2022</span
-                              >
-                            </a>
-                          </td>
-                          <td class="h-px w-px whitespace-nowrap align-top">
-                            <a class="block p-6" href="#">
-                              <span
-                                class="py-1 px-1.5 inline-flex items-center gap-x-1 text-xs font-medium bg-teal-100 text-teal-800 rounded-full dark:bg-teal-500/10 dark:text-teal-500"
-                              >
-                                <svg
-                                  class="w-2.5 h-2.5"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  width="16"
-                                  height="16"
-                                  fill="currentColor"
-                                  viewBox="0 0 16 16"
-                                >
-                                  <path
-                                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"
-                                  />
-                                </svg>
-                                Approved
-                              </span>
-                            </a>
-                          </td>
-                          <td class="h-px w-px whitespace-nowrap align-top">
-                            <a class="block p-6" href="#">
-                              <span
-                                class="py-1 px-1.5 inline-flex items-center gap-x-1 text-xs font-medium bg-teal-100 text-teal-800 rounded-full dark:bg-teal-500/10 dark:text-teal-500"
-                              >
-                                <svg
-                                  class="w-2.5 h-2.5"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  width="16"
-                                  height="16"
-                                  fill="currentColor"
-                                  viewBox="0 0 16 16"
-                                >
-                                  <path
-                                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"
-                                  />
-                                </svg>
-                                Sudah Diperiksa
-                              </span>
-                            </a>
-                          </td>
-                        </tr>
-                        <tr
-                          class="bg-white hover:bg-gray-50 dark:bg-slate-900 dark:hover:bg-slate-800"
+                          <path
+                            fill-rule="evenodd"
+                            d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"
+                          />
+                        </svg>
+                        Prev
+                      </button>
+
+                      <button
+                        type="button"
+                        class="py-2 px-3 inline-flex justify-center items-center gap-2 rounded-md border font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-600 transition-all text-sm"
+                      >
+                        Next
+                        <svg
+                          class="w-3 h-3"
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          viewBox="0 0 16 16"
                         >
-                          <td class="h-px w-px whitespace-nowrap align-top">
-                            <a class="block p-6" href="#">
-                              <div class="flex items-center gap-x-4">
-                                <div>
-                                  <span
-                                    class="block text-sm font-semibold text-gray-800 dark:text-gray-200"
-                                    >Daily Report Minggu ke-2</span
-                                  >
-                                </div>
-                              </div>
-                            </a>
-                          </td>
-                          <td class="h-px w-px whitespace-nowrap align-top">
-                            <a class="block p-6" href="#">
-                              <div class="flex items-center gap-x-3">
-                                <img
-                                  class="inline-block h-[2.375rem] w-[2.375rem] rounded-full"
-                                  src="https://images.unsplash.com/photo-1531927557220-a9e23c1e4794?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80"
-                                  alt="Image Description"
-                                />
-                                <div class="grow">
-                                  <span
-                                    class="block text-sm font-semibold text-gray-800 dark:text-gray-200"
-                                    >Roni Habibi</span
-                                  >
-                                  <span class="block text-sm text-gray-500"
-                                    >ronihabibi@gmail.com</span
-                                  >
-                                </div>
-                              </div>
-                            </a>
-                          </td>
-                          <td class="h-px w-72 min-w-[18rem] align-top">
-                            <a class="block p-6" href="#">
-                              <span class="block text-sm text-gray-500"
-                                >Membuat filter data untuk table data pegawai
-                                perusahaan</span
-                              >
-                            </a>
-                          </td>
-                          <td class="h-px w-px whitespace-nowrap align-top">
-                            <a class="block p-6" href="#">
-                              <span
-                                class="text-sm text-gray-600 dark:text-gray-400"
-                                >17 Jan 2022</span
-                              >
-                            </a>
-                          </td>
-                          <td class="h-px w-px whitespace-nowrap align-top">
-                            <a class="block p-6" href="#">
-                              <span
-                                class="py-1 px-1.5 inline-flex items-center gap-x-1 text-xs font-medium bg-teal-100 text-teal-800 rounded-full dark:bg-teal-500/10 dark:text-teal-500"
-                              >
-                                <svg
-                                  class="w-2.5 h-2.5"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  width="16"
-                                  height="16"
-                                  fill="currentColor"
-                                  viewBox="0 0 16 16"
-                                >
-                                  <path
-                                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"
-                                  />
-                                </svg>
-                                Approved
-                              </span>
-                            </a>
-                          </td>
-                          <td class="h-px w-px whitespace-nowrap align-top">
-                            <a class="block p-6" href="#">
-                              <span
-                                class="py-1 px-1.5 inline-flex items-center gap-x-1 text-xs font-medium bg-teal-100 text-teal-800 rounded-full dark:bg-teal-500/10 dark:text-teal-500"
-                              >
-                                <svg
-                                  class="w-2.5 h-2.5"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  width="16"
-                                  height="16"
-                                  fill="currentColor"
-                                  viewBox="0 0 16 16"
-                                >
-                                  <path
-                                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"
-                                  />
-                                </svg>
-                                Sudah Diperiksa
-                              </span>
-                            </a>
-                          </td>
-                        </tr>
-                        <tr
-                          class="bg-white hover:bg-gray-50 dark:bg-slate-900 dark:hover:bg-slate-800"
-                        >
-                          <td class="h-px w-px whitespace-nowrap align-top">
-                            <a class="block p-6" href="#">
-                              <div class="flex items-center gap-x-4">
-                                <div>
-                                  <span
-                                    class="block text-sm font-semibold text-gray-800 dark:text-gray-200"
-                                    >Daily Report Minggu ke-3</span
-                                  >
-                                </div>
-                              </div>
-                            </a>
-                          </td>
-                          <td class="h-px w-px whitespace-nowrap align-top">
-                            <a class="block p-6" href="#">
-                              <div class="flex items-center gap-x-3">
-                                <img
-                                  class="inline-block h-[2.375rem] w-[2.375rem] rounded-full"
-                                  src="https://images.unsplash.com/photo-1531927557220-a9e23c1e4794?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80"
-                                  alt="Image Description"
-                                />
-                                <div class="grow">
-                                  <span
-                                    class="block text-sm font-semibold text-gray-800 dark:text-gray-200"
-                                    >Roni Habibi</span
-                                  >
-                                  <span class="block text-sm text-gray-500"
-                                    >ronihabibi@gmail.com</span
-                                  >
-                                </div>
-                              </div>
-                            </a>
-                          </td>
-                          <td class="h-px w-72 min-w-[18rem] align-top">
-                            <a class="block p-6" href="#">
-                              <span class="block text-sm text-gray-500"
-                                >Membuat filter data untuk table data pegawai
-                                perusahaan</span
-                              >
-                            </a>
-                          </td>
-                          <td class="h-px w-px whitespace-nowrap align-top">
-                            <a class="block p-6" href="#">
-                              <span
-                                class="text-sm text-gray-600 dark:text-gray-400"
-                                >17 Jan 2022</span
-                              >
-                            </a>
-                          </td>
-                          <td class="h-px w-px whitespace-nowrap align-top">
-                            <a class="block p-6" href="#">
-                              <span
-                                class="py-1 px-1.5 inline-flex items-center gap-x-1 text-xs font-medium bg-teal-100 text-teal-800 rounded-full dark:bg-teal-500/10 dark:text-teal-500"
-                              >
-                                <svg
-                                  class="w-2.5 h-2.5"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  width="16"
-                                  height="16"
-                                  fill="currentColor"
-                                  viewBox="0 0 16 16"
-                                >
-                                  <path
-                                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"
-                                  />
-                                </svg>
-                                Approved
-                              </span>
-                            </a>
-                          </td>
-                          <td class="h-px w-px whitespace-nowrap align-top">
-                            <a class="block p-6" href="#">
-                              <span
-                                class="py-1 px-1.5 inline-flex items-center gap-x-1 text-xs font-medium bg-teal-100 text-teal-800 rounded-full dark:bg-teal-500/10 dark:text-teal-500"
-                              >
-                                <svg
-                                  class="w-2.5 h-2.5"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  width="16"
-                                  height="16"
-                                  fill="currentColor"
-                                  viewBox="0 0 16 16"
-                                >
-                                  <path
-                                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"
-                                  />
-                                </svg>
-                                Sudah Diperiksa
-                              </span>
-                            </a>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                    <!-- End Table -->
+                          <path
+                            fill-rule="evenodd"
+                            d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
+                          />
+                        </svg>
+                      </button>
+                    </div>
                   </div>
                 </div>
+                <!-- End Footer -->
+                <!-- End Table -->
               </div>
             </div>
-            <!-- End Card -->
+            <!-- End Daily Report -->
           </div>
-          <!-- Footer -->
+          <!-- End Pembimbing -->
+
+          <!-- Mentor -->
           <div
-            class="px-6 py-4 grid gap-3 md:flex md:justify-between md:items-center border-y border-gray-200"
+            id="basic-tabs-2"
+            class="hidden"
+            role="tabpanel"
+            aria-labelledby="basic-tabs-item-2"
           >
-            <div id="mentorCount">
-              <p class="text-sm text-gray-600">
-                <span class="font-semibold text-gray-800">0</span>
-                results
-              </p>
-            </div>
-
-            <div>
-              <div class="inline-flex gap-x-2">
-                <button
-                  type="button"
-                  class="py-2 px-3 inline-flex justify-center items-center gap-2 rounded-md border font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-600 transition-all text-sm"
+            <!-- Daily Report -->
+            <div class="pb-10 mx-auto">
+              <div class="p-5 mx-auto bg-white shadow-md rounded-b-lg">
+                <!-- Grid -->
+                <div
+                  class="pb-2 flex justify-between items-center border-b border-gray-200 dark:border-gray-700"
                 >
-                  <svg
-                    class="w-3 h-3"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    fill="currentColor"
-                    viewBox="0 0 16 16"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"
-                    />
-                  </svg>
-                  Prev
-                </button>
+                  <div>
+                    <h2
+                      class="text-2xl font-semibold text-gray-800 dark:text-gray-200"
+                    >
+                      Daily Report
+                    </h2>
+                    <p class="text-sm text-gray-600">
+                      Laporan harian tentang kegiatan mahasiswa saat magang
+                    </p>
+                  </div>
+                  <!-- Col -->
+                </div>
+                <!-- End Grid -->
 
-                <button
-                  type="button"
-                  class="py-2 px-3 inline-flex justify-center items-center gap-2 rounded-md border font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-600 transition-all text-sm"
+                <!-- Grid -->
+                <div class="grid lg:grid-cols-2 gap-7 py-5">
+                  <div>
+                    <div class="grid space-y-2">
+                      <!-- Mentor -->
+                      <div
+                        id="dataMentor"
+                        class="flex gap-x-8 text-sm items-center"
+                      ></div>
+                      <!-- End Mentor -->
+                    </div>
+                  </div>
+                  <!-- Col -->
+
+                  <div>
+                    <div class="grid space-y-2">
+                      <!-- Perusahaan -->
+                      <div>
+                        <h3 class="font-semibold text-gray-900 pb-3">
+                          Informasi Magang
+                        </h3>
+                        <div class="flex gap-x-3 text-sm">
+                          <h4
+                            class="min-w-[150px] max-w-[200px] font-semibold text-gray-800"
+                          >
+                            Nama Perusahaan :
+                          </h4>
+                          <p class="text-gray-500">Ardiant Company</p>
+                        </div>
+                        <div class="flex gap-x-3 text-sm">
+                          <h4
+                            class="min-w-[150px] max-w-[200px] font-semibold text-gray-800"
+                          >
+                            Email :
+                          </h4>
+                          <p class="text-blue-700">ardiantcompany@gmail.com</p>
+                        </div>
+                        <div class="flex gap-x-3 text-sm">
+                          <h4
+                            class="min-w-[150px] max-w-[200px] font-semibold text-gray-800"
+                          >
+                            Lokasi :
+                          </h4>
+                          <p class="text-gray-500">Kota Bandung</p>
+                        </div>
+                        <div class="flex gap-x-3 text-sm">
+                          <h4
+                            class="min-w-[150px] max-w-[200px] font-semibold text-gray-800"
+                          >
+                            Posisi Magang :
+                          </h4>
+                          <p class="text-gray-500">Front End Developer</p>
+                        </div>
+                      </div>
+                      <!-- End Perusahaan -->
+                    </div>
+                  </div>
+                  <!-- Col -->
+                </div>
+                <!-- Stats Task -->
+
+                <div class="h-[200px]">
+                  <!-- Grid -->
+                  <div class="grid grid-cols-3 h-20 border-y border-gray-200">
+                    <!-- Card -->
+                    <a
+                      class="flex justify-center items-center border-r border-gray-200 bg-white hover:bg-gray-50 before:absolute before:top-0 before:start-0 before:w-full before:h-px md:before:w-px md:before:h-full before:bg-gray-200 before:first:bg-transparent"
+                      href="#"
+                    >
+                      <div class="text-center">
+                        <p
+                          class="text-xs uppercase tracking-wide font-medium text-gray-800"
+                        >
+                          Task sedang dikerjakan
+                        </p>
+                        <h3 class="mt-1 text-3xl font-semibold text-gray-600">
+                          10
+                        </h3>
+                      </div>
+                    </a>
+                    <!-- End Card -->
+                    <!-- Card -->
+                    <a
+                      class="flex justify-center items-center border-r border-gray-200 bg-white hover:bg-gray-50 before:absolute before:top-0 before:start-0 before:w-full before:h-px md:before:w-px md:before:h-full before:bg-gray-200 before:first:bg-transparent"
+                      href="#"
+                    >
+                      <div class="text-center">
+                        <p
+                          class="text-xs uppercase tracking-wide font-medium text-gray-800"
+                        >
+                          Task sudah dikerjakan
+                        </p>
+                        <h3 class="mt-1 text-3xl font-semibold text-green-600">
+                          20
+                        </h3>
+                      </div>
+                    </a>
+                    <!-- End Card -->
+                    <!-- Card -->
+                    <a
+                      class="flex justify-center items-center bg-white hover:bg-gray-50 before:absolute before:top-0 before:start-0 before:w-full before:h-px md:before:w-px md:before:h-full before:bg-gray-200 before:first:bg-transparent"
+                      href="#"
+                    >
+                      <div class="text-center">
+                        <p
+                          class="text-xs uppercase tracking-wide font-medium text-gray-800"
+                        >
+                          Task belum dikerjakan
+                        </p>
+                        <h3 class="mt-1 text-3xl font-semibold text-red-600">
+                          15
+                        </h3>
+                      </div>
+                    </a>
+                    <!-- End Card -->
+                  </div>
+                  <!-- End Grid -->
+                  <h3 class="flex justify-center pt-10">COOMING SOON</h3>
+                </div>
+                <!-- End Stats Task -->
+                <!-- End Grid -->
+
+                <!-- Table -->
+                <!-- Header Table -->
+                <div
+                  class="px-2 py-4 grid gap-3 md:flex md:justify-between md:items-center border-t border-gray-200"
                 >
-                  Next
-                  <svg
-                    class="w-3 h-3"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    fill="currentColor"
-                    viewBox="0 0 16 16"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
-                    />
-                  </svg>
-                </button>
+                  <div>
+                    <h2 class="text-xl font-semibold text-gray-800">
+                      Data report
+                    </h2>
+                    <p class="text-sm text-gray-600">
+                      Berikut merupakan data daily report magang.
+                    </p>
+                  </div>
+
+                  <div>
+                    <div class="inline-flex gap-x-2">
+                      <button
+                        data-ripple-light="true"
+                        data-dialog-target="dialog"
+                        class="py-2 px-3 inline-flex justify-center items-center gap-2 rounded-md border border-transparent font-semibold bg-gradient-to-tl from-blue-600 to-violet-600 text-white text-sm"
+                      >
+                        <svg
+                          class="w-3 h-3"
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          viewBox="0 0 16 16"
+                          fill="none"
+                        >
+                          <path
+                            d="M2.63452 7.50001L13.6345 7.5M8.13452 13V2"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                          />
+                        </svg>
+                        Kirim Reporting
+                      </button>
+                      <div
+                        data-dialog-backdrop="dialog"
+                        data-dialog-backdrop-close="true"
+                        class="pointer-events-none fixed inset-0 z-[999] grid h-screen w-screen place-items-center bg-black bg-opacity-60 opacity-0 backdrop-blur-sm transition-opacity duration-300"
+                      >
+                        <div
+                          data-dialog="dialog"
+                          class="relative w-full h-full top-0 left-0 overflow-x-hidden overflow-y-auto"
+                        >
+                          <div
+                            class="opacity-100 h-full w-full py-10 px-5 md:px-16 lg:px-20"
+                          >
+                            <div
+                              class="max-h-full overflow-hidden flex flex-col bg-white border shadow-sm rounded-xl"
+                            >
+                              <div
+                                class="flex shrink-0 items-center p-4 font-sans text-2xl font-semibold leading-snug text-gray-800 antialiased"
+                              >
+                                Deskripsi
+                              </div>
+                              <div class="p-5 overflow-y-auto">
+                                <!-- Grid -->
+                                <div class="grid gap-2">
+                                  <!-- Judul -->
+                                  <div class="sm:col-span-3">
+                                    <label
+                                      for="af-account-judul"
+                                      class="inline-block text-sm text-gray-800 mt-2.5"
+                                    >
+                                      Judul Report
+                                    </label>
+                                  </div>
+                                  <!-- End Col -->
+                                  <div class="sm:col-span-9">
+                                    <div class="sm:flex">
+                                      <input
+                                        id="namalengkap"
+                                        type="text"
+                                        class="py-2 px-3 pr-11 block w-full border-[1px] border-gray-200 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500"
+                                        placeholder="Contoh : Daily Report 1"
+                                      />
+                                    </div>
+                                  </div>
+                                  <!-- End Col -->
+                                  <!-- End Judul -->
+
+                                  <!-- Task -->
+                                  <div class="sm:col-span-3">
+                                    <label
+                                      for="af-account-task"
+                                      class="inline-block text-sm text-gray-800 mt-2.5"
+                                    >
+                                      Task magang yang dikerjakan
+                                    </label>
+                                  </div>
+                                  <!-- End Col -->
+                                  <div class="sm:col-span-9">
+                                    <div class="sm:flex">
+                                      <input
+                                        id="namalengkap"
+                                        type="text"
+                                        class="py-2 px-3 pr-11 block w-full border-[1px] border-gray-200 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500"
+                                        placeholder="Contoh : Membuat desain web"
+                                      />
+                                    </div>
+                                  </div>
+                                  <!-- End Col -->
+                                  <!-- End Task -->
+
+                                  <!-- Deskripsi -->
+                                  <div class="sm:col-span-3">
+                                    <label
+                                      for="af-account-deskripsi"
+                                      class="inline-block text-sm text-gray-800 mt-2.5"
+                                    >
+                                      Deskripsi
+                                    </label>
+                                  </div>
+                                  <!-- End Col -->
+
+                                  <div class="sm:col-span-9">
+                                    <div
+                                      class="border border-gray-200 rounded-lg overflow-hidden"
+                                    >
+                                      <div id="hs-editor-tiptap">
+                                        <div
+                                          class="flex align-middle gap-x-0.5 border-b border-gray-200 p-2"
+                                        >
+                                          <button
+                                            class="w-8 h-8 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-full border border-transparent text-gray-800 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:hover:bg-gray-700 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                                            type="button"
+                                            data-hs-editor-bold
+                                          >
+                                            <svg
+                                              class="flex-shrink-0 w-4 h-4"
+                                              xmlns="http://www.w3.org/2000/svg"
+                                              width="24"
+                                              height="24"
+                                              viewBox="0 0 24 24"
+                                              fill="none"
+                                              stroke="currentColor"
+                                              stroke-width="2"
+                                              stroke-linecap="round"
+                                              stroke-linejoin="round"
+                                            >
+                                              <path
+                                                d="M14 12a4 4 0 0 0 0-8H6v8"
+                                              />
+                                              <path
+                                                d="M15 20a4 4 0 0 0 0-8H6v8Z"
+                                              />
+                                            </svg>
+                                          </button>
+                                          <button
+                                            class="w-8 h-8 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-full border border-transparent text-gray-800 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:hover:bg-gray-700 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                                            type="button"
+                                            data-hs-editor-italic
+                                          >
+                                            <svg
+                                              class="flex-shrink-0 w-4 h-4"
+                                              xmlns="http://www.w3.org/2000/svg"
+                                              width="24"
+                                              height="24"
+                                              viewBox="0 0 24 24"
+                                              fill="none"
+                                              stroke="currentColor"
+                                              stroke-width="2"
+                                              stroke-linecap="round"
+                                              stroke-linejoin="round"
+                                            >
+                                              <line
+                                                x1="19"
+                                                x2="10"
+                                                y1="4"
+                                                y2="4"
+                                              />
+                                              <line
+                                                x1="14"
+                                                x2="5"
+                                                y1="20"
+                                                y2="20"
+                                              />
+                                              <line
+                                                x1="15"
+                                                x2="9"
+                                                y1="4"
+                                                y2="20"
+                                              />
+                                            </svg>
+                                          </button>
+                                          <button
+                                            class="w-8 h-8 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-full border border-transparent text-gray-800 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:hover:bg-gray-700 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                                            type="button"
+                                            data-hs-editor-underline
+                                          >
+                                            <svg
+                                              class="flex-shrink-0 w-4 h-4"
+                                              xmlns="http://www.w3.org/2000/svg"
+                                              width="24"
+                                              height="24"
+                                              viewBox="0 0 24 24"
+                                              fill="none"
+                                              stroke="currentColor"
+                                              stroke-width="2"
+                                              stroke-linecap="round"
+                                              stroke-linejoin="round"
+                                            >
+                                              <path
+                                                d="M6 4v6a6 6 0 0 0 12 0V4"
+                                              />
+                                              <line
+                                                x1="4"
+                                                x2="20"
+                                                y1="20"
+                                                y2="20"
+                                              />
+                                            </svg>
+                                          </button>
+                                          <button
+                                            class="w-8 h-8 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-full border border-transparent text-gray-800 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:hover:bg-gray-700 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                                            type="button"
+                                            data-hs-editor-strike
+                                          >
+                                            <svg
+                                              class="flex-shrink-0 w-4 h-4"
+                                              xmlns="http://www.w3.org/2000/svg"
+                                              width="24"
+                                              height="24"
+                                              viewBox="0 0 24 24"
+                                              fill="none"
+                                              stroke="currentColor"
+                                              stroke-width="2"
+                                              stroke-linecap="round"
+                                              stroke-linejoin="round"
+                                            >
+                                              <path
+                                                d="M16 4H9a3 3 0 0 0-2.83 4"
+                                              />
+                                              <path
+                                                d="M14 12a4 4 0 0 1 0 8H6"
+                                              />
+                                              <line
+                                                x1="4"
+                                                x2="20"
+                                                y1="12"
+                                                y2="12"
+                                              />
+                                            </svg>
+                                          </button>
+                                          <button
+                                            class="w-8 h-8 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-full border border-transparent text-gray-800 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:hover:bg-gray-700 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                                            type="button"
+                                            data-hs-editor-link
+                                          >
+                                            <svg
+                                              class="flex-shrink-0 w-4 h-4"
+                                              xmlns="http://www.w3.org/2000/svg"
+                                              width="24"
+                                              height="24"
+                                              viewBox="0 0 24 24"
+                                              fill="none"
+                                              stroke="currentColor"
+                                              stroke-width="2"
+                                              stroke-linecap="round"
+                                              stroke-linejoin="round"
+                                            >
+                                              <path
+                                                d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"
+                                              />
+                                              <path
+                                                d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"
+                                              />
+                                            </svg>
+                                          </button>
+                                          <button
+                                            class="w-8 h-8 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-full border border-transparent text-gray-800 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:hover:bg-gray-700 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                                            type="button"
+                                            data-hs-editor-ol
+                                          >
+                                            <svg
+                                              class="flex-shrink-0 w-4 h-4"
+                                              xmlns="http://www.w3.org/2000/svg"
+                                              width="24"
+                                              height="24"
+                                              viewBox="0 0 24 24"
+                                              fill="none"
+                                              stroke="currentColor"
+                                              stroke-width="2"
+                                              stroke-linecap="round"
+                                              stroke-linejoin="round"
+                                            >
+                                              <line
+                                                x1="10"
+                                                x2="21"
+                                                y1="6"
+                                                y2="6"
+                                              />
+                                              <line
+                                                x1="10"
+                                                x2="21"
+                                                y1="12"
+                                                y2="12"
+                                              />
+                                              <line
+                                                x1="10"
+                                                x2="21"
+                                                y1="18"
+                                                y2="18"
+                                              />
+                                              <path d="M4 6h1v4" />
+                                              <path d="M4 10h2" />
+                                              <path
+                                                d="M6 18H4c0-1 2-2 2-3s-1-1.5-2-1"
+                                              />
+                                            </svg>
+                                          </button>
+                                          <button
+                                            class="w-8 h-8 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-full border border-transparent text-gray-800 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:hover:bg-gray-700 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                                            type="button"
+                                            data-hs-editor-ul
+                                          >
+                                            <svg
+                                              class="flex-shrink-0 w-4 h-4"
+                                              xmlns="http://www.w3.org/2000/svg"
+                                              width="24"
+                                              height="24"
+                                              viewBox="0 0 24 24"
+                                              fill="none"
+                                              stroke="currentColor"
+                                              stroke-width="2"
+                                              stroke-linecap="round"
+                                              stroke-linejoin="round"
+                                            >
+                                              <line
+                                                x1="8"
+                                                x2="21"
+                                                y1="6"
+                                                y2="6"
+                                              />
+                                              <line
+                                                x1="8"
+                                                x2="21"
+                                                y1="12"
+                                                y2="12"
+                                              />
+                                              <line
+                                                x1="8"
+                                                x2="21"
+                                                y1="18"
+                                                y2="18"
+                                              />
+                                              <line
+                                                x1="3"
+                                                x2="3.01"
+                                                y1="6"
+                                                y2="6"
+                                              />
+                                              <line
+                                                x1="3"
+                                                x2="3.01"
+                                                y1="12"
+                                                y2="12"
+                                              />
+                                              <line
+                                                x1="3"
+                                                x2="3.01"
+                                                y1="18"
+                                                y2="18"
+                                              />
+                                            </svg>
+                                          </button>
+                                          <button
+                                            class="w-8 h-8 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-full border border-transparent text-gray-800 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:hover:bg-gray-700 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                                            type="button"
+                                            data-hs-editor-blockquote
+                                          >
+                                            <svg
+                                              class="flex-shrink-0 w-4 h-4"
+                                              xmlns="http://www.w3.org/2000/svg"
+                                              width="24"
+                                              height="24"
+                                              viewBox="0 0 24 24"
+                                              fill="none"
+                                              stroke="currentColor"
+                                              stroke-width="2"
+                                              stroke-linecap="round"
+                                              stroke-linejoin="round"
+                                            >
+                                              <path d="M17 6H3" />
+                                              <path d="M21 12H8" />
+                                              <path d="M21 18H8" />
+                                              <path d="M3 12v6" />
+                                            </svg>
+                                          </button>
+                                          <button
+                                            class="w-8 h-8 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-full border border-transparent text-gray-800 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:hover:bg-gray-700 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                                            type="button"
+                                            data-hs-editor-code
+                                          >
+                                            <svg
+                                              class="flex-shrink-0 w-4 h-4"
+                                              xmlns="http://www.w3.org/2000/svg"
+                                              width="24"
+                                              height="24"
+                                              viewBox="0 0 24 24"
+                                              fill="none"
+                                              stroke="currentColor"
+                                              stroke-width="2"
+                                              stroke-linecap="round"
+                                              stroke-linejoin="round"
+                                            >
+                                              <path d="m18 16 4-4-4-4" />
+                                              <path d="m6 8-4 4 4 4" />
+                                              <path d="m14.5 4-5 16" />
+                                            </svg>
+                                          </button>
+                                        </div>
+
+                                        <div
+                                          id="deskripsi"
+                                          class="min-h-[200px] pb-10 px-3 text-gray-300 text-sm"
+                                          data-hs-editor-field
+                                        ></div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <!-- End Col -->
+                                  <!-- End Deskripsi -->
+                                </div>
+                                <!-- End Grid -->
+                              </div>
+                              <div
+                                class="flex shrink-0 flex-wrap items-center justify-end p-4 text-blue-gray-500"
+                              >
+                                <button
+                                  data-ripple-dark="true"
+                                  data-dialog-close="true"
+                                  class="middle none center mr-1 rounded-lg py-3 px-6 font-sans text-xs font-bold uppercase text-red-500 transition-all hover:bg-red-500/10 active:bg-red-500/30 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                                >
+                                  Cancel
+                                </button>
+                                <button
+                                  onclick="PostMentor()"
+                                  data-ripple-light="true"
+                                  data-dialog-close="true"
+                                  class="middle none center rounded-lg bg-gradient-to-tr from-green-600 to-green-400 py-3 px-6 font-sans text-xs font-bold uppercase text-white shadow-md shadow-green-500/20 transition-all hover:shadow-lg hover:shadow-green-500/40 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                                >
+                                  Save
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- End Header Table -->
+                <div class="">
+                  <!-- Card -->
+                  <div class="flex flex-col">
+                    <div class="overflow-x-auto">
+                      <div class="min-w-full inline-block align-middle">
+                        <div
+                          class="bg-white border-y border-gray-200 overflow-hidden"
+                        >
+                          <!-- Table -->
+                          <table
+                            class="min-w-full min-h-[200px] divide-y divide-gray-200"
+                          >
+                            <thead class="bg-gray-50">
+                              <tr>
+                                <th scope="col" class="px-6 py-3 text-left">
+                                  <div class="flex items-center gap-x-2">
+                                    <span
+                                      class="text-xs font-semibold uppercase tracking-wide text-gray-800"
+                                    >
+                                      Judul Report
+                                    </span>
+                                  </div>
+                                </th>
+
+                                <th scope="col" class="px-6 py-3 text-left">
+                                  <div class="flex items-center gap-x-2">
+                                    <span
+                                      class="text-xs font-semibold uppercase tracking-wide text-gray-800"
+                                    >
+                                      Pembimbing
+                                    </span>
+                                  </div>
+                                </th>
+
+                                <th scope="col" class="px-6 py-3 text-left">
+                                  <div class="flex items-center gap-x-2">
+                                    <span
+                                      class="text-xs font-semibold uppercase tracking-wide text-gray-800"
+                                    >
+                                      Task Magang
+                                    </span>
+                                  </div>
+                                </th>
+
+                                <th scope="col" class="px-6 py-3 text-left">
+                                  <div class="flex items-center gap-x-2">
+                                    <span
+                                      class="text-xs font-semibold uppercase tracking-wide text-gray-800"
+                                    >
+                                      Tanggal Report
+                                    </span>
+                                  </div>
+                                </th>
+
+                                <th scope="col" class="px-6 py-3 text-left">
+                                  <div class="flex items-center gap-x-2">
+                                    <span
+                                      class="text-xs font-semibold uppercase tracking-wide text-gray-800"
+                                    >
+                                      Approve Mentor
+                                    </span>
+                                  </div>
+                                </th>
+
+                                <th scope="col" class="px-6 py-3 text-left">
+                                  <div class="flex items-center gap-x-2">
+                                    <span
+                                      class="text-xs font-semibold uppercase tracking-wide text-gray-800"
+                                    >
+                                      Status Report
+                                    </span>
+                                  </div>
+                                </th>
+                              </tr>
+                            </thead>
+
+                            <tbody
+                              id="tableDailyReport"
+                              class="divide-y divide-gray-200"
+                            >
+                              <tr
+                                class="bg-white hover:bg-gray-50 dark:bg-slate-900 dark:hover:bg-slate-800"
+                              >
+                                <td
+                                  class="h-px w-px whitespace-nowrap align-top"
+                                >
+                                  <a class="block p-6" href="#">
+                                    <div class="flex items-center gap-x-4">
+                                      <div>
+                                        <span
+                                          class="block text-sm font-semibold text-gray-800 dark:text-gray-200"
+                                          >Daily Report Minggu ke-1</span
+                                        >
+                                      </div>
+                                    </div>
+                                  </a>
+                                </td>
+                                <td
+                                  class="h-px w-px whitespace-nowrap align-top"
+                                >
+                                  <a class="block p-6" href="#">
+                                    <div class="flex items-center gap-x-3">
+                                      <img
+                                        class="inline-block h-[2.375rem] w-[2.375rem] rounded-full"
+                                        src="https://images.unsplash.com/photo-1531927557220-a9e23c1e4794?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80"
+                                        alt="Image Description"
+                                      />
+                                      <div class="grow">
+                                        <span
+                                          class="block text-sm font-semibold text-gray-800 dark:text-gray-200"
+                                          >Roni Habibi</span
+                                        >
+                                        <span
+                                          class="block text-sm text-gray-500"
+                                          >ronihabibi@gmail.com</span
+                                        >
+                                      </div>
+                                    </div>
+                                  </a>
+                                </td>
+                                <td class="h-px w-72 min-w-[18rem] align-top">
+                                  <a class="block p-6" href="#">
+                                    <span class="block text-sm text-gray-500"
+                                      >Membuat table data pegawai untuk sistem
+                                      pendataan pegawai perusahaan</span
+                                    >
+                                  </a>
+                                </td>
+                                <td
+                                  class="h-px w-px whitespace-nowrap align-top"
+                                >
+                                  <a class="block p-6" href="#">
+                                    <span
+                                      class="text-sm text-gray-600 dark:text-gray-400"
+                                      >10 Jan 2022</span
+                                    >
+                                  </a>
+                                </td>
+                                <td
+                                  class="h-px w-px whitespace-nowrap align-top"
+                                >
+                                  <a class="block p-6" href="#">
+                                    <span
+                                      class="py-1 px-1.5 inline-flex items-center gap-x-1 text-xs font-medium bg-teal-100 text-teal-800 rounded-full dark:bg-teal-500/10 dark:text-teal-500"
+                                    >
+                                      <svg
+                                        class="w-2.5 h-2.5"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="16"
+                                        height="16"
+                                        fill="currentColor"
+                                        viewBox="0 0 16 16"
+                                      >
+                                        <path
+                                          d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"
+                                        />
+                                      </svg>
+                                      Approved
+                                    </span>
+                                  </a>
+                                </td>
+                                <td
+                                  class="h-px w-px whitespace-nowrap align-top"
+                                >
+                                  <a class="block p-6" href="#">
+                                    <span
+                                      class="py-1 px-1.5 inline-flex items-center gap-x-1 text-xs font-medium bg-teal-100 text-teal-800 rounded-full dark:bg-teal-500/10 dark:text-teal-500"
+                                    >
+                                      <svg
+                                        class="w-2.5 h-2.5"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="16"
+                                        height="16"
+                                        fill="currentColor"
+                                        viewBox="0 0 16 16"
+                                      >
+                                        <path
+                                          d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"
+                                        />
+                                      </svg>
+                                      Sudah Diperiksa
+                                    </span>
+                                  </a>
+                                </td>
+                              </tr>
+                              <tr
+                                class="bg-white hover:bg-gray-50 dark:bg-slate-900 dark:hover:bg-slate-800"
+                              >
+                                <td
+                                  class="h-px w-px whitespace-nowrap align-top"
+                                >
+                                  <a class="block p-6" href="#">
+                                    <div class="flex items-center gap-x-4">
+                                      <div>
+                                        <span
+                                          class="block text-sm font-semibold text-gray-800 dark:text-gray-200"
+                                          >Daily Report Minggu ke-2</span
+                                        >
+                                      </div>
+                                    </div>
+                                  </a>
+                                </td>
+                                <td
+                                  class="h-px w-px whitespace-nowrap align-top"
+                                >
+                                  <a class="block p-6" href="#">
+                                    <div class="flex items-center gap-x-3">
+                                      <img
+                                        class="inline-block h-[2.375rem] w-[2.375rem] rounded-full"
+                                        src="https://images.unsplash.com/photo-1531927557220-a9e23c1e4794?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80"
+                                        alt="Image Description"
+                                      />
+                                      <div class="grow">
+                                        <span
+                                          class="block text-sm font-semibold text-gray-800 dark:text-gray-200"
+                                          >Roni Habibi</span
+                                        >
+                                        <span
+                                          class="block text-sm text-gray-500"
+                                          >ronihabibi@gmail.com</span
+                                        >
+                                      </div>
+                                    </div>
+                                  </a>
+                                </td>
+                                <td class="h-px w-72 min-w-[18rem] align-top">
+                                  <a class="block p-6" href="#">
+                                    <span class="block text-sm text-gray-500"
+                                      >Membuat filter data untuk table data
+                                      pegawai perusahaan</span
+                                    >
+                                  </a>
+                                </td>
+                                <td
+                                  class="h-px w-px whitespace-nowrap align-top"
+                                >
+                                  <a class="block p-6" href="#">
+                                    <span
+                                      class="text-sm text-gray-600 dark:text-gray-400"
+                                      >17 Jan 2022</span
+                                    >
+                                  </a>
+                                </td>
+                                <td
+                                  class="h-px w-px whitespace-nowrap align-top"
+                                >
+                                  <a class="block p-6" href="#">
+                                    <span
+                                      class="py-1 px-1.5 inline-flex items-center gap-x-1 text-xs font-medium bg-teal-100 text-teal-800 rounded-full dark:bg-teal-500/10 dark:text-teal-500"
+                                    >
+                                      <svg
+                                        class="w-2.5 h-2.5"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="16"
+                                        height="16"
+                                        fill="currentColor"
+                                        viewBox="0 0 16 16"
+                                      >
+                                        <path
+                                          d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"
+                                        />
+                                      </svg>
+                                      Approved
+                                    </span>
+                                  </a>
+                                </td>
+                                <td
+                                  class="h-px w-px whitespace-nowrap align-top"
+                                >
+                                  <a class="block p-6" href="#">
+                                    <span
+                                      class="py-1 px-1.5 inline-flex items-center gap-x-1 text-xs font-medium bg-teal-100 text-teal-800 rounded-full dark:bg-teal-500/10 dark:text-teal-500"
+                                    >
+                                      <svg
+                                        class="w-2.5 h-2.5"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="16"
+                                        height="16"
+                                        fill="currentColor"
+                                        viewBox="0 0 16 16"
+                                      >
+                                        <path
+                                          d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"
+                                        />
+                                      </svg>
+                                      Sudah Diperiksa
+                                    </span>
+                                  </a>
+                                </td>
+                              </tr>
+                              <tr
+                                class="bg-white hover:bg-gray-50 dark:bg-slate-900 dark:hover:bg-slate-800"
+                              >
+                                <td
+                                  class="h-px w-px whitespace-nowrap align-top"
+                                >
+                                  <a class="block p-6" href="#">
+                                    <div class="flex items-center gap-x-4">
+                                      <div>
+                                        <span
+                                          class="block text-sm font-semibold text-gray-800 dark:text-gray-200"
+                                          >Daily Report Minggu ke-3</span
+                                        >
+                                      </div>
+                                    </div>
+                                  </a>
+                                </td>
+                                <td
+                                  class="h-px w-px whitespace-nowrap align-top"
+                                >
+                                  <a class="block p-6" href="#">
+                                    <div class="flex items-center gap-x-3">
+                                      <img
+                                        class="inline-block h-[2.375rem] w-[2.375rem] rounded-full"
+                                        src="https://images.unsplash.com/photo-1531927557220-a9e23c1e4794?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80"
+                                        alt="Image Description"
+                                      />
+                                      <div class="grow">
+                                        <span
+                                          class="block text-sm font-semibold text-gray-800 dark:text-gray-200"
+                                          >Roni Habibi</span
+                                        >
+                                        <span
+                                          class="block text-sm text-gray-500"
+                                          >ronihabibi@gmail.com</span
+                                        >
+                                      </div>
+                                    </div>
+                                  </a>
+                                </td>
+                                <td class="h-px w-72 min-w-[18rem] align-top">
+                                  <a class="block p-6" href="#">
+                                    <span class="block text-sm text-gray-500"
+                                      >Membuat filter data untuk table data
+                                      pegawai perusahaan</span
+                                    >
+                                  </a>
+                                </td>
+                                <td
+                                  class="h-px w-px whitespace-nowrap align-top"
+                                >
+                                  <a class="block p-6" href="#">
+                                    <span
+                                      class="text-sm text-gray-600 dark:text-gray-400"
+                                      >17 Jan 2022</span
+                                    >
+                                  </a>
+                                </td>
+                                <td
+                                  class="h-px w-px whitespace-nowrap align-top"
+                                >
+                                  <a class="block p-6" href="#">
+                                    <span
+                                      class="py-1 px-1.5 inline-flex items-center gap-x-1 text-xs font-medium bg-teal-100 text-teal-800 rounded-full dark:bg-teal-500/10 dark:text-teal-500"
+                                    >
+                                      <svg
+                                        class="w-2.5 h-2.5"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="16"
+                                        height="16"
+                                        fill="currentColor"
+                                        viewBox="0 0 16 16"
+                                      >
+                                        <path
+                                          d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"
+                                        />
+                                      </svg>
+                                      Approved
+                                    </span>
+                                  </a>
+                                </td>
+                                <td
+                                  class="h-px w-px whitespace-nowrap align-top"
+                                >
+                                  <a class="block p-6" href="#">
+                                    <span
+                                      class="py-1 px-1.5 inline-flex items-center gap-x-1 text-xs font-medium bg-teal-100 text-teal-800 rounded-full dark:bg-teal-500/10 dark:text-teal-500"
+                                    >
+                                      <svg
+                                        class="w-2.5 h-2.5"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="16"
+                                        height="16"
+                                        fill="currentColor"
+                                        viewBox="0 0 16 16"
+                                      >
+                                        <path
+                                          d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"
+                                        />
+                                      </svg>
+                                      Sudah Diperiksa
+                                    </span>
+                                  </a>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <!-- End Table -->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Card -->
+                </div>
+                <!-- Footer -->
+                <div
+                  class="px-6 py-4 grid gap-3 md:flex md:justify-between md:items-center border-y border-gray-200"
+                >
+                  <div id="mentorCount">
+                    <p class="text-sm text-gray-600">
+                      <span class="font-semibold text-gray-800">0</span>
+                      results
+                    </p>
+                  </div>
+
+                  <div>
+                    <div class="inline-flex gap-x-2">
+                      <button
+                        type="button"
+                        class="py-2 px-3 inline-flex justify-center items-center gap-2 rounded-md border font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-600 transition-all text-sm"
+                      >
+                        <svg
+                          class="w-3 h-3"
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"
+                          />
+                        </svg>
+                        Prev
+                      </button>
+
+                      <button
+                        type="button"
+                        class="py-2 px-3 inline-flex justify-center items-center gap-2 rounded-md border font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-600 transition-all text-sm"
+                      >
+                        Next
+                        <svg
+                          class="w-3 h-3"
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
+                          />
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <!-- End Footer -->
+                <!-- End Table -->
               </div>
             </div>
+            <!-- End Daily Report -->
           </div>
-          <!-- End Footer -->
-          <!-- End Table -->
+          <!-- End Mentor -->
         </div>
+        <!-- End Tabel -->
       </div>
-      <!-- End Daily Report -->
+      <!-- End Filter -->
     </div>
     <!-- End Content Section -->
 
@@ -1406,6 +2618,12 @@
     <script
       type="module"
       src="https://cdn.jsdelivr.net/gh/intern-monitoring/jsintermoni@0.2.0/logOut.js"
+    ></script>
+
+    <!-- Get Pembimbing dan Mentor -->
+    <script
+      type="module"
+      src="./assets/js/getFunction/mahasiswaMagang/getMhsMagangFunction.js"
     ></script>
 
     <script type="module" src="../js/get/getEmailMhs.js"></script>
