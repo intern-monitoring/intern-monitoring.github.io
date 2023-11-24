@@ -4,11 +4,11 @@ import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
 import { get } from "../../getFunction/mahasiswaMagang/getMhsMagangFunction.js";
 import { URLGetMahasiswaMagang } from "../../getFunction/mahasiswaMagang/getMhsMagang.js";
 
-get(URLGetMahasiswaMagang, responseData);
+get(URLGetMahasiswaMagang, responseIDPembimbing);
 
 let pembimbingID;
 
-function responseData(results) {
+function responseIDPembimbing(results) {
   console.log(results);
   results.forEach((result) => {
     getIDPembimbing(result);
