@@ -1,7 +1,7 @@
 import { addInner } from "https://jscroot.github.io/element/croot.js";
 
 export const URLGetReport =
-  "pages/mahasiswa/assets/js/getFunction/applyMagang/fetchDetailApply.js pages/mahasiswa/assets/js/getFunction/applyMagang/detailApply.js pages/mahasiswa/assets/js/getFunction/applyMagang/getApply.js pages/mahasiswa/assets/js/getFunction/applyMagang/getApplyFunction.js pages/mahasiswa/assets/js/getFunction/applyMagang/urlDetailApply.js";
+  "https://asia-southeast2-bursakerja-project.cloudfunctions.net/intermoni-report";
 
 export const tableDailyReportPembimbing = `
 <tr
