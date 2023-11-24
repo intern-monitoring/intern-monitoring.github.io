@@ -59,11 +59,50 @@ export const dataMentor = `
 </div>
 `;
 
+export const dataMagang = `
+<h3 class="font-semibold text-gray-900 pb-3">
+Informasi Magang
+</h3>
+<div class="flex gap-x-3 text-sm">
+<h4
+  class="min-w-[150px] max-w-[200px] font-semibold text-gray-800"
+>
+  Nama Perusahaan :
+</h4>
+<p class="text-gray-500">#NAMAPERUSAHAAN#</p>
+</div>
+<div class="flex gap-x-3 text-sm">
+<h4
+  class="min-w-[150px] max-w-[200px] font-semibold text-gray-800"
+>
+  Email :
+</h4>
+<p class="text-blue-700">#EMAILPERUSAHAAN#</p>
+</div>
+<div class="flex gap-x-3 text-sm">
+<h4
+  class="min-w-[150px] max-w-[200px] font-semibold text-gray-800"
+>
+  Lokasi :
+</h4>
+<p class="text-gray-500">#LOKASI#</p>
+</div>
+<div class="flex gap-x-3 text-sm">
+<h4
+  class="min-w-[150px] max-w-[200px] font-semibold text-gray-800"
+>
+  Posisi Magang :
+</h4>
+<p class="text-gray-500">#POSISI#</p>
+</div>
+`;
+
 export function responseData(results) {
   console.log(results);
   results.forEach((result) => {
     isiRowPembimbing(result);
     isiRowMentor(result);
+    isiRowMagang(result);
   });
 }
 
@@ -81,4 +120,13 @@ export function isiRowMentor(value) {
     .replace("#EMAILMENTOR#", value.mentor.akun.email)
     .replace("#PERUSAHAAN#", value.magang.mitra.nama);
   addInner("dataMentor", mentor);
+}
+
+export function isiRowMagang(value) {
+  const magangdata = dataMagang
+    .replace("#PERUSAHAAN#", value.magang.mitra.nama)
+    .replace("#EMAILPERUSAHAAN#", value.magang.mitra.akun.email)
+    .replace("#LOKASI#", value.magang.lokasi)
+    .replace("#POSISI#", value.magang.posisi);
+  addInner("dataMentor", magangdata);
 }
