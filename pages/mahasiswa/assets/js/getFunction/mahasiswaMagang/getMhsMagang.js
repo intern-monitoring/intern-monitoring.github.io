@@ -100,18 +100,18 @@ export function responseData(results) {
     isiRowPembimbing(result);
     isiRowMentor(result);
     isiRowMagang(result);
-    getIDPembimbing(result);
-    getIDMentor(result);
+    // getIDPembimbing(result);
+    // getIDMentor(result);
   });
 }
 
-export function getIDPembimbing(value) {
-  return (document.getElementById("idPembimbing").value = value.pembimbing._id);
-}
+// export function getIDPembimbing(value) {
+//   return (document.getElementById("idPembimbing").value = value.pembimbing._id);
+// }
 
-export function getIDMentor(value) {
-  return (document.getElementById("idMentor").value = value.mentor._id);
-}
+// export function getIDMentor(value) {
+//   return (document.getElementById("idMentor").value = value.mentor._id);
+// }
 
 export function isiRowPembimbing(value) {
   const pembimbing = dataPembimbing
