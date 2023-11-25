@@ -1,4 +1,5 @@
 import { addInner } from "https://jscroot.github.io/element/croot.js";
+import { convertToWIB } from "./convertToWib.js";
 
 export const dataDailyReport = `
 <div class="bg-white rounded-xl border shadow-md p-4 sm:p-7">
@@ -69,9 +70,10 @@ export function responseData(results) {
 }
 
 export function isiRow(value) {
+  const wibCreated = convertToWIB(value.createdat);
   const content = dataDailyReport
     .replace("#JUDUL#", value.judul)
     .replace("#DESKRIPSI#", value.isi)
-    .replace("#TANGGAL#", value.createdat);
+    .replace("#TANGGAL#", value.wibCreated);
   addInner("detailApply", content);
 }
