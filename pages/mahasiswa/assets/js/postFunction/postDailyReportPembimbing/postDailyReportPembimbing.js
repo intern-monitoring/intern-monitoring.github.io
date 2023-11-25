@@ -16,7 +16,9 @@ function responseIDPembimbing(results) {
 }
 
 function getIDPembimbing(value) {
-  return (pembimbingID = value.pembimbing._id);
+  if (value.status === 1) {
+    return (pembimbingID = value.pembimbing._id);
+  }
 }
 
 const PostDailyReportPembimbing = () => {
