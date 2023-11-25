@@ -114,27 +114,33 @@ export function responseData(results) {
 // }
 
 export function isiRowPembimbing(value) {
-  const pembimbing = dataPembimbing
-    .replace("#PEMBIMBING#", value.pembimbing.namalengkap)
-    .replace("#EMAILPEMBIMBING#", value.pembimbing.akun.email)
-    .replace("#PRODI#", value.pembimbing.prodi);
-  addInner("dataPembimbing", pembimbing);
+  if (value.status === 1) {
+    const pembimbing = dataPembimbing
+      .replace("#PEMBIMBING#", value.pembimbing.namalengkap)
+      .replace("#EMAILPEMBIMBING#", value.pembimbing.akun.email)
+      .replace("#PRODI#", value.pembimbing.prodi);
+    addInner("dataPembimbing", pembimbing);
+  }
 }
 
 export function isiRowMentor(value) {
-  const mentor = dataMentor
-    .replace("#MENTOR#", value.mentor.namalengkap)
-    .replace("#EMAILMENTOR#", value.mentor.akun.email)
-    .replace("#PERUSAHAAN#", value.magang.mitra.nama);
-  addInner("dataMentor", mentor);
+  if (value.status === 1) {
+    const mentor = dataMentor
+      .replace("#MENTOR#", value.mentor.namalengkap)
+      .replace("#EMAILMENTOR#", value.mentor.akun.email)
+      .replace("#PERUSAHAAN#", value.magang.mitra.nama);
+    addInner("dataMentor", mentor);
+  }
 }
 
 export function isiRowMagang(value) {
-  const magangdata = dataMagang
-    .replace("#NAMAPERUSAHAAN#", value.magang.mitra.nama)
-    .replace("#EMAILPERUSAHAAN#", value.magang.mitra.akun.email)
-    .replace("#LOKASI#", value.magang.lokasi)
-    .replace("#POSISI#", value.magang.posisi);
-  addInner("dataMagangM", magangdata);
-  addInner("dataMagangP", magangdata);
+  if (value.status === 1) {
+    const magangdata = dataMagang
+      .replace("#NAMAPERUSAHAAN#", value.magang.mitra.nama)
+      .replace("#EMAILPERUSAHAAN#", value.magang.mitra.akun.email)
+      .replace("#LOKASI#", value.magang.lokasi)
+      .replace("#POSISI#", value.magang.posisi);
+    addInner("dataMagangM", magangdata);
+    addInner("dataMagangP", magangdata);
+  }
 }
