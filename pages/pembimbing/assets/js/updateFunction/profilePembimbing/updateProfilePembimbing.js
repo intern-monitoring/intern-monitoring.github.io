@@ -34,6 +34,7 @@ const pushData = () => {
     nik: nikValue,
     prodi: prodiValue,
   };
+  console.log(data);
   putData(urlPUT, data, AmbilResponse);
 };
 

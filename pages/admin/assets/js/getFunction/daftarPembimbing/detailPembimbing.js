@@ -48,6 +48,12 @@ export const dataPembimbing = `
       >
       <h3 class="text-base text-gray-900 font-normal">#NIK#</h3>
     </div>
+    <div class="flex justify-center gap-2">
+      <label class="text-base text-gray-900 font-semibold"
+        >Dosen Prodi :</label
+      >
+      <h3 class="text-base text-gray-900 font-normal">#PRODI#</h3>
+    </div>
   </div>
   <div class="mt-2 border-b border-gray-200"></div>
 </div>
@@ -63,6 +69,7 @@ export function isiRow(value) {
   const content = dataPembimbing
     .replace("#NAMAPEMBIMBING#", value.namalengkap)
     .replace("#EMAIL#", value.akun.email)
+    .replace("#PRODI#", value.prodi)
     .replace("#NIK#", value.nik);
   addInner("detailPembimbing", content);
 }
