@@ -1,7 +1,7 @@
 import { addInner } from "https://jscroot.github.io/element/croot.js";
 
 export const URLGetPemilihanMentor =
-  "https://asia-southeast2-bursakerja-project.cloudfunctions.net/intermoni-mahasiswa-magang/seleksi";
+  "https://asia-southeast2-bursakerja-project.cloudfunctions.net/intermoni-mahasiswa-magang";
 
 export const tablePemilihanMentor = `
 <tr>
