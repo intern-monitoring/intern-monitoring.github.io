@@ -13,7 +13,6 @@ function responseIDPembimbing(results) {
   console.log(results);
   results.forEach((result) => {
     getIDPembimbing(result);
-    getIDMahasiswaMagang(result);
   });
 }
 
