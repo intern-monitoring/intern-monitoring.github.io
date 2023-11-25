@@ -23,7 +23,9 @@ const get = (target_url, responseFunction) => {
     .then((result) => {
       const parsedResult = JSON.parse(result);
 
-      const filteredData = parsedResult.filter((user) => user.status === 1);
+      const filteredData = parsedResult.filter(
+        (user) => user.status === 1 && !user.mentor.namalengkap
+      );
 
       // Call the response function with the filtered data
       responseFunction(filteredData);

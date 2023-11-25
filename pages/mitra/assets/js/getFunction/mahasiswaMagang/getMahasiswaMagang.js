@@ -82,7 +82,7 @@ export function responseData(results) {
 }
 
 export function isiRow(value) {
-  if (value.status === 1) {
+  if (value.status === 1 && value.mentor.namalengkap) {
     const mahasiswamagang = tableMahasiswaMagang
       .replace("#NAMAMHS#", value.mahasiswa.namalengkap)
       .replace("#EMAILMHS#", value.mahasiswa.akun.email)

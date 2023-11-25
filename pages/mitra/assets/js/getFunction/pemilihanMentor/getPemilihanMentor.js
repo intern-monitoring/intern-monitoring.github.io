@@ -87,7 +87,7 @@ export function responseData(results) {
 }
 
 export function isiRow(value) {
-  if (value.status === 1) {
+  if (value.status === 1 && !value.mentor.namalengkap) {
     // Mentor
     // const mentorNama =
     //   value.mentor.namalengkap === null

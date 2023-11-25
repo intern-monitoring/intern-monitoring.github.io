@@ -14,7 +14,9 @@ const fetchData = async () => {
     const response = await fetch(URLGetMahasiswaMagang, requestOptions);
     let data = await response.json();
 
-    data = data.filter((value) => value.status === 1);
+    data = data.filter(
+      (value) => value.status === 1 && value.mentor.namalengkap
+    );
 
     localStorage.setItem("mahasiswaMagang", JSON.stringify(data));
 
