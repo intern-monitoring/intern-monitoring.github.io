@@ -6,13 +6,21 @@ export const urlPUT =
   mitraId;
 
 export const AmbilResponse = (result) => {
-  console.log(result); // menampilkan response API pada console
-  Swal.fire({
-    icon: "success",
-    title: "Data berhasil diubah",
-    showConfirmButton: false,
-    timer: 1500,
-  }).then(() => {
-    window.location.href = "profileMitra.html";
-  });
+  if (result) {
+    console.log(result); // menampilkan response API pada console
+    Swal.fire({
+      icon: "success",
+      title: "Data berhasil diubah",
+      showConfirmButton: false,
+      timer: 1500,
+    }).then(() => {
+      window.location.href = "profileMitra.html";
+    });
+  } else {
+    Swal.fire({
+      icon: "error",
+      title: "error",
+      text: result.message,
+    });
+  }
 };

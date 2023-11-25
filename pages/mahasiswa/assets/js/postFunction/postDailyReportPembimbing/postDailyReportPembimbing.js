@@ -18,12 +18,10 @@ function responseIDPembimbing(results) {
 }
 
 function getIDPembimbing(value) {
-  console.log(value.pembimbing._id);
   return (pembimbingID = value.pembimbing._id);
 }
 
 function getIDMahasiswaMagang(value) {
-  console.log(value._id);
   return (idMhsMgn = value._id);
 }
 
