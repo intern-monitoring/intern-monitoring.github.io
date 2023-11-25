@@ -90,7 +90,7 @@ export function responseData(results) {
 }
 
 export function isiRow(value) {
-  if (value.status === 1) {
+  if (value.status === 1 && !value.pembimbing.namalengkap) {
     const pemilihanpembimbing = tablePemilihanPembimbing
       .replace("#NAMAMHS#", value.mahasiswa.namalengkap)
       .replace("#EMAILMHS#", value.mahasiswa.akun.email)

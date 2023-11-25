@@ -21,14 +21,9 @@ function getIDPembimbing(value) {
   return (pembimbingID = value.pembimbing._id);
 }
 
-function getIDMahasiswaMagang(value) {
-  return (idMhsMgn = value._id);
-}
-
 const PostDailyReportPembimbing = () => {
   const target_url =
-    "https://asia-southeast2-bursakerja-project.cloudfunctions.net/intermoni-report?id=" +
-    idMhsMgn;
+    "https://asia-southeast2-bursakerja-project.cloudfunctions.net/intermoni-report";
   const tokenvalue = getCookie("Authorization");
   const tokenkey = "Authorization";
   const datainjson = {
