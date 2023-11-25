@@ -82,12 +82,14 @@ export function responseData(results) {
 }
 
 export function isiRow(value) {
-  const mahasiswamagang = tableMahasiswaMagang
-    .replace("#NAMAMHS#", value.mahasiswa.namalengkap)
-    .replace("#EMAILMHS#", value.mahasiswa.akun.email)
-    .replace("#POSISI#", value.magang.posisi)
-    .replace("#MENTOR#", value.mentor.namalengkap)
-    .replace("#EMAILMENTOR#", value.mentor.akun.email)
-    .replace("#DETAIL#", value._id);
-  addInner("tableMahasiswaMagang", mahasiswamagang);
+  if (value.status === 1) {
+    const mahasiswamagang = tableMahasiswaMagang
+      .replace("#NAMAMHS#", value.mahasiswa.namalengkap)
+      .replace("#EMAILMHS#", value.mahasiswa.akun.email)
+      .replace("#POSISI#", value.magang.posisi)
+      .replace("#MENTOR#", value.mentor.namalengkap)
+      .replace("#EMAILMENTOR#", value.mentor.akun.email)
+      .replace("#DETAIL#", value._id);
+    addInner("tableMahasiswaMagang", mahasiswamagang);
+  }
 }
