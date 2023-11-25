@@ -39,7 +39,7 @@ const tolakBerkas = (TOLAK) => {
   }).then((result) => {
     if (result.isConfirmed) {
       const target_url =
-        "https://asia-southeast2-bursakerja-project.cloudfunctions.net/intermoni-mahasiswa-magang?id=" +
+        "https://asia-southeast2-bursakerja-project.cloudfunctions.net/intermoni-seleksi?id=" +
         TOLAK;
       const tokenvalue = getCookie("Authorization");
       const tokenkey = "Authorization";
