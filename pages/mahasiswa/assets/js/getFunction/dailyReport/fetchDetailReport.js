@@ -1,6 +1,6 @@
-import { responseData } from "./detailApply.js";
+import { responseData } from "./detailReport.js";
 import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
-import { urlFetch } from "./urlDetailApply.js";
+import { urlFetch } from "./urlDetailReport.js";
 
 function get(target_url, responseFunction) {
   const myHeaders = new Headers();
