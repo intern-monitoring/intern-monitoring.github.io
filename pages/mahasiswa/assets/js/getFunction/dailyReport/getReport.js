@@ -1,4 +1,5 @@
 import { addInner } from "https://jscroot.github.io/element/croot.js";
+import { convertToWIB } from "./convertToWib.js";
 
 export const URLGetReport =
   "https://asia-southeast2-bursakerja-project.cloudfunctions.net/intermoni-report";
@@ -170,33 +171,23 @@ export function responseData(results) {
 }
 
 export function isiRowReportPembimbing(value) {
+  const wibCreated = convertToWIB(value.createdat);
   const reportPembimbing = tableDailyReportPembimbing
-    .replace("#NAMAPERUSAHAAN#", value.magang.mitra.nama)
-    .replace("#POSISI#", value.magang.posisi)
-    .replace("#LOKASI#", value.magang.lokasi)
-    .replace("#SELEKSIBERKAS#", statusberkas)
-    .replace("#SELEKSIWAWANCARA#", statuswawancara)
-    .replace("#BGBERKAS#", bgberkas)
-    .replace("#BGWAWANCARA#", bgwawancara)
-    .replace("#IDHAPUS#", value._id)
-    .replace("#DETAIL#", value._id)
-    .replace("#PILIH#", value._id)
-    .replace("#TIDAK#", value._id);
+    .replace("#NAMAPEMBIMBING#", value.penerima)
+    .replace("#EMAILPEMBIMBING#", value.penerima)
+    .replace("#TASK#", value.judul)
+    .replace("#TANGGAL#", wibCreated)
+    .replace("#DETAIL#", value._id);
   addInner("tableDailyReportPembimbing", reportPembimbing);
 }
 
 export function isiRowReportMentor(value) {
+  const wibCreated = convertToWIB(value.createdat);
   const reportMentor = tableDailyReportMentor
-    .replace("#NAMAPERUSAHAAN#", value.magang.mitra.nama)
-    .replace("#POSISI#", value.magang.posisi)
-    .replace("#LOKASI#", value.magang.lokasi)
-    .replace("#SELEKSIBERKAS#", statusberkas)
-    .replace("#SELEKSIWAWANCARA#", statuswawancara)
-    .replace("#BGBERKAS#", bgberkas)
-    .replace("#BGWAWANCARA#", bgwawancara)
-    .replace("#IDHAPUS#", value._id)
-    .replace("#DETAIL#", value._id)
-    .replace("#PILIH#", value._id)
-    .replace("#TIDAK#", value._id);
+    .replace("#NAMAMENTOR#", value.penerima)
+    .replace("#EMAILMENTOR#", value.penerima)
+    .replace("#TASK#", value.judul)
+    .replace("#TANGGAL#", wibCreated)
+    .replace("#DETAIL#", value._id);
   addInner("tableDailyReportMentor", reportMentor);
 }

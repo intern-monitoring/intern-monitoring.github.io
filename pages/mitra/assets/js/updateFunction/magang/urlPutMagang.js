@@ -6,7 +6,7 @@ export const urlPUT =
   magangId;
 
 export const AmbilResponse = (result) => {
-  if (result) {
+  if (result.status) {
     console.log(result); // menampilkan response API pada console
     Swal.fire({
       icon: "success",

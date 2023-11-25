@@ -5,7 +5,7 @@ export const isiDataProfile = (results) => {
     { id: "jeniskelamin", path: "jeniskelamin" },
     { id: "nim", path: "nim" },
     { id: "perguruantinggi", path: "perguruantinggi" },
-    { id: "prodi", path: "prodi" },
+    // { id: "prodi", path: "prodi" },
   ];
 
   inputMapping.forEach(({ id, path, index, property }) => {
