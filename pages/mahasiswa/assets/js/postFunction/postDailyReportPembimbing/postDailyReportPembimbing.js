@@ -5,7 +5,6 @@ import { get } from "../../getFunction/mahasiswaMagang/getMhsMagangFunction.js";
 import { URLGetMahasiswaMagang } from "../../getFunction/mahasiswaMagang/getMhsMagang.js";
 
 let pembimbingID;
-let idMhsMgn;
 
 get(URLGetMahasiswaMagang, responseIDPembimbing);
 
@@ -29,7 +28,7 @@ const PostDailyReportPembimbing = () => {
     judul: getValue("judulReportPembimbing"),
     isi: document.getElementById("isiReportPembimbing").innerHTML,
     penerima: {
-      akun: pembimbingID,
+      _id: pembimbingID,
     },
   };
   postWithToken(target_url, tokenkey, tokenvalue, datainjson, responseData);
