@@ -14,7 +14,7 @@ export const dataDailyReport = `
     <div class="border-b pt-1 border-gray-200"></div>
   </div>
   <div>
-    <div class="grid space-y-2">
+    <div class="grid">
       <!-- Pembimbing -->
       <div class="pb-4">
         <h2 class="text-lg font-semibold text-gray-800">
@@ -22,7 +22,7 @@ export const dataDailyReport = `
         </h2>
       </div>
       <div class="flex gap-x-8 text-sm items-center">
-        <div class="pb-3">
+        <div>
           <img
             class="inline-block h-28 w-28 rounded-full ring-2 ring-white"
             src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80"
@@ -52,27 +52,26 @@ export const dataDailyReport = `
   <!-- Col -->
   <div>
     <div>
-      <div>
+      <div class="pb-2">
         <h2 class="text-lg font-semibold text-gray-800">
           Isi Report :
         </h2>
         <div class="border-b pt-1 border-gray-200"></div>
       </div>
-      <div class="py-4">
+      <div class="py-2">
         <h3 class="text-md font-semibold text-gray-800">
           Judul daily report :
         </h3>
         <p class="text-gray-800 text-sm">#JUDUL#</p>
       </div>
-      <div class="">
+      <div class="py-2">
         <h3 class="text-md font-semibold text-gray-800">
           Deskripsi daily report :
         </h3>
-
         <p class="text-gray-800 text-sm">#DESKRIPSI#</p>
-        <div class="border-b border-gray-200 pt-5"></div>
+        <div class="border-b border-gray-200 pt-4"></div>
       </div>
-      <div class="pt-4 flex justify-between items-start">
+      <div class="pt-2 flex justify-between items-start">
         <div class="flex items-center gap-x-2">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -98,7 +97,7 @@ export const dataDailyReport = `
         </div>
         <a
           href="dailyReport.html"
-          class="py-2 px-3 inline-flex cursor-pointer justify-center items-center gap-2 rounded-md border font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-600 transition-all text-sm"
+          class="py-2 px-3 inline-flex justify-center items-center gap-x-3 text-center bg-gradient-to-tl from-blue-600 to-violet-600 shadow-md shadow-transparent hover:shadow-blue-700/50 border border-transparent text-white text-sm font-medium rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600 focus:ring-offset-1 focus:ring-offset-white"
         >
           Kembali
         </a>

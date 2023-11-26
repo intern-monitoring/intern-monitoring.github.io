@@ -48,7 +48,7 @@ class="flex flex-col cursor-pointer justify-start rounded-xl p-4 md:p-6 bg-white
 
 <div class="flex justify-end pt-2">
   <a
-    class="inline-flex w-full justify-center items-center gap-x-3 text-center bg-gradient-to-tl from-blue-600 to-violet-600 shadow-lg shadow-transparent hover:shadow-blue-700/50 border border-transparent text-white text-sm font-medium rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 focus:ring-offset-white py-3 px-6"
+    class="inline-flex w-full justify-center items-center gap-x-3 text-center bg-gradient-to-tl from-blue-600 to-violet-600 shadow-md shadow-transparent hover:shadow-blue-700/50 border border-transparent text-white text-sm font-medium rounded-lg focus:outline-none focus:ring-1 focus:ring-blue-600 focus:ring-offset-1 focus:ring-offset-white py-3 px-6"
     href="detailMagang?magangId=#DETAIL#"
     >Detail</a
   >
