@@ -11,7 +11,7 @@ class="bg-white hover:bg-gray-50 dark:bg-slate-900 dark:hover:bg-slate-800"
 <td
   class="h-px w-px whitespace-nowrap align-top"
 >
-  <a class="block p-6" href="#">
+  <a class="block p-6 cursor-pointer">
     <div class="flex items-center gap-x-3">
       <img
         class="inline-block h-[2.375rem] w-[2.375rem] rounded-full"
@@ -32,7 +32,7 @@ class="bg-white hover:bg-gray-50 dark:bg-slate-900 dark:hover:bg-slate-800"
   </a>
 </td>
 <td class="h-px w-72 min-w-[18rem] align-top">
-  <a class="block p-6" href="#">
+  <a class="block p-6 cursor-pointer">
     <span class="block text-sm text-gray-500"
       >#TASK#</span
     >
@@ -41,7 +41,7 @@ class="bg-white hover:bg-gray-50 dark:bg-slate-900 dark:hover:bg-slate-800"
 <td
   class="h-px w-px whitespace-nowrap align-top"
 >
-  <a class="block p-6" href="#">
+  <a class="block p-6 cursor-pointer">
     <span
       class="text-sm text-gray-600 dark:text-gray-400"
       >#TANGGAL#</span
@@ -90,7 +90,7 @@ class="bg-white hover:bg-gray-50 dark:bg-slate-900 dark:hover:bg-slate-800"
 <td
   class="h-px w-px whitespace-nowrap align-top"
 >
-  <a class="block p-6" href="#">
+  <a class="block p-6 cursor-pointer">
     <div class="flex items-center gap-x-3">
       <img
         class="inline-block h-[2.375rem] w-[2.375rem] rounded-full"
@@ -111,7 +111,7 @@ class="bg-white hover:bg-gray-50 dark:bg-slate-900 dark:hover:bg-slate-800"
   </a>
 </td>
 <td class="h-px w-72 min-w-[18rem] align-top">
-  <a class="block p-6" href="#">
+  <a class="block p-6 cursor-pointer">
     <span class="block text-sm text-gray-500"
       >#TASK#</span
     >
@@ -120,7 +120,7 @@ class="bg-white hover:bg-gray-50 dark:bg-slate-900 dark:hover:bg-slate-800"
 <td
   class="h-px w-px whitespace-nowrap align-top"
 >
-  <a class="block p-6" href="#">
+  <a class="block p-6 cursor-pointer">
     <span
       class="text-sm text-gray-600 dark:text-gray-400"
       >#TANGGAL#</span
@@ -173,8 +173,8 @@ export function responseData(results) {
 export function isiRowReportPembimbing(value) {
   const wibCreated = convertToWIB(value.createdat);
   const reportPembimbing = tableDailyReportPembimbing
-    .replace("#NAMAPEMBIMBING#", value.penerima)
-    .replace("#EMAILPEMBIMBING#", value.penerima)
+    .replace("#NAMAPEMBIMBING#", value.penerima.namalengkap)
+    .replace("#EMAILPEMBIMBING#", value.penerima.email)
     .replace("#TASK#", value.judul)
     .replace("#TANGGAL#", wibCreated)
     .replace("#DETAIL#", value._id);
@@ -184,8 +184,8 @@ export function isiRowReportPembimbing(value) {
 export function isiRowReportMentor(value) {
   const wibCreated = convertToWIB(value.createdat);
   const reportMentor = tableDailyReportMentor
-    .replace("#NAMAMENTOR#", value.penerima)
-    .replace("#EMAILMENTOR#", value.penerima)
+    .replace("#NAMAMENTOR#", value.penerima.namalengkap)
+    .replace("#EMAILMENTOR#", value.penerima.email)
     .replace("#TASK#", value.judul)
     .replace("#TANGGAL#", wibCreated)
     .replace("#DETAIL#", value._id);
