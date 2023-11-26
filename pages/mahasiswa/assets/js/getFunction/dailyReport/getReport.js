@@ -25,8 +25,6 @@ const penerima = (result) => {
 
 let namaPenerima = [];
 
-get(URLGetReport, penerima, responseNamaPenerima);
-
 function responseNamaPenerima(results) {
   console.log(results);
   results.forEach((result) => {
@@ -37,6 +35,7 @@ function responseNamaPenerima(results) {
 function getNamaPenerima(value) {
   return (namaPenerima = value.penerima.nama);
 }
+get(URLGetReport, penerima, responseNamaPenerima);
 
 export const tableDailyReportPembimbing = `
 <tr
