@@ -32,13 +32,10 @@ const get = (target_url, responseFunction) => {
       responseFunction(jsonData);
 
       // Hitung jumlah data dan perbarui tampilan
-      const countPembimbing = jsonData.filter((value) => value.prodi).length;
-      const countMentor = jsonData.filter(
-        (value) => value.prodi === false
-      ).length;
+      const count = jsonData.length;
 
-      CountReportPembimbing(countPembimbing);
-      CountReportMentor(countMentor);
+      CountReportPembimbing(count);
+      CountReportMentor(count);
     })
     .catch((error) => console.log("error", error));
 };
