@@ -1,24 +1,6 @@
 import { URLGetReport, responseData } from "./getReport.js";
 import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
 
-const penerima = (result) => {
-  let allReport = result.map((row) => {
-    return row.penerima.nama.split(",").map(function (item) {
-      return item.trim();
-    });
-  });
-  let uniquePenerima = allReport
-    .flat()
-    .filter((item, index, arry) => arry.indexOf(item) === index);
-  let sortingPenerima = uniquePenerima.sort(function (first, second) {
-    return first > second ? 1 : -1;
-  });
-  length = sortingPenerima.length;
-  for (let i = 0; i < length; i++) {
-    console.log(sortingPenerima[i]);
-  }
-};
-
 const CountReportPembimbing = (count) => {
   const resultCountElement = document.getElementById("countReportPembimbing");
   resultCountElement.innerHTML = `
@@ -58,5 +40,4 @@ const get = (target_url, responseFunction) => {
     .catch((error) => console.log("error", error));
 };
 
-// get(URLGetReport, responseData, penerima);
-get(URLGetReport, penerima);
+get(URLGetReport, responseData);
