@@ -48,8 +48,10 @@ const blockquoteExtension = Blockquote.configure({
   },
 });
 
-const editorBimbingan = new Editor({
-  element: document.querySelector("#hs-editor-tiptap [data-hs-editor-field]"),
+const editorPembimbing = new Editor({
+  element: document.querySelector(
+    "#hs-editor-tiptap-pembimbing [data-hs-editor-field-pembimbing]"
+  ),
   extensions: [
     StarterKit.configure({
       paragraph: false,
@@ -71,28 +73,28 @@ const editorBimbingan = new Editor({
     blockquoteExtension,
   ],
 });
-const actionsBimbingan = [
+const actionsPembimbing = [
   {
-    id: "#hs-editor-tiptap [data-hs-editor-bold]",
-    fn: () => editorBimbingan.chain().focus().toggleBold().run(),
+    id: "#hs-editor-tiptap-pembimbing [data-hs-editor-bold]",
+    fn: () => editorPembimbing.chain().focus().toggleBold().run(),
   },
   {
-    id: "#hs-editor-tiptap [data-hs-editor-italic]",
-    fn: () => editorBimbingan.chain().focus().toggleItalic().run(),
+    id: "#hs-editor-tiptap-pembimbing [data-hs-editor-italic]",
+    fn: () => editorPembimbing.chain().focus().toggleItalic().run(),
   },
   {
-    id: "#hs-editor-tiptap [data-hs-editor-underline]",
-    fn: () => editorBimbingan.chain().focus().toggleUnderline().run(),
+    id: "#hs-editor-tiptap-pembimbing [data-hs-editor-underline]",
+    fn: () => editorPembimbing.chain().focus().toggleUnderline().run(),
   },
   {
-    id: "#hs-editor-tiptap [data-hs-editor-strike]",
-    fn: () => editorBimbingan.chain().focus().toggleStrike().run(),
+    id: "#hs-editor-tiptap-pembimbing [data-hs-editor-strike]",
+    fn: () => editorPembimbing.chain().focus().toggleStrike().run(),
   },
   {
-    id: "#hs-editor-tiptap [data-hs-editor-link]",
+    id: "#hs-editor-tiptap-pembimbing [data-hs-editor-link]",
     fn: () => {
       const url = window.prompt("URL");
-      editorBimbingan
+      editorPembimbing
         .chain()
         .focus()
         .extendMarkRange("link")
@@ -101,27 +103,108 @@ const actionsBimbingan = [
     },
   },
   {
-    id: "#hs-editor-tiptap [data-hs-editor-ol]",
-    fn: () => editorBimbingan.chain().focus().toggleOrderedList().run(),
+    id: "#hs-editor-tiptap-pembimbing [data-hs-editor-ol]",
+    fn: () => editorPembimbing.chain().focus().toggleOrderedList().run(),
   },
   {
-    id: "#hs-editor-tiptap [data-hs-editor-ul]",
-    fn: () => editorBimbingan.chain().focus().toggleBulletList().run(),
+    id: "#hs-editor-tiptap-pembimbing [data-hs-editor-ul]",
+    fn: () => editorPembimbing.chain().focus().toggleBulletList().run(),
   },
   {
-    id: "#hs-editor-tiptap [data-hs-editor-blockquote]",
-    fn: () => editorBimbingan.chain().focus().toggleBlockquote().run(),
+    id: "#hs-editor-tiptap-pembimbing [data-hs-editor-blockquote]",
+    fn: () => editorPembimbing.chain().focus().toggleBlockquote().run(),
   },
   {
-    id: "#hs-editor-tiptap [data-hs-editor-code]",
-    fn: () => editorBimbingan.chain().focus().toggleCode().run(),
+    id: "#hs-editor-tiptap-pembimbing [data-hs-editor-code]",
+    fn: () => editorPembimbing.chain().focus().toggleCode().run(),
   },
 ];
 
-actionsBimbingan.forEach(({ id, fn }) => {
-  const actionBimbingan = document.querySelector(id);
+actionsPembimbing.forEach(({ id, fn }) => {
+  const actionPembimbing = document.querySelector(id);
 
-  if (actionBimbingan === null) return;
+  if (actionPembimbing === null) return;
 
-  actionBimbingan.addEventListener("click", fn);
+  actionPembimbing.addEventListener("click", fn);
+});
+
+// Mentor
+const editorMentor = new Editor({
+  element: document.querySelector(
+    "#hs-editor-tiptap-mentor [data-hs-editor-field-mentor]"
+  ),
+  extensions: [
+    StarterKit.configure({
+      paragraph: false,
+      bold: false,
+      underline: false,
+      link: false,
+      bulletList: false,
+      orderedList: false,
+      listItem: false,
+      blockquote: false,
+    }),
+    paragraphExtension,
+    boldExtension,
+    Underline,
+    linkExtension,
+    bulletListExtension,
+    orderedListExtension,
+    ListItem,
+    blockquoteExtension,
+  ],
+});
+const actionsMentor = [
+  {
+    id: "#hs-editor-tiptap-mentor [data-hs-editor-bold]",
+    fn: () => editorMentor.chain().focus().toggleBold().run(),
+  },
+  {
+    id: "#hs-editor-tiptap-mentor [data-hs-editor-italic]",
+    fn: () => editorMentor.chain().focus().toggleItalic().run(),
+  },
+  {
+    id: "#hs-editor-tiptap-mentor [data-hs-editor-underline]",
+    fn: () => editorMentor.chain().focus().toggleUnderline().run(),
+  },
+  {
+    id: "#hs-editor-tiptap-mentor [data-hs-editor-strike]",
+    fn: () => editorMentor.chain().focus().toggleStrike().run(),
+  },
+  {
+    id: "#hs-editor-tiptap-mentor [data-hs-editor-link]",
+    fn: () => {
+      const url = window.prompt("URL");
+      editorMentor
+        .chain()
+        .focus()
+        .extendMarkRange("link")
+        .setLink({ href: url })
+        .run();
+    },
+  },
+  {
+    id: "#hs-editor-tiptap-mentor [data-hs-editor-ol]",
+    fn: () => editorMentor.chain().focus().toggleOrderedList().run(),
+  },
+  {
+    id: "#hs-editor-tiptap-mentor [data-hs-editor-ul]",
+    fn: () => editorMentor.chain().focus().toggleBulletList().run(),
+  },
+  {
+    id: "#hs-editor-tiptap-mentor [data-hs-editor-blockquote]",
+    fn: () => editorMentor.chain().focus().toggleBlockquote().run(),
+  },
+  {
+    id: "#hs-editor-tiptap-mentor [data-hs-editor-code]",
+    fn: () => editorMentor.chain().focus().toggleCode().run(),
+  },
+];
+
+actionsMentor.forEach(({ id, fn }) => {
+  const actionMentor = document.querySelector(id);
+
+  if (actionMentor === null) return;
+
+  actionMentor.addEventListener("click", fn);
 });
