@@ -23,10 +23,6 @@ class="bg-white hover:bg-gray-50 dark:bg-slate-900 dark:hover:bg-slate-800"
           class="block text-sm font-semibold text-gray-800 dark:text-gray-200"
           >#NAMAPEMBIMBING#</span
         >
-        <span
-          class="block text-sm text-gray-500"
-          >#EMAILPEMBIMBING#</span
-        >
       </div>
     </div>
   </a>
@@ -102,10 +98,6 @@ class="bg-white hover:bg-gray-50 dark:bg-slate-900 dark:hover:bg-slate-800"
           class="block text-sm font-semibold text-gray-800 dark:text-gray-200"
           >#NAMAMENTOR#</span
         >
-        <span
-          class="block text-sm text-gray-500"
-          >#EMAILMENTOR#</span
-        >
       </div>
     </div>
   </a>
@@ -173,8 +165,8 @@ export function responseData(results) {
 export function isiRowReportPembimbing(value) {
   const wibCreated = convertToWIB(value.createdat);
   const reportPembimbing = tableDailyReportPembimbing
-    .replace("#NAMAPEMBIMBING#", value.penerima.namalengkap)
-    .replace("#EMAILPEMBIMBING#", value.penerima.email)
+    .replace("#NAMAPEMBIMBING#", value.penerima.nama)
+    // .replace("#EMAILPEMBIMBING#", value.penerima.email)
     .replace("#TASK#", value.judul)
     .replace("#TANGGAL#", wibCreated)
     .replace("#DETAIL#", value._id);
@@ -184,8 +176,8 @@ export function isiRowReportPembimbing(value) {
 export function isiRowReportMentor(value) {
   const wibCreated = convertToWIB(value.createdat);
   const reportMentor = tableDailyReportMentor
-    .replace("#NAMAMENTOR#", value.penerima.namalengkap)
-    .replace("#EMAILMENTOR#", value.penerima.email)
+    .replace("#NAMAMENTOR#", value.penerima.nama)
+    // .replace("#EMAILMENTOR#", value.penerima.email)
     .replace("#TASK#", value.judul)
     .replace("#TANGGAL#", wibCreated)
     .replace("#DETAIL#", value._id);
