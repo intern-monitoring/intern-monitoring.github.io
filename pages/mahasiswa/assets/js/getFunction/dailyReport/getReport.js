@@ -171,23 +171,27 @@ export function responseData(results) {
 }
 
 export function isiRowReportPembimbing(value) {
-  const wibCreated = convertToWIB(value.createdat);
-  const reportPembimbing = tableDailyReportPembimbing
-    .replace("#NAMAPEMBIMBING#", value.penerima.nama)
-    .replace("#NIKPEMBIMBING#", value.penerima.nik)
-    .replace("#TASK#", value.judul)
-    .replace("#TANGGAL#", wibCreated)
-    .replace("#DETAIL#", value._id);
-  addInner("tableDailyReportPembimbing", reportPembimbing);
+  if (value.penerima.nama) {
+    const wibCreated = convertToWIB(value.createdat);
+    const reportPembimbing = tableDailyReportPembimbing
+      .replace("#NAMAPEMBIMBING#", value.penerima.nama)
+      .replace("#NIKPEMBIMBING#", value.penerima.nik)
+      .replace("#TASK#", value.judul)
+      .replace("#TANGGAL#", wibCreated)
+      .replace("#DETAIL#", value._id);
+    addInner("tableDailyReportPembimbing", reportPembimbing);
+  }
 }
 
 export function isiRowReportMentor(value) {
-  const wibCreated = convertToWIB(value.createdat);
-  const reportMentor = tableDailyReportMentor
-    .replace("#NAMAMENTOR#", value.penerima.nama)
-    .replace("#NIKMENTOR#", value.penerima.nik)
-    .replace("#TASK#", value.judul)
-    .replace("#TANGGAL#", wibCreated)
-    .replace("#DETAIL#", value._id);
-  addInner("tableDailyReportMentor", reportMentor);
+  if (value.penerima.nama) {
+    const wibCreated = convertToWIB(value.createdat);
+    const reportMentor = tableDailyReportMentor
+      .replace("#NAMAMENTOR#", value.penerima.nama)
+      .replace("#NIKMENTOR#", value.penerima.nik)
+      .replace("#TASK#", value.judul)
+      .replace("#TANGGAL#", wibCreated)
+      .replace("#DETAIL#", value._id);
+    addInner("tableDailyReportMentor", reportMentor);
+  }
 }
