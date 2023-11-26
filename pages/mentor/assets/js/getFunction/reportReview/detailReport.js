@@ -52,7 +52,7 @@ export const dataDailyReport = `
         </p>
       </div>
       <a
-        href="dailyReport.html"
+        href="reportReview.html"
         class="py-2 px-3 inline-flex cursor-pointer justify-center items-center gap-2 rounded-md border font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-600 transition-all text-sm"
       >
         Kembali
