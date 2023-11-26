@@ -95,7 +95,6 @@ export const dataMagang = `
 `;
 
 export function responseData(results) {
-  console.log(results);
   results.forEach((result) => {
     isiRowPembimbing(result);
     isiRowMentor(result);
