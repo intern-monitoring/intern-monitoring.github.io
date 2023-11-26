@@ -9,7 +9,6 @@ let mentorID;
 get(URLGetMahasiswaMagang, responseIDMentor);
 
 function responseIDMentor(results) {
-  console.log(results);
   results.forEach((result) => {
     getIDMentor(result);
   });
