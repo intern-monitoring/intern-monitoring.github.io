@@ -88,7 +88,7 @@ class="bg-white hover:bg-gray-50 dark:bg-slate-900 dark:hover:bg-slate-800"
 
 export function responseData(results) {
   console.log(results);
-  isiRow(results);
+  results.forEach(isiRow);
 }
 
 export function isiRow(value) {
