@@ -8,13 +8,9 @@ export function convertToWIB(utcTimeString) {
     day: "2-digit",
     month: "2-digit",
     year: "numeric",
-    hour: "2-digit",
-    minute: "2-digit",
-    hour12: false,
   };
 
   let dateStr = wibDate.toLocaleString("id-ID", options);
-  dateStr = dateStr.replace(",", "").replace(":", ".");
-  const [date, time] = dateStr.split(" ");
-  return `${time} - ${date}`;
+  dateStr = dateStr.replace(",", "");
+  return dateStr;
 }
