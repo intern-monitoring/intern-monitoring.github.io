@@ -1,41 +1,8 @@
 import { addInner } from "https://jscroot.github.io/element/croot.js";
 import { convertToWIB } from "./convertToWib.js";
-import { get } from "./getReportFunction.js";
 
 export const URLGetReport =
   "https://asia-southeast2-bursakerja-project.cloudfunctions.net/intermoni-report";
-
-const penerima = (result) => {
-  let allReport = result.map((row) => {
-    return row.penerima.nama.split(",").map(function (item) {
-      return item.trim();
-    });
-  });
-  let uniquePenerima = allReport
-    .flat()
-    .filter((item, index, arry) => arry.indexOf(item) === index);
-  let sortingPenerima = uniquePenerima.sort(function (first, second) {
-    return first > second ? 1 : -1;
-  });
-  length = sortingPenerima.length;
-  for (let i = 0; i < length; i++) {
-    console.log(sortingPenerima[i]);
-  }
-};
-
-let namaPenerima = [];
-
-function responseNamaPenerima(results) {
-  console.log(results);
-  results.forEach((result) => {
-    getNamaPenerima(result);
-  });
-}
-
-function getNamaPenerima(value) {
-  return (namaPenerima = value.penerima.nama);
-}
-get(URLGetReport, penerima, responseNamaPenerima);
 
 export const tableDailyReportPembimbing = `
 <tr
@@ -204,7 +171,7 @@ export function responseData(results) {
 }
 
 export function isiRowReportPembimbing(value) {
-  if (sortingPenerima[0]) {
+  if (value.penerima._id) {
     const wibCreated = convertToWIB(value.createdat);
     const reportPembimbing = tableDailyReportPembimbing
       .replace("#NAMAPEMBIMBING#", value.penerima.nama)
@@ -217,7 +184,7 @@ export function isiRowReportPembimbing(value) {
 }
 
 export function isiRowReportMentor(value) {
-  if (sortingPenerima[1]) {
+  if (value.penerima._id) {
     const wibCreated = convertToWIB(value.createdat);
     const reportMentor = tableDailyReportMentor
       .replace("#NAMAMENTOR#", value.penerima.nama)
