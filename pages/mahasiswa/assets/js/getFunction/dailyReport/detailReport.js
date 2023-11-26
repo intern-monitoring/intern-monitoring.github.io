@@ -74,6 +74,6 @@ export function isiRow(value) {
   const content = dataDailyReport
     .replace("#JUDUL#", value.judul)
     .replace("#DESKRIPSI#", value.isi)
-    .replace("#TANGGAL#", value.wibCreated);
-  addInner("detailApply", content);
+    .replace("#TANGGAL#", wibCreated);
+  addInner("detailDailyReport", content);
 }
