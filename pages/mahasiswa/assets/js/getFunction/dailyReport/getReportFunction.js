@@ -32,9 +32,7 @@ const get = (target_url, responseFunction) => {
       responseFunction(jsonData);
 
       // Hitung jumlah data dan perbarui tampilan
-      const countPembimbing = jsonData.filter(
-        (value) => value.prodi === true
-      ).length;
+      const countPembimbing = jsonData.filter((value) => value.prodi).length;
       const countMentor = jsonData.filter(
         (value) => value.prodi === false
       ).length;

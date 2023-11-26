@@ -184,7 +184,7 @@ export function isiRowReportPembimbing(value) {
 }
 
 export function isiRowReportMentor(value) {
-  if (value.penerima.prodi === null) {
+  if (value.penerima.prodi === false) {
     const wibCreated = convertToWIB(value.createdat);
     const reportMentor = tableDailyReportMentor
       .replace("#NAMAMENTOR#", value.penerima.nama)
