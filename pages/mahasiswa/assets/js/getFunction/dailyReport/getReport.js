@@ -23,6 +23,10 @@ class="bg-white hover:bg-gray-50 dark:bg-slate-900 dark:hover:bg-slate-800"
           class="block text-sm font-semibold text-gray-800 dark:text-gray-200"
           >#NAMAPEMBIMBING#</span
         >
+        <span
+          class="block text-sm text-gray-500"
+          >#NIKPEMBIMBING#</span
+        >
       </div>
     </div>
   </a>
@@ -98,6 +102,10 @@ class="bg-white hover:bg-gray-50 dark:bg-slate-900 dark:hover:bg-slate-800"
           class="block text-sm font-semibold text-gray-800 dark:text-gray-200"
           >#NAMAMENTOR#</span
         >
+        <span
+        class="block text-sm text-gray-500"
+        >#NIKMENTOR#</span
+      >
       </div>
     </div>
   </a>
@@ -166,7 +174,7 @@ export function isiRowReportPembimbing(value) {
   const wibCreated = convertToWIB(value.createdat);
   const reportPembimbing = tableDailyReportPembimbing
     .replace("#NAMAPEMBIMBING#", value.penerima.nama)
-    // .replace("#EMAILPEMBIMBING#", value.penerima.email)
+    .replace("#NIKPEMBIMBING#", value.penerima.nik)
     .replace("#TASK#", value.judul)
     .replace("#TANGGAL#", wibCreated)
     .replace("#DETAIL#", value._id);
@@ -177,7 +185,7 @@ export function isiRowReportMentor(value) {
   const wibCreated = convertToWIB(value.createdat);
   const reportMentor = tableDailyReportMentor
     .replace("#NAMAMENTOR#", value.penerima.nama)
-    // .replace("#EMAILMENTOR#", value.penerima.email)
+    .replace("#NIKMENTOR#", value.penerima.nik)
     .replace("#TASK#", value.judul)
     .replace("#TANGGAL#", wibCreated)
     .replace("#DETAIL#", value._id);
