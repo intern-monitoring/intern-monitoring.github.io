@@ -1,30 +1,5 @@
 import { addInner } from "https://jscroot.github.io/element/croot.js";
 import { convertToWIB } from "./convertToWib.js";
-import { get } from "../../getFunction/mahasiswaMagang/getMhsMagangFunction.js";
-import { URLGetMahasiswaMagang } from "../../getFunction/mahasiswaMagang/getMhsMagang.js";
-
-let pembimbing;
-let mentor;
-
-get(URLGetMahasiswaMagang, response);
-
-function response(results) {
-  results.forEach((result) => {
-    getMentor(result);
-    getPembimbing(result);
-  });
-}
-
-function getPembimbing(value) {
-  if (value.status === 1) {
-    return (pembimbing = value.pembimbing._id);
-  }
-}
-function getMentor(value) {
-  if (value.status === 1) {
-    return (mentor = value.mentor._id);
-  }
-}
 
 export const URLGetReport =
   "https://asia-southeast2-bursakerja-project.cloudfunctions.net/intermoni-report";
@@ -196,7 +171,7 @@ export function responseData(results) {
 }
 
 export function isiRowReportPembimbing(value) {
-  if (value.pembimbing) {
+  if (value.penerima._id) {
     const wibCreated = convertToWIB(value.createdat);
     const reportPembimbing = tableDailyReportPembimbing
       .replace("#NAMAPEMBIMBING#", value.penerima.nama)
@@ -209,7 +184,7 @@ export function isiRowReportPembimbing(value) {
 }
 
 export function isiRowReportMentor(value) {
-  if (value.mentor) {
+  if (value.penerima._id) {
     const wibCreated = convertToWIB(value.createdat);
     const reportMentor = tableDailyReportMentor
       .replace("#NAMAMENTOR#", value.penerima.nama)
