@@ -58,4 +58,5 @@ const get = (target_url, responseFunction) => {
     .catch((error) => console.log("error", error));
 };
 
-get(URLGetReport, responseData, penerima);
+// get(URLGetReport, responseData, penerima);
+get(URLGetReport, penerima);
