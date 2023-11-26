@@ -16,7 +16,7 @@ const CountReportMentor = (count) => {
     </p>`;
 };
 
-const get = (target_url, responseFunction) => {
+export const get = (target_url, responseFunction) => {
   const myHeaders = new Headers();
   myHeaders.append("Authorization", getCookie("Authorization"));
   const requestOptions = {
