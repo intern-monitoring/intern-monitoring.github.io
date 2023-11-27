@@ -226,24 +226,24 @@ export function responseData(results) {
 export function isiRowReport(value) {
   if (pembimbingID === value.penerima._id) {
     const wibCreated = convertToWIB(value.createdat);
-    const content = dataDailyReportPembimbing
+    const dailyreportpembimbing = dataDailyReportPembimbing
       .replace("#PEMBIMBING#", value.penerima.nama)
       .replace("#NIKPEMBIMBING#", value.penerima.nik)
       .replace("#PRODI#", value.penerima.prodi)
       .replace("#JUDUL#", value.judul)
       .replace("#DESKRIPSI#", value.isi)
       .replace("#TANGGAL#", wibCreated);
-    addInner("detailDailyReport", content);
+    addInner("detailDailyReport", dailyreportpembimbing);
   } else if (mentorID === value.penerima._id) {
     const wibCreated = convertToWIB(value.createdat);
-    const content = dataDailyReportMentor
+    const dailyreportmentor = dataDailyReportMentor
       .replace("#MENTOR#", value.penerima.nama)
       .replace("#NIKMENTOR#", value.penerima.nik)
       .replace("#PERUSAHAAN#", value.magang.mitra.nama)
       .replace("#JUDUL#", value.judul)
       .replace("#DESKRIPSI#", value.isi)
       .replace("#TANGGAL#", wibCreated);
-    addInner("detailDailyReport", content);
+    addInner("detailDailyReport", dailyreportmentor);
   } else {
     console.log("Belum ada id");
   }
