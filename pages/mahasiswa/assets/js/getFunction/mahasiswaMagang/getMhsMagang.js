@@ -95,22 +95,10 @@ export const dataMagang = `
 `;
 
 export function responseData(results) {
-  results.forEach((result) => {
-    isiRowPembimbing(result);
-    isiRowMentor(result);
-    isiRowMagang(result);
-    // getIDPembimbing(result);
-    // getIDMentor(result);
-  });
+  isiRowPembimbing(results);
+  isiRowMentor(results);
+  isiRowMagang(results);
 }
-
-// export function getIDPembimbing(value) {
-//   return (document.getElementById("idPembimbing").value = value.pembimbing._id);
-// }
-
-// export function getIDMentor(value) {
-//   return (document.getElementById("idMentor").value = value.mentor._id);
-// }
 
 export function isiRowPembimbing(value) {
   if (value.status === 1) {
