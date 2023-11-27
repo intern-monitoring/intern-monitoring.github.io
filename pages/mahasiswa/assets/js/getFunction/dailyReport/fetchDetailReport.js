@@ -1,5 +1,5 @@
 import { responseDataPembimbing } from "./detailReportPembimbing.js";
-import { responseDataMentor } from "./detailReportMentor.js";
+// import { responseDataMentor } from "./detailReportMentor.js";
 import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
 import { urlFetch } from "./urlDetailReport.js";
 
