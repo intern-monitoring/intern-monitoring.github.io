@@ -1,5 +1,8 @@
 import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
 
+const URLGet =
+  "https://asia-southeast2-bursakerja-project.cloudfunctions.net/intermoni-mahasiswa-magang";
+
 export const get = (target_url, responseFunction) => {
   const myHeaders = new Headers();
   myHeaders.append("Authorization", getCookie("Authorization"));
@@ -14,10 +17,8 @@ export const get = (target_url, responseFunction) => {
     .then((result) => responseFunction(JSON.parse(result)))
     .catch((error) => console.log("error", error));
 };
-get(URLGet, responseID);
 
-const URLGet =
-  "https://asia-southeast2-bursakerja-project.cloudfunctions.net/intermoni-mahasiswa-magang";
+get(URLGet, responseID);
 
 export let pembimbingID;
 export let mentorID;
