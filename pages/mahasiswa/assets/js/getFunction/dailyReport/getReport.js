@@ -167,9 +167,6 @@ class="bg-white hover:bg-gray-50 dark:bg-slate-900 dark:hover:bg-slate-800"
   `;
 
 export function responseData(results) {
-  console.log(results);
-  console.log(pembimbingID);
-  console.log(mentorID);
   results.forEach((result) => {
     isiRowReportPembimbing(result);
     isiRowReportMentor(result);
@@ -183,7 +180,6 @@ export function responseData(results) {
 }
 
 const CountReportPembimbing = (count) => {
-  console.log(count);
   const resultCountElement = document.getElementById("countReportPembimbing");
   resultCountElement.innerHTML = `
     <p class="text-sm text-gray-600">
@@ -192,7 +188,6 @@ const CountReportPembimbing = (count) => {
 };
 
 const CountReportMentor = (count) => {
-  console.log(count);
   const resultCountElement = document.getElementById("countReportMentor");
   resultCountElement.innerHTML = `
     <p class="text-sm text-gray-600">

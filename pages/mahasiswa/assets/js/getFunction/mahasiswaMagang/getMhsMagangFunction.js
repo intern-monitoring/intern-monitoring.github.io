@@ -23,7 +23,6 @@ export let pembimbingID;
 export let mentorID;
 
 function responseID(results) {
-  console.log(results);
   results.forEach((result) => {
     getIDMentor(result);
     getIDPembimbing(result);
@@ -31,14 +30,12 @@ function responseID(results) {
 }
 
 function getIDMentor(value) {
-  console.log(value);
   if (value.status === 1) {
     return (pembimbingID = value.pembimbing._id);
   }
   console.log(mentorID);
 }
 function getIDPembimbing(value) {
-  console.log(value);
   if (value.status === 1) {
     return (mentorID = value.mentor._id);
   }
