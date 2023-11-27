@@ -220,8 +220,8 @@ export const dataDailyReportMentor = `
 `;
 
 export function responseDataDetail(results) {
-  hide("skeletonLoader");
   isiRowReport(results);
+  hide("skeletonLoader");
 }
 
 export function isiRowReport(value) {
