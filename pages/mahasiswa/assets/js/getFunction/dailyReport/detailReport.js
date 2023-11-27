@@ -216,10 +216,8 @@ export const dataDailyReportMentor = `
 `;
 
 export function responseData(results) {
-  results.forEach((result) => {
-    isiRowReportPembimbing(result);
-    isiRowReportMentor(result);
-  });
+  isiRowReportPembimbing(results);
+  isiRowReportMentor(results);
 }
 
 export function isiRowReportPembimbing(value) {
