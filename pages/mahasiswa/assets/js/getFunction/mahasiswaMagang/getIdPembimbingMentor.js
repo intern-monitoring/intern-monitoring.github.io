@@ -18,8 +18,6 @@ export const get = (target_url, responseFunction) => {
     .catch((error) => console.log("error", error));
 };
 
-get(URLGet, responseID);
-
 export let pembimbingID;
 export let mentorID;
 
@@ -43,3 +41,5 @@ const getIDPembimbing = (value) => {
   }
   console.log(pembimbingID);
 };
+
+get(URLGet, responseID);
