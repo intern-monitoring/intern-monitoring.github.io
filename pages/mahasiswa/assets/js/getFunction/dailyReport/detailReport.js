@@ -3,7 +3,7 @@ import { convertToWIB } from "./convertToWib.js";
 import {
   mentorID,
   pembimbingID,
-} from "../../getFunction/mahasiswaMagang/getMhsMagangFunction.js";
+} from "../../getFunction/mahasiswaMagang/getIdPembimbingMentor.js";
 
 export const dataDailyReportPembimbing = `
 <div class="bg-white rounded-xl border shadow-md p-4 sm:p-7">

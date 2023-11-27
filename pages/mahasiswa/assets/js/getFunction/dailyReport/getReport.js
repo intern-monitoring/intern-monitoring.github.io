@@ -3,7 +3,7 @@ import { convertToWIB } from "./convertToWib.js";
 import {
   mentorID,
   pembimbingID,
-} from "../../getFunction/mahasiswaMagang/getMhsMagangFunction.js";
+} from "../../getFunction/mahasiswaMagang/getIdPembimbingMentor.js";
 
 export const URLGetReport =
   "https://asia-southeast2-bursakerja-project.cloudfunctions.net/intermoni-report";
