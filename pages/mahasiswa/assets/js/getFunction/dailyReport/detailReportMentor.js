@@ -215,22 +215,10 @@ export const dataDailyReportMentor = `
 </div>
 `;
 
-export function responseData(results) {
-  isiRowReportPembimbing(results);
+export function responseDataMentor(results) {
   isiRowReportMentor(results);
 }
 
-export function isiRowReportPembimbing(value) {
-  const wibCreated = convertToWIB(value.createdat);
-  const content = dataDailyReportPembimbing
-    .replace("#PEMBIMBING#", value.penerima.nama)
-    .replace("#NIKPEMBIMBING#", value.penerima.nik)
-    .replace("#PRODI#", value.penerima.prodi)
-    .replace("#JUDUL#", value.judul)
-    .replace("#DESKRIPSI#", value.isi)
-    .replace("#TANGGAL#", wibCreated);
-  addInner("detailDailyReportPembimbing", content);
-}
 export function isiRowReportMentor(value) {
   const wibCreated = convertToWIB(value.createdat);
   const content = dataDailyReportMentor
