@@ -1,6 +1,9 @@
 import { addInner } from "https://jscroot.github.io/element/croot.js";
 import { convertToWIB } from "./convertToWib.js";
-import { mentorID, pembimbingID } from "./getReport.js";
+import {
+  mentorID,
+  pembimbingID,
+} from "../../getFunction/mahasiswaMagang/getMhsMagangFunction.js";
 
 export const dataDailyReportPembimbing = `
 <div class="bg-white rounded-xl border shadow-md p-4 sm:p-7">
