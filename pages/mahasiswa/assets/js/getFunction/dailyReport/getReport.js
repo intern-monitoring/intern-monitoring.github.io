@@ -1,31 +1,9 @@
 import { addInner } from "https://jscroot.github.io/element/croot.js";
 import { convertToWIB } from "./convertToWib.js";
-import { get } from "../../getFunction/mahasiswaMagang/getMhsMagangFunction.js";
-import { URLGetMahasiswaMagang } from "../../getFunction/mahasiswaMagang/getMhsMagang.js";
-
-let pembimbingID;
-let mentorID;
-
-get(URLGetMahasiswaMagang, responseID);
-
-function responseID(results) {
-  console.log(results);
-  results.forEach((result) => {
-    getIDMentor(result);
-    getIDPembimbing(result);
-  });
-}
-
-function getIDMentor(value) {
-  if (value.status === 1) {
-    return (pembimbingID = value.pembimbing._id);
-  }
-}
-function getIDPembimbing(value) {
-  if (value.status === 1) {
-    return (mentorID = value.mentor._id);
-  }
-}
+import {
+  mentorID,
+  pembimbingID,
+} from "../../getFunction/mahasiswaMagang/getMhsMagangFunction.js";
 
 export const URLGetReport =
   "https://asia-southeast2-bursakerja-project.cloudfunctions.net/intermoni-report";
