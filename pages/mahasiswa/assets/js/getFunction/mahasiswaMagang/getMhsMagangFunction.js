@@ -34,13 +34,12 @@ function getIDMentor(value) {
   if (value.status === 1) {
     return (pembimbingID = value.pembimbing._id);
   }
+  console.log(mentorID);
 }
 function getIDPembimbing(value) {
   console.log(value);
   if (value.status === 1) {
     return (mentorID = value.mentor._id);
   }
+  console.log(pembimbingID);
 }
-
-console.log(pembimbingID);
-console.log(mentorID);
