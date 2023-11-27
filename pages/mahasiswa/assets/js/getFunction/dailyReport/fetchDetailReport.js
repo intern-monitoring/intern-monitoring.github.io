@@ -18,4 +18,4 @@ function get(target_url, responseFunction) {
     .then((result) => responseFunction(JSON.parse(result)))
     .catch((error) => console.log("error", error));
 }
-get(urlFetch, responseDataMentor, responseDataPembimbing);
+get(urlFetch, responseDataPembimbing);
