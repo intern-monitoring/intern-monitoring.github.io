@@ -29,6 +29,8 @@ const get = (target_url, responseFunction) => {
     headers: myHeaders,
     redirect: "follow",
   };
+  console.log(pembimbingID);
+  console.log(mentorID);
 
   fetch(target_url, requestOptions)
     .then((response) => response.text())
@@ -44,12 +46,15 @@ const get = (target_url, responseFunction) => {
         (value) => mentorID === value.penerima._id
       ).length;
 
+      console.log(pembimbingID);
+      console.log(mentorID);
+
       CountReportPembimbing(countPembimbing);
       CountReportMentor(countMentor);
     })
     .catch((error) => console.log("error", error));
-  console.log(pembimbingID);
-  console.log(mentorID);
 };
 
+console.log(pembimbingID);
+console.log(mentorID);
 get(URLGetReport, responseData);
