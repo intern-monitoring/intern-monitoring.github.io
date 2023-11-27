@@ -3,8 +3,8 @@ import { convertToWIB } from "./convertToWib.js";
 import { get } from "../../getFunction/mahasiswaMagang/getMhsMagangFunction.js";
 import { URLGetMahasiswaMagang } from "../../getFunction/mahasiswaMagang/getMhsMagang.js";
 
-let pembimbingID;
-let mentorID;
+export let pembimbingID;
+export let mentorID;
 
 get(URLGetMahasiswaMagang, responseID);
 
@@ -192,24 +192,8 @@ export function responseData(results) {
   results.forEach((result) => {
     isiRowReportPembimbing(result);
     isiRowReportMentor(result);
-    CountReportPembimbing(results.filter(pembimbingID).length);
-    CountReportMentor(results.filter(mentorID).length);
   });
 }
-const CountReportPembimbing = (count) => {
-  const resultCountElement = document.getElementById("countReportPembimbing");
-  resultCountElement.innerHTML = `
-    <p class="text-sm text-gray-600">
-      <span class="font-semibold text-gray-800">${count}</span> results
-    </p>`;
-};
-const CountReportMentor = (count) => {
-  const resultCountElement = document.getElementById("countReportMentor");
-  resultCountElement.innerHTML = `
-    <p class="text-sm text-gray-600">
-      <span class="font-semibold text-gray-800">${count}</span> results
-    </p>`;
-};
 
 export function isiRowReportPembimbing(value) {
   if (pembimbingID === value.penerima._id) {
