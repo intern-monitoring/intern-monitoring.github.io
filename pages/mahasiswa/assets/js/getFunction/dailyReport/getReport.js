@@ -9,6 +9,7 @@ let mentorID;
 get(URLGetMahasiswaMagang, responseID);
 
 function responseID(results) {
+  console.log(results);
   results.forEach((result) => {
     getIDMentor(result);
     getIDPembimbing(result);
