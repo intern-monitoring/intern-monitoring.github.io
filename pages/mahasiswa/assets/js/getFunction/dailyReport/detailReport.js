@@ -1,4 +1,4 @@
-import { addInner } from "https://jscroot.github.io/element/croot.js";
+import { addInner, hide } from "https://jscroot.github.io/element/croot.js";
 import { convertToWIB } from "./convertToWib.js";
 import {
   mentorID,
@@ -220,6 +220,7 @@ export const dataDailyReportMentor = `
 `;
 
 export function responseDataDetail(results) {
+  hide("skeletonLoader");
   isiRowReport(results);
 }
 
