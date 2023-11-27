@@ -48,6 +48,8 @@ const get = (target_url, responseFunction) => {
       CountReportMentor(countMentor);
     })
     .catch((error) => console.log("error", error));
+  console.log(pembimbingID);
+  console.log(mentorID);
 };
 
 get(URLGetReport, responseData);
