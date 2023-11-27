@@ -1,6 +1,7 @@
 import { addInner } from "https://jscroot.github.io/element/croot.js";
 import { convertToWIB } from "./convertToWib.js";
 import { get } from "../../getFunction/mahasiswaMagang/getMhsMagangFunction.js";
+import { URLGetMahasiswaMagang } from "../../getFunction/mahasiswaMagang/getMhsMagang.js";
 
 export const URLGetReport =
   "https://asia-southeast2-bursakerja-project.cloudfunctions.net/intermoni-report";
