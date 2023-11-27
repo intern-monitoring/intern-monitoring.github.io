@@ -3,8 +3,8 @@ import { convertToWIB } from "./convertToWib.js";
 import { get } from "../../getFunction/mahasiswaMagang/getMhsMagangFunction.js";
 import { URLGetMahasiswaMagang } from "../../getFunction/mahasiswaMagang/getMhsMagang.js";
 
-export let pembimbingID;
-export let mentorID;
+let pembimbingID;
+let mentorID;
 
 get(URLGetMahasiswaMagang, responseID);
 
@@ -189,11 +189,35 @@ class="bg-white hover:bg-gray-50 dark:bg-slate-900 dark:hover:bg-slate-800"
 
 export function responseData(results) {
   console.log(results);
+  CountReportPembimbing(
+    results.filter((value) => pembimbingID === value.penerima._id).length
+  );
+  CountReportMentor(
+    results.filter((value) => mentorID === value.penerima._id).length
+  );
   results.forEach((result) => {
     isiRowReportPembimbing(result);
     isiRowReportMentor(result);
   });
 }
+
+const CountReportPembimbing = (count) => {
+  console.log(count);
+  const resultCountElement = document.getElementById("countReportPembimbing");
+  resultCountElement.innerHTML = `
+    <p class="text-sm text-gray-600">
+      <span class="font-semibold text-gray-800">${count}</span> results
+    </p>`;
+};
+
+const CountReportMentor = (count) => {
+  console.log(count);
+  const resultCountElement = document.getElementById("countReportMentor");
+  resultCountElement.innerHTML = `
+    <p class="text-sm text-gray-600">
+      <span class="font-semibold text-gray-800">${count}</span> results
+    </p>`;
+};
 
 export function isiRowReportPembimbing(value) {
   if (pembimbingID === value.penerima._id) {
