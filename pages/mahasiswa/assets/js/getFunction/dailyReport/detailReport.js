@@ -1,5 +1,6 @@
 import { addInner } from "https://jscroot.github.io/element/croot.js";
 import { convertToWIB } from "./convertToWib.js";
+import { mentorID, pembimbingID } from "./getReport.js";
 
 export const dataDailyReportPembimbing = `
 <div class="bg-white rounded-xl border shadow-md p-4 sm:p-7">
@@ -215,18 +216,32 @@ export const dataDailyReportMentor = `
 </div>
 `;
 
-export function responseDataMentor(results) {
-  isiRowReportMentor(results);
+export function responseData(results) {
+  isiRowReport(results);
 }
 
-export function isiRowReportMentor(value) {
-  const wibCreated = convertToWIB(value.createdat);
-  const content = dataDailyReportMentor
-    .replace("#MENTOR#", value.penerima.nama)
-    .replace("#NIKMENTOR#", value.penerima.nik)
-    .replace("#PERUSAHAAN#", value.magang.mitra.nama)
-    .replace("#JUDUL#", value.judul)
-    .replace("#DESKRIPSI#", value.isi)
-    .replace("#TANGGAL#", wibCreated);
-  addInner("detailDailyReportMentor", content);
+export function isiRowReport(value) {
+  if (pembimbingID === value.penerima._id) {
+    const wibCreated = convertToWIB(value.createdat);
+    const content = dataDailyReportPembimbing
+      .replace("#PEMBIMBING#", value.penerima.nama)
+      .replace("#NIKPEMBIMBING#", value.penerima.nik)
+      .replace("#PRODI#", value.penerima.prodi)
+      .replace("#JUDUL#", value.judul)
+      .replace("#DESKRIPSI#", value.isi)
+      .replace("#TANGGAL#", wibCreated);
+    addInner("detailDailyReport", content);
+  } else if (mentorID === value.penerima._id) {
+    const wibCreated = convertToWIB(value.createdat);
+    const content = dataDailyReportMentor
+      .replace("#MENTOR#", value.penerima.nama)
+      .replace("#NIKMENTOR#", value.penerima.nik)
+      .replace("#PERUSAHAAN#", value.magang.mitra.nama)
+      .replace("#JUDUL#", value.judul)
+      .replace("#DESKRIPSI#", value.isi)
+      .replace("#TANGGAL#", wibCreated);
+    addInner("detailDailyReport", content);
+  } else {
+    console.log("Belum ada id");
+  }
 }

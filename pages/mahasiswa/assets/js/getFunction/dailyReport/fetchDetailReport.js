@@ -1,5 +1,4 @@
-import { responseDataPembimbing } from "./detailReportPembimbing.js";
-// import { responseDataMentor } from "./detailReportMentor.js";
+import { responseData } from "./detailReport.js";
 import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
 import { urlFetch } from "./urlDetailReport.js";
 
@@ -18,4 +17,6 @@ function get(target_url, responseFunction) {
     .then((result) => responseFunction(JSON.parse(result)))
     .catch((error) => console.log("error", error));
 }
-get(urlFetch, responseDataPembimbing);
+setTimeout(() => {
+  get(urlFetch, responseData);
+}, 1500);
