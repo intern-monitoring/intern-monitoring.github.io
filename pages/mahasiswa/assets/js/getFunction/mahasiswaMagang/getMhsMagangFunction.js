@@ -15,16 +15,14 @@ export const get = (target_url, responseFunction) => {
     .then((result) => responseFunction(JSON.parse(result)))
     .catch((error) => console.log("error", error));
 };
-setTimeout(() => {
-  get(URLGetMahasiswaMagang, responseData, responseID);
-}, 2000);
+get(URLGetMahasiswaMagang, responseData, responseID);
 
 export let pembimbingID;
 export let mentorID;
 
-function responseID(results) {
+async function responseID(results) {
   console.log(results);
-  results.forEach((result) => {
+  await results.forEach((result) => {
     getIDMentor(result);
     getIDPembimbing(result);
   });
