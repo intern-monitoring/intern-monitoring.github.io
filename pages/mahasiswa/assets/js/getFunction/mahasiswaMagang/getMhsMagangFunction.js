@@ -16,7 +16,8 @@ export const get = (target_url, responseFunction) => {
     .catch((error) => console.log("error", error));
 };
 
-get(URLGetMahasiswaMagang, responseData, responseID);
+get(URLGetMahasiswaMagang, responseData);
+get(URLGetMahasiswaMagang, responseID);
 
 export let pembimbingID;
 export let mentorID;
