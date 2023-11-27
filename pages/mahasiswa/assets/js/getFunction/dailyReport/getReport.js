@@ -77,7 +77,7 @@ class="bg-white hover:bg-gray-50 dark:bg-slate-900 dark:hover:bg-slate-800"
   class="h-px w-px whitespace-nowrap align-top"
 >
   <a
-    href="detailDailyReport?reportId=#DETAIL#"
+    href="detailDailyReportPembimbing?reportId=#DETAIL#"
     type="button"
     class="block py-6"
   >
@@ -156,7 +156,7 @@ class="bg-white hover:bg-gray-50 dark:bg-slate-900 dark:hover:bg-slate-800"
   class="h-px w-px whitespace-nowrap align-top"
 >
   <a
-    href="detailDailyReport?reportId=#DETAIL#"
+    href="detailDailyReportMentor?reportId=#DETAIL#"
     type="button"
     class="block py-6"
   >
