@@ -97,7 +97,7 @@ export const dataMagang = `
 export function responseData(results) {
   isiRowPembimbing(results);
   isiRowMentor(results);
-  isiRowMagang(results);
+  // isiRowMagang(results);
 }
 
 export function isiRowPembimbing(value) {
