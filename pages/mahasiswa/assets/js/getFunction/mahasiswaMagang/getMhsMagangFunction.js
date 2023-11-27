@@ -17,8 +17,6 @@ export const get = (target_url, responseFunction) => {
 };
 
 get(URLGetMahasiswaMagang, responseData, responseID);
-console.log(pembimbingID);
-console.log(mentorID);
 
 export let pembimbingID;
 export let mentorID;
@@ -43,3 +41,6 @@ function getIDPembimbing(value) {
     return (mentorID = value.mentor._id);
   }
 }
+
+console.log(pembimbingID);
+console.log(mentorID);
