@@ -117,9 +117,9 @@ export function responseData(results) {
 export function isiRow(value) {
   const wibCreated = convertToWIB(value.createdat);
   const content = dataDailyReport
-    .replace("#MAHASISWA#", value.mahasiswamagang.mahasiswa.namalengkap)
-    .replace("#NIM#", value.mahasiswamagang.mahasiswa.nim)
-    .replace("#PRODI#", value.mahasiswamagang.mahasiswa.prodi)
+    .replace("#MAHASISWA#", value.mahasiswa.namalengkap)
+    .replace("#NIM#", value.mahasiswa.nim)
+    .replace("#PRODI#", value.mahasiswa.prodi)
     .replace("#JUDUL#", value.judul)
     .replace("#DESKRIPSI#", value.isi)
     .replace("#TANGGAL#", wibCreated);
