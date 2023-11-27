@@ -1,7 +1,8 @@
 import { URLGetReport, responseData } from "./getReport.js";
 import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
 
-const get = (target_url, responseFunction) => {
+const get = async (target_url, responseFunction) => {
+  setTimeout;
   const myHeaders = new Headers();
   myHeaders.append("Authorization", getCookie("Authorization"));
   const requestOptions = {
@@ -10,14 +11,13 @@ const get = (target_url, responseFunction) => {
     redirect: "follow",
   };
 
-  fetch(target_url, requestOptions)
-    .then((response) => response.text())
-    .then((result) => {
-      const jsonData = JSON.parse(result);
-      responseFunction(jsonData);
-    })
-    .catch((error) => console.log("error", error));
+  try {
+    const response = await fetch(target_url, requestOptions);
+    const result = await response.text();
+    const jsonData = JSON.parse(result);
+    responseFunction(jsonData);
+  } catch (error) {
+    console.log("error", error);
+  }
 };
-setTimeout(() => {
-  get(URLGetReport, responseData);
-}, 5000);
+get(URLGetReport, responseData);
