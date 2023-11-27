@@ -1,23 +1,10 @@
-import { URLGetReport, responseData } from "./getReport.js";
+import {
+  URLGetReport,
+  responseData,
+  pembimbingID,
+  mentorID,
+} from "./getReport.js";
 import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
-
-// const penerima = (result) => {
-//   let allReport = result.map((row) => {
-//     return row.penerima.nama.split(",").map(function (item) {
-//       return item.trim();
-//     });
-//   });
-//   let uniquePenerima = allReport
-//     .flat()
-//     .filter((item, index, arry) => arry.indexOf(item) === index);
-//   let sortingPenerima = uniquePenerima.sort(function (first, second) {
-//     return first > second ? 1 : -1;
-//   });
-//   length = sortingPenerima.length;
-//   for (let i = 0; i < length; i++) {
-//     console.log(sortingPenerima[i]);
-//   }
-// };
 
 const CountReportPembimbing = (count) => {
   const resultCountElement = document.getElementById("countReportPembimbing");
@@ -50,13 +37,17 @@ const get = (target_url, responseFunction) => {
       responseFunction(jsonData);
 
       // Hitung jumlah data dan perbarui tampilan
-      const count = jsonData.length;
+      const countPembimbing = jsonData.filter(
+        (value) => pembimbingID === value.penerima._id
+      ).length;
+      const countMentor = jsonData.filter(
+        (value) => mentorID === value.penerima._id
+      ).length;
 
-      CountReportPembimbing(count);
-      CountReportMentor(count);
+      CountReportPembimbing(countPembimbing);
+      CountReportMentor(countMentor);
     })
     .catch((error) => console.log("error", error));
 };
 
 get(URLGetReport, responseData);
-// get(URLGetReport, penerima);

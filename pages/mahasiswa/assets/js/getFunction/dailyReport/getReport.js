@@ -3,8 +3,8 @@ import { convertToWIB } from "./convertToWib.js";
 import { get } from "../../getFunction/mahasiswaMagang/getMhsMagangFunction.js";
 import { URLGetMahasiswaMagang } from "../../getFunction/mahasiswaMagang/getMhsMagang.js";
 
-let pembimbingID;
-let mentorID;
+export let pembimbingID;
+export let mentorID;
 
 get(URLGetMahasiswaMagang, responseID);
 
