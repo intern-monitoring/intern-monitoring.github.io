@@ -1,4 +1,7 @@
-import { URLGetMahasiswaMagang, responseData } from "./getMhsMagang.js";
+import {
+  URLGetMahasiswaMagang,
+  responseDataDailyReport,
+} from "./getMhsMagang.js";
 import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
 
 export const get = (target_url, responseFunction) => {
@@ -15,7 +18,7 @@ export const get = (target_url, responseFunction) => {
     .then((result) => responseFunction(JSON.parse(result)))
     .catch((error) => console.log("error", error));
 };
-get(URLGetMahasiswaMagang, responseData);
+get(URLGetMahasiswaMagang, responseDataDailyReport);
 
 get(URLGetMahasiswaMagang, responseID);
 

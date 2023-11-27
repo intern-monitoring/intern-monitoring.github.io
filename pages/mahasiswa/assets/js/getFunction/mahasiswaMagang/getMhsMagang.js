@@ -94,7 +94,7 @@ export const dataMagang = `
 </div>
 `;
 
-export function responseData(results) {
+export function responseDataDailyReport(results) {
   results.forEach((result) => {
     isiRowPembimbing(result);
     isiRowMentor(result);
