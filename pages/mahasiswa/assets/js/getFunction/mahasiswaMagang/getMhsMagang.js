@@ -95,9 +95,11 @@ export const dataMagang = `
 `;
 
 export function responseData(results) {
-  isiRowPembimbing(results);
-  isiRowMentor(results);
-  // isiRowMagang(results);
+  results.forEach((result) => {
+    isiRowPembimbing(result);
+    isiRowMentor(result);
+    isiRowMagang(result);
+  });
 }
 
 export function isiRowPembimbing(value) {
