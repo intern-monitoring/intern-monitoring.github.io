@@ -5,9 +5,6 @@ import {
   pembimbingID,
 } from "../../getFunction/mahasiswaMagang/getMhsMagangFunction.js";
 
-const dataIdPembimbing = pembimbingID;
-const dataIdMentor = mentorID;
-
 export const URLGetReport =
   "https://asia-southeast2-bursakerja-project.cloudfunctions.net/intermoni-report";
 
@@ -171,17 +168,17 @@ class="bg-white hover:bg-gray-50 dark:bg-slate-900 dark:hover:bg-slate-800"
 
 export function responseData(results) {
   console.log(results);
-  console.log(dataIdPembimbing);
-  console.log(dataIdMentor);
+  console.log(pembimbingID);
+  console.log(mentorID);
   results.forEach((result) => {
     isiRowReportPembimbing(result);
     isiRowReportMentor(result);
   });
   CountReportPembimbing(
-    results.filter((value) => dataIdPembimbing === value.penerima._id).length
+    results.filter((value) => pembimbingID === value.penerima._id).length
   );
   CountReportMentor(
-    results.filter((value) => dataIdMentor === value.penerima._id).length
+    results.filter((value) => mentorID === value.penerima._id).length
   );
 }
 
@@ -204,7 +201,7 @@ const CountReportMentor = (count) => {
 };
 
 export function isiRowReportPembimbing(value) {
-  if (dataIdPembimbing === value.penerima._id) {
+  if (pembimbingID === value.penerima._id) {
     const wibCreated = convertToWIB(value.createdat);
     const reportPembimbing = tableDailyReportPembimbing
       .replace("#NAMAPEMBIMBING#", value.penerima.nama)
@@ -217,7 +214,7 @@ export function isiRowReportPembimbing(value) {
 }
 
 export function isiRowReportMentor(value) {
-  if (dataIdPembimbing === value.penerima._id) {
+  if (mentorID === value.penerima._id) {
     const wibCreated = convertToWIB(value.createdat);
     const reportMentor = tableDailyReportMentor
       .replace("#NAMAMENTOR#", value.penerima.nama)
