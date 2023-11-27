@@ -2,7 +2,6 @@ import { URLGetReport, responseData } from "./getReport.js";
 import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
 
 const get = async (target_url, responseFunction) => {
-  setTimeout;
   const myHeaders = new Headers();
   myHeaders.append("Authorization", getCookie("Authorization"));
   const requestOptions = {
