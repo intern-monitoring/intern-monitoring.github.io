@@ -221,10 +221,7 @@ export const dataDailyReportMentor = `
 
 export function responseDataDetail(results) {
   isiRowReport(results);
-  const skeletonLoader = document.getElementById("skeletonLoader");
-  if (skeletonLoader) {
-    skeletonLoader.style.display = "none";
-  }
+  hide("skeletonLoader");
 }
 
 export function isiRowReport(value) {
