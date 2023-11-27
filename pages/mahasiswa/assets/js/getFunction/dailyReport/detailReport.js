@@ -219,7 +219,7 @@ export const dataDailyReportMentor = `
 </div>
 `;
 
-export function responseData(results) {
+export function responseDataDetail(results) {
   isiRowReport(results);
 }
 

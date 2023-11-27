@@ -1,4 +1,4 @@
-import { responseData } from "./detailReport.js";
+import { responseDataDetail } from "./detailReport.js";
 import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
 import { urlFetch } from "./urlDetailReport.js";
 
@@ -18,5 +18,5 @@ function get(target_url, responseFunction) {
     .catch((error) => console.log("error", error));
 }
 setTimeout(() => {
-  get(urlFetch, responseData);
+  get(urlFetch, responseDataDetail);
 }, 1500);
