@@ -18,6 +18,5 @@ const get = (target_url, responseFunction) => {
     })
     .catch((error) => console.log("error", error));
 };
-setTimeout(() => {
-  get(URLGetReport, responseData);
-}, 2000);
+
+get(URLGetReport, responseData);
