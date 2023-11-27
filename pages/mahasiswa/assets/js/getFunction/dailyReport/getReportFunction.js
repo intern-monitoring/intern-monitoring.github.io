@@ -1,8 +1,8 @@
 import {
   URLGetReport,
   responseData,
-  pembimbingID,
-  mentorID,
+  isiRowReportMentor,
+  isiRowReportPembimbing,
 } from "./getReport.js";
 import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
 
@@ -37,8 +37,8 @@ const get = (target_url, responseFunction) => {
       responseFunction(jsonData);
 
       // Hitung jumlah data dan perbarui tampilan
-      const countPembimbing = jsonData.filter(pembimbingID).length;
-      const countMentor = jsonData.filter(mentorID).length;
+      const countPembimbing = jsonData.filter(isiRowReportPembimbing).length;
+      const countMentor = jsonData.filter(isiRowReportMentor).length;
 
       CountReportPembimbing(countPembimbing);
       CountReportMentor(countMentor);
