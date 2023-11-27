@@ -192,11 +192,11 @@ function getIDPembimbing(value) {
   console.log(pembimbingID);
 }
 
-export async function responseData(results) {
+export function responseData(results) {
   console.log(results);
   console.log(pembimbingID);
   console.log(mentorID);
-  await results.forEach((result) => {
+  results.forEach((result) => {
     isiRowReportPembimbing(result);
     isiRowReportMentor(result);
   });
