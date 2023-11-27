@@ -189,16 +189,18 @@ class="bg-white hover:bg-gray-50 dark:bg-slate-900 dark:hover:bg-slate-800"
 
 export function responseData(results) {
   console.log(results);
+  console.log(pembimbingID);
+  console.log(mentorID);
+  results.forEach((result) => {
+    isiRowReportPembimbing(result);
+    isiRowReportMentor(result);
+  });
   CountReportPembimbing(
     results.filter((value) => pembimbingID === value.penerima._id).length
   );
   CountReportMentor(
     results.filter((value) => mentorID === value.penerima._id).length
   );
-  results.forEach((result) => {
-    isiRowReportPembimbing(result);
-    isiRowReportMentor(result);
-  });
 }
 
 const CountReportPembimbing = (count) => {
