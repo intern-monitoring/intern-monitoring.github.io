@@ -15,32 +15,4 @@ export const get = (target_url, responseFunction) => {
     .then((result) => responseFunction(JSON.parse(result)))
     .catch((error) => console.log("error", error));
 };
-
 get(URLGetMahasiswaMagang, responseData);
-get(URLGetMahasiswaMagang, responseID);
-
-export let pembimbingID;
-export let mentorID;
-
-function responseID(results) {
-  console.log(results);
-  results.forEach((result) => {
-    getIDMentor(result);
-    getIDPembimbing(result);
-  });
-}
-
-function getIDMentor(value) {
-  console.log(value);
-  if (value.status === 1) {
-    return (pembimbingID = value.pembimbing._id);
-  }
-  console.log(mentorID);
-}
-function getIDPembimbing(value) {
-  console.log(value);
-  if (value.status === 1) {
-    return (mentorID = value.mentor._id);
-  }
-  console.log(pembimbingID);
-}
