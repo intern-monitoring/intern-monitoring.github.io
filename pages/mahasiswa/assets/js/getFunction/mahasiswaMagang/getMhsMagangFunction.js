@@ -23,10 +23,8 @@ export let pembimbingID;
 export let mentorID;
 
 function responseID(results) {
-  results.forEach((result) => {
-    getIDMentor(result);
-    getIDPembimbing(result);
-  });
+  getIDMentor(results);
+  getIDPembimbing(results);
 }
 
 function getIDMentor(value) {
