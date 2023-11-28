@@ -5,7 +5,7 @@ export const dataMagang = `
 <div class="p-5">
   <div class="space-y-4">
       <div class="flex justify-between items-center">
-        <h3 class="text-2xl font-semibold text-gray-800">
+        <h3 class="text-xl font-semibold text-gray-800">
             #POSISI#
         </h3>
         <p
