@@ -1,5 +1,6 @@
 import { URLGetKonfirmasi, responseData } from "./getKonfirmasi.js";
 import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
+import { hide } from "https://jscroot.github.io/element/croot.js";
 
 const CountKonfirmasi = (count) => {
   const resultCountElement = document.getElementById("konfirmasiCount");
@@ -10,6 +11,8 @@ const CountKonfirmasi = (count) => {
 };
 
 const get = (target_url, responseFunction) => {
+  document.getElementById("skeletonLoader").style.display = "grow";
+
   const myHeaders = new Headers();
   myHeaders.append("Authorization", getCookie("Authorization"));
   const requestOptions = {
@@ -30,7 +33,11 @@ const get = (target_url, responseFunction) => {
 
       CountKonfirmasi(filteredData.length);
     })
-    .catch((error) => console.log("error", error));
+    .catch((error) => {
+      console.log("error", error);
+      // Hide the skeleton loader in case of an error
+      hide("skeletonLoader");
+    });
 };
 
 get(URLGetKonfirmasi, responseData);
