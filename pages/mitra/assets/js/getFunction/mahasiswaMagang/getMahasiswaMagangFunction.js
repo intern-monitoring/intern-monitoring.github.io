@@ -26,7 +26,6 @@ const fetchData = async () => {
     updateCountElement(data.length); // Update count based on the fetched data
   } catch (error) {
     console.error("Error fetching or processing data: ", error);
-    hide("skeletonLoader");
   }
 };
 
@@ -73,6 +72,7 @@ const searchData = async () => {
       updateCountElement(filteredResults.length);
     } else {
       console.error("Data is not an array:", data);
+      hide("skeletonLoader");
     }
   } catch (error) {
     console.error("Error searching data: ", error);
