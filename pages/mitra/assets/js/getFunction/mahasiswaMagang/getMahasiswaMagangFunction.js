@@ -3,8 +3,7 @@ import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
 import { show, hide } from "https://jscroot.github.io/element/croot.js";
 
 const fetchData = async () => {
-  show("skeletonLoader1");
-  show("skeletonLoader2");
+  show("skeletonLoader");
   try {
     const myHeaders = new Headers();
     myHeaders.append("Authorization", getCookie("Authorization"));
@@ -73,8 +72,7 @@ const searchData = async () => {
       updateCountElement(filteredResults.length);
     } else {
       console.error("Data is not an array:", data);
-      hide("skeletonLoader1");
-      hide("skeletonLoader2");
+      hide("skeletonLoader");
     }
   } catch (error) {
     console.error("Error searching data: ", error);
