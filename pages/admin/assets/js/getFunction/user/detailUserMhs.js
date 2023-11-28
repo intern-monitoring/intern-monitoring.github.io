@@ -1,4 +1,4 @@
-import { addInner } from "https://jscroot.github.io/element/croot.js";
+import { addInner, hide } from "https://jscroot.github.io/element/croot.js";
 
 export const dataUserMhs = `
 <div class="bg-white rounded-xl shadow-md">
@@ -83,7 +83,7 @@ export const dataUserMhs = `
           Perguruan Tinggi
         </p>
       </div>
-      <p class="text-center text-base text-gray-500">#PERGURUAN#</p>
+      <p class="text-center text-sm text-gray-500">#PERGURUAN#</p>
     </div>
     <div class="mx-auto">
       <div class="flex justify-center mb-2">
@@ -108,7 +108,7 @@ export const dataUserMhs = `
           Prodi
         </p>
       </div>
-      <p class="text-center text-base text-gray-500">#PRODI#</p>
+      <p class="text-center text-sm text-gray-500">#PRODI#</p>
     </div>
   </div>
 </div>
@@ -118,6 +118,7 @@ export const dataUserMhs = `
 export function responseDataMhs(results) {
   console.log(results);
   isiRowMahasiswa(results);
+  hide("skeletonLoader");
 }
 
 export function isiRowMahasiswa(value) {

@@ -2,24 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.skeleton-loader {
-  background-color: #f0f0f0;
-  border-radius: 8px;
-  animation: pulse 1.5s infinite;
-  height: 20px;
-  margin-bottom: 10px;
-}
-
-@keyframes pulse {
-  0%,
-  100% {
-    opacity: 0.6;
-  }
-  50% {
-    opacity: 1;
-  }
-}
-
 .ProseMirror:focus {
   outline: none;
 }

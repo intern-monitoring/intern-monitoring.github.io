@@ -1,4 +1,4 @@
-import { addInner } from "https://jscroot.github.io/element/croot.js";
+import { addInner, hide } from "https://jscroot.github.io/element/croot.js";
 
 export const URLGetProfileMahasiswa =
   "https://asia-southeast2-bursakerja-project.cloudfunctions.net/intermoni-mahasiswa";
@@ -104,12 +104,12 @@ export const dataMahasiswa = `
     <div class="mx-auto">
       <div class="flex justify-center mb-2">
         <p
-          class="inline-flex justify-center items-center gap-x-3 text-xl text-center font-semibold text-gray-900"
+          class="inline-flex justify-center items-center gap-x-3 text-lg text-center font-semibold text-gray-900"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="20"
-            height="20"
+            width="18"
+            height="18"
             fill="currentColor"
             class="bi bi-bank"
             viewBox="0 0 16 16"
@@ -121,7 +121,7 @@ export const dataMahasiswa = `
           Perguruan Tinggi
         </p>
       </div>
-      <p class="text-center text-base text-gray-500">#PERGURUAN#</p>
+      <p class="text-center text-sm text-gray-500">#PERGURUAN#</p>
     </div>
     <div class="mx-auto">
       <div class="flex justify-center mb-2">
@@ -146,7 +146,7 @@ export const dataMahasiswa = `
           Prodi
         </p>
       </div>
-      <p class="text-center text-base text-gray-500">#PRODI#</p>
+      <p class="text-center text-sm text-gray-500">#PRODI#</p>
     </div>
   </div>
 </div>
@@ -156,6 +156,7 @@ export const dataMahasiswa = `
 export function responseDataProfile(results) {
   console.log(results);
   isiRow(results);
+  hide("skeletonLoader");
 }
 
 export function isiRow(value) {

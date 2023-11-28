@@ -6,7 +6,11 @@ import { responseDataMhs } from "./detailUserMhs.js";
 import { responseDataPembimbing } from "./detailUserPembimbing.js";
 import { responseDataMentor } from "./detailUserMentor.js";
 
+import { show, hide } from "https://jscroot.github.io/element/croot.js";
+
 function get(target_url) {
+  show("skeletonLoader");
+
   const myHeaders = new Headers();
   myHeaders.append("Authorization", getCookie("Authorization"));
 
@@ -38,7 +42,11 @@ function get(target_url) {
         console.log("Peran tidak diketahui:", role);
       }
     })
-    .catch((error) => console.log("error", error));
+    .catch((error) => {
+      console.log("error", error);
+      // Hide the skeleton loader in case of an error
+      hide("skeletonLoader");
+    });
 }
 
 // Contoh pemanggilan metode get
