@@ -173,6 +173,7 @@ export const detailSeleksiMitra = `
 export function responseData(results) {
   console.log(results);
   isiRow(results);
+  hide("skeletonLoader");
 }
 
 export function isiRow(value) {
