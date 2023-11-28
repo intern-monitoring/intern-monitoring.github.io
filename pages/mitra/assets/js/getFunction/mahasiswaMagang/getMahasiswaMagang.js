@@ -79,7 +79,8 @@ export const tableMahasiswaMagang = `
 
 export function responseData(results) {
   results.forEach(isiRow);
-  hide("skeletonLoader");
+  hide("skeletonLoader1");
+  hide("skeletonLoader2");
 }
 
 export function isiRow(value) {
