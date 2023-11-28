@@ -1,4 +1,4 @@
-import { addInner } from "https://jscroot.github.io/element/croot.js";
+import { addInner, hide } from "https://jscroot.github.io/element/croot.js";
 
 export const dataMentor = `
 <div class="bg-white rounded-xl shadow-md">
@@ -57,6 +57,7 @@ export const dataMentor = `
 export function responseDataMentor(results) {
   console.log(results);
   isiRowMentor(results);
+  hide("skeletonLoader");
 }
 
 export function isiRowMentor(value) {

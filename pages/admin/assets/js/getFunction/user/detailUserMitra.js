@@ -1,4 +1,4 @@
-import { addInner } from "https://jscroot.github.io/element/croot.js";
+import { addInner, hide } from "https://jscroot.github.io/element/croot.js";
 
 export const dataUserMitra = `
 <div class="bg-white rounded-xl shadow-md">
@@ -173,6 +173,7 @@ export const dataUserMitra = `
 export function responseDataMitra(results) {
   console.log(results);
   isiRowMitra(results);
+  hide("skeletonLoader");
 }
 
 export function isiRowMitra(value) {
