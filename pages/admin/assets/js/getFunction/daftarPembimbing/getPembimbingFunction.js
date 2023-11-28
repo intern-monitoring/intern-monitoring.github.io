@@ -1,5 +1,6 @@
 import { URLGetPembimbing, responseData } from "./getPembimbing.js";
 import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
+import { hide } from "https://jscroot.github.io/element/croot.js";
 
 const CountPembimbing = (count) => {
   const resultCountElement = document.getElementById("pembimbingCount");
@@ -10,6 +11,8 @@ const CountPembimbing = (count) => {
 };
 
 const get = (target_url, responseFunction) => {
+  document.getElementById("skeletonLoader").style.display = "grow";
+
   const myHeaders = new Headers();
   myHeaders.append("Authorization", getCookie("Authorization"));
   const requestOptions = {
@@ -28,7 +31,11 @@ const get = (target_url, responseFunction) => {
       const count = jsonData.length;
       CountPembimbing(count);
     })
-    .catch((error) => console.log("error", error));
+    .catch((error) => {
+      console.log("error", error);
+      // Hide the skeleton loader in case of an error
+      hide("skeletonLoader");
+    });
 };
 
 get(URLGetPembimbing, responseData);
