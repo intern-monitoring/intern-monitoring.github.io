@@ -97,15 +97,17 @@ export function responseData(results) {
 }
 
 export function isiRow(value) {
-  const mahasiswamagang = tableMahasiswaMagang
-    .replace("#NAMAMHS#", value.mahasiswa.namalengkap)
-    .replace("#EMAILMHS#", value.mahasiswa.akun.email)
-    .replace("#POSISI#", value.magang.posisi)
-    .replace("#PERUSAHAAN#", value.magang.mitra.nama)
-    .replace("#PEMBIMBING#", value.pembimbing.namalengkap)
-    .replace("#EMAILPEMBIMBING#", value.pembimbing.akun.email)
-    .replace("#MENTOR#", value.mentor.namalengkap)
-    .replace("#EMAILMENTOR#", value.mentor.akun.email)
-    .replace("#DETAIL#", value._id);
-  addInner("tableMahasiswaMagang", mahasiswamagang);
+  if (value.pembimbing.namalengkap && value.mentor.namalengkap) {
+    const mahasiswamagang = tableMahasiswaMagang
+      .replace("#NAMAMHS#", value.mahasiswa.namalengkap)
+      .replace("#EMAILMHS#", value.mahasiswa.akun.email)
+      .replace("#POSISI#", value.magang.posisi)
+      .replace("#PERUSAHAAN#", value.magang.mitra.nama)
+      .replace("#PEMBIMBING#", value.pembimbing.namalengkap)
+      .replace("#EMAILPEMBIMBING#", value.pembimbing.akun.email)
+      .replace("#MENTOR#", value.mentor.namalengkap)
+      .replace("#EMAILMENTOR#", value.mentor.akun.email)
+      .replace("#DETAIL#", value._id);
+    addInner("tableMahasiswaMagang", mahasiswamagang);
+  }
 }
