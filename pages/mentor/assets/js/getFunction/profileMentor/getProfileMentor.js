@@ -1,4 +1,4 @@
-import { addInner } from "https://jscroot.github.io/element/croot.js";
+import { addInner, hide } from "https://jscroot.github.io/element/croot.js";
 
 export const URLGetProfileMentor =
   "https://asia-southeast2-bursakerja-project.cloudfunctions.net/intermoni-mentor";
@@ -100,6 +100,7 @@ export const dataMentor = `
 export function responseData(results) {
   console.log(results);
   isiRow(results);
+  hide("skeletonLoader");
 }
 
 export function isiRow(value) {

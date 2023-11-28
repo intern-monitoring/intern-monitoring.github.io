@@ -1,4 +1,4 @@
-import { addInner } from "https://jscroot.github.io/element/croot.js";
+import { addInner, hide } from "https://jscroot.github.io/element/croot.js";
 
 export const URLGetProfileMitra =
   "https://asia-southeast2-bursakerja-project.cloudfunctions.net/intermoni-mitra";
@@ -212,6 +212,7 @@ export const dataProfileMitra = `
 export function responseData(results) {
   console.log(results);
   isiRow(results);
+  hide("skeletonLoader");
 }
 
 export function isiRow(value) {
