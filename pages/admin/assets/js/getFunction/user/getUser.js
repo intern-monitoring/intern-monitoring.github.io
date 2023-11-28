@@ -1,4 +1,4 @@
-import { addInner } from "https://jscroot.github.io/element/croot.js";
+import { addInner, hide } from "https://jscroot.github.io/element/croot.js";
 
 export const URLGetUser =
   "https://asia-southeast2-bursakerja-project.cloudfunctions.net/intermoni-user";
@@ -220,6 +220,7 @@ export function responseData(results) {
     isiRowPembimbing(result);
     isiRowMentor(result);
   });
+  hide("skeletonLoader");
 }
 
 export function isiRowMhs(value) {
