@@ -1,4 +1,4 @@
-import { addInner } from "https://jscroot.github.io/element/croot.js";
+import { addInner, hide } from "https://jscroot.github.io/element/croot.js";
 
 export const URLGetMahasiswaMagang =
   "https://asia-southeast2-bursakerja-project.cloudfunctions.net/intermoni-mahasiswa-magang";
@@ -79,6 +79,7 @@ export const tableMahasiswaMagang = `
 
 export function responseData(results) {
   results.forEach(isiRow);
+  hide("skeletonLoader");
 }
 
 export function isiRow(value) {

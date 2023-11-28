@@ -1,7 +1,9 @@
 import { URLGetMahasiswaMagang, responseData } from "./getMahasiswaMagang.js";
 import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
+import { show, hide } from "https://jscroot.github.io/element/croot.js";
 
 const fetchData = async () => {
+  show("skeletonLoader");
   try {
     const myHeaders = new Headers();
     myHeaders.append("Authorization", getCookie("Authorization"));
@@ -24,6 +26,7 @@ const fetchData = async () => {
     updateCountElement(data.length); // Update count based on the fetched data
   } catch (error) {
     console.error("Error fetching or processing data: ", error);
+    hide("skeletonLoader");
   }
 };
 
