@@ -1,4 +1,4 @@
-import { addInner } from "https://jscroot.github.io/element/croot.js";
+import { addInner, hide } from "https://jscroot.github.io/element/croot.js";
 
 export const URLGetMagang =
   "https://asia-southeast2-bursakerja-project.cloudfunctions.net/intermoni-magang";
@@ -59,6 +59,7 @@ class="flex flex-col cursor-pointer justify-start rounded-xl p-4 md:p-6 bg-white
 export function responseDataMagang(results) {
   console.log(results);
   results.forEach(isiRow);
+  hide("skeletonLoader");
 }
 
 export function isiRow(value) {

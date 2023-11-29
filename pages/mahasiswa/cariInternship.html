@@ -515,6 +515,52 @@
           id="magang"
           class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"
         >
+          <!-- Skeleton Loader -->
+          <div
+            id="skeletonLoader"
+            class="animate-pulse flex flex-col cursor-pointer justify-start rounded-xl p-4 md:p-6 bg-white border border-gray-200 shadow-md"
+          >
+            <div class="flex items-center gap-x-4">
+              <div class="grow">
+                <ul class="space-y-1">
+                  <li class="w-40 h-5 bg-gray-200 rounded-full"></li>
+                </ul>
+                <div class="flex justify-between items-center mt-5">
+                  <ul class="space-y-1">
+                    <li class="w-20 h-4 bg-gray-200 rounded-full"></li>
+                  </ul>
+                  <ul class="space-y-1">
+                    <li class="w-20 h-4 bg-gray-200 rounded-full"></li>
+                  </ul>
+                </div>
+                <div class="border-t border-gray-200 mt-2 mb-2"></div>
+              </div>
+            </div>
+
+            <div
+              class="h-36 overflow-x-auto [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-track]:bg-gray-100 [&::-webkit-scrollbar-thumb]:bg-gray-300"
+            >
+              <ul class="space-y-1">
+                <li class="w-full h-4 bg-gray-200 rounded-full"></li>
+                <li class="w-full h-4 bg-gray-200 rounded-full"></li>
+                <li class="w-full h-4 bg-gray-200 rounded-full"></li>
+                <li class="w-full h-4 bg-gray-200 rounded-full"></li>
+                <li class="w-full h-4 bg-gray-200 rounded-full"></li>
+                <li class="w-full h-4 bg-gray-200 rounded-full"></li>
+                <li class="w-full h-4 bg-gray-200 rounded-full"></li>
+              </ul>
+            </div>
+            <ul class="mt-8 space-y-1">
+              <li class="w-20 h-4 bg-gray-200 rounded-full"></li>
+            </ul>
+
+            <div class="pt-2">
+              <ul class="space-y-1">
+                <li class="w-full h-10 bg-gray-200 rounded-md"></li>
+              </ul>
+            </div>
+          </div>
+          <!-- End Skeleton Loader -->
           <!-- Card -->
 
           <!-- End Card -->
