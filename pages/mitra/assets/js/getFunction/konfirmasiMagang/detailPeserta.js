@@ -1,4 +1,4 @@
-import { addInner } from "https://jscroot.github.io/element/croot.js";
+import { addInner, hide } from "https://jscroot.github.io/element/croot.js";
 
 export const detailPeserta = `
 <div class="bg-white rounded-xl shadow-md">
@@ -275,6 +275,7 @@ export const detailPeserta = `
 export function responseData(results) {
   console.log(results);
   isiRow(results);
+  hide("skeletonLoader");
 }
 
 export function isiRow(value) {
