@@ -22,7 +22,12 @@ const getMhsMagang = (target_url) => {
     .then((result) => {
       const jsonData = JSON.parse(result);
 
-      const mhsCount = jsonData.filter((item) => item.status === 1).length;
+      const mhsCount = jsonData.filter(
+        (item) =>
+          item.status === 1 &&
+          item.mentor.namalengkap &&
+          item.pembimbing.namalengkap
+      ).length;
 
       mhsMagangCount(mhsCount);
     })
