@@ -2,7 +2,6 @@ import { addInner, hide } from "https://jscroot.github.io/element/croot.js";
 
 export const dataMagang = `
 <div class="bg-white rounded-xl border shadow-md p-4 sm:p-7">
-<div class="bg-white rounded-xl border shadow-md p-4 sm:p-7">
 <div class="p-5">
   <div class="space-y-4">
     <div class="flex justify-between items-center">
