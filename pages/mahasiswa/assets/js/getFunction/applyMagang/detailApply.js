@@ -76,7 +76,7 @@ export const dataApply = `
     </div>
     <div class="mt-5 flex justify-end gap-x-2">
       <a
-        href="applyMagang.html"
+        href="cariInternship.html"
         class="py-2 px-3 inline-flex cursor-pointer justify-center items-center gap-2 rounded-md border font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-600 transition-all text-sm"
       >
         Kembali
