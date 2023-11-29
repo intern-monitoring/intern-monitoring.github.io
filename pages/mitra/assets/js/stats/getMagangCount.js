@@ -22,7 +22,7 @@ const getMagang = (target_url) => {
     .then((result) => {
       const jsonData = JSON.parse(result);
 
-      const magangcount = jsonData.filter((item) => item.status === 1).length;
+      const magangcount = jsonData.length;
 
       magangCount(magangcount);
     })
