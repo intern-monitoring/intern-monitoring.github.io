@@ -1,4 +1,4 @@
-import { addInner } from "https://jscroot.github.io/element/croot.js";
+import { addInner, hide } from "https://jscroot.github.io/element/croot.js";
 
 export const URLGetApply =
   "https://asia-southeast2-bursakerja-project.cloudfunctions.net/intermoni-mahasiswa-magang";
@@ -228,6 +228,7 @@ export function responseData(results) {
     isiRowBelumKonfirmasi(result);
     isiRowKonfirmasi(result);
   });
+  hide("skeletonLoader");
 }
 
 export function isiRowBelumKonfirmasi(value) {
