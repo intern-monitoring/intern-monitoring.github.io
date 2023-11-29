@@ -1,9 +1,6 @@
 import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
-import { responseData } from "./tableMitra";
+import { responseData, URLGetMitra } from "./tableMitra";
 import { hide } from "https://jscroot.github.io/element/croot.js";
-
-const URLGetMitra =
-  "https://asia-southeast2-bursakerja-project.cloudfunctions.net/intermoni-mitra";
 
 const mitracount = (count) => {
   const resultCountElement = document.getElementById("jumlahMitra");
