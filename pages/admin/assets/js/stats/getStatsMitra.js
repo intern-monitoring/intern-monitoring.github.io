@@ -1,4 +1,5 @@
 import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
+import { responseData } from "./tableMitra";
 import { hide } from "https://jscroot.github.io/element/croot.js";
 
 const URLGetMitra =
@@ -35,4 +36,4 @@ const getMitra = (target_url) => {
       hide("skeletonLoader");
     });
 };
-getMitra(URLGetMitra);
+getMitra(URLGetMitra, responseData);

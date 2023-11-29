@@ -1,8 +1,5 @@
 import { addInner, hide } from "https://jscroot.github.io/element/croot.js";
 
-export const URLGetMitra =
-  "https://asia-southeast2-bursakerja-project.cloudfunctions.net/intermoni-mitra";
-
 export const lolosSeleksiMitra = `
 <tr>
 <td class="h-px w-px whitespace-nowrap">
