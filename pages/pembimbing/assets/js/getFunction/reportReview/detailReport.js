@@ -1,5 +1,6 @@
 import { addInner } from "https://jscroot.github.io/element/croot.js";
 import { convertToWIB } from "./convertToWib.js";
+import { hide } from "https://jscroot.github.io/element/croot.js";
 
 export const dataDailyReport = `
 <div class="bg-white rounded-xl border shadow-md p-4 sm:p-7">
@@ -112,6 +113,7 @@ export const dataDailyReport = `
 export function responseData(results) {
   console.log(results);
   isiRow(results);
+  hide("skeletonLoader");
 }
 
 export function isiRow(value) {

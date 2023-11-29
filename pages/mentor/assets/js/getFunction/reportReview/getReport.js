@@ -1,5 +1,6 @@
 import { addInner } from "https://jscroot.github.io/element/croot.js";
 import { convertToWIB } from "./convertToWib.js";
+import { hide } from "https://jscroot.github.io/element/croot.js";
 
 export const URLGetReport =
   "https://asia-southeast2-bursakerja-project.cloudfunctions.net/intermoni-report";
@@ -89,6 +90,7 @@ class="bg-white hover:bg-gray-50 dark:bg-slate-900 dark:hover:bg-slate-800"
 export function responseData(results) {
   console.log(results);
   results.forEach(isiRow);
+  hide("skeletonLoader");
 }
 
 export function isiRow(value) {
