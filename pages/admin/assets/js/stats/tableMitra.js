@@ -3,7 +3,7 @@ import { addInner, hide } from "https://jscroot.github.io/element/croot.js";
 export const URLGetMitra =
   "https://asia-southeast2-bursakerja-project.cloudfunctions.net/intermoni-mitra";
 
-export const lolosSeleksiMitra = `
+export const tableMitra = `
 <tr>
 <td class="h-px w-px whitespace-nowrap">
     <div class="pl-6 pr-6 py-3">
@@ -90,7 +90,7 @@ export function isiRow(value) {
   if (value.mou === 1) {
     const statusmou = "Bekerjasama";
 
-    const content = pendingSeleksiMitra
+    const content = tableMitra
       .replace("#NAMAMITRA#", value.nama)
       .replace("#EMAIL#", value.akun.email)
       .replace("#MOU#", statusmou)
