@@ -89,7 +89,6 @@ export function responseData(results) {
 export function isiRow(value) {
   if (value.mou === 1) {
     const statusmou = "Bekerjasama";
-
     const content = tableMitra
       .replace("#NAMAMITRA#", value.nama)
       .replace("#EMAIL#", value.akun.email)
