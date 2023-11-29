@@ -1,7 +1,9 @@
 import { responseDataMagang, URLGetMagang } from "./getMagang.js";
 import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
+import { show, hide } from "https://jscroot.github.io/element/croot.js";
 
 const fetchData = async () => {
+  show("skeletonLoader");
   try {
     // Hapus data lama dari localStorage sebelum mendapatkan data baru
     // localStorage.removeItem("magangData");
@@ -23,6 +25,7 @@ const fetchData = async () => {
     responseDataMagang(data);
   } catch (error) {
     console.error("Error fetching or processing data: ", error);
+    hide("skeletonLoader");
   }
 };
 
@@ -95,6 +98,7 @@ const searchData = async () => {
       }
     } else {
       console.error("Data is not an array:", data);
+      hide("skeletonLoader");
     }
   } catch (error) {
     console.error("Error searching data: ", error);
