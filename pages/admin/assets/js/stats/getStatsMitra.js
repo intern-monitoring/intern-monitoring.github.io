@@ -10,7 +10,7 @@ const mitracount = (count) => {
   resultCountElement.innerHTML = `<h3 class="mt-1 text-xl font-medium text-gray-800">${count}</h3>`;
 };
 
-const getMitra = (target_url) => {
+const get = (target_url, responseFunction) => {
   document.getElementById("skeletonLoader").style.display = "grow";
 
   const myHeaders = new Headers();
@@ -27,6 +27,7 @@ const getMitra = (target_url) => {
       const jsonData = JSON.parse(result);
 
       const mitraCount = jsonData.filter((item) => item.mou === 1).length;
+      responseFunction(jsonData);
 
       mitracount(mitraCount);
     })
@@ -36,4 +37,4 @@ const getMitra = (target_url) => {
       hide("skeletonLoader");
     });
 };
-getMitra(URLGetMitra, responseData);
+get(URLGetMitra, responseData);
