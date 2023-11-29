@@ -1,10 +1,10 @@
-import { addInner } from "https://jscroot.github.io/element/croot.js";
+import { addInner, hide } from "https://jscroot.github.io/element/croot.js";
 
 export const dataMagang = `
 <div class="bg-white rounded-xl border shadow-md p-4 sm:p-7">
 <div class="p-5">
   <div class="space-y-4">
-    <h3 class="text-2xl font-semibold text-gray-800">#POSISI#</h3>
+    <h3 class="text-xl font-semibold text-gray-800">#POSISI#</h3>
     <div class="flex justify-between items-center">
       <h3 class="text-lg font-semibold text-gray-800">
         #NAMAMITRA#
@@ -89,20 +89,20 @@ export const dataMagang = `
       </p>
     </div>
   </div>
-</div>
-<div class="mt-2 flex justify-end gap-x-2">
-  <a
-    href="cariInternship.html"
-    class="py-2 px-3 inline-flex cursor-pointer justify-center items-center gap-2 rounded-md border font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-600 transition-all text-sm"
-  >
-    Kembali
-  </a>
-  <button
-    onclick="applyMagang('#APPLY#')"
-    class="inline-flex justify-center items-center gap-x-3 text-center bg-gradient-to-tl from-blue-600 to-violet-600 shadow-md shadow-transparent hover:shadow-blue-700/50 border border-transparent text-white text-sm font-medium rounded-lg focus:outline-none focus:ring-1 focus:ring-blue-600 focus:ring-offset-1 focus:ring-offset-white py-2 px-5"
-  >
-    Apply
-  </button>
+  <div class="mt-2 flex justify-end gap-x-2">
+    <a
+      href="cariInternship.html"
+      class="py-2 px-3 inline-flex cursor-pointer justify-center items-center gap-2 rounded-md border font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-600 transition-all text-sm"
+    >
+      Kembali
+    </a>
+    <button
+      onclick="applyMagang('#APPLY#')"
+      class="inline-flex justify-center items-center gap-x-3 text-center bg-gradient-to-tl from-blue-600 to-violet-600 shadow-md shadow-transparent hover:shadow-blue-700/50 border border-transparent text-white text-sm font-medium rounded-lg focus:outline-none focus:ring-1 focus:ring-blue-600 focus:ring-offset-1 focus:ring-offset-white py-2 px-5"
+    >
+      Apply
+    </button>
+  </div>
 </div>
 </div>
 `;
@@ -110,6 +110,7 @@ export const dataMagang = `
 export function responseData(results) {
   console.log(results);
   isiRow(results);
+  hide("skeletonLoader");
 }
 
 export function isiRow(value) {
