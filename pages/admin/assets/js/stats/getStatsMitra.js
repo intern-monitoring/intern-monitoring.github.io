@@ -1,5 +1,5 @@
 import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
-import { responseData, URLGetMitra } from "./tableMitra";
+import { responseData, URLGetMitra } from "./tableMitra.js";
 import { hide } from "https://jscroot.github.io/element/croot.js";
 
 const mitracount = (count) => {
