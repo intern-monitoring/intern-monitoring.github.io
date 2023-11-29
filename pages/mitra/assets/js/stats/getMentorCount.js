@@ -1,14 +1,14 @@
 import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
 
-const URLGetMhsMagang =
-  "https://asia-southeast2-bursakerja-project.cloudfunctions.net/intermoni-mahasiswa-magang";
+const URLGetMentor =
+  "https://asia-southeast2-bursakerja-project.cloudfunctions.net/intermoni-mentor";
 
-const mhsMagangCount = (count) => {
-  const resultCountElement = document.getElementById("mahasiswaMagangCount");
+const mentorCount = (count) => {
+  const resultCountElement = document.getElementById("mentorCount");
   resultCountElement.innerHTML = `<h3 class="mt-1 text-xl font-medium text-gray-800">${count}</h3>`;
 };
 
-const getMhsMagang = (target_url) => {
+const getMentor = (target_url) => {
   const myHeaders = new Headers();
   myHeaders.append("Authorization", getCookie("Authorization"));
   const requestOptions = {
@@ -22,12 +22,10 @@ const getMhsMagang = (target_url) => {
     .then((result) => {
       const jsonData = JSON.parse(result);
 
-      const mhsCount = jsonData.filter(
-        (item) => item.status === 1 && item.mentor.namalengkap
-      ).length;
+      const mentorcount = jsonData.length;
 
-      mhsMagangCount(mhsCount);
+      mentorCount(mentorcount);
     })
     .catch((error) => console.log("error", error));
 };
-getMhsMagang(URLGetMhsMagang);
+getMentor(URLGetMentor);
