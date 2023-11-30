@@ -13,9 +13,11 @@ const get = (target_url, responseFunction) => {
   };
 
   fetch(target_url, requestOptions)
-    .then((response) => response.json()) // Parse as JSON
-    .then((parsedResult) => {
-      const lolosberkas = jsonData.filter(
+    .then((response) => response.text())
+    .then((result) => {
+      const parsedResult = JSON.parse(result);
+
+      const lolosberkas = parsedResult.filter(
         (item) => item.seleksiberkas === 1
       ).length;
 
