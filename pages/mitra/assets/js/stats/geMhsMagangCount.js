@@ -1,18 +1,18 @@
 import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
 
-const URLGetSeleksi =
+const URLGet =
   "https://asia-southeast2-bursakerja-project.cloudfunctions.net/intermoni-mahasiswa-magang";
 
-const seleksiBerkasCount = (count) => {
-  const resultCountElement = document.getElementById("berkasCount");
+const mhsMagangCount = (count) => {
+  const resultCountElement = document.getElementById("mahasiswaMagangCount");
   resultCountElement.innerHTML = `<h3 class="mt-1 text-xl font-medium text-gray-800">${count}</h3>`;
 };
-const seleksiWawancaraCount = (count) => {
-  const resultCountElement = document.getElementById("wawancaraCount");
+const applyCount = (count) => {
+  const resultCountElement = document.getElementById("applyCount");
   resultCountElement.innerHTML = `<h3 class="mt-1 text-xl font-medium text-gray-800">${count}</h3>`;
 };
 
-const getSeleksi = (target_url) => {
+const get = (target_url) => {
   const myHeaders = new Headers();
   myHeaders.append("Authorization", getCookie("Authorization"));
   const requestOptions = {
@@ -26,14 +26,14 @@ const getSeleksi = (target_url) => {
     .then((result) => {
       const jsonData = JSON.parse(result);
 
-      const berkas = jsonData.filter((item) => item.seleksiberkas === 1).length;
-      const wawancara = jsonData.filter(
-        (item) => item.seleksiwewancara === 1
+      const mhscount = jsonData.filter(
+        (item) => item.status === 1 && item.mentor.namalengkap
       ).length;
+      const applycount = jsonData.filter((item) => !item.seleksiBerkas).length;
 
-      seleksiBerkasCount(berkas);
-      seleksiWawancaraCount(wawancara);
+      mhsMagangCount(mhscount);
+      applyCount(applycount);
     })
     .catch((error) => console.log("error", error));
 };
-getSeleksi(URLGetSeleksi);
+get(URLGetMhsMagang);
