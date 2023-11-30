@@ -1,0 +1,35 @@
+import { URLGetMahasiswaMagang, responseData } from "./getMahasiswaMagang.js";
+import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
+import { hide } from "https://jscroot.github.io/element/croot.js";
+
+const get = (target_url, responseFunction) => {
+  document.getElementById("skeletonLoader").style.display = "grow";
+
+  const myHeaders = new Headers();
+  myHeaders.append("Authorization", getCookie("Authorization"));
+  const requestOptions = {
+    method: "GET",
+    headers: myHeaders,
+    redirect: "follow",
+  };
+
+  fetch(target_url, requestOptions)
+    .then((response) => response.text())
+    .then((result) => {
+      const parsedResult = JSON.parse(result);
+
+      const filteredData = parsedResult.filter(
+        (user) => user.status === 1 && user.mentor.namalengkap
+      );
+
+      // Call the response function with the filtered data
+      responseFunction(filteredData);
+    })
+    .catch((error) => {
+      console.log("error", error);
+      // Hide the skeleton loader in case of an error
+      hide("skeletonLoader");
+    });
+};
+
+get(URLGetMahasiswaMagang, responseData);
