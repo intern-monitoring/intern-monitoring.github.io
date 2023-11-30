@@ -4,7 +4,7 @@ const URLGet =
   "https://asia-southeast2-bursakerja-project.cloudfunctions.net/intermoni-report";
 
 const mhsCount = (count) => {
-  const resultCountElement = document.getElementById("applyCount");
+  const resultCountElement = document.getElementById("mentoringCount");
   resultCountElement.innerHTML = `<h3 class="mt-1 text-xl font-medium text-gray-800">${count}</h3>`;
 };
 

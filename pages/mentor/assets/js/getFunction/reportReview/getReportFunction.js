@@ -10,11 +10,6 @@ const CountReport = (count) => {
     </p>`;
 };
 
-const mhsCount = (count) => {
-  const resultCountElement = document.getElementById("mentoringCount");
-  resultCountElement.innerHTML = `<h3 class="mt-1 text-xl font-medium text-gray-800">${count}</h3>`;
-};
-
 const get = (target_url, responseFunction) => {
   document.getElementById("skeletonLoader").style.display = "grow";
 
@@ -35,7 +30,6 @@ const get = (target_url, responseFunction) => {
       // Hitung jumlah data dan perbarui tampilan
       const count = jsonData.length;
       CountReport(count);
-      mhsCount(count);
     })
     .catch((error) => {
       console.log("error", error);
