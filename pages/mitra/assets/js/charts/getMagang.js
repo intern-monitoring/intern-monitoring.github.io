@@ -27,7 +27,7 @@ const responsePosisi = (results) => {
 };
 
 const getPosisiMagang = (value) => {
-  posisiMagangValue = value.posisi;
+  posisiValue = value.posisi;
 };
-console.log(posisiMagangValue);
+console.log(posisiValue);
 get(URLGetMagang, responsePosisi);
