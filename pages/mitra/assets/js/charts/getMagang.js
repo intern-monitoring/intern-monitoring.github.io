@@ -20,7 +20,7 @@ const get = (target_url, responseFunction) => {
 export let posisiValue;
 
 const responsePosisi = (results) => {
-  console.log(results);
+  console.log(results.posisi);
   results.forEach((result) => {
     getPosisiMagang(result);
   });
