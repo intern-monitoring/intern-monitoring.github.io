@@ -28,6 +28,6 @@ const responsePosisi = (results) => {
 
 const getPosisiMagang = (value) => {
   posisiMagangValue = value.posisi;
-  console.log(posisiMagangValue);
 };
+console.log(posisiMagangValue);
 get(URLGetMagang, responsePosisi);
