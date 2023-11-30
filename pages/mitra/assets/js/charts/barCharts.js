@@ -17,20 +17,24 @@ const get = (target_url, responseFunction) => {
     .then((response) => response.text())
     .then((result) => {
       const jsonData = JSON.parse(result);
-      const mhsApply = jsonData.filter(
-        (item) => item.magang.posisi === posisiValue
-      );
+      const posisiCounts = jsonData.reduce((counts, item) => {
+        if (item.magang.posisi === posisiValue) {
+          if (!counts[item.magang.posisi]) {
+            counts[item.magang.posisi] = 0;
+          }
+          counts[item.magang.posisi]++;
+        }
+        return counts;
+      }, {});
 
-      const countMhsApply = mhsApply.length;
-
-      responseFunction(countMhsApply);
+      responseFunction(posisiCounts);
     })
     .catch((error) => console.log("error", error));
 };
 
 window.addEventListener("load", () => {
   setTimeout(() => {
-    get(URLGet, (mhsApply) => {
+    get(URLGet, (posisiCounts) => {
       buildChart("#hs-single-bar-chart", () => ({
         chart: {
           type: "bar",
@@ -45,9 +49,9 @@ window.addEventListener("load", () => {
         series: [
           {
             name: "Jumlah Mahasiswa",
-            data: mhsApply.map((item) => ({
-              x: item.mhsApply,
-              y: item.posisiValue,
+            data: posisiValue.map((posisi) => ({
+              x: posisi,
+              y: posisiCounts[posisi] || 0,
             })),
           },
         ],
