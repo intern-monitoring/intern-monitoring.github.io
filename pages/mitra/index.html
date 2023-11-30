@@ -678,14 +678,140 @@
       </div>
       <!-- End Stats Section -->
       <!-- Section Charts -->
-      <div class="py-5 grid gap-7">
-        <!-- Bar Section -->
-        <div
-          class="w-full lg:col-start-1 lg:col-end-4 bg-white p-5 rounded-lg shadow-md"
-        >
-          <div id="hs-single-bar-chart"></div>
+      <div class="pt-5 grid grid-cols-1 gap-7 lg:grid-cols-5 max-h[210px]">
+        <!-- Table Section -->
+        <div class="w-full h-full lg:col-start-1 lg:col-end-4">
+          <!-- Card -->
+          <div class="flex flex-col">
+            <div class="overflow-x-auto">
+              <div class="min-w-full inline-block align-middle">
+                <div
+                  class="bg-white border border-gray-200 rounded-xl shadow-sm overflow-hidden"
+                >
+                  <!-- Header -->
+                  <div
+                    class="px-6 py-4 grid gap-3 justify-start border-b border-gray-200 lg:justify-center"
+                  >
+                    <h2 class="text-lg font-semibold text-gray-800 lg:text-xl">
+                      Kerjasama Mitra
+                    </h2>
+                  </div>
+                  <!-- End Header -->
+
+                  <!-- Table -->
+                  <table
+                    class="min-w-full h-[205px] divide-y divide-gray-200 dark:divide-gray-700"
+                  >
+                    <thead class="bg-gray-50 dark:bg-slate-900">
+                      <tr>
+                        <th scope="col" class="px-6 py-3 text-start">
+                          <div class="flex items-center gap-x-2">
+                            <span
+                              class="text-xs font-semibold uppercase tracking-wide text-gray-800 dark:text-gray-200"
+                            >
+                              Mitra
+                            </span>
+                          </div>
+                        </th>
+
+                        <th scope="col" class="px-6 py-3 text-start">
+                          <div class="flex items-center gap-x-2">
+                            <span
+                              class="text-xs font-semibold uppercase tracking-wide text-gray-800 dark:text-gray-200"
+                            >
+                              Status
+                            </span>
+                          </div>
+                        </th>
+                      </tr>
+                    </thead>
+
+                    <tbody
+                      id="kerjasamaMitra"
+                      class="divide-y divide-gray-200 dark:divide-gray-700"
+                    >
+                      <!-- Skeleton Loader -->
+                      <tr id="skeletonLoader" class="animate-pulse">
+                        <td class="h-px w-px whitespace-nowrap">
+                          <div class="pl-6 pr-6 py-3">
+                            <div class="flex items-center gap-x-3">
+                              <div
+                                class="inline-block h-[2.375rem] w-[2.375rem] rounded-full bg-gray-200 pr-2"
+                              ></div>
+                              <div class="grow">
+                                <ul class="space-y-1">
+                                  <li
+                                    class="w-28 h-4 bg-gray-200 rounded-full"
+                                  ></li>
+                                  <li
+                                    class="w-28 h-4 bg-gray-200 rounded-full"
+                                  ></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                        <td class="px-6 py-3 whitespace-nowrap">
+                          <div class="flex items-center">
+                            <ul class="space-y-1">
+                              <li
+                                class="w-28 h-4 bg-gray-200 rounded-full"
+                              ></li>
+                            </ul>
+                          </div>
+                        </td>
+                      </tr>
+                      <!-- End Skeleton Loader -->
+                    </tbody>
+                  </table>
+                  <!-- End Table -->
+
+                  <!-- Footer -->
+                  <div
+                    class="px-6 py-4 grid gap-3 md:flex md:justify-between md:items-center border-t border-gray-200"
+                  ></div>
+                  <!-- End Footer -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End Card -->
         </div>
-        <!-- End Bar Section -->
+        <!-- End Table Section -->
+
+        <!-- Donut Charts -->
+        <div class="lg:col-start-4 lg:col-end-6 h-full">
+          <div
+            class="sm:h-[300px] flex flex-col justify-center items-center bg-white p-5 rounded-lg shadow-md"
+          >
+            <h1 class="text-center text-xl font-semibold text-gray-900 pb-5">
+              Seleksi Magang
+            </h1>
+            <div id="hs-donut-chart"></div>
+
+            <!-- Legend Indicator -->
+            <div
+              class="flex justify-center sm:justify-end items-center gap-x-4 mt-3 sm:mt-6"
+            >
+              <div class="inline-flex items-center">
+                <span
+                  style="background-color: #001f3f"
+                  class="w-2.5 h-2.5 inline-block rounded-sm me-2"
+                ></span>
+                <span class="text-[13px] text-gray-600">Lolos</span>
+              </div>
+              <div class="inline-flex items-center">
+                <span
+                  style="background-color: #0050a1"
+                  class="w-2.5 h-2.5 inline-block rounded-sm me-2"
+                ></span>
+                <span class="text-[13px] text-gray-600"> Tidak Lolos </span>
+              </div>
+            </div>
+            <!-- End Legend Indicator -->
+          </div>
+        </div>
+        <!-- Donut Charts -->
       </div>
       <!-- End Section Charts -->
     </div>
@@ -716,7 +842,8 @@
     <script src="../../node_modules/lodash/lodash.min.js"></script>
     <script src="../../node_modules/apexcharts/dist/apexcharts.min.js"></script>
     <script src="https://preline.co/assets/js/hs-apexcharts-helpers.js"></script>
-    <script type="module" src="./assets/js/charts/barCharts.js"></script>
+    <script type="module" src="./assets/js/charts/donutCharts.js"></script>
+    <!-- <script type="module" src="./assets/js/charts/barCharts.js"></script> -->
     <!-- <script src="./assets/js/charts/columnCharts.js"></script> -->
 
     <script type="module" src="../js/get/getEmailMitra.js"></script>
