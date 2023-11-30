@@ -1,4 +1,5 @@
 import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
+import { posisiValue } from "./getMagang.js";
 
 const URLGet =
   "https://asia-southeast2-bursakerja-project.cloudfunctions.net/intermoni-mahasiswa-magang";
@@ -15,69 +16,57 @@ const get = (target_url, responseFunction) => {
   fetch(target_url, requestOptions)
     .then((response) => response.text())
     .then((result) => {
-      const parsedResult = JSON.parse(result);
+      const jsonData = JSON.parse(result);
+      const mhsApply = jsonData.filter(
+        (item) => item.magang.posisi === posisiValue
+      );
 
-      const lolosberkas = parsedResult.filter(
-        (item) => item.seleksiberkas === 1
-      ).length;
+      const countMhsApply = mhsApply.length;
 
-      const loloswawancara = parsedResult.filter(
-        (user) => user.seleksiwewancara === 1
-      ).length;
-      const mahasiswamagang = parsedResult.filter(
-        (user) => user.status === 1 && user.mentor.namalengkap
-      ).length;
-
-      responseFunction(lolosberkas, loloswawancara, mahasiswamagang);
+      responseFunction(countMhsApply);
     })
     .catch((error) => console.log("error", error));
 };
 
+get(URLGetSeleksiBerkas, responseData);
+
 window.addEventListener("load", () => {
-  get(URLGet, (lolosberkas, loloswawancara, mahasiswamagang) => {
-    buildChart("#hs-single-bar-chart", () => ({
-      chart: {
-        type: "bar",
-        height: 200,
-        toolbar: {
-          show: false,
+  setTimeout(() => {
+    get(URLGet, (mhsApply) => {
+      buildChart("#hs-single-bar-chart", () => ({
+        chart: {
+          type: "bar",
+          height: 200,
+          toolbar: {
+            show: false,
+          },
+          zoom: {
+            enabled: false,
+          },
         },
-        zoom: {
+        series: [
+          {
+            name: "Jumlah Mahasiswa",
+            data: mhsApply.map((item) => ({
+              x: item.mhsApply,
+              y: item.posisiValue,
+            })),
+          },
+        ],
+        chart: {
+          height: 350,
+          type: "bar",
+        },
+        plotOptions: {
+          bar: {
+            columnWidth: "20%",
+          },
+        },
+        colors: ["#1e40af"],
+        dataLabels: {
           enabled: false,
         },
-      },
-      series: [
-        {
-          name: "Jumlah Mahasiswa",
-          data: [
-            {
-              x: "Lolos Seleksi Berkas",
-              y: lolosberkas,
-            },
-            {
-              x: "Lolos Seleksi Wawancara",
-              y: loloswawancara,
-            },
-            {
-              x: "Mahasiswa Magang",
-              y: mahasiswamagang,
-            },
-          ],
-        },
-      ],
-      chart: {
-        height: 350,
-        type: "bar",
-      },
-      plotOptions: {
-        bar: {
-          columnWidth: "20%",
-        },
-      },
-      colors: ["#1e40af"],
-      dataLabels: {
-        enabled: false,
-      },
-    }));
-  });
+      }));
+    });
+  }, 1500);
 });
