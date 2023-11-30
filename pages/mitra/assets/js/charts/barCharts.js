@@ -1,7 +1,7 @@
 import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
 
-const URLGetMhsApply =
-  "https://asia-southeast2-bursakerja-project.cloudfunctions.net/intermoni-mahasiswa-magang";
+const URLGet =
+  "https://asia-southeast2-bursakerja-project.cloudfunctions.net/intermoni-magang";
 
 const get = (target_url, responseFunction) => {
   const myHeaders = new Headers();
@@ -15,20 +15,28 @@ const get = (target_url, responseFunction) => {
   fetch(target_url, requestOptions)
     .then((response) => response.json()) // Parse as JSON
     .then((parsedResult) => {
-      const posisiMagang = parsedResult.map((user) => user.magang.posisi);
-      const applyCount = parsedResult.length;
+      const lolosberkas = jsonData.filter(
+        (item) => item.seleksiberkas === 1
+      ).length;
 
-      responseFunction(posisiMagang, applyCount);
+      const loloswawancara = parsedResult.filter(
+        (user) => user.seleksiwewancara === 1
+      ).length;
+      const mahasiswamagang = parsedResult.filter(
+        (user) => user.status === 1 && user.mentor.namalengkap
+      ).length;
+
+      responseFunction(lolosberkas, loloswawancara, mahasiswamagang);
     })
     .catch((error) => console.log("error", error));
 };
 
 window.addEventListener("load", () => {
-  get(URLGetMhsApply, (posisiMagang, applyCount) => {
+  get(URLGet, (lolosberkas, loloswawancara, mahasiswamagang) => {
     buildChart("#hs-single-bar-chart", () => ({
       chart: {
         type: "bar",
-        height: 350, // Adjusted height for better visibility
+        height: 200,
         toolbar: {
           show: false,
         },
@@ -39,52 +47,45 @@ window.addEventListener("load", () => {
       series: [
         {
           name: "Jumlah yang apply",
-          data: posisiMagang.map((position) => ({
-            x: position,
-            y: applyCount,
-          })),
+          data: [
+            {
+              x: "Lolos Seleksi Berkas",
+              y: lolosberkas,
+            },
+            {
+              x: "Lolos Seleksi Wawancara",
+              y: loloswawancara,
+            },
+            {
+              x: "Mahasiswa Magang",
+              y: mahasiswamagang,
+            },
+          ],
         },
       ],
+      chart: {
+        height: 350,
+        type: "bar",
+      },
       plotOptions: {
         bar: {
           columnWidth: "30%",
         },
       },
-      colors: ["#2563eb"],
-      xaxis: {
-        categories: posisiMagang,
-        labels: {
-          style: {
-            colors: "#9ca3af",
-            fontSize: "13px",
-            fontFamily: "Inter, ui-sans-serif",
-            fontWeight: 400,
-          },
-          formatter: (title) => title.slice(0, 3),
-        },
-      },
-      yaxis: {
-        labels: {
-          align: "left",
-          minWidth: 0,
-          style: {
-            colors: "#9ca3af",
-            fontSize: "13px",
-            fontFamily: "Inter, ui-sans-serif",
-            fontWeight: 400,
-          },
-          formatter: (value) => (value >= 1000 ? `${value / 1000}k` : value),
-        },
-      },
+      colors: ["#add8e6", "#0000ff", "#00008b"],
       dataLabels: {
         enabled: false,
       },
       legend: {
         show: true,
         showForSingleSeries: true,
-        customLegendItems: ["Mahasiswa yang apply"],
+        customLegendItems: [
+          "Lolos Seleksi Berkas",
+          "Lolos Seleksi Wawancara",
+          "Mahasiswa Magang",
+        ],
         markers: {
-          fillColors: ["#2563eb"],
+          fillColors: ["#add8e6", "#0000ff", "#00008b"],
         },
       },
     }));
