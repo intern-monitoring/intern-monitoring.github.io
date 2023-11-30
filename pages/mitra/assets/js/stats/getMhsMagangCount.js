@@ -36,4 +36,4 @@ const get = (target_url) => {
     })
     .catch((error) => console.log("error", error));
 };
-get(URLGetMhsMagang);
+get(URLGet);
