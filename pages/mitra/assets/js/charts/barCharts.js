@@ -74,7 +74,7 @@ window.addEventListener("load", () => {
           columnWidth: "30%",
         },
       },
-      colors: ["#add8e6"],
+      colors: ["#0000ff"],
       dataLabels: {
         enabled: false,
       },
