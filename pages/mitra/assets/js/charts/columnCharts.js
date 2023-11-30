@@ -27,15 +27,6 @@ window.addEventListener("load", () => {
               x: "Frontend Developer",
               y: 4,
             },
-            {
-              x: "Frontend Developer",
-              y: 4,
-              colors: ["#add8e6"],
-            },
-            {
-              x: "Frontend Developer",
-              y: 4,
-            },
           ],
         },
       ],
@@ -45,10 +36,10 @@ window.addEventListener("load", () => {
       },
       plotOptions: {
         bar: {
-          columnWidth: "30%",
+          columnWidth: "20%",
         },
       },
-      colors: ["#0000ff"],
+      colors: ["#1e40af"],
       dataLabels: {
         enabled: false,
       },

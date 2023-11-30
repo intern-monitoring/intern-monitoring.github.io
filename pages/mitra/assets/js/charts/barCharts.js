@@ -71,10 +71,10 @@ window.addEventListener("load", () => {
       },
       plotOptions: {
         bar: {
-          columnWidth: "30%",
+          columnWidth: "20%",
         },
       },
-      colors: ["#0000ff"],
+      colors: ["#1e40af"],
       dataLabels: {
         enabled: false,
       },
