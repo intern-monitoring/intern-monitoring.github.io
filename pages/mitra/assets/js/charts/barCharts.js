@@ -30,153 +30,47 @@ const get = (target_url, responseFunction) => {
 
 window.addEventListener("load", () => {
   get(URLGetMhsApply, (posisiMagang, applyCount) => {
-    buildChart(
-      "#hs-single-bar-chart",
-      (mode) => ({
-        chart: {
-          type: "bar",
-          height: 300,
-          toolbar: {
-            show: false,
-          },
-          zoom: {
-            enabled: false,
-          },
-        },
-        series: [
-          {
-            name: "Jumlah Apply",
-            data: [applyCount],
-          },
-        ],
-        plotOptions: {
-          bar: {
-            horizontal: false,
-            columnWidth: "16px",
-            borderRadius: 0,
-          },
-        },
-        legend: {
+    buildChart("#hs-single-bar-chart", () => ({
+      chart: {
+        type: "bar",
+        height: 200,
+        toolbar: {
           show: false,
         },
-        dataLabels: {
+        zoom: {
           enabled: false,
         },
-        stroke: {
-          show: true,
-          width: 8,
-          colors: ["transparent"],
+      },
+      series: [
+        {
+          name: "Jumlah yang apply",
+          data: posisiMagang.map((position) => ({
+            x: position,
+            y: applyCount,
+          })),
         },
-        xaxis: {
-          categories: [posisiMagang],
-          axisBorder: {
-            show: false,
-          },
-          axisTicks: {
-            show: false,
-          },
-          crosshairs: {
-            show: false,
-          },
-          labels: {
-            style: {
-              colors: "#9ca3af",
-              fontSize: "13px",
-              fontFamily: "Inter, ui-sans-serif",
-              fontWeight: 400,
-            },
-            offsetX: -2,
-            formatter: (title) => title.slice(0, 3),
-          },
-        },
-        yaxis: {
-          labels: {
-            align: "left",
-            minWidth: 0,
-            maxWidth: 140,
-            style: {
-              colors: "#9ca3af",
-              fontSize: "13px",
-              fontFamily: "Inter, ui-sans-serif",
-              fontWeight: 400,
-            },
-            formatter: (value) => (value >= 1000 ? `${value / 1000}k` : value),
-          },
-        },
-        states: {
-          hover: {
-            filter: {
-              type: "darken",
-              value: 0.9,
-            },
-          },
-        },
-        tooltip: {
-          y: {
-            formatter: (value) =>
-              `$${value >= 1000 ? `${value / 1000}k` : value}`,
-          },
-          custom: function (props) {
-            const { categories } = props.ctx.opts.xaxis;
-            const { dataPointIndex } = props;
-            const title = categories[dataPointIndex];
-            const newTitle = `${title}`;
-
-            return buildTooltip(props, {
-              title: newTitle,
-              mode,
-              hasTextLabel: true,
-              wrapperExtClasses: "min-w-[120px]",
-              labelDivider: ":",
-              labelExtClasses: "ms-2",
-            });
-          },
-        },
-        responsive: [
-          {
-            breakpoint: 568,
-            options: {
-              chart: {
-                height: 300,
-              },
-              plotOptions: {
-                bar: {
-                  columnWidth: "14px",
-                },
-              },
-              stroke: {
-                width: 8,
-              },
-              labels: {
-                style: {
-                  colors: "#9ca3af",
-                  fontSize: "11px",
-                  fontFamily: "Inter, ui-sans-serif",
-                  fontWeight: 400,
-                },
-                offsetX: -2,
-                formatter: (title) => title.slice(0, 3),
-              },
-              yaxis: {
-                min: 5,
-                max: 15,
-              },
-            },
-          },
-        ],
-      }),
-      {
-        colors: ["#2563eb", "#d1d5db"],
-        grid: {
-          borderColor: "#e5e7eb",
+      ],
+      chart: {
+        height: 350,
+        type: "bar",
+      },
+      plotOptions: {
+        bar: {
+          columnWidth: "30%",
         },
       },
-      {
-        colors: ["#3b82f6", "#2563eb"],
-        grid: {
-          borderColor: "#374151",
+      colors: ["#2563eb"],
+      dataLabels: {
+        enabled: false,
+      },
+      legend: {
+        show: true,
+        showForSingleSeries: true,
+        customLegendItems: ["Mahasiswa yang apply"],
+        markers: {
+          fillColors: ["#2563eb"],
         },
-      }
-    );
+      },
+    }));
   })();
 });
