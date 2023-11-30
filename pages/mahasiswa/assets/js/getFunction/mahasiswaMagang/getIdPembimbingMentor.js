@@ -32,14 +32,14 @@ const getIDMentor = (value) => {
   if (value.status === 1) {
     pembimbingID = value.pembimbing._id;
   }
-  console.log(mentorID);
+  console.log(pembimbingID);
 };
 
 const getIDPembimbing = (value) => {
   if (value.status === 1) {
     mentorID = value.mentor._id;
   }
-  console.log(pembimbingID);
+  console.log(mentorID);
 };
 
 get(URLGet, responseID);
