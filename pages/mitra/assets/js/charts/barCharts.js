@@ -46,7 +46,7 @@ window.addEventListener("load", () => {
       },
       series: [
         {
-          name: "Tentang Magang",
+          name: "Jumlah Mahasiswa",
           data: [
             {
               x: "Lolos Seleksi Berkas",
