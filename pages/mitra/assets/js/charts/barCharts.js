@@ -74,21 +74,9 @@ window.addEventListener("load", () => {
           columnWidth: "30%",
         },
       },
-      colors: ["#add8e6", "#0000ff", "#00008b"],
+      colors: ["#add8e6"],
       dataLabels: {
         enabled: false,
-      },
-      legend: {
-        show: true,
-        showForSingleSeries: true,
-        customLegendItems: [
-          "Lolos Seleksi Berkas",
-          "Lolos Seleksi Wawancara",
-          "Mahasiswa Magang",
-        ],
-        markers: {
-          fillColors: ["#add8e6", "#0000ff", "#00008b"],
-        },
       },
     }));
   });

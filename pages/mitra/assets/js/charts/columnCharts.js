@@ -30,6 +30,7 @@ window.addEventListener("load", () => {
             {
               x: "Frontend Developer",
               y: 4,
+              colors: ["#add8e6"],
             },
             {
               x: "Frontend Developer",
@@ -47,17 +48,9 @@ window.addEventListener("load", () => {
           columnWidth: "30%",
         },
       },
-      colors: ["#2563eb"],
+      colors: ["#2563eb", "#add8e6"],
       dataLabels: {
         enabled: false,
-      },
-      legend: {
-        show: true,
-        showForSingleSeries: true,
-        customLegendItems: ["Mahasiswa yang apply"],
-        markers: {
-          fillColors: ["#2563eb"],
-        },
       },
     }));
   })();
