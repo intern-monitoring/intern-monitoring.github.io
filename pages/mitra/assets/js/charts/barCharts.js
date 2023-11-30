@@ -28,8 +28,6 @@ const get = (target_url, responseFunction) => {
     .catch((error) => console.log("error", error));
 };
 
-get(URLGetSeleksiBerkas, responseData);
-
 window.addEventListener("load", () => {
   setTimeout(() => {
     get(URLGet, (mhsApply) => {
