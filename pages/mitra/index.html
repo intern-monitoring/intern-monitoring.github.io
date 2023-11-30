@@ -538,7 +538,6 @@
           </h1>
         </div>
       </div>
-
       <div class="flex justify-center">
         <div
           class="relative w-full px-5 -mt-16 gap-4 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 lg:px-10"
@@ -678,6 +677,34 @@
         </div>
       </div>
       <!-- End Stats Section -->
+      <!-- Section Charts -->
+      <div class="pt-5 grid gap-7">
+        <!-- Bar Section -->
+        <div
+          class="w-full lg:col-start-1 lg:col-end-4 bg-white p-5 rounded-lg shadow-md"
+        >
+          <div class="flex justify-center sm:justify-end items-center gap-x-3">
+            <div class="inline-flex items-center">
+              <span
+                class="w-2.5 h-2.5 inline-block bg-blue-600 rounded-sm me-2"
+              ></span>
+              <span class="text-[13px] text-gray-600"> Jumlah Magang </span>
+            </div>
+            <div class="inline-flex items-center">
+              <span
+                class="w-2.5 h-2.5 inline-block bg-gray-300 rounded-sm me-2"
+              ></span>
+              <span class="text-[13px] text-gray-600">
+                Mahasiswa yang apply
+              </span>
+            </div>
+          </div>
+          <!-- End Legend Indicator -->
+          <div id="hs-single-bar-chart"></div>
+        </div>
+        <!-- End Bar Section -->
+      </div>
+      <!-- End Section Charts -->
     </div>
     <!-- End Content Section -->
 
@@ -697,6 +724,16 @@
     <script type="module" src="./assets/js/stats/getSeleksiCount.js"></script>
     <script type="module" src="./assets/js/stats/getMhsMagangCount.js"></script>
     <script type="module" src="./assets/js/stats/getMentorCount.js"></script>
+
+    <!-- Charts -->
+    <link
+      rel="stylesheet"
+      href="../../node_modules/apexcharts/dist/apexcharts.css"
+    />
+    <script src="../../node_modules/lodash/lodash.min.js"></script>
+    <script src="../../node_modules/apexcharts/dist/apexcharts.min.js"></script>
+    <script src="https://preline.co/assets/js/hs-apexcharts-helpers.js"></script>
+    <script src="./assets/js/charts/barCharts.js"></script>
 
     <script type="module" src="../js/get/getEmailMitra.js"></script>
     <!-- autentikasi function -->
