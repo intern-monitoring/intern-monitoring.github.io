@@ -73,5 +73,5 @@ window.addEventListener("load", () => {
         },
       }));
     });
-  }, 1500);
+  }, 2500);
 });
