@@ -51,11 +51,12 @@ window.addEventListener("load", () => {
         },
         series: [
           {
-            name: "Jumlah Mahasiswa",
-            data: valuePosisi.map((posisi) => ({
-              x: posisi,
-              y: posisiCounts[posisi] || 0,
-            })),
+            data: [
+              {
+                x: valuePosisi,
+                y: posisiCounts[valuePosisi] || 0,
+              },
+            ],
           },
         ],
         chart: {
