@@ -7,10 +7,6 @@ const mhsMagangCount = (count) => {
   const resultCountElement = document.getElementById("mahasiswaMagangCount");
   resultCountElement.innerHTML = `<h3 class="mt-1 text-xl font-medium text-gray-800">${count}</h3>`;
 };
-const applyCount = (count) => {
-  const resultCountElement = document.getElementById("applyCount");
-  resultCountElement.innerHTML = `<h3 class="mt-1 text-xl font-medium text-gray-800">${count}</h3>`;
-};
 
 const get = (target_url) => {
   const myHeaders = new Headers();
@@ -29,10 +25,8 @@ const get = (target_url) => {
       const mhscount = jsonData.filter(
         (item) => item.status === 1 && item.mentor.namalengkap
       ).length;
-      const applycount = jsonData.filter((item) => !item.seleksiBerkas).length;
 
       mhsMagangCount(mhscount);
-      applyCount(applycount);
     })
     .catch((error) => console.log("error", error));
 };
