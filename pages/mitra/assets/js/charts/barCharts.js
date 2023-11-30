@@ -13,14 +13,9 @@ const get = (target_url, responseFunction) => {
   };
 
   fetch(target_url, requestOptions)
-    .then((response) => response.text())
-    .then((result) => {
-      const parsedResult = JSON.parse(result);
-
-      // Count the number of "Mahasiswa" and "Mitra"
-      const posisiMagang = parsedResult.filter(
-        (user) => user.magang.posisi
-      ).value;
+    .then((response) => response.json()) // Parse as JSON
+    .then((parsedResult) => {
+      const posisiMagang = parsedResult.map((user) => user.magang.posisi);
       const applyCount = parsedResult.length;
 
       responseFunction(posisiMagang, applyCount);
@@ -33,7 +28,7 @@ window.addEventListener("load", () => {
     buildChart("#hs-single-bar-chart", () => ({
       chart: {
         type: "bar",
-        height: 200,
+        height: 350, // Adjusted height for better visibility
         toolbar: {
           show: false,
         },
@@ -50,16 +45,37 @@ window.addEventListener("load", () => {
           })),
         },
       ],
-      chart: {
-        height: 350,
-        type: "bar",
-      },
       plotOptions: {
         bar: {
           columnWidth: "30%",
         },
       },
       colors: ["#2563eb"],
+      xaxis: {
+        categories: posisiMagang,
+        labels: {
+          style: {
+            colors: "#9ca3af",
+            fontSize: "13px",
+            fontFamily: "Inter, ui-sans-serif",
+            fontWeight: 400,
+          },
+          formatter: (title) => title.slice(0, 3),
+        },
+      },
+      yaxis: {
+        labels: {
+          align: "left",
+          minWidth: 0,
+          style: {
+            colors: "#9ca3af",
+            fontSize: "13px",
+            fontFamily: "Inter, ui-sans-serif",
+            fontWeight: 400,
+          },
+          formatter: (value) => (value >= 1000 ? `${value / 1000}k` : value),
+        },
+      },
       dataLabels: {
         enabled: false,
       },
@@ -72,5 +88,5 @@ window.addEventListener("load", () => {
         },
       },
     }));
-  })();
+  });
 });
