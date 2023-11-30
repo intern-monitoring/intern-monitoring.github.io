@@ -1,7 +1,7 @@
 import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
 
 const URLGet =
-  "https://asia-southeast2-bursakerja-project.cloudfunctions.net/intermoni-magang";
+  "https://asia-southeast2-bursakerja-project.cloudfunctions.net/intermoni-mahasiswa-magang";
 
 const get = (target_url, responseFunction) => {
   const myHeaders = new Headers();
@@ -46,7 +46,7 @@ window.addEventListener("load", () => {
       },
       series: [
         {
-          name: "Jumlah yang apply",
+          name: "Tentang Magang",
           data: [
             {
               x: "Lolos Seleksi Berkas",
