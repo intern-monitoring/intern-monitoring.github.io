@@ -12,17 +12,19 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script>
     <script src="../../node_modules/preline/dist/preline.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./assets/css/styleMitra.css" />
 
     <!-- Tiptap -->
-    <script type="module" src="../js/tiptap.js"></script>
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/gh/intern-monitoring/jsintermoni@0.3.2/Tiptap/tiptap.js"
+    ></script>
 
     <!-- Delete Magang -->
     <script
       type="module"
-      src="https://cdn.jsdelivr.net/gh/intern-monitoring/jsintermoni@0.2.0/deleteFunction/deleteMagang.js"
+      src="https://cdn.jsdelivr.net/gh/intern-monitoring/jsintermoni@0.3.2/Mitra/deleteFunction/deleteMagang.js"
     ></script>
-
-    <link rel="stylesheet" href="./assets/css/styleMitra.css" />
   </head>
   <body class="bg-gray-50">
     <!-- Header -->
@@ -1526,35 +1528,42 @@
     <!-- Dropdown Function -->
     <script
       type="module"
-      src="https://cdn.jsdelivr.net/gh/intern-monitoring/jsintermoni@0.0.6/components/dropdown.js"
+      src="https://cdn.jsdelivr.net/gh/intern-monitoring/jsintermoni@0.2.6/components/dropdown.js"
     ></script>
 
     <!-- Logout Function -->
     <script
       type="module"
-      src="https://cdn.jsdelivr.net/gh/intern-monitoring/jsintermoni@0.2.0/logOut.js"
+      src="https://cdn.jsdelivr.net/gh/intern-monitoring/jsintermoni@0.3.1/logOut.js"
     ></script>
+
+    <!-- Get Email -->
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/gh/intern-monitoring/jsintermoni@0.3.1/Email/getEmailMitra.js"
+    ></script>
+
     <!-- Get Function -->
     <script
       type="module"
-      src="./assets/js/getFunction/magang/getMagangFunction.js"
+      src="https://cdn.jsdelivr.net/gh/intern-monitoring/jsintermoni@0.3.2/Mitra/getFunction/magang/getMagangFunction.js"
     ></script>
     <!-- Post Magang -->
     <script
       type="module"
-      src="https://cdn.jsdelivr.net/gh/intern-monitoring/jsintermoni@0.2.3/postFunction/mitra/postMagang.js"
+      src="https://cdn.jsdelivr.net/gh/intern-monitoring/jsintermoni@0.3.2/Mitra/postFunction/magang/postMagang.js"
     ></script>
 
-    <script type="module" src="../js/get/getEmailMitra.js"></script>
-    <!-- autentikasi function -->
-    <!-- <script
+    <!-- otorisasi function -->
+    <script
       type="module"
-      src="https://cdn.jsdelivr.net/gh/intern-monitoring/jsintermoni@0.0.6/autentikasiToken.js"
-    ></script> -->
+      src="https://cdn.jsdelivr.net/gh/intern-monitoring/jsintermoni@0.2.6/OtorisasiHalaman/otorisasiHalaman.js"
+    ></script>
 
-    <script>
-      localStorage.setItem("previousPageURL", window.location.href);
-    </script>
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/gh/intern-monitoring/jsintermoni@0.2.6/OtorisasiHalaman/previousPageURL.js"
+    ></script>
   </body>
   <!-- modal -->
   <script src="https://unpkg.com/@material-tailwind/html@latest/scripts/dialog.js"></script>
