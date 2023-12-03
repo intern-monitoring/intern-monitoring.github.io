@@ -15,7 +15,10 @@
     <link rel="stylesheet" href="./assets/css/styleMahasiswa.css" />
 
     <!-- Tiptap -->
-    <script type="module" src="./assets/js/tiptap/tiptap.js"></script>
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/gh/intern-monitoring/jsintermoni@0.3.1/Mahasiswa/tiptap/tiptap.js"
+    ></script>
   </head>
   <body class="bg-gray-50">
     <!-- Header -->
@@ -534,33 +537,37 @@
     <!-- Dropdown Function -->
     <script
       type="module"
-      src="https://cdn.jsdelivr.net/gh/intern-monitoring/jsintermoni@0.0.6/components/dropdown.js"
+      src="https://cdn.jsdelivr.net/gh/intern-monitoring/jsintermoni@0.2.6/components/dropdown.js"
     ></script>
 
     <!-- Logout Function -->
     <script
       type="module"
-      src="https://cdn.jsdelivr.net/gh/intern-monitoring/jsintermoni@0.2.0/logOut.js"
+      src="https://cdn.jsdelivr.net/gh/intern-monitoring/jsintermoni@0.3.1/logOut.js"
+    ></script>
+
+    <!-- Get Email -->
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/gh/intern-monitoring/jsintermoni@0.3.1/Email/getEmailMhs.js"
     ></script>
 
     <!-- Detail Daily Report -->
     <script
       type="module"
-      src="./assets/js/getFunction/dailyReport/fetchDetailReport.js"
+      src="https://cdn.jsdelivr.net/gh/intern-monitoring/jsintermoni@0.3.1/Mahasiswa/getFunction/dailyReport/fetchDetailReport.js"
     ></script>
 
-    <!-- Get Email -->
-    <script type="module" src="../js/get/getEmailMhs.js"></script>
-
-    <!-- autentikasi function -->
-    <!-- <script
+    <!-- otorisasi function -->
+    <script
       type="module"
-      src="https://cdn.jsdelivr.net/gh/intern-monitoring/jsintermoni@0.0.6/autentikasiToken.js"
-    ></script> -->
+      src="https://cdn.jsdelivr.net/gh/intern-monitoring/jsintermoni@0.2.6/OtorisasiHalaman/otorisasiHalaman.js"
+    ></script>
 
-    <script>
-      localStorage.setItem("previousPageURL", window.location.href);
-    </script>
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/gh/intern-monitoring/jsintermoni@0.2.6/OtorisasiHalaman/previousPageURL.js"
+    ></script>
   </body>
   <script src="https://unpkg.com/@material-tailwind/html@latest/scripts/dialog.js"></script>
 </html>
