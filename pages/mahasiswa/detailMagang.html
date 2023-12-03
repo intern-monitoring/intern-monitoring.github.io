@@ -16,17 +16,6 @@
 
     <!-- Tiptap -->
     <script type="module" src="../js/tiptap.js"></script>
-    <!-- Apply Magang -->
-    <script
-      type="module"
-      src="./assets/js/postFunction/applyMagang.js"
-    ></script>
-
-    <!-- Detail Magang -->
-    <script
-      type="module"
-      src="./assets/js/getFunction/magang/fetchDetailMagang.js"
-    ></script>
   </head>
   <body class="bg-gray-50">
     <!-- Header -->
@@ -535,23 +524,42 @@
     <!-- Dropdown Function -->
     <script
       type="module"
-      src="https://cdn.jsdelivr.net/gh/intern-monitoring/jsintermoni@0.0.6/components/dropdown.js"
+      src="https://cdn.jsdelivr.net/gh/intern-monitoring/jsintermoni@0.2.6/components/dropdown.js"
     ></script>
 
     <!-- Logout Function -->
     <script
       type="module"
-      src="https://cdn.jsdelivr.net/gh/intern-monitoring/jsintermoni@0.2.0/logOut.js"
+      src="https://cdn.jsdelivr.net/gh/intern-monitoring/jsintermoni@0.3.1/logOut.js"
     ></script>
-    <script type="module" src="../js/get/getEmailMhs.js"></script>
-    <!-- autentikasi function -->
-    <!-- <script
-      type="module"
-      src="https://cdn.jsdelivr.net/gh/intern-monitoring/jsintermoni@0.0.6/autentikasiToken.js"
-    ></script> -->
 
-    <script>
-      localStorage.setItem("previousPageURL", window.location.href);
-    </script>
+    <!-- Get Email -->
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/gh/intern-monitoring/jsintermoni@0.3.1/Email/getEmailMhs.js"
+    ></script>
+
+    <!-- Apply Magang -->
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/gh/intern-monitoring/jsintermoni@0.3.1/Mahasiswa/postFunction/applyMagang.js"
+    ></script>
+
+    <!-- Detail Magang -->
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/gh/intern-monitoring/jsintermoni@0.3.1/Mahasiswa/getFunction/magang/fetchDetailMagang.js"
+    ></script>
+
+    <!-- otorisasi function -->
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/gh/intern-monitoring/jsintermoni@0.2.6/OtorisasiHalaman/otorisasiHalaman.js"
+    ></script>
+
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/gh/intern-monitoring/jsintermoni@0.2.6/OtorisasiHalaman/previousPageURL.js"
+    ></script>
   </body>
 </html>
