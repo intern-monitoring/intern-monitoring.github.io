@@ -51,12 +51,10 @@ window.addEventListener("load", () => {
         },
         series: [
           {
-            data: [
-              {
-                x: valuePosisi,
-                y: posisiCounts[valuePosisi] || 1,
-              },
-            ],
+            data: valuePosisi.map((posisi) => ({
+              x: posisi,
+              y: posisiCounts[posisi] || 0,
+            })),
           },
         ],
         chart: {
