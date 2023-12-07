@@ -4,8 +4,6 @@ const checkTokenAndRedirect = () => {
   // Mendapatkan nilai cookie dengan nama "token" menggunakan fungsi getCookie
   const token = getCookie("Authorization");
   const role = getCookie("Role");
-  // Mendapatkan URL sebelumnya dari local storage (jika ada)
-  const previousPageURL = localStorage.getItem("previousPageURL");
 
   // Jika tidak ada token, kembalikan ke halaman signIn.html
   if (!token) {
@@ -27,8 +25,24 @@ const checkTokenAndRedirect = () => {
         text: "Anda tidak memiliki akses untuk halaman ini.",
         confirmButtonText: "OK",
       }).then(() => {
-        // Redirect ke URL sebelumnya
-        window.location.href = previousPageURL;
+        switch (role) {
+          case "mitra":
+            window.location.href = "https://intermoni.my.id/pages/mitra/";
+            break;
+          case "mahasiswa":
+            window.location.href = "https://intermoni.my.id/pages/mahasiswa/";
+            break;
+          case "mentor":
+            window.location.href = "https://intermoni.my.id/pages/mentor/";
+            break;
+          case "pembimbing":
+            window.location.href = "https://intermoni.my.id/pages/pembimbing/";
+            break;
+          default:
+            // Jika role tidak cocok dengan yang diharapkan, redirect ke URL sebelumnya atau ke halaman default
+            window.location.href =
+              previousPageURL || "https://intermoni.my.id/pages/signIn.html";
+        }
       });
     }
   }
