@@ -13,21 +13,28 @@ const get = (target_url, responseFunction) => {
   };
 
   fetch(target_url, requestOptions)
-    .then((response) => response.text())
-    .then((result) => responseFunction(JSON.parse(result)))
+    .then((response) => response.json()) // Parse JSON directly here
+    .then((result) => responseFunction(result))
     .catch((error) => console.log("error", error));
 };
-export let posisiValue;
+
+export let posisiValues = [];
 
 const responsePosisi = (results) => {
   console.log(results.posisi);
   results.forEach((result) => {
     getPosisiMagang(result);
+    console.log(result);
   });
 };
 
 const getPosisiMagang = (value) => {
-  posisiValue = value.posisi;
+  posisiValues.push(value.posisi);
 };
-console.log(posisiValue);
+
 get(URLGetMagang, responsePosisi);
+
+// Add a delay to wait for the asynchronous fetch to complete
+setTimeout(() => {
+  console.log(posisiValues);
+}, 1000); // Adjust the delay as needed
