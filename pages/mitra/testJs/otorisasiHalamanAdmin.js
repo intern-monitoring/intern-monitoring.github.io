@@ -18,19 +18,19 @@ const checkTokenAndRedirect = () => {
       // Redirect ke halaman sign in
       window.location.href = "../signIn.html";
     });
-  }
-
-  // Jika rolenya bukan "Admin", tampilkan Sweet Alert dan redirect ke previousPageURL
-  if (role !== "admin") {
-    Swal.fire({
-      icon: "error",
-      title: "Akses Ditolak",
-      text: "Anda tidak memiliki akses untuk halaman ini.",
-      confirmButtonText: "OK",
-    }).then(() => {
-      // Redirect ke URL sebelumnya
-      window.location.href = previousPageURL;
-    });
+  } else {
+    // Jika rolenya bukan "Admin", tampilkan Sweet Alert dan redirect ke previousPageURL
+    if (role !== "admin") {
+      Swal.fire({
+        icon: "error",
+        title: "Akses Ditolak",
+        text: "Anda tidak memiliki akses untuk halaman ini.",
+        confirmButtonText: "OK",
+      }).then(() => {
+        // Redirect ke URL sebelumnya
+        window.location.href = previousPageURL;
+      });
+    }
   }
 };
 
