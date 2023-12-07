@@ -1,5 +1,5 @@
 import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
-import { posisiValue } from "./getMagang.js";
+import { posisiValues } from "./getMagang.js";
 
 const URLGet =
   "https://asia-southeast2-bursakerja-project.cloudfunctions.net/intermoni-mahasiswa-magang";
@@ -18,7 +18,7 @@ const get = (target_url, responseFunction) => {
     .then((result) => {
       const jsonData = JSON.parse(result);
 
-      const valuePosisi = posisiValue;
+      const valuePosisi = posisiValues;
 
       const posisiCounts = jsonData.reduce((counts, item) => {
         if (item.magang.posisi === posisiValue) {
