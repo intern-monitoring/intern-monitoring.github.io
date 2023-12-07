@@ -21,12 +21,18 @@ const get = (target_url, responseFunction) => {
       const valuePosisi = posisiValues;
 
       const posisiCounts = jsonData.reduce((counts, item) => {
-        if (item.magang.posisi === posisiValues) {
-          if (!counts[item.magang.posisi]) {
-            counts[item.magang.posisi] = 0;
+        const posisi = item.magang.posisi;
+
+        // Periksa apakah posisi ada di dalam posisiValues
+        if (posisiValues.includes(posisi)) {
+          // Inisialisasi count jika belum ada
+          if (!counts[posisi]) {
+            counts[posisi] = 0;
           }
-          counts[item.magang.posisi]++;
+          // Tambahkan count
+          counts[posisi]++;
         }
+
         return counts;
       }, {});
 
