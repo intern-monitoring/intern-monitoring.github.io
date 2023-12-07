@@ -95,6 +95,7 @@ const searchData = async () => {
       }
     } else {
       console.error("Data is not an array:", data);
+      hide("skeletonLoader");
     }
   } catch (error) {
     console.error("Error searching data: ", error);
