@@ -57,6 +57,7 @@ window.addEventListener("load", () => {
         },
         series: [
           {
+            name: "Jumlah yang apply",
             data: valuePosisi.map((posisi) => ({
               x: posisi,
               y: posisiCounts[posisi] || 0,
