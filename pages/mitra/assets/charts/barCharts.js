@@ -21,7 +21,7 @@ const get = (target_url, responseFunction) => {
       const valuePosisi = posisiValues;
 
       const posisiCounts = jsonData.reduce((counts, item) => {
-        if (item.magang.posisi === posisiValue) {
+        if (item.magang.posisi === posisiValues) {
           if (!counts[item.magang.posisi]) {
             counts[item.magang.posisi] = 0;
           }
