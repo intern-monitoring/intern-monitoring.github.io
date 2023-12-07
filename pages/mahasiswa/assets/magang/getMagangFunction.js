@@ -5,9 +5,6 @@ import { show, hide } from "https://jscroot.github.io/element/croot.js";
 const fetchData = async () => {
   show("skeletonLoader");
   try {
-    // Hapus data lama dari localStorage sebelum mendapatkan data baru
-    // localStorage.removeItem("magangData");
-
     const myHeaders = new Headers();
     myHeaders.append("Authorization", getCookie("Authorization"));
     const requestOptions = {
@@ -98,7 +95,6 @@ const searchData = async () => {
       }
     } else {
       console.error("Data is not an array:", data);
-      hide("skeletonLoader");
     }
   } catch (error) {
     console.error("Error searching data: ", error);
