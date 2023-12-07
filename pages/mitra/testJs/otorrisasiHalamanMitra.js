@@ -21,7 +21,7 @@ const checkTokenAndRedirect = () => {
   }
 
   // Jika rolenya bukan "Mitra", tampilkan Sweet Alert dan redirect ke previousPageURL
-  if (role !== "Mitra") {
+  if (role !== "mitra") {
     Swal.fire({
       icon: "error",
       title: "Akses Ditolak",
