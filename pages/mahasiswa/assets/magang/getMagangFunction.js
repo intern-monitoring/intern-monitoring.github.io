@@ -19,6 +19,7 @@ const fetchData = async () => {
     // Simpan data baru ke localStorage
     localStorage.setItem("magangData", JSON.stringify(data));
 
+    hide("skeletonLoader");
     responseDataMagang(data);
   } catch (error) {
     console.error("Error fetching or processing data: ", error);
