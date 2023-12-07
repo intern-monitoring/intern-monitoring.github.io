@@ -33,8 +33,3 @@ const getPosisiMagang = (value) => {
 };
 
 get(URLGetMagang, responsePosisi);
-
-// Add a delay to wait for the asynchronous fetch to complete
-setTimeout(() => {
-  console.log(posisiValues);
-}, 1500); // Adjust the delay as needed
