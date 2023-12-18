@@ -29,20 +29,21 @@ const pushData = () => {
   const prodiValue = document.getElementById("prodi");
 
   const file = imageInput.files[0];
-
-  if (!file) {
-    alert("Please select an image file.");
-    return;
-  }
+  const namalengkap = namalengkapValue.value;
+  const tanggallahir = tanggallahirValue.value;
+  const jeniskelamin = jeniskelaminValue.value;
+  const nim = nimValue.value;
+  const perguruantinggi = perguruantinggiValue.value;
+  const prodi = prodiValue.value;
 
   const formData = new FormData();
   formData.append("file", file);
-  formData.append("namalengkap", namalengkapValue);
-  formData.append("tanggallahir", tanggallahirValue);
-  formData.append("jeniskelamin", jeniskelaminValue);
-  formData.append("nim", nimValue);
-  formData.append("perguruantinggi", perguruantinggiValue);
-  formData.append("prodi", prodiValue);
+  formData.append("namalengkap", namalengkap);
+  formData.append("tanggallahir", tanggallahir);
+  formData.append("jeniskelamin", jeniskelamin);
+  formData.append("nim", nim);
+  formData.append("perguruantinggi", perguruantinggi);
+  formData.append("prodi", prodi);
 
   putData(urlPUT, formData, AmbilResponse);
 };

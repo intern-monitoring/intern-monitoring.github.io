@@ -1,6 +1,6 @@
 export const isiDataProfile = (results) => {
   const inputMapping = [
-    { id: "previewImage", path: "imagename" },
+    { id: "previewImage", path: "imageurl" },
     { id: "namalengkap", path: "namalengkap" },
     { id: "tanggallahir", path: "tanggallahir" },
     { id: "jeniskelamin", path: "jeniskelamin" },
@@ -12,7 +12,12 @@ export const isiDataProfile = (results) => {
   inputMapping.forEach(({ id, path, index, property }) => {
     const inputElement = document.getElementById(id);
     const value = getNestedValue(results, path, index, property);
-    inputElement.value = value;
+    // Check if the element is an image and set the src attribute
+    if (inputElement.tagName === "IMG") {
+      inputElement.src = value;
+    } else {
+      inputElement.value = value;
+    }
   });
 };
 
