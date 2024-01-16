@@ -336,27 +336,6 @@
               Dashboard
             </a>
           </li>
-          <li>
-            <a
-              class="flex items-center gap-x-3.5 py-2 px-2.5 bg-white text-sm font-semibold text-slate-700 rounded-md hover:bg-gray-100"
-              href="reportReview.html"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fill="currentColor"
-                class="bi bi-clipboard-pulse w-3.5 h-3.5"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M10 1.5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-1Zm-5 0A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5v1A1.5 1.5 0 0 1 9.5 4h-3A1.5 1.5 0 0 1 5 2.5v-1Zm-2 0h1v1H3a1 1 0 0 0-1 1V14a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V3.5a1 1 0 0 0-1-1h-1v-1h1a2 2 0 0 1 2 2V14a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V3.5a2 2 0 0 1 2-2Zm6.979 3.856a.5.5 0 0 0-.968.04L7.92 10.49l-.94-3.135a.5.5 0 0 0-.895-.133L4.232 10H3.5a.5.5 0 0 0 0 1h1a.5.5 0 0 0 .416-.223l1.41-2.115 1.195 3.982a.5.5 0 0 0 .968-.04L9.58 7.51l.94 3.135A.5.5 0 0 0 11 11h1.5a.5.5 0 0 0 0-1h-1.128L9.979 5.356Z"
-                />
-              </svg>
-              Report Review
-            </a>
-          </li>
         </ul>
         <!-- End Main Menu Section -->
 
@@ -373,7 +352,7 @@
     <!-- End Sidebar -->
 
     <!-- Content Section -->
-    <div class="w-full h-screen bg-gray-50 pt-5 px-4 sm:px-6 md:px-8 lg:pl-72">
+    <div class="w-full bg-gray-50 pt-5 px-4 sm:px-6 md:px-8 lg:pl-72">
       <!-- Stats Section -->
       <div class="w-full">
         <div
@@ -441,10 +420,7 @@
                 <p class="text-xs tracking-wide text-gray-500">
                   Yang belum dinilai
                 </p>
-                <div
-                  id="seleksiKampusTidakLolosCount"
-                  class="mt-1 flex items-center gap-x-1"
-                >
+                <div id="reportingCount" class="mt-1 flex items-center gap-x-1">
                   <h3 class="mt-1 text-xl font-medium text-gray-800">0</h3>
                 </div>
               </div>
@@ -473,39 +449,239 @@
     </div>
     <!-- End Content Section -->
 
+    <!-- Table Section -->
+    <div class="w-full bg-gray-50 lg:pl-64">
+      <!-- Table Section -->
+      <div class="px-4 py-10 sm:px-6 lg:px-8 mx-auto">
+        <!-- Card -->
+        <div class="flex flex-col">
+          <div class="-m-1.5 overflow-x-auto">
+            <div class="p-1.5 min-w-full inline-block align-middle">
+              <div
+                class="bg-white border border-gray-200 rounded-xl shadow-sm overflow-hidden"
+              >
+                <!-- Header -->
+                <div
+                  class="px-6 py-4 grid gap-3 md:flex md:justify-between md:items-center border-b border-gray-200"
+                >
+                  <div>
+                    <h2 class="text-xl font-semibold text-gray-800">
+                      Mahasiswa Magang
+                    </h2>
+                    <p class="text-sm text-gray-600">
+                      Berikut merupakan data mahasiwa yang sedang magang
+                    </p>
+                  </div>
+                </div>
+                <!-- End Header -->
+
+                <!-- Table -->
+                <table class="min-w-full divide-y divide-gray-200">
+                  <thead class="bg-gray-50">
+                    <tr>
+                      <th scope="col" class="px-6 py-3 text-left">
+                        <div class="flex items-center gap-x-2">
+                          <span
+                            class="text-xs font-semibold uppercase tracking-wide text-gray-800"
+                          >
+                            Mahasiswa
+                          </span>
+                        </div>
+                      </th>
+
+                      <th scope="col" class="px-6 py-3 text-left">
+                        <div class="flex items-center gap-x-2">
+                          <span
+                            class="text-xs font-semibold uppercase tracking-wide text-gray-800"
+                          >
+                            Posisi Magang
+                          </span>
+                        </div>
+                      </th>
+
+                      <th scope="col" class="px-6 py-3 text-left">
+                        <div class="flex items-center gap-x-2">
+                          <span
+                            class="text-xs font-semibold uppercase tracking-wide text-gray-800"
+                          >
+                            Perguruan Tinggi
+                          </span>
+                        </div>
+                      </th>
+
+                      <th scope="col" class="px-6 py-3 text-left">
+                        <div class="flex items-center gap-x-2">
+                          <span
+                            class="text-xs font-semibold uppercase tracking-wide text-gray-800"
+                          >
+                            Detail
+                          </span>
+                        </div>
+                      </th>
+                    </tr>
+                  </thead>
+
+                  <tbody id="tableMhsMagang" class="divide-y divide-gray-200">
+                    <!-- Skeleton Loader -->
+                    <tr id="skeletonLoader" class="animate-pulse">
+                      <td class="h-px w-px whitespace-nowrap">
+                        <div class="pl-6 pr-6 py-3">
+                          <div class="flex items-center gap-x-3">
+                            <div
+                              class="inline-block h-[2.375rem] w-[2.375rem] rounded-full bg-gray-200 pr-2"
+                            ></div>
+                            <div class="grow">
+                              <ul class="space-y-1">
+                                <li
+                                  class="w-28 h-4 bg-gray-200 rounded-full"
+                                ></li>
+                                <li
+                                  class="w-28 h-4 bg-gray-200 rounded-full"
+                                ></li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="h-px w-72 whitespace-nowrap">
+                        <div class="px-6 py-3">
+                          <ul class="space-y-1">
+                            <li
+                              class="w-full h-4 bg-gray-200 rounded-full"
+                            ></li>
+                          </ul>
+                        </div>
+                      </td>
+                      <td class="h-px w-72 whitespace-nowrap">
+                        <div class="px-6 py-3">
+                          <ul class="space-y-1">
+                            <li
+                              class="w-full h-4 bg-gray-200 rounded-full"
+                            ></li>
+                          </ul>
+                        </div>
+                      </td>
+                      <td class="h-px w-px whitespace-nowrap">
+                        <a type="button" class="block">
+                          <span class="px-6 py-1.5">
+                            <span
+                              class="py-3 px-10 inline-flex justify-center items-center gap-2 rounded-lg border font-medium bg-gray-200 text-gray-700 shadow-sm align-middle"
+                            >
+                            </span>
+                          </span>
+                        </a>
+                      </td>
+                    </tr>
+                    <!-- End Skeleton Loader -->
+                  </tbody>
+                </table>
+                <!-- End Table -->
+
+                <!-- Footer -->
+                <div
+                  class="px-6 py-4 grid gap-3 md:flex md:justify-between md:items-center border-t border-gray-200"
+                >
+                  <div id="mhsCount">
+                    <p class="text-sm text-gray-600">
+                      <span class="font-semibold text-gray-800">0</span>
+                      results
+                    </p>
+                  </div>
+
+                  <div>
+                    <div class="inline-flex gap-x-2">
+                      <button
+                        type="button"
+                        class="py-2 px-3 inline-flex justify-center items-center gap-2 rounded-md border font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-600 transition-all text-sm"
+                      >
+                        <svg
+                          class="w-3 h-3"
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"
+                          />
+                        </svg>
+                        Prev
+                      </button>
+
+                      <button
+                        type="button"
+                        class="py-2 px-3 inline-flex justify-center items-center gap-2 rounded-md border font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-600 transition-all text-sm"
+                      >
+                        Next
+                        <svg
+                          class="w-3 h-3"
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
+                          />
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <!-- End Footer -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End Card -->
+      </div>
+      <!-- End Table Section -->
+    </div>
+    <!-- End Table Section -->
+
     <!-- Dropdown -->
     <script
       type="module"
-      src="https://cdn.jsdelivr.net/gh/intern-monitoring/jsintermoni@0.5.5/components/dropdown.js"
+      src="https://cdn.jsdelivr.net/gh/intern-monitoring/jsintermoni@0.5.7/components/dropdown.js"
     ></script>
 
     <!-- Logout Function -->
     <script
       type="module"
-      src="https://cdn.jsdelivr.net/gh/intern-monitoring/jsintermoni@0.5.5/logOut.js"
+      src="https://cdn.jsdelivr.net/gh/intern-monitoring/jsintermoni@0.5.7/logOut.js"
     ></script>
 
     <!-- Get Email -->
     <script
       type="module"
-      src="https://cdn.jsdelivr.net/gh/intern-monitoring/jsintermoni@0.5.5/Email/getEmailMentor.js"
+      src="https://cdn.jsdelivr.net/gh/intern-monitoring/jsintermoni@0.5.7/Email/getEmailMentor.js"
+    ></script>
+
+    <!-- Get Mahasiswa Magang -->
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/gh/intern-monitoring/jsintermoni@0.5.7/Mentor/getFunction/mahasiswaMagang/getMahasiswaMagangFunction.js"
     ></script>
 
     <!-- Get Stats -->
     <script
       type="module"
-      src="https://cdn.jsdelivr.net/gh/intern-monitoring/jsintermoni@0.5.5/Mentor/stats/getMentoring.js"
+      src="https://cdn.jsdelivr.net/gh/intern-monitoring/jsintermoni@0.5.7/Mentor/stats/getMentoring.js"
     ></script>
 
     <!-- otorisasi function -->
     <script
       type="module"
-      src="https://cdn.jsdelivr.net/gh/intern-monitoring/jsintermoni@0.5.5/OtorisasiHalaman/otorisasiHalamanMentor.js"
+      src="https://cdn.jsdelivr.net/gh/intern-monitoring/jsintermoni@0.5.7/OtorisasiHalaman/otorisasiHalamanMentor.js"
     ></script>
 
     <script
       type="module"
-      src="https://cdn.jsdelivr.net/gh/intern-monitoring/jsintermoni@0.5.5/OtorisasiHalaman/previousPageURL.js"
+      src="https://cdn.jsdelivr.net/gh/intern-monitoring/jsintermoni@0.5.7/OtorisasiHalaman/previousPageURL.js"
     ></script>
   </body>
 </html>

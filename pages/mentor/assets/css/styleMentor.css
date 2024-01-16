@@ -6,6 +6,13 @@
   outline: none;
 }
 
+trix-editor ul {
+  list-style-type: disc;
+}
+trix-editor ol {
+  list-style-type: decimal;
+}
+
 .open.hs-overlay-open\:mt-0 {
   margin-top: 0px;
 }

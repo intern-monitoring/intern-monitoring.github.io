@@ -12,7 +12,7 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script>
     <script src="../../node_modules/preline/dist/preline.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="./assets/css/styleMentor.css" />
+    <link rel="stylesheet" href="./assets/css/stylePembimbing.css" />
   </head>
   <body class="bg-gray-50">
     <!-- Header -->
@@ -179,7 +179,7 @@
                 <div class="mt-2 py-2 first:pt-0 last:pb-0">
                   <a
                     class="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500"
-                    href="profileMentor.html"
+                    href="profilePembimbing.html"
                   >
                     <svg
                       class="flex-none"
@@ -283,7 +283,7 @@
             class="flex items-center text-sm text-gray-800"
             aria-current="page"
           >
-            Report Review
+            Mahasiswa Magang
             <svg
               class="flex-shrink-0 mx-3 overflow-visible h-2.5 w-2.5 text-gray-400"
               width="16"
@@ -304,7 +304,7 @@
             class="text-sm font-semibold text-gray-800 truncate"
             aria-current="page"
           >
-            Detail Report Review
+            Detail Report
           </li>
         </ol>
         <!-- End Breadcrumb -->
@@ -334,7 +334,7 @@
         <ul class="space-y-1.5">
           <li>
             <a
-              class="flex items-center gap-x-3.5 py-2 px-2.5 bg-white text-sm font-semibold text-slate-700 rounded-md hover:bg-gray-100"
+              class="flex items-center gap-x-3.5 py-2 px-2.5 bg-gradient-to-tl from-blue-600 to-violet-600 text-sm font-semibold text-white rounded-md hover:bg-gray-100"
               href="index.html"
             >
               <svg
@@ -357,27 +357,6 @@
               Dashboard
             </a>
           </li>
-          <li>
-            <a
-              class="flex items-center gap-x-3.5 py-2 px-2.5 bg-gradient-to-tl from-blue-600 to-violet-600 text-sm font-semibold text-white rounded-md hover:bg-gray-100"
-              href="reportReview.html"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fill="currentColor"
-                class="bi bi-clipboard-pulse w-3.5 h-3.5"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M10 1.5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-1Zm-5 0A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5v1A1.5 1.5 0 0 1 9.5 4h-3A1.5 1.5 0 0 1 5 2.5v-1Zm-2 0h1v1H3a1 1 0 0 0-1 1V14a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V3.5a1 1 0 0 0-1-1h-1v-1h1a2 2 0 0 1 2 2V14a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V3.5a2 2 0 0 1 2-2Zm6.979 3.856a.5.5 0 0 0-.968.04L7.92 10.49l-.94-3.135a.5.5 0 0 0-.895-.133L4.232 10H3.5a.5.5 0 0 0 0 1h1a.5.5 0 0 0 .416-.223l1.41-2.115 1.195 3.982a.5.5 0 0 0 .968-.04L9.58 7.51l.94 3.135A.5.5 0 0 0 11 11h1.5a.5.5 0 0 0 0-1h-1.128L9.979 5.356Z"
-                />
-              </svg>
-              Report Review
-            </a>
-          </li>
         </ul>
         <!-- End Main Menu Section -->
 
@@ -386,7 +365,7 @@
           <p class="text-gray-400 text-xs font-semibold">REPORTING</p>
         </div>
         <ul class="space-y-1.5">
-       
+         
         </ul> -->
         <!-- End Reporting Section -->
       </nav>
@@ -398,95 +377,99 @@
       <!-- Card Section -->
       <div class="px-4 py-10 sm:px-6 lg:px-8 mx-auto">
         <!-- Grid -->
-        <div id="detailReportReview" class="relative mx-auto w-full">
+        <div id="detailReport" class="relative mx-auto w-full">
           <!-- Skeleton Loader -->
-          <div
-            id="skeletonLoader"
-            class="bg-white animate-pulse rounded-xl border shadow-md p-4 sm:p-7"
-          >
-            <div class="grid gap-4">
-              <div>
-                <ul class="space-y-2">
-                  <li class="w-36 h-6 bg-gray-200 rounded-full"></li>
-                  <li class="w-1/2 h-4 bg-gray-200 rounded-full"></li>
-                </ul>
-                <div class="border-b pt-1 border-gray-200"></div>
-              </div>
-              <div>
-                <div class="grid">
-                  <!-- Mahasiswa -->
-                  <div class="pb-4">
-                    <ul class="space-y-2">
-                      <li class="w-32 h-4 bg-gray-200 rounded-full"></li>
-                    </ul>
-                  </div>
-                  <div class="flex gap-x-8 text-sm items-center">
-                    <div>
-                      <img
-                        class="inline-block h-28 w-28 rounded-full bg-gray-200"
-                      />
-                    </div>
-                    <div class="space-y-1">
-                      <div>
-                        <ul class="space-y-2">
-                          <li class="w-32 h-4 bg-gray-200 rounded-full"></li>
-                          <li class="w-32 h-4 bg-gray-200 rounded-full"></li>
-                        </ul>
-                      </div>
-                      <div>
-                        <ul class="space-y-2">
-                          <li class="w-32 h-4 bg-gray-200 rounded-full"></li>
-                          <li class="w-32 h-4 bg-gray-200 rounded-full"></li>
-                        </ul>
-                      </div>
-                      <div>
-                        <ul class="space-y-2">
-                          <li class="w-32 h-4 bg-gray-200 rounded-full"></li>
-                          <li class="w-32 h-4 bg-gray-200 rounded-full"></li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- End Mahasiswa -->
+          <div id="skeletonLoader">
+            <div class="bg-white rounded-xl border shadow-md p-4 sm:p-7">
+              <div class="grid gap-4">
+                <div class="space-y-2">
+                  <h2
+                    class="text-2xl font-semibold text-gray-800 h-8 w-full animate-pulse rounded-full bg-gray-200"
+                  ></h2>
+                  <p
+                    class="text-md text-gray-600 pb-1 h-4 w-full animate-pulse rounded-full bg-gray-200"
+                  ></p>
+                  <div class="border-gray-200 h-2 w-full"></div>
                 </div>
-              </div>
-              <!-- Col -->
-              <div>
-                <div>
-                  <div class="pb-2">
-                    <ul class="space-y-2">
-                      <li class="w-32 h-4 bg-gray-200 rounded-full"></li>
-                    </ul>
-                    <div class="border-b pt-1 border-gray-200"></div>
+                <div class="grid">
+                  <!-- Pembimbing -->
+                  <div class="pb-4">
+                    <h2
+                      class="text-lg font-semibold text-gray-800 h-6 animate-pulse rounded-full bg-gray-200 w-40"
+                    ></h2>
                   </div>
-                  <div class="py-2">
-                    <ul class="space-y-2">
-                      <li class="w-32 h-4 bg-gray-200 rounded-full"></li>
-                      <li class="w-32 h-4 bg-gray-200 rounded-full"></li>
-                    </ul>
+                  <div class="flex gap-x-8 text-sm items-center pt-2">
+                    <div
+                      class="h-28 w-28 ring-2 ring-white animate-pulse rounded-full bg-gray-200"
+                    ></div>
+                    <div
+                      class="space-y-1 animate-pulse rounded-md bg-gray-200 w-40"
+                    >
+                      <div>
+                        <h3 class="font-semibold text-gray-800 h-4"></h3>
+                        <p class="text-gray-500 h-3"></p>
+                      </div>
+                      <div>
+                        <span class="block font-semibold h-3"></span>
+                        <p class="text-gray-500 h-3"></p>
+                      </div>
+                      <div>
+                        <span class="block font-semibold h-3"></span>
+                        <p class="text-gray-500 h-3"></p>
+                      </div>
+                    </div>
                   </div>
-                  <div class="py-2">
-                    <ul class="space-y-2">
-                      <li class="w-32 h-4 bg-gray-200 rounded-full"></li>
-                      <li class="w-32 h-4 bg-gray-200 rounded-full"></li>
-                    </ul>
+                  <!-- End Pembimbing -->
+                </div>
+                <div class="animate-pulse">
+                  <div class="pb-2 space-y-2">
+                    <h2
+                      class="text-lg font-semibold text-gray-800 h-4 animate-pulse rounded-full bg-gray-200"
+                    ></h2>
+                    <div
+                      class="border-gray-200 h-4 animate-pulse rounded-full bg-gray-200"
+                    ></div>
+                  </div>
+                  <div class="py-2 space-y-2">
+                    <h3
+                      class="text-md font-semibold text-gray-800 h-4 animate-pulse rounded-full bg-gray-200"
+                    ></h3>
+                    <p
+                      class="text-gray-800 text-sm h-4 animate-pulse rounded-full bg-gray-200"
+                    ></p>
+                  </div>
+                  <div class="py-2 space-y-2">
+                    <h3
+                      class="text-md font-semibold text-gray-800 h-5 animate-pulse rounded-full bg-gray-200"
+                    ></h3>
+                    <p
+                      class="text-gray-800 text-sm h-4 animate-pulse rounded-full bg-gray-200"
+                    ></p>
                     <div class="border-b border-gray-200 pt-4"></div>
                   </div>
                   <div class="pt-2 flex justify-between items-start">
                     <div class="flex items-center gap-x-2">
-                      <ul class="space-y-2">
-                        <li class="w-36 h-4 bg-gray-200 rounded-full"></li>
-                      </ul>
+                      <div
+                        class="h-5 w-5 animate-pulse rounded-md bg-gray-200"
+                      ></div>
+                      <p
+                        class="text-md font-semibold text-gray-800 animate-pulse rounded-md bg-gray-200 w-40 h-4"
+                      >
+                        <span
+                          class="text-gray-800 text-sm font-normal h-4"
+                        ></span>
+                      </p>
                     </div>
-                    <ul class="space-y-2">
-                      <li class="w-24 h-7 bg-gray-200 rounded-md"></li>
-                    </ul>
+                    <div
+                      class="h-8 w-20 animate-pulse rounded-md bg-gray-200"
+                    ></div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
           <!-- End Skeleton Loader -->
+
           <!-- Card -->
 
           <!-- End Card -->
@@ -500,36 +483,36 @@
     <!-- Dropdown -->
     <script
       type="module"
-      src="https://cdn.jsdelivr.net/gh/intern-monitoring/jsintermoni@0.5.5/components/dropdown.js"
+      src="https://cdn.jsdelivr.net/gh/intern-monitoring/jsintermoni@0.5.7/components/dropdown.js"
     ></script>
 
     <!-- Logout Function -->
     <script
       type="module"
-      src="https://cdn.jsdelivr.net/gh/intern-monitoring/jsintermoni@0.5.5/logOut.js"
+      src="https://cdn.jsdelivr.net/gh/intern-monitoring/jsintermoni@0.5.7/logOut.js"
+    ></script>
+
+    <!-- Get Report -->
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/gh/intern-monitoring/jsintermoni@0.5.7/Pembimbing/getFunction/reportReview/fetchDetailReport.js"
     ></script>
 
     <!-- Get Email -->
     <script
       type="module"
-      src="https://cdn.jsdelivr.net/gh/intern-monitoring/jsintermoni@0.5.5/Email/getEmailMentor.js"
-    ></script>
-
-    <!-- Detail Report -->
-    <script
-      type="module"
-      src="https://cdn.jsdelivr.net/gh/intern-monitoring/jsintermoni@0.5.5/Mentor/getFunction/reportReview/fetchDetailReport.js"
+      src="https://cdn.jsdelivr.net/gh/intern-monitoring/jsintermoni@0.5.7/Email/getEmailPembimbing.js"
     ></script>
 
     <!-- otorisasi function -->
     <script
       type="module"
-      src="https://cdn.jsdelivr.net/gh/intern-monitoring/jsintermoni@0.5.5/OtorisasiHalaman/otorisasiHalamanMentor.js"
+      src="https://cdn.jsdelivr.net/gh/intern-monitoring/jsintermoni@0.5.7/OtorisasiHalaman/otorisasiHalamanPembimbing.js"
     ></script>
 
     <script
       type="module"
-      src="https://cdn.jsdelivr.net/gh/intern-monitoring/jsintermoni@0.5.5/OtorisasiHalaman/previousPageURL.js"
+      src="https://cdn.jsdelivr.net/gh/intern-monitoring/jsintermoni@0.5.7/OtorisasiHalaman/previousPageURL.js"
     ></script>
   </body>
 </html>
