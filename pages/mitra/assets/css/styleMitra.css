@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.ProseMirror:focus {
-  outline: none;
-}
-
 .open.hs-overlay-open\:mt-0 {
   margin-top: 0px;
 }
